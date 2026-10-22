@@ -1,0 +1,22 @@
+# Campanhas de trace e cobertura do SA-BSN
+
+Este repositório preserva evidências de execução das features BDD da validação da migração ROS 1--ROS 2. Cada diretório em `campanhas_traces/` é imutável: contém o manifesto, hashes, fontes arquivadas, configuração, resultados JUnit, logs compactados e o trace de eventos dos cenários.
+
+## Leitura de uma campanha
+
+Em `<campanha>/<feature>/`:
+
+- `trace.jsonl`: eventos de início e término de cenários e passos, além dos resultados do pytest;
+- `internal_junit/*.xml`: resultado individual de cada cenário;
+- `execution.log.gz`: saída integral da execução;
+- `outer.xml`: resultado do invólucro `launch_testing`;
+- `coverage_production.xml` e `coverage_production.json`: cobertura do recorte de produção, quando a coleta a habilitou;
+- `manifest.json`: comandos, versões, hashes, totais e limitações da campanha.
+
+## Situação inicial deste acervo
+
+As campanhas de 22/10/2026 com `check_bsn`, `knowledge_repo`, `target_system`, `data_persistance`, `health_status`, `injector` e `bsn_p03` foram executadas com `coverage_enabled: false`, para reduzir o consumo de armazenamento durante a coleta de traces. Elas preservam os traces e resultados por feature, mas **não devem ser usadas como evidência de cobertura**.
+
+As campanhas históricas `ros2_20261022T181912Z_lo_2z9we` (`managing_system`) e `ros2_20261022T182336Z_la6kiyl4` (`check_bsn`) incluem cobertura por feature. Seus manifestos registram as divergências de cenário daquela rodada; cobertura e aprovação funcional devem ser interpretadas separadamente.
+
+As próximas coletas devem usar `ferramentas_traces/coletar_ros2.py` sem `--without-coverage`, executando uma feature por vez e publicando a campanha antes de liberar espaço local.

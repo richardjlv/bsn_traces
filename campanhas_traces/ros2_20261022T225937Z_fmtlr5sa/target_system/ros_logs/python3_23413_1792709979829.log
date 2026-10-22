@@ -1,0 +1,20 @@
+[WARN] [1792709980.259395703] [patient_node]: State 0 for oxigenation is all zeros and will be ignored.
+[WARN] [1792709980.276919153] [patient_node]: State 1 for oxigenation is all zeros and will be ignored.
+[WARN] [1792709980.281178610] [patient_node]: oxigenation transition matrix: {0: None, 1: None, 2: [0.0, 0.0, 0.9, 0.08, 0.02], 3: [0.0, 0.0, 0.75, 0.1, 0.05], 4: [0.0, 0.0, 0.05, 0.35, 0.6]}
+[WARN] [1792709980.299124065] [patient_node]: heart_rate transition matrix: {0: [0.72, 0.21, 0.04, 0.02, 0.01], 1: [0.14, 0.61, 0.19, 0.04, 0.02], 2: [0.01, 0.17, 0.6, 0.2, 0.02], 3: [0.0, 0.02, 0.15, 0.7, 0.13], 4: [0.0, 0.01, 0.02, 0.2, 0.77]}
+[WARN] [1792709980.303635262] [patient_node]: State 4 for temperature is all zeros and will be ignored.
+[WARN] [1792709980.313279336] [patient_node]: temperature transition matrix: {0: [0.25, 0.51, 0.21, 0.03, 0.0], 1: [0.05, 0.5, 0.43, 0.02, 0.0], 2: [0.0, 0.04, 0.85, 0.11, 0.0], 3: [0.0, 0.01, 0.32, 0.67, 0.0], 4: None}
+[WARN] [1792709980.318305961] [patient_node]: State 0 for abps is all zeros and will be ignored.
+[WARN] [1792709980.321134871] [patient_node]: State 1 for abps is all zeros and will be ignored.
+[WARN] [1792709980.322837119] [patient_node]: abps transition matrix: {0: None, 1: None, 2: [0.0, 0.0, 0.79, 0.18, 0.03], 3: [0.0, 0.0, 0.23, 0.64, 0.13], 4: [0.0, 0.0, 0.05, 0.26, 0.69]}
+[WARN] [1792709980.335590316] [patient_node]: State 0 for abpd is all zeros and will be ignored.
+[WARN] [1792709980.345663701] [patient_node]: State 1 for abpd is all zeros and will be ignored.
+[WARN] [1792709980.347417277] [patient_node]: abpd transition matrix: {0: None, 1: None, 2: [0.0, 0.0, 0.94, 0.04, 0.02], 3: [0.0, 0.0, 0.5, 0.35, 0.15], 4: [0.0, 0.0, 0.31, 0.25, 0.44]}
+[WARN] [1792709980.353720647] [patient_node]: glucose transition matrix: {0: [0.2, 0.4, 0.22, 0.15, 0.03], 1: [0.1, 0.5, 0.2, 0.15, 0.05], 2: [0.04, 0.09, 0.65, 0.12, 0.1], 3: [0.0, 0.02, 0.33, 0.5, 0.15], 4: [0.0, 0.0, 0.2, 0.45, 0.35]}
+[INFO] [1792710000.377561995] [patient_node]: State transition for abps: 2 -> 3
+[INFO] [1792710010.577261494] [patient_node]: State transition for glucose: 2 -> 0
+[INFO] [1792710020.776914100] [patient_node]: State transition for temperature: 2 -> 1
+[INFO] [1792710020.777282206] [patient_node]: State transition for abps: 3 -> 4
+[INFO] [1792710030.977365407] [patient_node]: State transition for heart_rate: 2 -> 3
+[INFO] [1792710030.977795964] [patient_node]: State transition for abps: 4 -> 3
+[INFO] [1792710030.978179517] [patient_node]: State transition for glucose: 0 -> 2

@@ -1,0 +1,23 @@
+[INFO] [1792712936.955539609] [param_adapter]: Starting ParamAdapter
+[INFO] [1792712937.579795355] [param_adapter]: ParamAdapter initialized and ready to register components
+[INFO] [1792712937.911126268] [param_adapter]: Component registered: oximeter_node
+[INFO] [1792712937.913257868] [param_adapter]: Component registered: thermometer_node
+[INFO] [1792712938.098662589] [param_adapter]: Component registered: abps_node
+[INFO] [1792712938.107342623] [param_adapter]: Component registered: ecg_node
+[INFO] [1792712938.173093488] [param_adapter]: Component registered: glucosemeter_node
+[INFO] [1792712938.593200741] [param_adapter]: Component registered: abpd_node
+[INFO] [1792712938.655220872] [param_adapter]: Component registered: central_hub_node
+[INFO] [1792712999.374064921] [param_adapter]: Routed adaptation: /g4t1 → /central_hub_node
+[INFO] [1792712999.374473921] [param_adapter]: Command content: freq=6.73
+[INFO] [1792712999.378998597] [param_adapter]: Routed adaptation: /g3t1_5 → /abpd_node
+[INFO] [1792712999.379287827] [param_adapter]: Command content: freq=1.45
+[INFO] [1792712999.380649290] [param_adapter]: Routed adaptation: /g3t1_2 → /ecg_node
+[INFO] [1792712999.381008034] [param_adapter]: Command content: freq=1.23
+[INFO] [1792712999.382324706] [param_adapter]: Routed adaptation: /g3t1_6 → /glucosemeter_node
+[INFO] [1792712999.382597809] [param_adapter]: Command content: freq=1.38
+[INFO] [1792712999.383783902] [param_adapter]: Routed adaptation: /g3t1_1 → /oximeter_node
+[INFO] [1792712999.384169419] [param_adapter]: Command content: freq=1.25
+[INFO] [1792712999.386831386] [param_adapter]: Routed adaptation: /g3t1_4 → /abps_node
+[INFO] [1792712999.387123271] [param_adapter]: Command content: freq=1.38
+[INFO] [1792712999.389466100] [param_adapter]: Routed adaptation: /g3t1_3 → /thermometer_node
+[INFO] [1792712999.389743360] [param_adapter]: Command content: freq=1.21

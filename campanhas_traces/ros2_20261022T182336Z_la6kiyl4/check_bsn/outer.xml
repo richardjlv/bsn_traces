@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="513.716" timestamp="2026-10-22T18:23:38.821349" hostname="bsn-virtualbox"><testcase classname="test.test_check_bsn_bdd" name="test_check_bsn_bdd" time="513.541"><failure message="test_check_bsn_bdd.TestCheckBsn.test_bdd_scenarios failed">
+=========================================================================================================================================================================================================================================================================================================
+FAIL: test_check_bsn_bdd.TestCheckBsn.test_bdd_scenarios
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/ros_ws/src/bsn_ros2/features/test/test_check_bsn_bdd.py", line 46, in test_bdd_scenarios
+    assert result.returncode == 0, (
+AssertionError: steps/test_check_bsn.py failed - see the pytest output above for which scenario and why
+assert 1 == 0
+ +  where 1 = CompletedProcess(args=['/usr/bin/python3', '-m', 'pytest', '-v', 'steps/test_check_bsn.py', '--junitxml=/ros_ws/src/campanhas_traces/ros2_20261022T182336Z_la6kiyl4/check_bsn/internal_junit/test_check_bsn.xml', '-rA', '-p', 'no:pytest_cov', '-o', 'addopts='], returncode=1).returncode
+</failure></testcase></testsuite></testsuites>
