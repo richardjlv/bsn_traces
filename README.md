@@ -24,3 +24,7 @@ As próximas coletas devem usar `ferramentas_traces/coletar_ros2.py` sem `--with
 ## Cobertura geral
 
 As campanhas gerais ROS 1 (`bsn2`) e ROS 2 (`bsn_ros2`) estão em [cobertura_geral](cobertura_geral/README.md), com arquivos integrais compactados, inventários SHA-256 e relatórios para consulta. As campanhas por feature foram executadas separadamente, cada uma com inicialização e encerramento próprios.
+
+## Diagnósticos posteriores
+
+- [23/10/2026 — cenário temporal de managing_system](diagnosticos/managing_system_2026-10-23/README.md): reexecução após alteração da ordem dos cenários; aprovação do executor externo, sem nova cobertura nem resultados individuais preservados.
