@@ -119,6 +119,7 @@ def main():
                     ros_distro=os.environ.get('ROS_DISTRO'), domain_id=args.domain_id,
                     coverage_enabled=not args.without_coverage,
                     direct_readiness=args.direct_readiness,
+                    managing_groups=os.environ.get('BSN_MANAGING_GROUPS', 'default'),
                     hub_stack_after=args.hub_stack_after,
                     selected_features=selected, features={}, successful_collection=False,
                     limitations=['Coverage is per feature, including setup and shutdown, not per scenario.',

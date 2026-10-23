@@ -28,3 +28,5 @@ As campanhas gerais ROS 1 (`bsn2`) e ROS 2 (`bsn_ros2`) estão em [cobertura_ger
 ## Diagnósticos posteriores
 
 - [23/10/2026 — cenário temporal de managing_system](diagnosticos/managing_system_2026-10-23/README.md): reexecução após alteração da ordem dos cenários; aprovação do executor externo, sem nova cobertura nem resultados individuais preservados.
+
+- [23/10/2026 — isolamento dos cenários de adaptação](diagnosticos/managing_system_isolado_2026-10-23/README.md): temporal aprovado sozinho e após recuperação em pilha nova; execução completa com 8 PASS, 2 XFAIL e 1 timeout no estímulo de registro, corrigido e aprovado em reexecução individual. XML internos, traces e cobertura preservados.

@@ -41,3 +41,23 @@ O runner recusa iniciar com menos de 100 MiB livres e interrompe a sequência an
 `python3 -m pytest -q -o addopts= ferramentas_traces/test_trace_plugin.py` verifica o registro de um cenário aprovado e de uma falha esperada, sem iniciar ROS. As execuções reais têm seus próprios manifestos e devem ser avaliadas separadamente.
 
 O executor deste diretório é para ROS 2. ROS 1 não está instalado no ambiente atual; não há nova campanha ROS 1 nesta etapa. A instrumentação do legado precisa ser adaptada e validada no ambiente Melodic, inclusive quanto à versão Python/pytest-bdd e à separação dos perfis LLVM por feature. Não aplicar os percentuais Python às fontes C++.
+
+## Isolamento dos cenários de managing_system
+
+O executor de `managing_system` inicia uma pilha ROS nova para cada cenário de adaptação. Os seis casos de topologia compartilham apenas uma montagem de inspeção. O pytest externo continua sendo um único item que agrega os lançamentos; os resultados individuais ficam em `internal_junit/test_managing_system_<grupo>.xml`, sem sobrescrever o grupo anterior.
+
+A ordem padrão dos grupos é `topology,increases,recovers,deadline,silent,logging`. Assim, o cenário temporal também é exercitado depois do cenário de recuperação, mas com processos e estado em memória novos. Antes dos cenários que usam o controlador, a fixture aguarda um primeiro comando real para o oxímetro (até 90 s), fora do prazo de resposta do cenário. Essa prontidão não comprova confiabilidade estável nem causalidade do comando posterior.
+
+Para executar somente o cenário temporal:
+
+```bash
+BSN_MANAGING_GROUPS=deadline python3 /ros_ws/src/ferramentas_traces/coletar_ros2.py --features managing_system --direct-readiness --timeout 300
+```
+
+Para a feature completa:
+
+```bash
+python3 /ros_ws/src/ferramentas_traces/coletar_ros2.py --features managing_system --direct-readiness --timeout 1200
+```
+
+A cobertura da feature completa passa a ser a união das montagens independentes, incluindo suas inicializações e encerramentos. Não comparar sua variação com uma montagem compartilhada como se fosse apenas aumento de cobertura dos comportamentos. `BSN_MANAGING_GROUPS` permite selecionar e ordenar grupos distintos e é registrado no manifesto; `default` identifica a ordem do executor arquivado. Com `--direct-readiness`, tanto o executor externo quanto a fixture interna consultam os serviços de ciclo de vida, mantendo a exigência de estado ativo e o prazo de 60 s.

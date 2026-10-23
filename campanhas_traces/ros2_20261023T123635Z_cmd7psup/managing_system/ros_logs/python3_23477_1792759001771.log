@@ -1,0 +1,62 @@
+[INFO] [1792759002.503228364] [abps_node]: Initialized sensor: abps, vital sign: abps, frequency: 1.0Hz
+[INFO] [1792759002.528537127] [abps_node]: Lifecycle Manager initialized
+[INFO] [1792759002.555813189] [abps_node]: PublisherManagerBase initialized successfully
+[INFO] [1792759003.065555192] [abps_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792759003.066136496] [abps_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792759003.081696800] [abps_node]: Starting individual lifecycle management...
+[INFO] [1792759003.082245247] [abps_node]: Lifecycle auto-management started
+[INFO] [1792759003.095291607] [abps_node]: Successfully registered with ParamAdapter
+[INFO] [1792759005.083315226] [abps_node]: Auto-configuring node...
+[INFO] [1792759005.083805545] [abps_node]: Triggering node configuration...
+[INFO] [1792759005.084776185] [abps_node]: Configuring abps sensor...
+[INFO] [1792759005.089022535] [abps_node]: Risk ranges configured for abps: HR0=(-1.0, -1.0), MR0=(-1.0, -1.0), LR=(0.0, 120.0), MR1=(120.0, 140.0), HR1=(140.0, 300.0)
+[INFO] [1792759005.089608357] [abps_node]: Node configuration successful
+[INFO] [1792759006.091069934] [abps_node]: Triggering node activation...
+[INFO] [1792759006.091586179] [abps_node]: Activating abps sensor...
+[INFO] [1792759006.092303165] [abps_node]: Node activation successful
+[INFO] [1792759007.089953496] [abps_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792759008.087066642] [abps_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792759009.097150411] [abps_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792759010.089723439] [abps_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792759011.094683058] [abps_node]: ++Transfer++
+ Value: 51.82840806471548, Risk: 2.72%, Level: low, Battery: 99.6%
+[INFO] [1792759012.087898858] [abps_node]: ++Transfer++
+ Value: 54.968104175922136, Risk: 1.68%, Level: low, Battery: 99.4%
+[INFO] [1792759013.087733013] [abps_node]: ++Transfer++
+ Value: 69.99345968334015, Risk: 3.33%, Level: low, Battery: 99.3%
+[INFO] [1792759014.088702888] [abps_node]: ++Transfer++
+ Value: 68.52106803640977, Risk: 2.84%, Level: low, Battery: 99.2%
+[INFO] [1792759015.086987540] [abps_node]: ++Transfer++
+ Value: 70.34828146649811, Risk: 3.45%, Level: low, Battery: 99.1%
+[INFO] [1792759016.086800116] [abps_node]: ++Transfer++
+ Value: 68.97640371484661, Risk: 2.99%, Level: low, Battery: 98.9%
+[INFO] [1792759017.089424645] [abps_node]: ++Transfer++
+ Value: 68.71861044255004, Risk: 2.91%, Level: low, Battery: 98.8%
+[INFO] [1792759018.086566364] [abps_node]: ++Transfer++
+ Value: 66.19682003429457, Risk: 2.07%, Level: low, Battery: 98.7%
+[INFO] [1792759019.088865275] [abps_node]: ++Transfer++
+ Value: 72.42799286836006, Risk: 4.14%, Level: low, Battery: 98.6%
+[INFO] [1792759020.100246634] [abps_node]: ++Transfer++
+ Value: 80.85996587981958, Risk: 6.95%, Level: low, Battery: 98.4%
+[INFO] [1792759021.097600242] [abps_node]: ++Transfer++
+ Value: 82.78027897668143, Risk: 7.59%, Level: low, Battery: 98.3%
+[INFO] [1792759022.096521412] [abps_node]: ++Transfer++
+ Value: 86.62418483679525, Risk: 8.87%, Level: low, Battery: 98.2%
+[INFO] [1792759023.093501212] [abps_node]: ++Transfer++
+ Value: 98.92153457926433, Risk: 12.97%, Level: low, Battery: 98.1%
+[INFO] [1792759024.107477487] [abps_node]: ++Transfer++
+ Value: 100.19812632435557, Risk: 13.40%, Level: low, Battery: 97.9%
+[INFO] [1792759025.108606091] [abps_node]: ++Transfer++
+ Value: 105.95886364253825, Risk: 15.32%, Level: low, Battery: 97.8%
+[INFO] [1792759026.103038038] [abps_node]: ++Transfer++
+ Value: 130.16201259986968, Risk: 43.36%, Level: moderate, Battery: 97.7%
+[INFO] [1792759027.104411103] [abps_node]: ++Transfer++
+ Value: 130.0567122247616, Risk: 43.12%, Level: moderate, Battery: 97.6%
+[INFO] [1792759028.093244263] [abps_node]: ++Transfer++
+ Value: 130.5971441190882, Risk: 44.31%, Level: moderate, Battery: 97.4%
+[INFO] [1792759029.401599015] [abps_node]: ++Transfer++
+ Value: 132.8179785696413, Risk: 49.20%, Level: moderate, Battery: 97.3%
+[INFO] [1792759030.087060301] [abps_node]: ++Transfer++
+ Value: 133.15267243222624, Risk: 49.94%, Level: moderate, Battery: 97.2%
+[INFO] [1792759031.108623554] [abps_node]: ++Transfer++
+ Value: 132.7625647280691, Risk: 49.08%, Level: moderate, Battery: 97.1%

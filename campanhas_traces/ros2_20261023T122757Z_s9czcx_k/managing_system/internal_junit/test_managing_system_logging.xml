@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="16.745" timestamp="2026-10-23T12:35:09.188832" hostname="bsn-virtualbox"><testcase classname="steps.test_managing_system" name="test_a_failed_adaptation_attempt_is_recorded_in_the_system_log_g4g5" time="15.612"><failure message="subprocess.TimeoutExpired: Command '['ros2', 'topic', 'pub', '--once', '/log_adapt', 'bsn_interfaces/msg/AdaptationCommand', &quot;{source: '/enactor', target: '/g3t1_1', action: 'freq=5.0'}&quot;]' timed out after 5 seconds">request = &lt;FixtureRequest for &lt;Function test_a_failed_adaptation_attempt_is_recorded_in_the_system_log_g4g5&gt;&gt;
+_pytest_bdd_example = {}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+steps/test_managing_system.py:578: in adaptation_command_issued_for_sensor
+    subprocess.run(
+/usr/lib/python3.12/subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+/usr/lib/python3.12/subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+/usr/lib/python3.12/subprocess.py:2116: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;Popen: returncode: -9 args: ['ros2', 'topic', 'pub', '--once', '/log_adapt'...&gt;
+endtime = 25087.637287314, orig_timeout = 5, stdout_seq = [], stderr_seq = []
+skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() &gt; endtime:
+&gt;           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['ros2', 'topic', 'pub', '--once', '/log_adapt', 'bsn_interfaces/msg/AdaptationCommand', "{source: '/enactor', target: '/g3t1_1', action: 'freq=5.0'}"]' timed out after 5 seconds
+
+/usr/lib/python3.12/subprocess.py:1253: TimeoutExpired</failure></testcase></testsuite></testsuites>

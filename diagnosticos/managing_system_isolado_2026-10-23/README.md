@@ -1,0 +1,51 @@
+# Isolamento dos cenários de managing_system — 23/10/2026
+
+## Implementação e alcance
+
+O executor passou a criar uma pilha ROS nova para cada um dos cinco cenários de adaptação. Os seis casos de topologia compartilham uma montagem de inspeção separada. Os grupos são executados sequencialmente na ordem `topology,increases,recovers,deadline,silent,logging`, com encerramento da montagem anterior. O estado em memória do controlador e do repositório é inicializado em novos processos. A seleção foi conferida por coleta do pytest: os 11 casos aparecem exatamente uma vez nos seis grupos (`selecao_cenarios.json`).
+
+Cada grupo produz seu próprio XML interno, evitando sobrescrita. O executor externo continua sendo um único item agregador; suas contagens não devem ser somadas às internas. A fixture dos cenários que observam o controlador aguarda um primeiro comando real para o oxímetro, por até 90 s, para separar seu período inicial de 60 ciclos do prazo de resposta do cenário. Essa observação comprova atividade, não estabilidade da confiabilidade. A configuração de produção e as asserções funcionais não foram alteradas por esta intervenção.
+
+## Execuções preservadas
+
+| Campanha | Montagem | Resultado interno |
+|---|---|---|
+| [122341Z](../../campanhas_traces/ros2_20261023T122341Z_7sj4kj7u/) | Somente temporal; primeira tentativa | Nenhum cenário executado: a fixture interna por CLI esgotou a preparação, apesar da prontidão externa por serviço |
+| [122618Z](../../campanhas_traces/ros2_20261023T122618Z_mqbypydy/) | Somente temporal; prontidão direta também na fixture interna | 1 PASS; 1 cenário e 3 passos no trace |
+| [122757Z](../../campanhas_traces/ros2_20261023T122757Z_s9czcx_k/) | Feature completa, seis montagens | 8 PASS, 2 XFAIL, 1 FAIL; 11 cenários e 28 passos no trace |
+| [123635Z](../../campanhas_traces/ros2_20261023T123635Z_cmd7psup/) | Somente registro, após correção do publicador de teste | 1 PASS; 1 cenário e 3 passos no trace |
+
+Todos os casos registrados nos XML das três execuções com cenários possuem eventos correspondentes no trace (`missing_case_traces` vazio). A tentativa de preparação tem zero casos: seu arquivo XML vazio não representa aprovação. Não foi realizada outra execução completa após corrigir o publicador do cenário de registro. Assim, não se declara uma única execução completa posterior com nove aprovações e duas falhas esperadas.
+
+O cenário temporal passou sozinho e depois do ensaio de recuperação no executor completo, com uma nova pilha. Isso sustenta a remoção da interferência observada nessas execuções; não prova ausência de dependências em toda condição. A recuperação continuou como XFAIL no `Then`, por ausência de comando inferior ao pico medido de 6,380 Hz. A expectativa de silêncio também continuou como XFAIL no `Then`, pela presença de comandos. Os traces identificam essas asserções, distinguindo as falhas esperadas de problemas de preparação.
+
+A falha inesperada da execução completa ocorreu no `When` do registro: `ros2 topic pub --once` excedeu seu limite operacional de 5 s ao publicar o comando sintético. Essa falha não demonstra perda de persistência. A chamada foi substituída por um publicador no participante rclpy já existente, aguardando um assinante e mantendo cinco publicações do mesmo conteúdo (`source=/enactor`, `target=/g3t1_1`, `action=freq=5.0`). A espera de 10 s e a asserção sobre o registro real em `/persist` foram preservadas. A reexecução individual aprovou. O resultado verifica o encaminhamento do registro; não acrescenta uma consulta a armazenamento durável.
+
+## Cobertura
+
+| Execução | Linhas cobertas/total | Ramos cobertos/total |
+|---|---:|---:|
+| Temporal isolado | 2.331/3.147 | 499/888 |
+| Feature completa com montagens independentes | 2.352/3.147 | 519/888 |
+| Registro isolado corrigido | 2.166/3.147 | 430/888 |
+
+A cobertura inclui preparação, execução e encerramento. Na feature completa, ela é a união das seis montagens e inclui a tentativa reprovada. Os percentuais combinados emitidos por coverage.py não devem ser rotulados como cobertura apenas de linhas. As coberturas dos três relatórios não são somadas nem substituem a campanha geral de 01/10. A execução de preparação também pode cobrir fontes, mesmo sem executar um cenário.
+
+## Limitações e continuidade
+
+O oráculo temporal ainda aceita qualquer comando após iniciar a publicação dos estados `fail`. Não observa diretamente o cruzamento de um limiar nem estabelece causalidade entre estímulo e resposta. A fixture de prontidão não resolve essa limitação. O estímulo repetido de status ainda usa CLI, enquanto a correção do publicador persistente se aplica apenas ao cenário de registro.
+
+O próximo refinamento é observar a confiabilidade e os comandos correlacionados ao estímulo, com relógio monotônico e condições iniciais verificáveis. A repetição em ordens adicionais e uma nova execução completa com a correção do publicador podem ampliar a avaliação. As campanhas históricas e a primeira mitigação por reordenação permanecem preservadas.
+
+## Reprodução
+
+```sh
+# Cenário temporal isolado
+BSN_MANAGING_GROUPS=deadline python3 src/ferramentas_traces/coletar_ros2.py --features managing_system --direct-readiness --timeout 300
+# Todos os cenários, com montagens independentes
+python3 src/ferramentas_traces/coletar_ros2.py --features managing_system --direct-readiness --timeout 1200
+# Cenário de registro isolado
+BSN_MANAGING_GROUPS=logging python3 src/ferramentas_traces/coletar_ros2.py --features managing_system --direct-readiness --timeout 300
+```
+
+Os comandos foram executados a partir de `/ros_ws`, com ROS Jazzy e o workspace carregados. Cada campanha contém fontes, diferenças locais, dependências, hashes, XML, logs, trace e cobertura próprios. O primeiro manifesto não inclui a opção de grupos (acrescentada ao coletor em seguida); sua seleção `deadline` está registrada neste relatório e no comando pytest interno do log. As fontes arquivadas são a referência exata de cada execução; pequenas revisões posteriores de comentários não alteram esses snapshots.
