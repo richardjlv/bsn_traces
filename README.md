@@ -20,3 +20,7 @@ As campanhas de 22/10/2026 com `check_bsn`, `knowledge_repo`, `target_system`, `
 As campanhas históricas `ros2_20261022T181912Z_lo_2z9we` (`managing_system`) e `ros2_20261022T182336Z_la6kiyl4` (`check_bsn`) incluem cobertura por feature. Seus manifestos registram as divergências de cenário daquela rodada; cobertura e aprovação funcional devem ser interpretadas separadamente.
 
 As próximas coletas devem usar `ferramentas_traces/coletar_ros2.py` sem `--without-coverage`, executando uma feature por vez e publicando a campanha antes de liberar espaço local.
+
+## Cobertura geral
+
+As campanhas gerais ROS 1 (`bsn2`) e ROS 2 (`bsn_ros2`) estão em [cobertura_geral](cobertura_geral/README.md), com arquivos integrais compactados, inventários SHA-256 e relatórios para consulta. As campanhas por feature foram executadas separadamente, cada uma com inicialização e encerramento próprios.
