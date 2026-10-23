@@ -1,0 +1,144 @@
+[INFO] [1792781085.917433961] [glucosemeter_node]: Initialized sensor: glucosemeter, vital sign: glucose, frequency: 1.0Hz
+[INFO] [1792781085.948493826] [glucosemeter_node]: Lifecycle Manager initialized
+[INFO] [1792781085.997750126] [glucosemeter_node]: PublisherManagerBase initialized successfully
+[INFO] [1792781087.005406276] [glucosemeter_node]: Service not available, waiting again...
+[INFO] [1792781088.008017328] [glucosemeter_node]: Service not available, waiting again...
+[INFO] [1792781088.512137081] [glucosemeter_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792781088.512804506] [glucosemeter_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792781088.517186741] [glucosemeter_node]: Starting individual lifecycle management...
+[INFO] [1792781088.518043834] [glucosemeter_node]: Lifecycle auto-management started
+[INFO] [1792781088.601133105] [glucosemeter_node]: Successfully registered with ParamAdapter
+[INFO] [1792781090.519005816] [glucosemeter_node]: Auto-configuring node...
+[INFO] [1792781090.522402318] [glucosemeter_node]: Triggering node configuration...
+[INFO] [1792781090.525900727] [glucosemeter_node]: Configuring glucosemeter sensor...
+[INFO] [1792781090.539403295] [glucosemeter_node]: Risk ranges configured for glucosemeter: HR0=(20.0, 39.99), MR0=(40.0, 54.99), LR=(55.0, 95.99), MR1=(96.0, 119.99), HR1=(120.0, 200.0)
+[INFO] [1792781090.540152536] [glucosemeter_node]: Node configuration successful
+[INFO] [1792781091.542669870] [glucosemeter_node]: Triggering node activation...
+[INFO] [1792781091.543269128] [glucosemeter_node]: Activating glucosemeter sensor...
+[INFO] [1792781091.545277717] [glucosemeter_node]: Node activation successful
+[INFO] [1792781092.527181132] [glucosemeter_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792781093.526075073] [glucosemeter_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792781094.527827691] [glucosemeter_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792781095.528035415] [glucosemeter_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792781096.536019306] [glucosemeter_node]: ++Transfer++
+ Value: 79.85718944991876, Risk: 4.26%, Level: low, Battery: 99.6%
+[INFO] [1792781097.527108446] [glucosemeter_node]: ++Transfer++
+ Value: 82.49950921346641, Risk: 6.84%, Level: low, Battery: 99.4%
+[INFO] [1792781098.522536774] [glucosemeter_node]: ++Transfer++
+ Value: 85.87117945156884, Risk: 10.13%, Level: low, Battery: 99.3%
+[INFO] [1792781099.521693243] [glucosemeter_node]: ++Transfer++
+ Value: 81.3655176819836, Risk: 5.73%, Level: low, Battery: 99.2%
+[INFO] [1792781100.522800342] [glucosemeter_node]: ++Transfer++
+ Value: 75.85709269174825, Risk: 0.35%, Level: low, Battery: 99.1%
+[INFO] [1792781101.524379058] [glucosemeter_node]: ++Transfer++
+ Value: 75.52352134872588, Risk: 0.03%, Level: low, Battery: 98.9%
+[INFO] [1792781102.557324843] [glucosemeter_node]: ++Transfer++
+ Value: 73.64802418228041, Risk: 1.80%, Level: low, Battery: 98.8%
+[INFO] [1792781103.529736323] [glucosemeter_node]: ++Transfer++
+ Value: 73.30948748292668, Risk: 2.13%, Level: low, Battery: 98.7%
+[INFO] [1792781104.541180106] [glucosemeter_node]: ++Transfer++
+ Value: 79.93888461100148, Risk: 4.34%, Level: low, Battery: 98.6%
+[INFO] [1792781105.550604128] [glucosemeter_node]: ++Transfer++
+ Value: 80.18237397843878, Risk: 4.57%, Level: low, Battery: 98.4%
+[INFO] [1792781106.542497627] [glucosemeter_node]: ++Transfer++
+ Value: 82.995406044629, Risk: 7.32%, Level: low, Battery: 98.3%
+[INFO] [1792781107.535640441] [glucosemeter_node]: ++Transfer++
+ Value: 83.48622970691586, Risk: 7.80%, Level: low, Battery: 98.2%
+[INFO] [1792781108.531988625] [glucosemeter_node]: ++Transfer++
+ Value: 84.8696491334538, Risk: 9.15%, Level: low, Battery: 98.1%
+[INFO] [1792781109.525796990] [glucosemeter_node]: ++Transfer++
+ Value: 80.05631536310726, Risk: 4.45%, Level: low, Battery: 97.9%
+[INFO] [1792781110.525163672] [glucosemeter_node]: ++Transfer++
+ Value: 80.66443262618854, Risk: 5.04%, Level: low, Battery: 97.8%
+[INFO] [1792781111.539999929] [glucosemeter_node]: ++Transfer++
+ Value: 79.77826869875068, Risk: 4.18%, Level: low, Battery: 97.7%
+[INFO] [1792781112.535748802] [glucosemeter_node]: ++Transfer++
+ Value: 75.93468798830588, Risk: 0.43%, Level: low, Battery: 97.6%
+[INFO] [1792781113.529487491] [glucosemeter_node]: ++Transfer++
+ Value: 73.35422563142332, Risk: 2.09%, Level: low, Battery: 97.4%
+[INFO] [1792781114.548358219] [glucosemeter_node]: ++Transfer++
+ Value: 71.39789052430982, Risk: 4.00%, Level: low, Battery: 97.3%
+[INFO] [1792781115.542625712] [glucosemeter_node]: ++Transfer++
+ Value: 71.81998572157394, Risk: 3.59%, Level: low, Battery: 97.2%
+[INFO] [1792781116.535721612] [glucosemeter_node]: ++Transfer++
+ Value: 70.98029374911678, Risk: 4.41%, Level: low, Battery: 97.1%
+[INFO] [1792781117.534930807] [glucosemeter_node]: ++Transfer++
+ Value: 74.20019482375834, Risk: 1.26%, Level: low, Battery: 96.9%
+[INFO] [1792781118.536860204] [glucosemeter_node]: ++Transfer++
+ Value: 75.58761537019998, Risk: 0.09%, Level: low, Battery: 96.8%
+[INFO] [1792781119.536806293] [glucosemeter_node]: ++Transfer++
+ Value: 77.09251641241747, Risk: 1.56%, Level: low, Battery: 96.7%
+[INFO] [1792781120.549883459] [glucosemeter_node]: ++Transfer++
+ Value: 80.28799392037232, Risk: 4.68%, Level: low, Battery: 96.6%
+[INFO] [1792781121.551807744] [glucosemeter_node]: ++Transfer++
+ Value: 81.41627518606529, Risk: 5.78%, Level: low, Battery: 96.4%
+[INFO] [1792781122.582529495] [glucosemeter_node]: ++Transfer++
+ Value: 81.36334127946301, Risk: 5.73%, Level: low, Battery: 96.3%
+[INFO] [1792781123.545624848] [glucosemeter_node]: ++Transfer++
+ Value: 80.94536547465907, Risk: 5.32%, Level: low, Battery: 96.2%
+[INFO] [1792781124.569574012] [glucosemeter_node]: ++Transfer++
+ Value: 85.53311936181329, Risk: 9.80%, Level: low, Battery: 96.1%
+[INFO] [1792781125.550116592] [glucosemeter_node]: ++Transfer++
+ Value: 80.46249871345444, Risk: 4.85%, Level: low, Battery: 95.9%
+[INFO] [1792781126.570191636] [glucosemeter_node]: ++Transfer++
+ Value: 83.69872067000804, Risk: 8.01%, Level: low, Battery: 95.8%
+[INFO] [1792781127.541432109] [glucosemeter_node]: ++Transfer++
+ Value: 89.36368630224516, Risk: 13.53%, Level: low, Battery: 95.7%
+[INFO] [1792781128.557751056] [glucosemeter_node]: ++Transfer++
+ Value: 92.62456773027455, Risk: 16.72%, Level: low, Battery: 95.6%
+[INFO] [1792781129.541095729] [glucosemeter_node]: ++Transfer++
+ Value: 98.52955090405383, Risk: 25.64%, Level: moderate, Battery: 95.4%
+[INFO] [1792781130.547774062] [glucosemeter_node]: ++Transfer++
+ Value: 110.3884133582213, Risk: 47.39%, Level: moderate, Battery: 95.3%
+[INFO] [1792781131.528969622] [glucosemeter_node]: ++Transfer++
+ Value: 111.97892843525146, Risk: 50.31%, Level: moderate, Battery: 95.2%
+[INFO] [1792781132.540340301] [glucosemeter_node]: ++Transfer++
+ Value: 111.55953168817113, Risk: 49.54%, Level: moderate, Battery: 95.1%
+[INFO] [1792781133.538185770] [glucosemeter_node]: ++Transfer++
+ Value: 112.87745733184686, Risk: 51.95%, Level: moderate, Battery: 94.9%
+[INFO] [1792781134.541642013] [glucosemeter_node]: ++Transfer++
+ Value: 111.00410827680226, Risk: 48.52%, Level: moderate, Battery: 94.8%
+[INFO] [1792781135.559252213] [glucosemeter_node]: ++Transfer++
+ Value: 108.36627602168917, Risk: 43.68%, Level: moderate, Battery: 94.7%
+[INFO] [1792781136.561971693] [glucosemeter_node]: ++Transfer++
+ Value: 117.87457029366428, Risk: 61.12%, Level: moderate, Battery: 94.6%
+[INFO] [1792781137.538309242] [glucosemeter_node]: ++Transfer++
+ Value: 125.79208520065693, Risk: 68.46%, Level: high, Battery: 94.4%
+[INFO] [1792781138.543695370] [glucosemeter_node]: ++Transfer++
+ Value: 136.434849762287, Risk: 72.98%, Level: high, Battery: 94.3%
+[INFO] [1792781139.533837238] [glucosemeter_node]: ++Transfer++
+ Value: 152.5437284699996, Risk: 79.83%, Level: high, Battery: 94.2%
+[INFO] [1792781140.539059924] [glucosemeter_node]: ++Transfer++
+ Value: 166.72037542728197, Risk: 85.86%, Level: high, Battery: 94.1%
+[INFO] [1792781141.543666605] [glucosemeter_node]: ++Transfer++
+ Value: 166.2548814456415, Risk: 85.66%, Level: high, Battery: 93.9%
+[INFO] [1792781142.529996480] [glucosemeter_node]: ++Transfer++
+ Value: 165.81638280566662, Risk: 85.47%, Level: high, Battery: 93.8%
+[INFO] [1792781143.539471315] [glucosemeter_node]: ++Transfer++
+ Value: 166.58229459790226, Risk: 85.80%, Level: high, Battery: 93.7%
+[INFO] [1792781144.529851080] [glucosemeter_node]: ++Transfer++
+ Value: 162.26572689152516, Risk: 83.96%, Level: high, Battery: 93.6%
+[INFO] [1792781145.533731970] [glucosemeter_node]: ++Transfer++
+ Value: 164.9350011987145, Risk: 85.10%, Level: high, Battery: 93.4%
+[INFO] [1792781146.558064671] [glucosemeter_node]: ++Transfer++
+ Value: 162.02391635187718, Risk: 83.86%, Level: high, Battery: 93.3%
+[INFO] [1792781147.348724865] [glucosemeter_node]: Received adaptation command: freq=1.28
+[INFO] [1792781147.349458617] [glucosemeter_node]: Changing frequency to 1.28Hz
+[INFO] [1792781147.536230429] [glucosemeter_node]: ++Transfer++
+ Value: 153.70447783045014, Risk: 80.32%, Level: high, Battery: 93.2%
+[INFO] [1792781148.320740540] [glucosemeter_node]: Received adaptation command: freq=1.57
+[INFO] [1792781148.322732364] [glucosemeter_node]: Changing frequency to 1.57Hz
+[INFO] [1792781148.538555643] [glucosemeter_node]: ++Transfer++
+ Value: 141.16825487624408, Risk: 75.00%, Level: high, Battery: 93.1%
+[INFO] [1792781149.314213698] [glucosemeter_node]: Received adaptation command: freq=1.85
+[INFO] [1792781149.315519145] [glucosemeter_node]: Changing frequency to 1.85Hz
+[INFO] [1792781149.539599055] [glucosemeter_node]: ++Transfer++
+ Value: 126.97035346565467, Risk: 68.96%, Level: high, Battery: 92.9%
+[INFO] [1792781150.315047050] [glucosemeter_node]: Received adaptation command: freq=2.14
+[INFO] [1792781150.315772238] [glucosemeter_node]: Changing frequency to 2.14Hz
+[INFO] [1792781150.538802657] [glucosemeter_node]: ++Transfer++
+ Value: 112.63410646881134, Risk: 51.51%, Level: moderate, Battery: 92.8%
+[INFO] [1792781151.319879023] [glucosemeter_node]: Received adaptation command: freq=2.42
+[INFO] [1792781151.320454698] [glucosemeter_node]: Changing frequency to 2.42Hz
+[INFO] [1792781151.530866463] [glucosemeter_node]: ++Transfer++
+ Value: 105.82770117092628, Risk: 39.02%, Level: moderate, Battery: 92.7%

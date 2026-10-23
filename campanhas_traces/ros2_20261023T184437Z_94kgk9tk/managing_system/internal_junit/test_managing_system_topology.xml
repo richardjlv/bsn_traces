@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="6" time="53.901" timestamp="2026-10-23T18:44:57.517940" hostname="bsn-virtualbox"><testcase classname="steps.test_managing_system" name="test_the_adaptation_enactor_exchanges_adaptation_strategies_with_the_reliability_engine" time="9.593" /><testcase classname="steps.test_managing_system" name="test_the_adaptation_enactor_exchanges_adaptation_records_with_the_system_log" time="5.080"><failure message="AssertionError: Node(s) not online after 5.0s: /enactor&#10;assert not '/enactor'">request = &lt;FixtureRequest for &lt;Function test_the_adaptation_enactor_exchanges_adaptation_records_with_the_system_log&gt;&gt;
+_pytest_bdd_example = {}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+steps/test_managing_system.py:110: in adaptation_enactor_running
+    _nodes_online(ENACTOR_NODE)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+timeout_s = 5.0, node_names = ('enactor',), expected = {'/enactor'}
+
+    def _nodes_online(*node_names, timeout_s=5.0):
+        """Wait briefly for a consistent DDS graph observation.
+    
+        A newly created ``ros2 node list`` participant may miss an already-active
+        node during discovery.  The precondition remains the same (every node
+        must be visible); retrying avoids treating one transient graph snapshot as
+        evidence that the component is unavailable.
+        """
+        expected = {f"/{name}" for name in node_names}
+        deadline = time.monotonic() + timeout_s
+        observed = set()
+        while True:
+            remaining = deadline - time.monotonic()
+            if remaining &lt;= 0:
+                missing = ", ".join(sorted(expected - observed))
+&gt;               assert not missing, f"Node(s) not online after {timeout_s:.1f}s: {missing}"
+E               AssertionError: Node(s) not online after 5.0s: /enactor
+E               assert not '/enactor'
+
+steps/conftest.py:54: AssertionError</failure></testcase><testcase classname="steps.test_managing_system" name="test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor event]" time="5.023"><failure message="AssertionError: Node(s) not online after 5.0s: /logger&#10;assert not '/logger'">request = &lt;FixtureRequest for &lt;Function test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor event]&gt;&gt;
+_pytest_bdd_example = {'topic': 'sensor event'}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+steps/test_managing_system.py:82: in system_log_is_running
+    _nodes_online(LOGGER_NODE)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+timeout_s = 5.0, node_names = ('logger',), expected = {'/logger'}
+
+    def _nodes_online(*node_names, timeout_s=5.0):
+        """Wait briefly for a consistent DDS graph observation.
+    
+        A newly created ``ros2 node list`` participant may miss an already-active
+        node during discovery.  The precondition remains the same (every node
+        must be visible); retrying avoids treating one transient graph snapshot as
+        evidence that the component is unavailable.
+        """
+        expected = {f"/{name}" for name in node_names}
+        deadline = time.monotonic() + timeout_s
+        observed = set()
+        while True:
+            remaining = deadline - time.monotonic()
+            if remaining &lt;= 0:
+                missing = ", ".join(sorted(expected - observed))
+&gt;               assert not missing, f"Node(s) not online after {timeout_s:.1f}s: {missing}"
+E               AssertionError: Node(s) not online after 5.0s: /logger
+E               assert not '/logger'
+
+steps/conftest.py:54: AssertionError</failure></testcase><testcase classname="steps.test_managing_system" name="test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor status]" time="10.890" /><testcase classname="steps.test_managing_system" name="test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor energy status]" time="9.029" /><testcase classname="steps.test_managing_system" name="test_the_system_log_sends_reconfiguration_requests_to_the_parameter_adapter" time="12.849" /></testsuite></testsuites>

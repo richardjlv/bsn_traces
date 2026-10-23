@@ -15,7 +15,7 @@ Cada grupo produz seu próprio XML interno, evitando sobrescrita. O executor ext
 | [122757Z](../../campanhas_traces/ros2_20261023T122757Z_s9czcx_k/) | Feature completa, seis montagens | 8 PASS, 2 XFAIL, 1 FAIL; 11 cenários e 28 passos no trace |
 | [123635Z](../../campanhas_traces/ros2_20261023T123635Z_cmd7psup/) | Somente registro, após correção do publicador de teste | 1 PASS; 1 cenário e 3 passos no trace |
 
-Todos os casos registrados nos XML das três execuções com cenários possuem eventos correspondentes no trace (`missing_case_traces` vazio). A tentativa de preparação tem zero casos: seu arquivo XML vazio não representa aprovação. Não foi realizada outra execução completa após corrigir o publicador do cenário de registro. Assim, não se declara uma única execução completa posterior com nove aprovações e duas falhas esperadas.
+Todos os casos registrados nos XML das três execuções com cenários possuem eventos correspondentes no trace (`missing_case_traces` vazio). A tentativa de preparação tem zero casos: seu arquivo XML vazio não representa aprovação. Os resultados desta primeira etapa não são somados como se pertencessem a uma única execução. A continuação está documentada abaixo.
 
 O cenário temporal passou sozinho e depois do ensaio de recuperação no executor completo, com uma nova pilha. Isso sustenta a remoção da interferência observada nessas execuções; não prova ausência de dependências em toda condição. A recuperação continuou como XFAIL no `Then`, por ausência de comando inferior ao pico medido de 6,380 Hz. A expectativa de silêncio também continuou como XFAIL no `Then`, pela presença de comandos. Os traces identificam essas asserções, distinguindo as falhas esperadas de problemas de preparação.
 
@@ -35,7 +35,7 @@ A cobertura inclui preparação, execução e encerramento. Na feature completa,
 
 O oráculo temporal ainda aceita qualquer comando após iniciar a publicação dos estados `fail`. Não observa diretamente o cruzamento de um limiar nem estabelece causalidade entre estímulo e resposta. A fixture de prontidão não resolve essa limitação. O estímulo repetido de status ainda usa CLI, enquanto a correção do publicador persistente se aplica apenas ao cenário de registro.
 
-O próximo refinamento é observar a confiabilidade e os comandos correlacionados ao estímulo, com relógio monotônico e condições iniciais verificáveis. A repetição em ordens adicionais e uma nova execução completa com a correção do publicador podem ampliar a avaliação. As campanhas históricas e a primeira mitigação por reordenação permanecem preservadas.
+O próximo refinamento é observar a confiabilidade e os comandos correlacionados ao estímulo, com relógio monotônico e condições iniciais verificáveis. A repetição em ordens adicionais pode ampliar a avaliação. As campanhas históricas e a primeira mitigação por reordenação permanecem preservadas.
 
 ## Reprodução
 
@@ -49,3 +49,13 @@ BSN_MANAGING_GROUPS=logging python3 src/ferramentas_traces/coletar_ros2.py --fea
 ```
 
 Os comandos foram executados a partir de `/ros_ws`, com ROS Jazzy e o workspace carregados. Cada campanha contém fontes, diferenças locais, dependências, hashes, XML, logs, trace e cobertura próprios. O primeiro manifesto não inclui a opção de grupos (acrescentada ao coletor em seguida); sua seleção `deadline` está registrada neste relatório e no comando pytest interno do log. As fontes arquivadas são a referência exata de cada execução; pequenas revisões posteriores de comentários não alteram esses snapshots.
+
+## Continuação: preparação e consultas ao grafo
+
+Na campanha `ros2_20261023T183646Z_if2mkg0o`, uma nova execução completa registrou oito falhas e dois XFAIL internos, com dez cenários iniciados. As consultas CLI de presença e interfaces excederam seus limites; o cenário de registro não chegou a produzir um resultado interno. Os dois XFAIL ocorreram na preparação, não nas asserções funcionais conhecidas. Portanto, não constituem evidência sobre recuperação ou silêncio do controlador.
+
+A exclusão dos processos CLI `ros2` do bootstrap de cobertura foi verificada por quatro testes de subprocesso, mantendo instrumentação nos nós e no pytest e preservando o hook anterior. Ela não resolveu sozinha o problema: `ros2_20261023T184437Z_94kgk9tk` registrou quatro aprovações e duas falhas de presença na topologia. A consulta de presença por um participante rclpy persistente eliminou essa dependência do CLI, mas `ros2_20261023T184726Z_jbr2le1b` ainda apresentou quatro falhas em `ros2 node info`, incluindo uma após imprimir suas interfaces.
+
+A consulta das interfaces também passou a utilizar a API do grafo no modo `--direct-readiness`. As asserções continuam exigindo os mesmos publicadores e assinantes. A campanha `ros2_20261023T185048Z_syeo2uvm` aprovou os seis casos de topologia. As duas marcações XFAIL foram restringidas a `BehaviorExpectationNotMet`, emitida apenas pelas respectivas asserções de comportamento: erros de preparação devem reprovar normalmente. Essas intervenções alteram a instrumentação e a classificação do resultado, sem alterar a política do controlador ou seus limites.
+
+Os manifests registram a exclusão do CLI da cobertura. Não foi isolado experimentalmente quanto do atraso das chamadas decorre da instrumentação, da descoberta DDS ou do encerramento dos processos; o timeout de CLI não deve ser apresentado como um defeito funcional confirmado do sistema.

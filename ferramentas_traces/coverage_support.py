@@ -26,13 +26,19 @@ def configuration(source_root, data_file, context):
             "[report]\nshow_missing = True\nfail_under = 0\n")
 
 
-def bootstrap_text(previous_sitecustomize):
+def bootstrap_text(previous_sitecustomize, *, enabled=True, skip_ros_cli=False):
     # Conserva o hook do ambiente, caso exista, sem alterar site-packages.
-    return ("import os, runpy\n"
+    startup = ("import os, runpy, sys\n"
             f"previous = {previous_sitecustomize!r}\n"
             "if previous and os.path.isfile(previous):\n"
-            "    runpy.run_path(previous)\n"
-            "import coverage\ncoverage.process_startup()\n")
+            "    runpy.run_path(previous)\n")
+    if enabled:
+        if skip_ros_cli:
+            startup += ("if os.path.basename(sys.argv[0]) != 'ros2':\n"
+                        "    import coverage\n    coverage.process_startup()\n")
+        else:
+            startup += "import coverage\ncoverage.process_startup()\n"
+    return startup
 
 
 def run_logged(command, cwd, env, logfile):

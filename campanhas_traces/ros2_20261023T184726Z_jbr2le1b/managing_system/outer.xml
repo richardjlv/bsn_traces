@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="82.494" timestamp="2026-10-23T18:47:33.205615" hostname="bsn-virtualbox"><testcase classname="test.test_managing_system_bdd" name="test_managing_system_bdd" time="82.317"><failure message="test_managing_system_bdd.TestManagingSystem.test_bdd_scenarios[topology] failed">
+======================================================================================================================================================================================================================================================================================================================================================
+FAIL: test_managing_system_bdd.TestManagingSystem.test_bdd_scenarios[topology]
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/ros_ws/src/bsn_ros2/features/test/test_managing_system_bdd.py", line 69, in test_bdd_scenarios
+    assert result.returncode == 0, (
+AssertionError: steps/test_managing_system.py failed - see the pytest output above for which scenario and why
+assert 1 == 0
+ +  where 1 = CompletedProcess(args=['/usr/bin/python3', '-m', 'pytest', '-v', 'steps/test_managing_system.py', '-m', 'topology', '--junitxml=/ros_ws/src/campanhas_traces/ros2_20261023T184726Z_jbr2le1b/managing_system/internal_junit/test_managing_system_topology.xml', '-rA', '-p', 'no:pytest_cov', '-o', 'addopts='], returncode=1).returncode
+</failure></testcase></testsuite></testsuites>

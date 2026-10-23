@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="54.948" timestamp="2026-10-23T18:40:49.673593" hostname="bsn-virtualbox"><testcase classname="steps.test_managing_system" name="test_an_adaptation_command_is_issued_within_10_seconds_after_reliability_degradation_g4g5" time="52.002"><failure message="AssertionError: Node(s) not online after 5.0s: /enactor, /param_adapter, /reli_engine&#10;assert not '/enactor, /param_adapter, /reli_engine'">request = &lt;FixtureRequest for &lt;Function test_an_adaptation_command_is_issued_within_10_seconds_after_reliability_degradation_g4g5&gt;&gt;
+_pytest_bdd_example = {}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+steps/test_managing_system.py:446: in sensor_operating_normally_stable
+    _nodes_online(RELIABILITY_ENGINE_NODE, ENACTOR_NODE, PARAM_ADAPTER_NODE)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+timeout_s = 5.0, node_names = ('reli_engine', 'enactor', 'param_adapter')
+expected = {'/enactor', '/param_adapter', '/reli_engine'}
+
+    def _nodes_online(*node_names, timeout_s=5.0):
+        """Wait briefly for a consistent DDS graph observation.
+    
+        A newly created ``ros2 node list`` participant may miss an already-active
+        node during discovery.  The precondition remains the same (every node
+        must be visible); retrying avoids treating one transient graph snapshot as
+        evidence that the component is unavailable.
+        """
+        expected = {f"/{name}" for name in node_names}
+        deadline = time.monotonic() + timeout_s
+        observed = set()
+        while True:
+            remaining = deadline - time.monotonic()
+            if remaining &lt;= 0:
+                missing = ", ".join(sorted(expected - observed))
+&gt;               assert not missing, f"Node(s) not online after {timeout_s:.1f}s: {missing}"
+E               AssertionError: Node(s) not online after 5.0s: /enactor, /param_adapter, /reli_engine
+E               assert not '/enactor, /param_adapter, /reli_engine'
+
+steps/conftest.py:54: AssertionError</failure></testcase></testsuite></testsuites>

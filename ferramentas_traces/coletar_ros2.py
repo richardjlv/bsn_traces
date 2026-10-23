@@ -105,9 +105,8 @@ def main():
     bootstrap = run / 'bootstrap'
     bootstrap.mkdir()
     previous = importlib.util.find_spec('sitecustomize')
-    startup = collector.bootstrap_text(previous.origin if previous else None)
-    if args.without_coverage:
-        startup = startup.replace('import coverage\ncoverage.process_startup()\n', '')
+    startup = collector.bootstrap_text(previous.origin if previous else None,
+                                       enabled=not args.without_coverage, skip_ros_cli=True)
     if args.hub_stack_after:
         startup += ("import sys, faulthandler\n"
                     "if os.path.basename(sys.argv[0]) == 'emergency_detection':\n"
@@ -118,6 +117,7 @@ def main():
     manifest = dict(schema=1, started_utc=stamp, source_root=str(root), python=sys.version,
                     ros_distro=os.environ.get('ROS_DISTRO'), domain_id=args.domain_id,
                     coverage_enabled=not args.without_coverage,
+                    coverage_process_exclusions=['ros2 CLI (executable basename)'],
                     direct_readiness=args.direct_readiness,
                     managing_groups=os.environ.get('BSN_MANAGING_GROUPS', 'default'),
                     hub_stack_after=args.hub_stack_after,

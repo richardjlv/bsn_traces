@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="6" time="55.050" timestamp="2026-10-23T18:47:57.546870" hostname="bsn-virtualbox"><testcase classname="steps.test_managing_system" name="test_the_adaptation_enactor_exchanges_adaptation_strategies_with_the_reliability_engine" time="16.783" /><testcase classname="steps.test_managing_system" name="test_the_adaptation_enactor_exchanges_adaptation_records_with_the_system_log" time="11.236"><failure message="subprocess.TimeoutExpired: Command '['ros2', 'node', 'info', '/enactor']' timed out after 5 seconds">request = &lt;FixtureRequest for &lt;Function test_the_adaptation_enactor_exchanges_adaptation_records_with_the_system_log&gt;&gt;
+_pytest_bdd_example = {}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+steps/test_managing_system.py:135: in component_publishes_channel_to
+    component_info = _node_info(COMPONENT_NODES[component])
+steps/test_managing_system.py:74: in _node_info
+    result = subprocess.run(
+/usr/lib/python3.12/subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+/usr/lib/python3.12/subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+/usr/lib/python3.12/subprocess.py:2116: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;Popen: returncode: -9 args: ['ros2', 'node', 'info', '/enactor']&gt;
+endtime = 30187.114337016, orig_timeout = 5, stdout_seq = [], stderr_seq = []
+skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() &gt; endtime:
+&gt;           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['ros2', 'node', 'info', '/enactor']' timed out after 5 seconds
+
+/usr/lib/python3.12/subprocess.py:1253: TimeoutExpired</failure></testcase><testcase classname="steps.test_managing_system" name="test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor event]" time="5.104"><failure message="subprocess.TimeoutExpired: Command '['ros2', 'node', 'info', '/node_monitor']' timed out after 5 seconds">request = &lt;FixtureRequest for &lt;Function test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor event]&gt;&gt;
+_pytest_bdd_example = {'topic': 'sensor event'}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+steps/test_managing_system.py:97: in system_log_subscribes_to_collector_topic
+    collector_info = _node_info(LOG_COLLECTOR_NODE)
+steps/test_managing_system.py:74: in _node_info
+    result = subprocess.run(
+/usr/lib/python3.12/subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+/usr/lib/python3.12/subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+/usr/lib/python3.12/subprocess.py:2116: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;Popen: returncode: -9 args: ['ros2', 'node', 'info', '/node_monitor']&gt;
+endtime = 30192.969290142, orig_timeout = 5, stdout_seq = [], stderr_seq = []
+skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() &gt; endtime:
+&gt;           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['ros2', 'node', 'info', '/node_monitor']' timed out after 5 seconds
+
+/usr/lib/python3.12/subprocess.py:1253: TimeoutExpired</failure></testcase><testcase classname="steps.test_managing_system" name="test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor status]" time="5.057"><failure message="subprocess.TimeoutExpired: Command '['ros2', 'node', 'info', '/node_monitor']' timed out after 5 seconds">request = &lt;FixtureRequest for &lt;Function test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor status]&gt;&gt;
+_pytest_bdd_example = {'topic': 'sensor status'}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+steps/test_managing_system.py:97: in system_log_subscribes_to_collector_topic
+    collector_info = _node_info(LOG_COLLECTOR_NODE)
+steps/test_managing_system.py:74: in _node_info
+    result = subprocess.run(
+/usr/lib/python3.12/subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+/usr/lib/python3.12/subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+/usr/lib/python3.12/subprocess.py:2116: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;Popen: returncode: -9 args: ['ros2', 'node', 'info', '/node_monitor']&gt;
+endtime = 30198.408135719, orig_timeout = 5, stdout_seq = [], stderr_seq = []
+skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() &gt; endtime:
+&gt;           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['ros2', 'node', 'info', '/node_monitor']' timed out after 5 seconds
+
+/usr/lib/python3.12/subprocess.py:1253: TimeoutExpired</failure></testcase><testcase classname="steps.test_managing_system" name="test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor energy status]" time="7.548" /><testcase classname="steps.test_managing_system" name="test_the_system_log_sends_reconfiguration_requests_to_the_parameter_adapter" time="5.158"><failure message="subprocess.TimeoutExpired: Command '['ros2', 'node', 'info', '/logger']' timed out after 5 seconds">request = &lt;FixtureRequest for &lt;Function test_the_system_log_sends_reconfiguration_requests_to_the_parameter_adapter&gt;&gt;
+_pytest_bdd_example = {}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+steps/test_managing_system.py:135: in component_publishes_channel_to
+    component_info = _node_info(COMPONENT_NODES[component])
+steps/test_managing_system.py:74: in _node_info
+    result = subprocess.run(
+/usr/lib/python3.12/subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+/usr/lib/python3.12/subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+/usr/lib/python3.12/subprocess.py:2116: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;Popen: returncode: -9 args: ['ros2', 'node', 'info', '/logger']&gt;
+endtime = 30211.465974511, orig_timeout = 5
+stdout_seq = [b'/logger\n', b'  Subscribers:\n    /log_adapt: bsn_interfaces/msg/AdaptationCommand\n    /log_energy_status: bsn_int...ters_atomically: rcl_interfaces/srv/SetParametersAtomically\n', b'  Service Clients:\n\n', b'  Action Servers:\n', ...]
+stderr_seq = [], skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() &gt; endtime:
+&gt;           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['ros2', 'node', 'info', '/logger']' timed out after 5 seconds
+
+/usr/lib/python3.12/subprocess.py:1253: TimeoutExpired</failure></testcase></testsuite></testsuites>

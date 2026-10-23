@@ -1,0 +1,130 @@
+[INFO] [1792780615.010142196] [ecg_node]: Initialized sensor: ecg, vital sign: heart_rate, frequency: 1.0Hz
+[INFO] [1792780615.080119971] [ecg_node]: Lifecycle Manager initialized
+[INFO] [1792780615.110472812] [ecg_node]: PublisherManagerBase initialized successfully
+[INFO] [1792780615.375401326] [ecg_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792780615.375990038] [ecg_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792780615.394693561] [ecg_node]: Starting individual lifecycle management...
+[INFO] [1792780615.395524721] [ecg_node]: Lifecycle auto-management started
+[INFO] [1792780615.416523592] [ecg_node]: Successfully registered with ParamAdapter
+[INFO] [1792780617.396407759] [ecg_node]: Auto-configuring node...
+[INFO] [1792780617.396898694] [ecg_node]: Triggering node configuration...
+[INFO] [1792780617.397489595] [ecg_node]: Configuring ecg sensor...
+[INFO] [1792780617.403137120] [ecg_node]: Risk ranges configured for ecg: HR0=(0.0, 70.0), MR0=(70.0, 85.0), LR=(85.0, 97.0), MR1=(97.0, 115.0), HR1=(115.0, 300.0)
+[INFO] [1792780617.403865887] [ecg_node]: Node configuration successful
+[INFO] [1792780618.409344462] [ecg_node]: Triggering node activation...
+[INFO] [1792780618.409968571] [ecg_node]: Activating ecg sensor...
+[INFO] [1792780618.410966640] [ecg_node]: Node activation successful
+[INFO] [1792780619.852954158] [ecg_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792780620.390645479] [ecg_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792780621.392176223] [ecg_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792780622.397046398] [ecg_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792780623.394411866] [ecg_node]: ++Transfer++
+ Value: 89.67322768717061, Risk: 4.42%, Level: low, Battery: 99.6%
+[INFO] [1792780624.412698249] [ecg_node]: ++Transfer++
+ Value: 89.01509774016901, Risk: 6.62%, Level: low, Battery: 99.4%
+[INFO] [1792780625.389120539] [ecg_node]: ++Transfer++
+ Value: 89.01501944518478, Risk: 6.62%, Level: low, Battery: 99.3%
+[INFO] [1792780626.395179172] [ecg_node]: ++Transfer++
+ Value: 89.36110939302048, Risk: 5.46%, Level: low, Battery: 99.2%
+[INFO] [1792780627.392377326] [ecg_node]: ++Transfer++
+ Value: 88.0410402843653, Risk: 9.86%, Level: low, Battery: 99.1%
+[INFO] [1792780628.397635501] [ecg_node]: ++Transfer++
+ Value: 88.41035260403126, Risk: 8.63%, Level: low, Battery: 98.9%
+[INFO] [1792780629.409338083] [ecg_node]: ++Transfer++
+ Value: 88.7794231228353, Risk: 7.40%, Level: low, Battery: 98.8%
+[INFO] [1792780630.390949717] [ecg_node]: ++Transfer++
+ Value: 90.49806772740376, Risk: 1.67%, Level: low, Battery: 98.7%
+[INFO] [1792780631.394061112] [ecg_node]: ++Transfer++
+ Value: 92.1331474139048, Risk: 3.78%, Level: low, Battery: 98.6%
+[INFO] [1792780632.397347783] [ecg_node]: ++Transfer++
+ Value: 93.47494352551432, Risk: 8.25%, Level: low, Battery: 98.4%
+[INFO] [1792780633.400283949] [ecg_node]: ++Transfer++
+ Value: 92.99742865793516, Risk: 6.66%, Level: low, Battery: 98.3%
+[INFO] [1792780634.400638555] [ecg_node]: ++Transfer++
+ Value: 92.26712061904418, Risk: 4.22%, Level: low, Battery: 98.2%
+[INFO] [1792780635.416997694] [ecg_node]: ++Transfer++
+ Value: 89.35054264948343, Risk: 5.50%, Level: low, Battery: 98.1%
+[INFO] [1792780636.418079489] [ecg_node]: ++Transfer++
+ Value: 85.95004913315438, Risk: 16.83%, Level: low, Battery: 97.9%
+[INFO] [1792780637.411957326] [ecg_node]: ++Transfer++
+ Value: 81.9218722520925, Risk: 30.03%, Level: moderate, Battery: 97.8%
+[INFO] [1792780638.426658030] [ecg_node]: ++Transfer++
+ Value: 80.07880197635032, Risk: 35.44%, Level: moderate, Battery: 97.7%
+[INFO] [1792780639.411266075] [ecg_node]: ++Transfer++
+ Value: 76.79749564050422, Risk: 45.06%, Level: moderate, Battery: 97.6%
+[INFO] [1792780640.410506466] [ecg_node]: ++Transfer++
+ Value: 76.64051403773541, Risk: 45.52%, Level: moderate, Battery: 97.4%
+[INFO] [1792780641.419902789] [ecg_node]: ++Transfer++
+ Value: 74.95720621757688, Risk: 50.46%, Level: moderate, Battery: 97.3%
+[INFO] [1792780642.422519943] [ecg_node]: ++Transfer++
+ Value: 76.3878329622338, Risk: 46.26%, Level: moderate, Battery: 97.2%
+[INFO] [1792780643.427608194] [ecg_node]: ++Transfer++
+ Value: 76.5111689907894, Risk: 45.90%, Level: moderate, Battery: 97.1%
+[INFO] [1792780644.431393015] [ecg_node]: ++Transfer++
+ Value: 76.96148409497422, Risk: 44.58%, Level: moderate, Battery: 96.9%
+[INFO] [1792780645.409966716] [ecg_node]: ++Transfer++
+ Value: 79.3935313216086, Risk: 37.45%, Level: moderate, Battery: 96.8%
+[INFO] [1792780646.417112867] [ecg_node]: ++Transfer++
+ Value: 82.98681839478726, Risk: 26.91%, Level: moderate, Battery: 96.7%
+[INFO] [1792780647.413428891] [ecg_node]: ++Transfer++
+ Value: 83.66899125341413, Risk: 24.90%, Level: moderate, Battery: 96.6%
+[INFO] [1792780648.405873957] [ecg_node]: ++Transfer++
+ Value: 85.57741264035356, Risk: 18.08%, Level: low, Battery: 96.4%
+[INFO] [1792780649.410995402] [ecg_node]: ++Transfer++
+ Value: 90.11946009125992, Risk: 2.94%, Level: low, Battery: 96.3%
+[INFO] [1792780650.416402476] [ecg_node]: ++Transfer++
+ Value: 89.03202902466369, Risk: 6.56%, Level: low, Battery: 96.2%
+[INFO] [1792780651.403487494] [ecg_node]: ++Transfer++
+ Value: 88.34691365670426, Risk: 8.84%, Level: low, Battery: 96.1%
+[INFO] [1792780652.423101905] [ecg_node]: ++Transfer++
+ Value: 89.36536425187403, Risk: 5.45%, Level: low, Battery: 95.9%
+[INFO] [1792780653.406881085] [ecg_node]: ++Transfer++
+ Value: 90.34364510116278, Risk: 2.19%, Level: low, Battery: 95.8%
+[INFO] [1792780654.398302762] [ecg_node]: ++Transfer++
+ Value: 89.86764404664966, Risk: 3.77%, Level: low, Battery: 95.7%
+[INFO] [1792780655.399234771] [ecg_node]: ++Transfer++
+ Value: 90.08859713681139, Risk: 3.04%, Level: low, Battery: 95.6%
+[INFO] [1792780656.407679620] [ecg_node]: ++Transfer++
+ Value: 91.6141996998684, Risk: 2.05%, Level: low, Battery: 95.4%
+[INFO] [1792780657.407295163] [ecg_node]: ++Transfer++
+ Value: 91.49240025972009, Risk: 1.64%, Level: low, Battery: 95.3%
+[INFO] [1792780658.398021472] [ecg_node]: ++Transfer++
+ Value: 92.10544350401831, Risk: 3.68%, Level: low, Battery: 95.2%
+[INFO] [1792780659.417726505] [ecg_node]: ++Transfer++
+ Value: 91.5461295570122, Risk: 1.82%, Level: low, Battery: 95.1%
+[INFO] [1792780660.464904258] [ecg_node]: ++Transfer++
+ Value: 91.52162899754178, Risk: 1.74%, Level: low, Battery: 94.9%
+[INFO] [1792780661.418855436] [ecg_node]: ++Transfer++
+ Value: 91.59823927002256, Risk: 1.99%, Level: low, Battery: 94.8%
+[INFO] [1792780662.416243133] [ecg_node]: ++Transfer++
+ Value: 91.9152562629292, Risk: 3.05%, Level: low, Battery: 94.7%
+[INFO] [1792780663.408471657] [ecg_node]: ++Transfer++
+ Value: 92.08727709322163, Risk: 3.62%, Level: low, Battery: 94.6%
+[INFO] [1792780664.416783253] [ecg_node]: ++Transfer++
+ Value: 92.44868352715187, Risk: 4.83%, Level: low, Battery: 94.4%
+[INFO] [1792780665.407597742] [ecg_node]: ++Transfer++
+ Value: 90.26212925720773, Risk: 2.46%, Level: low, Battery: 94.3%
+[INFO] [1792780666.424155677] [ecg_node]: ++Transfer++
+ Value: 87.68934083425253, Risk: 11.04%, Level: low, Battery: 94.2%
+[INFO] [1792780667.424657104] [ecg_node]: ++Transfer++
+ Value: 83.97095056493036, Risk: 24.02%, Level: moderate, Battery: 94.1%
+[INFO] [1792780668.417493221] [ecg_node]: ++Transfer++
+ Value: 81.55307705609286, Risk: 31.11%, Level: moderate, Battery: 93.9%
+[INFO] [1792780669.414914831] [ecg_node]: ++Transfer++
+ Value: 78.20278989809822, Risk: 40.94%, Level: moderate, Battery: 93.8%
+[INFO] [1792780670.403508021] [ecg_node]: ++Transfer++
+ Value: 79.27640322367377, Risk: 37.79%, Level: moderate, Battery: 93.7%
+[INFO] [1792780671.403428322] [ecg_node]: ++Transfer++
+ Value: 79.80853008729129, Risk: 36.23%, Level: moderate, Battery: 93.6%
+[INFO] [1792780672.401182228] [ecg_node]: ++Transfer++
+ Value: 81.62476695603593, Risk: 30.90%, Level: moderate, Battery: 93.4%
+[INFO] [1792780673.407856721] [ecg_node]: ++Transfer++
+ Value: 80.54364399224816, Risk: 34.07%, Level: moderate, Battery: 93.3%
+[INFO] [1792780674.405582101] [ecg_node]: ++Transfer++
+ Value: 80.91547045539883, Risk: 32.98%, Level: moderate, Battery: 93.2%
+[INFO] [1792780675.405931304] [ecg_node]: ++Transfer++
+ Value: 80.36253070391253, Risk: 34.60%, Level: moderate, Battery: 93.1%
+[INFO] [1792780676.394559010] [ecg_node]: ++Transfer++
+ Value: 82.80077488973424, Risk: 27.45%, Level: moderate, Battery: 92.9%
+[INFO] [1792780677.400281609] [ecg_node]: ++Transfer++
+ Value: 85.35691474086104, Risk: 18.81%, Level: low, Battery: 92.8%
