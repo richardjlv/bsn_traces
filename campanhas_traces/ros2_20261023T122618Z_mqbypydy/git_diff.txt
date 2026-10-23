@@ -1,0 +1,3833 @@
+diff --git a/.gitignore b/.gitignore
+index ef400de..728770d 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -53,6 +53,7 @@ qtcreator-*
+ CATKIN_IGNORE
+ 
+ # Unit test / coverage reports
++coverage_runs/
+ htmlcov/
+ .tox/
+ .nox/
+@@ -68,4 +69,4 @@ coverage.xml
+ cover/
+ 
+ # MkDocs documentation
+-docs/site/
+\ No newline at end of file
++docs/site/
+diff --git a/adaptation/adaptation/enactor/controller.py b/adaptation/adaptation/enactor/controller.py
+index d4e1de0..d268f14 100644
+--- a/adaptation/adaptation/enactor/controller.py
++++ b/adaptation/adaptation/enactor/controller.py
+@@ -190,33 +190,41 @@ class Controller(Enactor):
+             self.invocations[component].clear()
+     
+     def _send_adaptation_command(self, component, action):
+-        """Send adaptation command to component via reconfigure topic, and a
+-        separate audit copy via log_adapt (see enactor.setup's log_adapt_pub
+-        docstring for why this is a second publish, not a relay).
++        """Send adaptation command to component via log_adapt.
+ 
+-        Both copies carry the same BSN-form target (e.g. "/g3t1_1") -
+-        matching ROS1's Controller.cpp/Logger.cpp, where log_adapt's
+-        AdaptationCommand *is* the one Logger relays onward unchanged, so
+-        the persisted target and the delivered target were always the same
+-        value. param_adapter.bsn_to_ros_mapping translates this form to the
+-        real ROS2 node name on the delivery path; /persist keeps the BSN
+-        form other adaptation records use (data_access.component_mapping is
+-        keyed the same way for status/event lookups)."""
++        Matches ROS1's Controller.cpp/Logger.cpp: the logger persists this
++        AdaptationCommand and relays the same message onward to
++        'reconfigure', so the persisted target and the delivered target are
++        always the same BSN-form value (e.g. "/g3t1_1").
++        param_adapter.bsn_to_ros_mapping translates it to the real ROS2 node
++        name on the delivery path; /persist keeps the BSN form other
++        adaptation records use (data_access.component_mapping is keyed the
++        same way for status/event lookups)."""
+         command = AdaptationCommand()
+         command.source = self.get_name()
+         command.target = component
+         command.action = action
+ 
+         self.adapt.publish(command)
+-        self.log_adapt_pub.publish(command)
+ 
+         self.get_logger().info(f"Sent adaptation to {component}: {action}")
+     
+     def _publish_exception(self, component, value):
+-        """Publish an exception message"""
++        """Publish an exception message.
++
++        content must be "<component>=<value>" (matching ROS1's
++        Controller.cpp: content = component+"=1"/"=-1") - base_engine.py's
++        receive_exception() only updates self.priority inside its own
++        `if "=" in content:` branch, parsing exactly that format. The
++        previous human-readable sentence here never matched, so priority
++        never diverged between components, r_vec's ordering in plan() never
++        changed, and the same term (the hub) was permanently stuck as the
++        only one left adjustable - see MANAGING_SYSTEM_GAPS.md for the full
++        analysis, verified against a real ROS1 run.
++        """
+         exception_msg = ExceptionMsg()
+         exception_msg.source = self.get_name()
+-        exception_msg.content = f"Component {component} has {value} exceptions"
++        exception_msg.content = f"{component}={value}"
+         self.except_pub.publish(exception_msg)
+         self.get_logger().warn(f'Published exception for {component}: {value}')
+ 
+diff --git a/adaptation/adaptation/enactor/enactor.py b/adaptation/adaptation/enactor/enactor.py
+index 11dd19e..6cf3e7d 100644
+--- a/adaptation/adaptation/enactor/enactor.py
++++ b/adaptation/adaptation/enactor/enactor.py
+@@ -103,17 +103,14 @@ class Enactor(Node):
+             durability=DurabilityPolicy.VOLATILE
+         )
+         
+-        # Publishers (matching C++ original)
++        # Publishers (matching C++ original). The enactor's only
++        # AdaptationCommand publisher is log_adapt, as in ROS1's
++        # Controller.cpp:12 - logger.py persists each command and relays it
++        # to 'reconfigure' for delivery (Logger.cpp:39-47), so the system log
++        # is what sends reconfiguration requests to the parameter adapter
++        # (managing_system.feature). Publishing to 'reconfigure' here as well
++        # would deliver every command twice.
+         self.adapt = self.create_publisher(
+-            AdaptationCommand, 'reconfigure', qos_profile)
+-
+-        # Audit trail only - logger.py's log_adapt subscriber persists a
+-        # record of every issued command, but does not relay it onward
+-        # (delivery is this node's own direct publish to `reconfigure`,
+-        # above; see Controller._send_adaptation_command for why both exist
+-        # rather than routing through the relay - MANAGING_SYSTEM_GAPS.md
+-        # finding #3).
+-        self.log_adapt_pub = self.create_publisher(
+             AdaptationCommand, 'log_adapt', qos_profile)
+ 
+         self.except_pub = self.create_publisher(
+diff --git a/central_hub/.coverage b/central_hub/.coverage
+index d5d6d53..ef5dc8d 100644
+Binary files a/central_hub/.coverage and b/central_hub/.coverage differ
+diff --git a/central_hub/coverage.xml b/central_hub/coverage.xml
+index 3fd7bc3..021d16c 100644
+--- a/central_hub/coverage.xml
++++ b/central_hub/coverage.xml
+@@ -1,150 +1,149 @@
+ <?xml version="1.0" ?>
+-<coverage version="7.4.4" timestamp="1759421958215" lines-valid="668" lines-covered="554" line-rate="0.8293" branches-covered="0" branches-valid="0" branch-rate="0" complexity="0">
++<coverage version="7.4.4" timestamp="1790482190063" lines-valid="613" lines-covered="518" line-rate="0.845" branches-covered="0" branches-valid="0" branch-rate="0" complexity="0">
+ 	<!-- Generated by coverage.py: https://coverage.readthedocs.io/en/7.4.4 -->
+ 	<!-- Based on https://raw.githubusercontent.com/cobertura/web/master/htdocs/xml/coverage-04.dtd -->
+ 	<sources>
+-		<source>/ros_ws/src/central_hub/central_hub</source>
++		<source>/ros_ws/src/bsn_ros2/central_hub/central_hub</source>
+ 	</sources>
+ 	<packages>
+-		<package name="." line-rate="0.7548" branch-rate="0" complexity="0">
++		<package name="." line-rate="0.8201" branch-rate="0" complexity="0">
+ 			<classes>
+ 				<class name="__init__.py" filename="__init__.py" complexity="0" line-rate="1" branch-rate="0">
+ 					<methods/>
+ 					<lines/>
+ 				</class>
+-				<class name="central_hub.py" filename="central_hub.py" complexity="0" line-rate="0.7008" branch-rate="0">
++				<class name="central_hub.py" filename="central_hub.py" complexity="0" line-rate="0.9762" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="1" hits="1"/>
+ 						<line number="2" hits="1"/>
+ 						<line number="3" hits="1"/>
+-						<line number="4" hits="1"/>
++						<line number="6" hits="1"/>
+ 						<line number="7" hits="1"/>
+ 						<line number="8" hits="1"/>
+ 						<line number="9" hits="1"/>
+ 						<line number="10" hits="1"/>
+ 						<line number="11" hits="1"/>
++						<line number="12" hits="1"/>
+ 						<line number="13" hits="1"/>
+-						<line number="14" hits="1"/>
+ 						<line number="15" hits="1"/>
+-						<line number="16" hits="1"/>
+-						<line number="18" hits="1"/>
+-						<line number="25" hits="1"/>
++						<line number="22" hits="1"/>
++						<line number="24" hits="1"/>
+ 						<line number="26" hits="1"/>
+-						<line number="29" hits="1"/>
+ 						<line number="32" hits="1"/>
+-						<line number="33" hits="1"/>
+-						<line number="34" hits="1"/>
+-						<line number="35" hits="1"/>
+-						<line number="36" hits="1"/>
+-						<line number="37" hits="1"/>
+ 						<line number="40" hits="1"/>
+ 						<line number="42" hits="1"/>
+-						<line number="43" hits="1"/>
+-						<line number="44" hits="0"/>
++						<line number="44" hits="1"/>
+ 						<line number="46" hits="1"/>
+-						<line number="47" hits="1"/>
+ 						<line number="48" hits="1"/>
++						<line number="50" hits="1"/>
+ 						<line number="51" hits="1"/>
+-						<line number="59" hits="1"/>
++						<line number="52" hits="1"/>
++						<line number="53" hits="1"/>
++						<line number="56" hits="1"/>
++						<line number="62" hits="1"/>
+ 						<line number="64" hits="1"/>
++						<line number="65" hits="1"/>
+ 						<line number="66" hits="1"/>
+-						<line number="68" hits="1"/>
++						<line number="67" hits="1"/>
+ 						<line number="70" hits="1"/>
+-						<line number="73" hits="1"/>
+-						<line number="76" hits="1"/>
+-						<line number="78" hits="1"/>
+-						<line number="79" hits="0"/>
+-						<line number="80" hits="0"/>
+-						<line number="81" hits="0"/>
++						<line number="71" hits="1"/>
++						<line number="74" hits="0"/>
++						<line number="75" hits="0"/>
++						<line number="79" hits="1"/>
++						<line number="80" hits="1"/>
++						<line number="81" hits="1"/>
+ 						<line number="83" hits="1"/>
+-						<line number="84" hits="1"/>
+-						<line number="86" hits="1"/>
++						<line number="85" hits="1"/>
+ 						<line number="87" hits="1"/>
+ 						<line number="89" hits="1"/>
+-						<line number="90" hits="1"/>
+-						<line number="94" hits="1"/>
++						<line number="92" hits="1"/>
++						<line number="95" hits="1"/>
+ 						<line number="97" hits="1"/>
+ 						<line number="98" hits="1"/>
++						<line number="99" hits="1"/>
+ 						<line number="100" hits="1"/>
+-						<line number="101" hits="0"/>
+-						<line number="102" hits="0"/>
+-						<line number="103" hits="0"/>
+-						<line number="105" hits="1"/>
++						<line number="101" hits="1"/>
++						<line number="103" hits="1"/>
++						<line number="104" hits="1"/>
+ 						<line number="106" hits="1"/>
+-						<line number="108" hits="1"/>
++						<line number="107" hits="1"/>
+ 						<line number="109" hits="1"/>
+-						<line number="113" hits="1"/>
+-						<line number="115" hits="1"/>
+-						<line number="116" hits="1"/>
++						<line number="110" hits="1"/>
++						<line number="114" hits="1"/>
++						<line number="117" hits="1"/>
+ 						<line number="118" hits="1"/>
+-						<line number="119" hits="0"/>
+-						<line number="120" hits="0"/>
+-						<line number="121" hits="0"/>
++						<line number="120" hits="1"/>
++						<line number="121" hits="1"/>
++						<line number="122" hits="1"/>
+ 						<line number="123" hits="1"/>
+ 						<line number="124" hits="1"/>
+ 						<line number="126" hits="1"/>
+-						<line number="128" hits="1"/>
++						<line number="127" hits="1"/>
++						<line number="129" hits="1"/>
+ 						<line number="130" hits="1"/>
+-						<line number="131" hits="1"/>
+-						<line number="132" hits="0"/>
+-						<line number="133" hits="0"/>
+-						<line number="134" hits="0"/>
++						<line number="134" hits="1"/>
+ 						<line number="136" hits="1"/>
+ 						<line number="137" hits="1"/>
+ 						<line number="139" hits="1"/>
+ 						<line number="140" hits="1"/>
+ 						<line number="141" hits="1"/>
+-						<line number="144" hits="1"/>
+-						<line number="145" hits="0"/>
+-						<line number="146" hits="0"/>
++						<line number="142" hits="1"/>
++						<line number="143" hits="1"/>
++						<line number="145" hits="1"/>
++						<line number="146" hits="1"/>
+ 						<line number="148" hits="1"/>
+-						<line number="149" hits="0"/>
+-						<line number="150" hits="0"/>
+-						<line number="151" hits="0"/>
++						<line number="150" hits="1"/>
++						<line number="151" hits="1"/>
++						<line number="152" hits="1"/>
+ 						<line number="153" hits="1"/>
+-						<line number="155" hits="1"/>
++						<line number="154" hits="1"/>
+ 						<line number="156" hits="1"/>
+-						<line number="158" hits="1"/>
++						<line number="157" hits="1"/>
++						<line number="159" hits="1"/>
++						<line number="160" hits="1"/>
+ 						<line number="161" hits="1"/>
+-						<line number="163" hits="1"/>
+ 						<line number="164" hits="1"/>
+ 						<line number="165" hits="1"/>
+-						<line number="167" hits="1"/>
++						<line number="166" hits="1"/>
++						<line number="168" hits="1"/>
+ 						<line number="169" hits="1"/>
+-						<line number="172" hits="1"/>
++						<line number="170" hits="1"/>
++						<line number="171" hits="1"/>
+ 						<line number="173" hits="1"/>
++						<line number="175" hits="1"/>
+ 						<line number="176" hits="1"/>
+ 						<line number="178" hits="1"/>
+-						<line number="180" hits="1"/>
+-						<line number="188" hits="1"/>
+-						<line number="190" hits="1"/>
+-						<line number="191" hits="1"/>
+-						<line number="194" hits="1"/>
+-						<line number="195" hits="0"/>
+-						<line number="197" hits="0"/>
+-						<line number="200" hits="0"/>
+-						<line number="203" hits="0"/>
+-						<line number="206" hits="0"/>
+-						<line number="207" hits="0"/>
+-						<line number="209" hits="0"/>
+-						<line number="210" hits="0"/>
+-						<line number="211" hits="0"/>
+-						<line number="212" hits="0"/>
+-						<line number="215" hits="0"/>
+-						<line number="216" hits="0"/>
+-						<line number="219" hits="0"/>
+-						<line number="223" hits="0"/>
+-						<line number="224" hits="0"/>
+-						<line number="225" hits="0"/>
+-						<line number="227" hits="0"/>
+-						<line number="228" hits="0"/>
+-						<line number="229" hits="0"/>
++						<line number="181" hits="1"/>
++						<line number="183" hits="1"/>
++						<line number="184" hits="1"/>
++						<line number="185" hits="1"/>
++						<line number="187" hits="1"/>
++						<line number="189" hits="1"/>
++						<line number="192" hits="1"/>
++						<line number="193" hits="1"/>
++						<line number="196" hits="1"/>
++						<line number="198" hits="1"/>
++						<line number="200" hits="1"/>
++						<line number="208" hits="1"/>
++						<line number="210" hits="1"/>
++						<line number="211" hits="1"/>
++						<line number="214" hits="1"/>
++						<line number="215" hits="1"/>
++						<line number="217" hits="1"/>
++						<line number="220" hits="1"/>
++						<line number="223" hits="1"/>
++						<line number="226" hits="1"/>
++						<line number="228" hits="1"/>
++						<line number="229" hits="1"/>
++						<line number="231" hits="1"/>
+ 						<line number="232" hits="1"/>
+-						<line number="233" hits="0"/>
++						<line number="233" hits="1"/>
++						<line number="236" hits="1"/>
++						<line number="237" hits="0"/>
+ 					</lines>
+ 				</class>
+-				<class name="central_hub_tests.py" filename="central_hub_tests.py" complexity="0" line-rate="0.7839" branch-rate="0">
++				<class name="central_hub_tests.py" filename="central_hub_tests.py" complexity="0" line-rate="0.7421" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="2" hits="1"/>
+@@ -166,325 +165,279 @@
+ 						<line number="25" hits="1"/>
+ 						<line number="26" hits="1"/>
+ 						<line number="27" hits="1"/>
++						<line number="28" hits="1"/>
+ 						<line number="29" hits="1"/>
+-						<line number="30" hits="1"/>
+-						<line number="34" hits="1"/>
++						<line number="31" hits="0"/>
++						<line number="32" hits="0"/>
++						<line number="34" hits="0"/>
+ 						<line number="35" hits="0"/>
+-						<line number="38" hits="1"/>
+-						<line number="44" hits="1"/>
+-						<line number="45" hits="1"/>
+-						<line number="47" hits="1"/>
+-						<line number="48" hits="1"/>
+-						<line number="51" hits="1"/>
+-						<line number="52" hits="0"/>
+-						<line number="55" hits="1"/>
+-						<line number="61" hits="1"/>
+-						<line number="62" hits="1"/>
++						<line number="36" hits="0"/>
++						<line number="37" hits="0"/>
++						<line number="38" hits="0"/>
++						<line number="39" hits="0"/>
++						<line number="40" hits="0"/>
++						<line number="42" hits="0"/>
++						<line number="43" hits="0"/>
++						<line number="44" hits="0"/>
++						<line number="45" hits="0"/>
++						<line number="47" hits="0"/>
++						<line number="49" hits="1"/>
++						<line number="50" hits="1"/>
++						<line number="54" hits="1"/>
++						<line number="55" hits="0"/>
++						<line number="58" hits="1"/>
+ 						<line number="64" hits="1"/>
+ 						<line number="65" hits="1"/>
+ 						<line number="67" hits="1"/>
+-						<line number="68" hits="0"/>
+-						<line number="70" hits="1"/>
++						<line number="68" hits="1"/>
++						<line number="71" hits="1"/>
++						<line number="72" hits="0"/>
+ 						<line number="75" hits="1"/>
+-						<line number="76" hits="1"/>
+-						<line number="77" hits="1"/>
+-						<line number="79" hits="1"/>
+-						<line number="80" hits="1"/>
++						<line number="81" hits="1"/>
+ 						<line number="82" hits="1"/>
+-						<line number="83" hits="0"/>
++						<line number="84" hits="1"/>
+ 						<line number="85" hits="1"/>
++						<line number="87" hits="1"/>
++						<line number="88" hits="0"/>
+ 						<line number="90" hits="1"/>
+-						<line number="91" hits="1"/>
+-						<line number="92" hits="1"/>
+-						<line number="94" hits="1"/>
+ 						<line number="95" hits="1"/>
++						<line number="96" hits="1"/>
+ 						<line number="97" hits="1"/>
+-						<line number="98" hits="0"/>
++						<line number="99" hits="1"/>
+ 						<line number="100" hits="1"/>
++						<line number="102" hits="1"/>
++						<line number="103" hits="0"/>
+ 						<line number="105" hits="1"/>
+ 						<line number="110" hits="1"/>
++						<line number="111" hits="1"/>
+ 						<line number="112" hits="1"/>
+-						<line number="113" hits="1"/>
+ 						<line number="114" hits="1"/>
+-						<line number="116" hits="1"/>
++						<line number="115" hits="1"/>
+ 						<line number="117" hits="1"/>
++						<line number="118" hits="0"/>
+ 						<line number="120" hits="1"/>
+-						<line number="122" hits="1"/>
+-						<line number="124" hits="1"/>
+ 						<line number="125" hits="1"/>
+-						<line number="126" hits="1"/>
+-						<line number="128" hits="1"/>
+-						<line number="129" hits="1"/>
+ 						<line number="130" hits="1"/>
+-						<line number="131" hits="1"/>
++						<line number="132" hits="1"/>
++						<line number="133" hits="1"/>
+ 						<line number="134" hits="1"/>
+-						<line number="135" hits="1"/>
+ 						<line number="136" hits="1"/>
+ 						<line number="137" hits="1"/>
+-						<line number="138" hits="1"/>
+ 						<line number="140" hits="1"/>
+ 						<line number="142" hits="1"/>
+-						<line number="143" hits="1"/>
++						<line number="144" hits="1"/>
++						<line number="145" hits="1"/>
+ 						<line number="146" hits="1"/>
+-						<line number="147" hits="1"/>
+ 						<line number="148" hits="1"/>
+ 						<line number="149" hits="1"/>
+-						<line number="152" hits="1"/>
++						<line number="150" hits="1"/>
++						<line number="151" hits="1"/>
+ 						<line number="154" hits="1"/>
++						<line number="155" hits="1"/>
+ 						<line number="156" hits="1"/>
+ 						<line number="157" hits="1"/>
+ 						<line number="158" hits="1"/>
+ 						<line number="160" hits="1"/>
++						<line number="162" hits="1"/>
+ 						<line number="163" hits="1"/>
++						<line number="166" hits="1"/>
+ 						<line number="167" hits="1"/>
++						<line number="168" hits="1"/>
+ 						<line number="169" hits="1"/>
+-						<line number="171" hits="1"/>
+ 						<line number="172" hits="1"/>
+-						<line number="175" hits="1"/>
++						<line number="174" hits="1"/>
+ 						<line number="176" hits="1"/>
+ 						<line number="177" hits="1"/>
+ 						<line number="178" hits="1"/>
+-						<line number="181" hits="1"/>
+-						<line number="182" hits="1"/>
++						<line number="180" hits="1"/>
+ 						<line number="183" hits="1"/>
+-						<line number="184" hits="1"/>
+ 						<line number="187" hits="1"/>
+-						<line number="188" hits="1"/>
+-						<line number="190" hits="1"/>
++						<line number="189" hits="1"/>
+ 						<line number="191" hits="1"/>
+-						<line number="194" hits="1"/>
++						<line number="192" hits="1"/>
+ 						<line number="195" hits="1"/>
+ 						<line number="196" hits="1"/>
+ 						<line number="197" hits="1"/>
+-						<line number="200" hits="1"/>
++						<line number="198" hits="1"/>
+ 						<line number="201" hits="1"/>
+ 						<line number="202" hits="1"/>
+ 						<line number="203" hits="1"/>
+-						<line number="206" hits="1"/>
++						<line number="204" hits="1"/>
+ 						<line number="207" hits="1"/>
+ 						<line number="208" hits="1"/>
+ 						<line number="210" hits="1"/>
+-						<line number="212" hits="1"/>
+-						<line number="213" hits="1"/>
++						<line number="211" hits="1"/>
++						<line number="214" hits="1"/>
++						<line number="215" hits="1"/>
+ 						<line number="216" hits="1"/>
+ 						<line number="217" hits="1"/>
+-						<line number="218" hits="1"/>
+-						<line number="219" hits="1"/>
++						<line number="220" hits="1"/>
++						<line number="221" hits="1"/>
+ 						<line number="222" hits="1"/>
+-						<line number="224" hits="1"/>
++						<line number="223" hits="1"/>
+ 						<line number="226" hits="1"/>
+-						<line number="229" hits="1"/>
++						<line number="227" hits="1"/>
++						<line number="228" hits="1"/>
++						<line number="230" hits="1"/>
++						<line number="232" hits="1"/>
+ 						<line number="233" hits="1"/>
+-						<line number="235" hits="1"/>
++						<line number="236" hits="1"/>
+ 						<line number="237" hits="1"/>
+ 						<line number="238" hits="1"/>
+-						<line number="241" hits="1"/>
++						<line number="239" hits="1"/>
+ 						<line number="242" hits="1"/>
+-						<line number="245" hits="1"/>
+-						<line number="246" hits="0"/>
+-						<line number="247" hits="0"/>
+-						<line number="250" hits="1"/>
++						<line number="244" hits="1"/>
++						<line number="246" hits="1"/>
++						<line number="249" hits="1"/>
+ 						<line number="253" hits="1"/>
+-						<line number="254" hits="1"/>
++						<line number="255" hits="1"/>
+ 						<line number="257" hits="1"/>
+ 						<line number="258" hits="1"/>
+ 						<line number="261" hits="1"/>
+ 						<line number="262" hits="1"/>
+-						<line number="264" hits="1"/>
+ 						<line number="265" hits="1"/>
++						<line number="266" hits="0"/>
++						<line number="267" hits="0"/>
+ 						<line number="270" hits="1"/>
+-						<line number="271" hits="1"/>
++						<line number="273" hits="1"/>
+ 						<line number="274" hits="1"/>
+-						<line number="275" hits="1"/>
+-						<line number="276" hits="1"/>
+ 						<line number="277" hits="1"/>
+ 						<line number="278" hits="1"/>
+-						<line number="279" hits="1"/>
+-						<line number="280" hits="1"/>
+-						<line number="283" hits="1"/>
++						<line number="281" hits="1"/>
++						<line number="282" hits="1"/>
++						<line number="284" hits="1"/>
+ 						<line number="285" hits="1"/>
+-						<line number="287" hits="1"/>
+-						<line number="288" hits="1"/>
++						<line number="290" hits="1"/>
+ 						<line number="291" hits="1"/>
+-						<line number="292" hits="0"/>
++						<line number="294" hits="1"/>
+ 						<line number="295" hits="1"/>
++						<line number="296" hits="1"/>
+ 						<line number="297" hits="1"/>
+ 						<line number="298" hits="1"/>
+-						<line number="301" hits="1"/>
+-						<line number="302" hits="1"/>
++						<line number="299" hits="1"/>
++						<line number="300" hits="1"/>
+ 						<line number="303" hits="1"/>
+-						<line number="306" hits="1"/>
++						<line number="305" hits="1"/>
+ 						<line number="307" hits="1"/>
+ 						<line number="308" hits="1"/>
+-						<line number="310" hits="1"/>
+-						<line number="314" hits="1"/>
+-						<line number="316" hits="1"/>
++						<line number="311" hits="1"/>
++						<line number="312" hits="0"/>
++						<line number="315" hits="1"/>
++						<line number="317" hits="1"/>
+ 						<line number="318" hits="1"/>
+-						<line number="319" hits="1"/>
+ 						<line number="321" hits="1"/>
+-						<line number="323" hits="0"/>
+-						<line number="324" hits="0"/>
+-						<line number="327" hits="0"/>
+-						<line number="330" hits="0"/>
+-						<line number="334" hits="0"/>
+-						<line number="337" hits="0"/>
+-						<line number="338" hits="0"/>
+-						<line number="340" hits="1"/>
+-						<line number="342" hits="1"/>
+-						<line number="343" hits="1"/>
+-						<line number="345" hits="1"/>
+-						<line number="346" hits="1"/>
+-						<line number="347" hits="1"/>
+-						<line number="348" hits="1"/>
+-						<line number="349" hits="1"/>
+-						<line number="350" hits="1"/>
+-						<line number="351" hits="1"/>
+-						<line number="353" hits="1"/>
+-						<line number="354" hits="1"/>
+-						<line number="356" hits="1"/>
+-						<line number="357" hits="1"/>
+-						<line number="360" hits="0"/>
+-						<line number="361" hits="0"/>
+-						<line number="363" hits="0"/>
+-						<line number="364" hits="0"/>
+-						<line number="367" hits="0"/>
+-						<line number="368" hits="0"/>
+-						<line number="370" hits="0"/>
+-						<line number="371" hits="0"/>
+-						<line number="372" hits="0"/>
+-						<line number="374" hits="0"/>
+-						<line number="376" hits="0"/>
+-						<line number="377" hits="0"/>
++						<line number="322" hits="1"/>
++						<line number="323" hits="1"/>
++						<line number="326" hits="1"/>
++						<line number="327" hits="1"/>
++						<line number="328" hits="1"/>
++						<line number="330" hits="1"/>
++						<line number="334" hits="1"/>
++						<line number="336" hits="1"/>
++						<line number="338" hits="1"/>
++						<line number="339" hits="1"/>
++						<line number="341" hits="1"/>
++						<line number="343" hits="0"/>
++						<line number="344" hits="0"/>
++						<line number="347" hits="0"/>
++						<line number="350" hits="0"/>
++						<line number="354" hits="0"/>
++						<line number="357" hits="0"/>
++						<line number="358" hits="0"/>
++						<line number="360" hits="1"/>
++						<line number="362" hits="1"/>
++						<line number="363" hits="1"/>
++						<line number="365" hits="1"/>
++						<line number="366" hits="1"/>
++						<line number="367" hits="1"/>
++						<line number="368" hits="1"/>
++						<line number="369" hits="1"/>
++						<line number="370" hits="1"/>
++						<line number="371" hits="1"/>
++						<line number="373" hits="1"/>
++						<line number="374" hits="1"/>
++						<line number="376" hits="1"/>
++						<line number="377" hits="1"/>
+ 						<line number="380" hits="0"/>
++						<line number="381" hits="0"/>
+ 						<line number="383" hits="0"/>
+ 						<line number="384" hits="0"/>
++						<line number="387" hits="0"/>
+ 						<line number="388" hits="0"/>
+-						<line number="389" hits="0"/>
+-						<line number="391" hits="1"/>
+-						<line number="392" hits="1"/>
++						<line number="390" hits="0"/>
++						<line number="391" hits="0"/>
++						<line number="392" hits="0"/>
+ 						<line number="394" hits="0"/>
+-						<line number="396" hits="1"/>
+-						<line number="397" hits="1"/>
+-						<line number="399" hits="0"/>
++						<line number="396" hits="0"/>
++						<line number="397" hits="0"/>
+ 						<line number="400" hits="0"/>
+-						<line number="401" hits="0"/>
+-						<line number="402" hits="0"/>
++						<line number="403" hits="0"/>
+ 						<line number="404" hits="0"/>
+-						<line number="405" hits="0"/>
+-						<line number="406" hits="0"/>
+-						<line number="407" hits="0"/>
++						<line number="408" hits="0"/>
+ 						<line number="409" hits="0"/>
+-						<line number="410" hits="0"/>
+-						<line number="413" hits="0"/>
++						<line number="411" hits="1"/>
++						<line number="412" hits="1"/>
+ 						<line number="414" hits="0"/>
+-						<line number="417" hits="0"/>
+-						<line number="418" hits="0"/>
++						<line number="416" hits="1"/>
++						<line number="417" hits="1"/>
++						<line number="419" hits="0"/>
++						<line number="420" hits="0"/>
+ 						<line number="421" hits="0"/>
+ 						<line number="422" hits="0"/>
+-						<line number="423" hits="0"/>
++						<line number="424" hits="0"/>
+ 						<line number="425" hits="0"/>
++						<line number="426" hits="0"/>
++						<line number="427" hits="0"/>
++						<line number="429" hits="0"/>
++						<line number="430" hits="0"/>
++						<line number="433" hits="0"/>
++						<line number="434" hits="0"/>
++						<line number="437" hits="0"/>
++						<line number="438" hits="0"/>
++						<line number="441" hits="0"/>
++						<line number="442" hits="0"/>
++						<line number="443" hits="0"/>
++						<line number="445" hits="0"/>
+ 					</lines>
+ 				</class>
+ 			</classes>
+ 		</package>
+-		<package name="components" line-rate="0.9409" branch-rate="0" complexity="0">
++		<package name="components" line-rate="0.9198" branch-rate="0" complexity="0">
+ 			<classes>
+ 				<class name="__init__.py" filename="components/__init__.py" complexity="0" line-rate="1" branch-rate="0">
+ 					<methods/>
+ 					<lines/>
+ 				</class>
+-				<class name="battery_manager.py" filename="components/battery_manager.py" complexity="0" line-rate="0.8519" branch-rate="0">
++				<class name="config_manager.py" filename="components/config_manager.py" complexity="0" line-rate="0.7143" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="9" hits="1"/>
+-						<line number="10" hits="1"/>
+-						<line number="11" hits="1"/>
+-						<line number="14" hits="1"/>
+-						<line number="45" hits="1"/>
+-						<line number="55" hits="1"/>
+-						<line number="58" hits="1"/>
+-						<line number="66" hits="1"/>
+-						<line number="67" hits="1"/>
+-						<line number="68" hits="1"/>
+-						<line number="70" hits="1"/>
+-						<line number="71" hits="1"/>
+-						<line number="74" hits="1"/>
+-						<line number="79" hits="1"/>
+-						<line number="81" hits="1"/>
+-						<line number="91" hits="1"/>
+-						<line number="92" hits="1"/>
+-						<line number="94" hits="1"/>
+-						<line number="102" hits="1"/>
+-						<line number="104" hits="1"/>
+-						<line number="106" hits="0"/>
+-						<line number="108" hits="1"/>
+-						<line number="117" hits="1"/>
+-						<line number="118" hits="1"/>
+-						<line number="119" hits="1"/>
+-						<line number="122" hits="1"/>
+-						<line number="123" hits="1"/>
+-						<line number="124" hits="1"/>
+-						<line number="125" hits="1"/>
+-						<line number="126" hits="0"/>
+-						<line number="129" hits="1"/>
+-						<line number="130" hits="0"/>
+-						<line number="131" hits="0"/>
+-						<line number="134" hits="1"/>
+-						<line number="136" hits="1"/>
+-						<line number="144" hits="1"/>
+-						<line number="147" hits="1"/>
+-						<line number="148" hits="1"/>
+-						<line number="150" hits="1"/>
+-						<line number="152" hits="1"/>
+-						<line number="160" hits="0"/>
+-						<line number="163" hits="0"/>
+-						<line number="164" hits="0"/>
+-						<line number="166" hits="0"/>
+-						<line number="168" hits="1"/>
+-						<line number="176" hits="1"/>
+-						<line number="177" hits="1"/>
+-						<line number="178" hits="1"/>
+-						<line number="179" hits="1"/>
+-						<line number="180" hits="1"/>
+-						<line number="181" hits="1"/>
+-						<line number="183" hits="1"/>
+-						<line number="184" hits="1"/>
+-						<line number="187" hits="1"/>
+-					</lines>
+-				</class>
+-				<class name="config_manager.py" filename="components/config_manager.py" complexity="0" line-rate="1" branch-rate="0">
+-					<methods/>
+-					<lines>
+-						<line number="10" hits="1"/>
+-						<line number="36" hits="1"/>
+-						<line number="46" hits="1"/>
+-						<line number="49" hits="1"/>
+-						<line number="50" hits="1"/>
+-						<line number="51" hits="1"/>
+-						<line number="52" hits="1"/>
+-						<line number="53" hits="1"/>
+-						<line number="54" hits="1"/>
+-						<line number="57" hits="1"/>
+-						<line number="58" hits="1"/>
+-						<line number="59" hits="1"/>
+-						<line number="60" hits="1"/>
+-						<line number="61" hits="1"/>
+-						<line number="64" hits="1"/>
+-						<line number="67" hits="1"/>
+-						<line number="68" hits="1"/>
+-						<line number="71" hits="1"/>
++						<line number="12" hits="1"/>
++						<line number="19" hits="1"/>
++						<line number="21" hits="1"/>
++						<line number="23" hits="1"/>
++						<line number="24" hits="1"/>
++						<line number="25" hits="1"/>
++						<line number="26" hits="0"/>
++						<line number="27" hits="0"/>
++						<line number="28" hits="0"/>
++						<line number="30" hits="1"/>
++						<line number="39" hits="1"/>
++						<line number="40" hits="0"/>
++						<line number="42" hits="1"/>
+ 					</lines>
+ 				</class>
+-				<class name="data_fusion.py" filename="components/data_fusion.py" complexity="0" line-rate="0.9508" branch-rate="0">
++				<class name="data_fusion.py" filename="components/data_fusion.py" complexity="0" line-rate="0.9545" branch-rate="0">
+ 					<methods/>
+ 					<lines>
++						<line number="8" hits="1"/>
+ 						<line number="10" hits="1"/>
+ 						<line number="32" hits="1"/>
+ 						<line number="42" hits="1"/>
+ 						<line number="44" hits="1"/>
+ 						<line number="62" hits="1"/>
+ 						<line number="63" hits="0"/>
+-						<line number="65" hits="1"/>
++						<line number="66" hits="1"/>
+ 						<line number="68" hits="1"/>
+ 						<line number="69" hits="1"/>
+ 						<line number="72" hits="1"/>
+@@ -515,58 +468,70 @@
+ 						<line number="115" hits="1"/>
+ 						<line number="117" hits="1"/>
+ 						<line number="118" hits="1"/>
++						<line number="119" hits="1"/>
+ 						<line number="120" hits="1"/>
+-						<line number="136" hits="1"/>
+-						<line number="137" hits="0"/>
++						<line number="121" hits="1"/>
++						<line number="122" hits="1"/>
++						<line number="124" hits="1"/>
+ 						<line number="140" hits="1"/>
+-						<line number="141" hits="1"/>
+-						<line number="142" hits="1"/>
++						<line number="141" hits="0"/>
+ 						<line number="144" hits="1"/>
+ 						<line number="145" hits="1"/>
+ 						<line number="146" hits="1"/>
+ 						<line number="148" hits="1"/>
+ 						<line number="149" hits="1"/>
+ 						<line number="150" hits="1"/>
+-						<line number="151" hits="1"/>
++						<line number="152" hits="1"/>
++						<line number="153" hits="1"/>
+ 						<line number="154" hits="1"/>
+ 						<line number="155" hits="1"/>
+ 						<line number="158" hits="1"/>
+ 						<line number="159" hits="1"/>
+-						<line number="161" hits="1"/>
+ 						<line number="162" hits="1"/>
+ 						<line number="163" hits="1"/>
+-						<line number="164" hits="1"/>
++						<line number="165" hits="1"/>
++						<line number="166" hits="1"/>
+ 						<line number="167" hits="1"/>
+ 						<line number="168" hits="1"/>
+-						<line number="170" hits="0"/>
++						<line number="171" hits="1"/>
++						<line number="172" hits="1"/>
++						<line number="174" hits="0"/>
+ 					</lines>
+ 				</class>
+-				<class name="publishers.py" filename="components/publishers.py" complexity="0" line-rate="0.9706" branch-rate="0">
++				<class name="publishers.py" filename="components/publishers.py" complexity="0" line-rate="0.8696" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="9" hits="1"/>
+ 						<line number="10" hits="1"/>
+-						<line number="13" hits="1"/>
+-						<line number="41" hits="1"/>
+-						<line number="51" hits="1"/>
+-						<line number="52" hits="1"/>
++						<line number="11" hits="1"/>
++						<line number="12" hits="1"/>
++						<line number="15" hits="1"/>
++						<line number="43" hits="1"/>
++						<line number="53" hits="1"/>
+ 						<line number="55" hits="1"/>
+-						<line number="60" hits="1"/>
+-						<line number="62" hits="1"/>
++						<line number="57" hits="1"/>
++						<line number="65" hits="1"/>
++						<line number="67" hits="1"/>
+ 						<line number="70" hits="1"/>
+-						<line number="74" hits="1"/>
+-						<line number="78" hits="1"/>
+-						<line number="89" hits="1"/>
++						<line number="71" hits="0"/>
++						<line number="72" hits="0"/>
++						<line number="73" hits="0"/>
++						<line number="75" hits="1"/>
+ 						<line number="90" hits="1"/>
+-						<line number="92" hits="1"/>
+-						<line number="93" hits="1"/>
+-						<line number="94" hits="1"/>
+-						<line number="95" hits="1"/>
++						<line number="91" hits="0"/>
++						<line number="92" hits="0"/>
++						<line number="93" hits="0"/>
+ 						<line number="96" hits="1"/>
+-						<line number="97" hits="1"/>
+ 						<line number="98" hits="1"/>
++						<line number="99" hits="1"/>
+ 						<line number="100" hits="1"/>
+-						<line number="110" hits="1"/>
++						<line number="101" hits="1"/>
++						<line number="104" hits="1"/>
++						<line number="105" hits="1"/>
++						<line number="106" hits="1"/>
++						<line number="107" hits="1"/>
++						<line number="108" hits="1"/>
++						<line number="109" hits="1"/>
+ 						<line number="111" hits="1"/>
+ 						<line number="112" hits="1"/>
+ 						<line number="113" hits="1"/>
+@@ -574,47 +539,17 @@
+ 						<line number="115" hits="1"/>
+ 						<line number="116" hits="1"/>
+ 						<line number="118" hits="1"/>
+-						<line number="126" hits="1"/>
++						<line number="119" hits="1"/>
++						<line number="120" hits="1"/>
++						<line number="121" hits="1"/>
++						<line number="122" hits="1"/>
++						<line number="123" hits="1"/>
++						<line number="125" hits="1"/>
+ 						<line number="127" hits="1"/>
+ 						<line number="128" hits="1"/>
+-						<line number="129" hits="1"/>
+-						<line number="132" hits="1"/>
+-						<line number="133" hits="0"/>
+-						<line number="135" hits="1"/>
+-						<line number="137" hits="1"/>
+-						<line number="138" hits="1"/>
+-						<line number="140" hits="1"/>
+-						<line number="155" hits="1"/>
+-						<line number="156" hits="0"/>
+-						<line number="159" hits="1"/>
+-						<line number="161" hits="1"/>
+-						<line number="162" hits="1"/>
+-						<line number="163" hits="1"/>
+-						<line number="164" hits="1"/>
+-						<line number="167" hits="1"/>
+-						<line number="168" hits="1"/>
+-						<line number="169" hits="1"/>
+-						<line number="170" hits="1"/>
+-						<line number="171" hits="1"/>
+-						<line number="172" hits="1"/>
+-						<line number="174" hits="1"/>
+-						<line number="175" hits="1"/>
+-						<line number="176" hits="1"/>
+-						<line number="177" hits="1"/>
+-						<line number="178" hits="1"/>
+-						<line number="179" hits="1"/>
+-						<line number="181" hits="1"/>
+-						<line number="182" hits="1"/>
+-						<line number="183" hits="1"/>
+-						<line number="184" hits="1"/>
+-						<line number="185" hits="1"/>
+-						<line number="186" hits="1"/>
+-						<line number="188" hits="1"/>
+-						<line number="190" hits="1"/>
+-						<line number="191" hits="1"/>
+ 					</lines>
+ 				</class>
+-				<class name="sensor_data_handler.py" filename="components/sensor_data_handler.py" complexity="0" line-rate="0.9722" branch-rate="0">
++				<class name="sensor_data_handler.py" filename="components/sensor_data_handler.py" complexity="0" line-rate="1" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="9" hits="1"/>
+@@ -645,7 +580,7 @@
+ 						<line number="128" hits="1"/>
+ 						<line number="130" hits="1"/>
+ 						<line number="134" hits="1"/>
+-						<line number="135" hits="0"/>
++						<line number="135" hits="1"/>
+ 						<line number="140" hits="1"/>
+ 						<line number="141" hits="1"/>
+ 						<line number="142" hits="1"/>
+@@ -657,23 +592,24 @@
+ 				</class>
+ 			</classes>
+ 		</package>
+-		<package name="utils" line-rate="0.8382" branch-rate="0" complexity="0">
++		<package name="utils" line-rate="0.8082" branch-rate="0" complexity="0">
+ 			<classes>
+ 				<class name="__init__.py" filename="utils/__init__.py" complexity="0" line-rate="1" branch-rate="0">
+ 					<methods/>
+ 					<lines/>
+ 				</class>
+-				<class name="risk_analyzer.py" filename="utils/risk_analyzer.py" complexity="0" line-rate="0.96" branch-rate="0">
++				<class name="risk_analyzer.py" filename="utils/risk_analyzer.py" complexity="0" line-rate="0.8667" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="1" hits="1"/>
+-						<line number="4" hits="1"/>
++						<line number="2" hits="1"/>
+ 						<line number="5" hits="1"/>
+-						<line number="7" hits="1"/>
+-						<line number="10" hits="1"/>
++						<line number="6" hits="1"/>
++						<line number="8" hits="1"/>
+ 						<line number="11" hits="1"/>
++						<line number="12" hits="1"/>
+ 						<line number="13" hits="1"/>
+-						<line number="16" hits="1"/>
++						<line number="15" hits="1"/>
+ 						<line number="17" hits="1"/>
+ 						<line number="18" hits="1"/>
+ 						<line number="19" hits="1"/>
+@@ -682,15 +618,19 @@
+ 						<line number="22" hits="1"/>
+ 						<line number="23" hits="1"/>
+ 						<line number="24" hits="1"/>
+-						<line number="27" hits="1"/>
++						<line number="25" hits="1"/>
+ 						<line number="28" hits="1"/>
+ 						<line number="29" hits="1"/>
+-						<line number="33" hits="0"/>
+-						<line number="36" hits="1"/>
++						<line number="30" hits="1"/>
++						<line number="34" hits="0"/>
+ 						<line number="37" hits="1"/>
+-						<line number="40" hits="1"/>
++						<line number="38" hits="1"/>
+ 						<line number="41" hits="1"/>
+-						<line number="45" hits="1"/>
++						<line number="42" hits="1"/>
++						<line number="46" hits="1"/>
++						<line number="47" hits="0"/>
++						<line number="48" hits="0"/>
++						<line number="49" hits="0"/>
+ 					</lines>
+ 				</class>
+ 				<class name="visualization.py" filename="utils/visualization.py" complexity="0" line-rate="0.7674" branch-rate="0">
+diff --git a/central_hub/launch/emergency_detection_launch.py b/central_hub/launch/emergency_detection_launch.py
+index 1a462e8..a939b19 100644
+--- a/central_hub/launch/emergency_detection_launch.py
++++ b/central_hub/launch/emergency_detection_launch.py
+@@ -145,14 +145,14 @@ def generate_launch_description():
+                 emulate_tty=True,
+                 parameters=[config_monitor]
+             ),
+-            # launch_ros.actions.Node(
+-                # package='adaptation',
+-                # executable='enactor',
+-                # name='enactor',
+-                # output='screen',
+-                # emulate_tty=True,
+-                #parameters=[config_enactor]
+-            # ),
++            launch_ros.actions.Node(
++                package='adaptation',
++                executable='enactor',
++                name='enactor',
++                output='screen',
++                emulate_tty=True,
++                parameters=[config_enactor] if os.path.exists(config_enactor) else [],
++            ),
+             launch_ros.actions.Node(
+                 package='adaptation',
+                 executable='data_access',
+diff --git a/features/BSN-P03.feature b/features/BSN-P03.feature
+index 9f1b378..9444b29 100644
+--- a/features/BSN-P03.feature
++++ b/features/BSN-P03.feature
+@@ -1,3 +1,4 @@
++# Propriedades e resultados: src/tg/apendices/apendice_b_propriedades_bdd.md
+ Feature: Emergency detection (BSN-P03) A high-risk vital sign reading is escalated to an emergency within 250 ms.
+ 	
+ 	@timing @bsn-p03
+@@ -13,6 +14,7 @@ Feature: Emergency detection (BSN-P03) A high-risk vital sign reading is escalat
+ 	# `parameters=[{"frequency": 6.0}]` no central_hub_node dos dois launches
+ 	# (o default do proprio no continua 2.0 -
+ 	# central_hub/components/config_manager.py:9 - a mudanca e so de launch).
++	# Rastreabilidade BDD01: BSN-P03. Retomada de P3, com fronteira de observação adaptada.
+ 	Scenario: An emergency is reported within 250 ms of a high-risk reading (BSN-P03)
+ 		Given the patient is being monitored by the thermometer
+ 		When the thermometer reports a vital sign reading in the high-risk range
+@@ -47,6 +49,7 @@ Feature: Emergency detection (BSN-P03) A high-risk vital sign reading is escalat
+ 	# Alternativa mais fiel, mexendo em launch: dar
+ 	# `parameters=[{"frequency": 20.0}]` ao thermometer_node faz o sensor real
+ 	# gerar a carga desde o startup, sem depender da adaptacao em runtime.
++	# Rastreabilidade BDD02: BSN-P03. Variante local sob carga de P3.
+ 	Scenario: An emergency is reported within 250 ms even while the sensor is under sustained load (BSN-P03)
+ 		Given the thermometer is reporting low-risk readings at its maximum sampling rate
+ 		When the thermometer reports a vital sign reading in the high-risk range
+diff --git a/features/check_bsn.feature b/features/check_bsn.feature
+index 86b4ca3..45da131 100644
+--- a/features/check_bsn.feature
++++ b/features/check_bsn.feature
+@@ -1,6 +1,8 @@
++# Propriedades e resultados: src/tg/apendices/apendice_b_propriedades_bdd.md
+ Feature: Check for bsn features
+ 
+ 	@behavior @bsn-p08
++	# Rastreabilidade BDD03: BSN-C01. Complementar; relação parcial com P7; título histórico P08.
+ 	Scenario Outline: The central hub receives the vital sign reading reported by a body sensor (BSN-P08)
+ 		Given the patient is being monitored by <sensor>
+ 		When <sensor> reports a new vital sign reading
+@@ -16,12 +18,14 @@ Feature: Check for bsn features
+ 			| the glucometer  |
+ 
+ 	@behavior @bsn-p08
++	# Rastreabilidade BDD04: BSN-P09. Recorte alto de P9; referência recuperada do histórico.
+ 	Scenario: The central hub classifies a vital sign reading outside the normal range as high risk (BSN-P08)
+ 		Given the patient is being monitored by the oximeter
+ 		When the oximeter reports a blood oxygenation reading outside its normal range
+ 		Then the central hub should classify the patient risk for blood oxygenation as high
+ 
+ 	@behavior @sad-path @bsn-p08
++	# Rastreabilidade BDD05: BSN-C02. Variante local de indisponibilidade, relacionada a P7/P9.
+ 	Scenario: No patient risk level is reported while the central hub is unavailable (BSN-P08)
+ 		Given the central hub is unavailable
+ 		When the oximeter reports a new vital sign reading
+diff --git a/features/data_persistance.feature b/features/data_persistance.feature
+index 7851b4c..e6e1545 100644
+--- a/features/data_persistance.feature
++++ b/features/data_persistance.feature
+@@ -1,9 +1,11 @@
++# Propriedades e resultados: src/tg/apendices/apendice_b_propriedades_bdd.md
+ Feature: Data Persistence (BSN-P08) - Whether the sensor node has collected some data, eventually the bodyhub will persist it.
+ 
+ 	@behavior @bsn-p08 @persistence
+ 	# Passa: um registro do sensor chegando ao /persist (o que o teste ROS1 verificava) funciona aqui.
+ 	# A clausula "with the value reported" nenhuma versao satisfaz (o ROS1 nunca guardou o valor);
+ 	# nao e regressao, e escopo novo. Ver DATA_PERSISTANCE_GAPS.md.
++	# Rastreabilidade BDD06: BSN-P08. Retomada de P8; enunciado atual exige recuperação do valor.
+ 	Scenario: A vital sign reading collected by a sensor is persisted in the knowledge repository (BSN-P08)
+ 		Given the patient is being monitored by the thermometer
+ 		When the thermometer reports a new vital sign reading
+@@ -13,6 +15,7 @@ Feature: Data Persistence (BSN-P08) - Whether the sensor node has collected some
+ 	# xfail: gap nas DUAS versoes. Replay do ROS1 (2026-09-12): o kill do /logger nunca funciona e o
+ 	# "fail" vinha do /g4t1 (hub central), sem relacao com persistencia. Nenhuma versao tem
+ 	# branch de falha de armazenamento
++	# Rastreabilidade BDD07: BSN-C03. Complementar de falha de armazenamento, relacionada a P8.
+ 	Scenario: A persistence failure is recorded when the knowledge repository cannot store a reading (BSN-P08)
+ 		Given the knowledge repository is experiencing storage failures
+ 		When the thermometer reports a new vital sign reading
+diff --git a/features/health_status.feature b/features/health_status.feature
+index a95de88..b357e15 100644
+--- a/features/health_status.feature
++++ b/features/health_status.feature
+@@ -1,3 +1,4 @@
++# Propriedades e resultados: src/tg/apendices/apendice_b_propriedades_bdd.md
+ Feature: Patient Health Status (BSN-P10)
+ 
+ 	A patient health status is available whenever a sensor reports a reading,
+@@ -5,6 +6,7 @@ Feature: Patient Health Status (BSN-P10)
+ 	incoming readings.
+ 
+ 	@behavior @bsn-p10
++	# Rastreabilidade BDD08: BSN-P10. Retomada de P10.
+ 	Scenario: A patient health status is available after a sensor reports a reading (BSN-P10)
+ 		Given the patient is being monitored by the thermometer
+ 		When the thermometer reports a new vital sign reading
+@@ -18,6 +20,7 @@ Feature: Patient Health Status (BSN-P10)
+ 	# sensor and the thermometer report new vital sign readings" for the same
+ 	# reasoning).
+ 	@behavior @sad-path @bsn-p10
++	# Rastreabilidade BDD09: BSN-C04. Variante local de indisponibilidade, relacionada a P10.
+ 	Scenario: No patient health status is produced when the central hub cannot process a reading (BSN-P10)
+ 		Given the central hub is unable to process incoming readings
+ 		When the thermometer reports a reading
+diff --git a/features/injector.feature b/features/injector.feature
+index 33802e6..e977efa 100644
+--- a/features/injector.feature
++++ b/features/injector.feature
+@@ -1,3 +1,4 @@
++# Propriedades e resultados: src/tg/apendices/apendice_b_propriedades_bdd.md
+ Feature: ensure simulation components communicate properly
+ 
+ 	# Scenario: Ensure the data is being injected into nodes /logger, /g3t1_6, /g3t1_5, /g3t1_4, /g3t1_3, /g3t1_2, /g3t1_1
+@@ -6,6 +7,7 @@ Feature: ensure simulation components communicate properly
+ 	# 	Then /injector node is connected appropriately
+ 
+ 	@topology @contract @regression
++	# Rastreabilidade BDD10: BSN-C05. Contrato estrutural complementar.
+ 	Scenario Outline: The uncertainty injector is wired to each body sensor
+ 		Given the uncertainty injector is running
+ 		Then the uncertainty injector should publish "uncertainty injection" to <sensor>
+@@ -21,6 +23,7 @@ Feature: ensure simulation components communicate properly
+ 	
+ 	
+ 	@topology @contract @regression
++	# Rastreabilidade BDD11: BSN-C05. Contrato estrutural complementar.
+ 	Scenario: The uncertainty injector is wired to the system log
+ 		Given the uncertainty injector is running
+ 		Then the uncertainty injector should publish "uncertainty log" to the system log
+diff --git a/features/knowledge_repo.feature b/features/knowledge_repo.feature
+index 8914276..4e6d23f 100644
+--- a/features/knowledge_repo.feature
++++ b/features/knowledge_repo.feature
+@@ -1,6 +1,8 @@
++# Propriedades e resultados: src/tg/apendices/apendice_b_propriedades_bdd.md
+ Feature: Ensure knowledge repository components are communicating correctly
+ 	
+ 	@topology @contract
++	# Rastreabilidade BDD12: BSN-C06. Contrato estrutural complementar, relacionado à infraestrutura de P8.
+ 	Scenario: The knowledge repository is wired to the system log and to the central hub
+ 		Given the knowledge repository is running
+ 		Then the knowledge repository should subscribe to "persistence" published by the system log
+diff --git a/features/managing_system.feature b/features/managing_system.feature
+index 1376bc4..4304cd0 100644
+--- a/features/managing_system.feature
++++ b/features/managing_system.feature
+@@ -42,8 +42,8 @@ Feature: Managing system adapts sensor sampling rate in response to reliability
+ 
+   @timing @g4-g5
+   # Rastreabilidade BDD19: BSN-C10. Critério temporal local; G4/G5 local.
+-  # Executar antes do cenário longo de recuperação: a mesma pilha ROS é compartilhada
+-  # e aquele ensaio pode levar o oxímetro ao limite de 40 Hz, impedindo novos comandos.
++  # O executor inicia uma pilha nova para cada cenário de adaptação;
++  # a ordem textual não deve propagar o estado deixado pelo ensaio de recuperação.
+   Scenario: An adaptation command is issued within 10 seconds after reliability degradation (G4/G5)
+     Given the oximeter is operating normally with stable reliability
+     When the oximeter repeatedly reports a 'fail' status
+diff --git a/features/package.xml b/features/package.xml
+index 5f716c4..9d0d9c7 100644
+--- a/features/package.xml
++++ b/features/package.xml
+@@ -1,7 +1,7 @@
+ <?xml version="1.0"?>
+ <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+ <package format="3">
+-  <name>bsn_bdd</name>
++  <name>features</name>
+   <version>0.0.0</version>
+   <description>
+     The BDD suite, living in features/ rather than inside any one package
+diff --git a/features/steps/conftest.py b/features/steps/conftest.py
+index 1eb0aa3..c665526 100644
+--- a/features/steps/conftest.py
++++ b/features/steps/conftest.py
+@@ -234,6 +234,16 @@ def pytest_configure(config):
+ def bsn_system():
+     """Verifies the system under test is already running and active; launching and tearing it down
+     is the harness's job (see this module's docstring)."""
++    if os.environ.get("BSN_TRACE_DIRECT_READINESS") == "1":
++        # Use the same active-state service probe as the outer launch harness.
++        # Repeated instrumented CLI startups can each exhaust their 5s budget.
++        sys.path.insert(0, os.path.join(FEATURES_DIR, "test"))
++        from harness import wait_for_lifecycle_active
++        pending = wait_for_lifecycle_active(LIFECYCLE_NODES, STARTUP_TIMEOUT_S)
++        if pending:
++            pytest.exit(f"Nodes never reached 'active': {pending}", returncode=1)
++        yield
++        return
+     # Poll for 'active' instead of a blind sleep - usually faster, and gives
+     # a precise, actionable failure if nothing was launched at all.
+     deadline = time.time() + STARTUP_TIMEOUT_S
+diff --git a/features/steps/test_managing_system.py b/features/steps/test_managing_system.py
+index bc81530..b71046d 100644
+--- a/features/steps/test_managing_system.py
++++ b/features/steps/test_managing_system.py
+@@ -314,8 +314,16 @@ def adaptation_log():
+     """One persistent subscriber for every G4/G5 scenario (see _AdaptationCommandLog); module-scoped
+     so rclpy.init()/shutdown() happens once per pytest subprocess."""
+     log = _AdaptationCommandLog(reconfigure_topic("the oximeter"))
+-    yield log
+-    log.shutdown()
++    try:
++        # A fresh controller has a 60-cycle startup period. Readiness is outside
++        # the scenario response budget, and must be evidenced by an actual
++        # command rather than inferred from graph presence or a fixed sleep.
++        first = log.wait_for_any(0, timeout=90.0)
++        assert first is not None, "Controller never produced an initial oximeter command (90s readiness)"
++        print(f"Controller ready: first observed oximeter command {first:.3f} Hz", flush=True)
++        yield log
++    finally:
++        log.shutdown()
+ 
+ 
+ class _PersistLog:
+diff --git a/features/target_system.feature b/features/target_system.feature
+index 8caafc5..01b3d85 100644
+--- a/features/target_system.feature
++++ b/features/target_system.feature
+@@ -1,5 +1,7 @@
++# Propriedades e resultados: src/tg/apendices/apendice_b_propriedades_bdd.md
+ Feature: Ensure that central hub receives data from body sensors and publishes to data access node
+ 	@topology
++	# Rastreabilidade BDD22: BSN-C13. Contrato de comunicação complementar, relacionado a P7/P9.
+ 	Scenario Outline: Each body sensor sends its readings to the central hub
+ 		Given <sensor> is running
+ 		Then <sensor> should publish "vital sign data" to the central hub
+@@ -14,6 +16,7 @@ Feature: Ensure that central hub receives data from body sensors and publishes t
+ 			| the glucometer  |
+ 
+ 	@topology
++	# Rastreabilidade BDD23: BSN-C14. Contrato estrutural complementar de reconfiguração.
+ 	Scenario Outline: The parameter adapter forwards reconfiguration commands to each target
+ 		Given the parameter adapter is running
+ 		Then the parameter adapter should publish "reconfiguration command" to <target>
+@@ -29,6 +32,7 @@ Feature: Ensure that central hub receives data from body sensors and publishes t
+ 			| the central hub |
+ 
+ 	@behavior @patient-simulator
++	# Rastreabilidade BDD24: BSN-C15. Contrato complementar do simulador de paciente.
+ 	Scenario Outline: The patient simulator returns a current value for each monitored vital sign
+ 		Given the patient simulator is generating vital signs for the monitored patient
+ 		When the current value of <vital sign> is requested
+diff --git a/features/test/harness.py b/features/test/harness.py
+index 065427c..633a07e 100644
+--- a/features/test/harness.py
++++ b/features/test/harness.py
+@@ -178,21 +178,21 @@ def wait_for_topic_subscribers(topic_names, timeout_s=30.0):
+     return pending
+ 
+ 
+-def run_bdd_steps(relative_test_path):
++def run_bdd_steps(relative_test_path, *, pytest_args=(), report_suffix=""):
+     """Run one steps/test_*.py file as a `pytest` subprocess and return the CompletedProcess
+     (stdout/stderr inherited, so step failures show up directly in this test's output)."""
+     env = dict(os.environ)
+     # colcon's `--pytest-args` sets PYTEST_ADDOPTS on the outer pytest; left in place it leaks into this
+     # inner run and is applied relative to the wrong cwd (e.g. collecting a path that doesn't exist here).
+     env.pop("PYTEST_ADDOPTS", None)
+-    command = [sys.executable, "-m", "pytest", "-v", relative_test_path]
++    command = [sys.executable, "-m", "pytest", "-v", relative_test_path, *pytest_args]
+     # Um diretório novo por campanha evita confundir resultados antigos com os
+     # cenários internos desta execução. Sem a variável, preserva o uso habitual.
+     results_dir = env.get("BSN_BDD_RESULTS_DIR")
+     if results_dir:
+         destination = Path(results_dir).resolve()
+         destination.mkdir(parents=True, exist_ok=True)
+-        report = destination / (Path(relative_test_path).stem + ".xml")
++        report = destination / (Path(relative_test_path).stem + report_suffix + ".xml")
+         command.extend(["--junitxml=" + str(report), "-rA"])
+     if env.get("BSN_COVERAGE_CAMPAIGN"):
+         # A coleta multiprocesso é iniciada pelo sitecustomize da campanha.
+diff --git a/features/test/test_managing_system_bdd.py b/features/test/test_managing_system_bdd.py
+index 26d0a12..a927d1a 100644
+--- a/features/test/test_managing_system_bdd.py
++++ b/features/test/test_managing_system_bdd.py
+@@ -19,8 +19,27 @@ LIFECYCLE_NODES = (
+ PLAIN_NODES = ("logger", "node_monitor", "enactor", "reli_engine", "data_access")
+ 
+ 
++# Each behavioral scenario gets a fresh launch, including a new controller and
++# knowledge repository. Topology cases share a read-only inspection launch.
++GROUPS = {
++    "topology": ("-m", "topology"),
++    "increases": ("-k", "test_sampling_rate_increases"),
++    "recovers": ("-k", "test_sampling_rate_decreases"),
++    "deadline": ("-k", "test_an_adaptation_command_is_issued_within_10_seconds"),
++    "silent": ("-k", "test_no_adaptation_is_triggered"),
++    "logging": ("-k", "test_a_failed_adaptation_attempt"),
++}
++# Optional diagnostic subset/order. The default deliberately runs recovery before
++# the deadline case: a fresh launch must remove the old ordering dependency.
++SELECTED_GROUPS = os.environ.get("BSN_MANAGING_GROUPS", ",".join(GROUPS)).split(",")
++if (not SELECTED_GROUPS or len(set(SELECTED_GROUPS)) != len(SELECTED_GROUPS)
++        or any(group not in GROUPS for group in SELECTED_GROUPS)):
++    raise ValueError("BSN_MANAGING_GROUPS must contain distinct known group names")
++
++
+ @pytest.mark.launch_test
+-def generate_test_description():
++@launch_testing.parametrize("bdd_group", SELECTED_GROUPS)
++def generate_test_description(bdd_group):
+     launch_file = os.path.join(
+         get_package_share_directory("central_hub"), "launch", "emergency_detection_launch.py"
+     )
+@@ -29,19 +48,22 @@ def generate_test_description():
+             launch.launch_description_sources.PythonLaunchDescriptionSource(launch_file)
+         ),
+         launch_testing.actions.ReadyToTest(),
+-    ])
++    ]), {"bdd_group": bdd_group}
+ 
+ 
+ class TestManagingSystem(unittest.TestCase):
+ 
+-    def test_bdd_scenarios(self):
++    def test_bdd_scenarios(self, bdd_group):
+         pending = wait_for_lifecycle_active(LIFECYCLE_NODES)
+         assert not pending, f"Nodes never reached 'active': {pending}"
+ 
+         missing = nodes_online(*PLAIN_NODES)
+         assert not missing, f"Nodes never came online: {missing}"
+ 
+-        result = run_bdd_steps("steps/test_managing_system.py")
++        result = run_bdd_steps(
++            "steps/test_managing_system.py",
++            pytest_args=GROUPS[bdd_group], report_suffix="_" + bdd_group,
++        )
+         assert result.returncode == 0, (
+             "steps/test_managing_system.py failed - see the "
+             "pytest output above for which scenario and why"
+diff --git a/patient/coverage.xml b/patient/coverage.xml
+index 0340078..fef3af8 100644
+--- a/patient/coverage.xml
++++ b/patient/coverage.xml
+@@ -1,9 +1,9 @@
+ <?xml version="1.0" ?>
+-<coverage version="7.4.4" timestamp="1757681071658" lines-valid="115" lines-covered="107" line-rate="0.9304" branches-covered="0" branches-valid="0" branch-rate="0" complexity="0">
++<coverage version="7.4.4" timestamp="1790482072386" lines-valid="115" lines-covered="107" line-rate="0.9304" branches-covered="0" branches-valid="0" branch-rate="0" complexity="0">
+ 	<!-- Generated by coverage.py: https://coverage.readthedocs.io/en/7.4.4 -->
+ 	<!-- Based on https://raw.githubusercontent.com/cobertura/web/master/htdocs/xml/coverage-04.dtd -->
+ 	<sources>
+-		<source>/ros_ws/src/patient/patient</source>
++		<source>/ros_ws/src/bsn_ros2/patient/patient</source>
+ 	</sources>
+ 	<packages>
+ 		<package name="." line-rate="0.9304" branch-rate="0" complexity="0">
+diff --git a/sensor/coverage.xml b/sensor/coverage.xml
+index aa64c52..89bbe48 100644
+--- a/sensor/coverage.xml
++++ b/sensor/coverage.xml
+@@ -1,140 +1,827 @@
+ <?xml version="1.0" ?>
+-<coverage version="7.4.4" timestamp="1760628327928" lines-valid="514" lines-covered="389" line-rate="0.7568" branches-covered="0" branches-valid="0" branch-rate="0" complexity="0">
++<coverage version="7.4.4" timestamp="1790482158000" lines-valid="1054" lines-covered="510" line-rate="0.4839" branches-covered="0" branches-valid="0" branch-rate="0" complexity="0">
+ 	<!-- Generated by coverage.py: https://coverage.readthedocs.io/en/7.4.4 -->
+ 	<!-- Based on https://raw.githubusercontent.com/cobertura/web/master/htdocs/xml/coverage-04.dtd -->
+ 	<sources>
+-		<source>/ros_ws/src/sensor/sensor</source>
++		<source></source>
++		<source>/ros_ws/src/bsn_ros2/sensor/sensor</source>
+ 	</sources>
+ 	<packages>
+-		<package name="." line-rate="0.6492" branch-rate="0" complexity="0">
++		<package name=".ros_ws.src.bsn_ros2.central_hub.central_hub" line-rate="0.1508" branch-rate="0" complexity="0">
+ 			<classes>
+-				<class name="__init__.py" filename="__init__.py" complexity="0" line-rate="1" branch-rate="0">
++				<class name="__init__.py" filename="/ros_ws/src/bsn_ros2/central_hub/central_hub/__init__.py" complexity="0" line-rate="1" branch-rate="0">
+ 					<methods/>
+ 					<lines/>
+ 				</class>
+-				<class name="sensor.py" filename="sensor.py" complexity="0" line-rate="0.5128" branch-rate="0">
++				<class name="central_hub.py" filename="/ros_ws/src/bsn_ros2/central_hub/central_hub/central_hub.py" complexity="0" line-rate="0.4524" branch-rate="0">
+ 					<methods/>
+ 					<lines>
++						<line number="1" hits="1"/>
++						<line number="2" hits="1"/>
++						<line number="3" hits="1"/>
++						<line number="6" hits="1"/>
++						<line number="7" hits="1"/>
++						<line number="8" hits="1"/>
+ 						<line number="9" hits="1"/>
+ 						<line number="10" hits="1"/>
+ 						<line number="11" hits="1"/>
+ 						<line number="12" hits="1"/>
+ 						<line number="13" hits="1"/>
+-						<line number="14" hits="1"/>
+ 						<line number="15" hits="1"/>
+-						<line number="16" hits="1"/>
+-						<line number="17" hits="1"/>
+-						<line number="18" hits="1"/>
+-						<line number="19" hits="1"/>
+ 						<line number="22" hits="1"/>
++						<line number="24" hits="1"/>
++						<line number="26" hits="1"/>
++						<line number="32" hits="1"/>
++						<line number="40" hits="1"/>
++						<line number="42" hits="1"/>
++						<line number="44" hits="1"/>
++						<line number="46" hits="1"/>
++						<line number="48" hits="1"/>
++						<line number="50" hits="1"/>
++						<line number="51" hits="1"/>
+ 						<line number="52" hits="1"/>
+-						<line number="60" hits="1"/>
+-						<line number="63" hits="1"/>
+-						<line number="66" hits="1"/>
+-						<line number="67" hits="1"/>
+-						<line number="68" hits="1"/>
+-						<line number="69" hits="1"/>
+-						<line number="72" hits="1"/>
+-						<line number="74" hits="1"/>
+-						<line number="75" hits="1"/>
+-						<line number="76" hits="1"/>
+-						<line number="79" hits="1"/>
+-						<line number="80" hits="1"/>
+-						<line number="81" hits="1"/>
+-						<line number="84" hits="1"/>
++						<line number="53" hits="1"/>
++						<line number="56" hits="1"/>
++						<line number="62" hits="0"/>
++						<line number="64" hits="0"/>
++						<line number="65" hits="0"/>
++						<line number="66" hits="0"/>
++						<line number="67" hits="0"/>
++						<line number="70" hits="0"/>
++						<line number="71" hits="0"/>
++						<line number="74" hits="0"/>
++						<line number="75" hits="0"/>
++						<line number="79" hits="0"/>
++						<line number="80" hits="0"/>
++						<line number="81" hits="0"/>
++						<line number="83" hits="1"/>
++						<line number="85" hits="1"/>
++						<line number="87" hits="1"/>
++						<line number="89" hits="1"/>
+ 						<line number="92" hits="1"/>
++						<line number="95" hits="1"/>
+ 						<line number="97" hits="1"/>
++						<line number="98" hits="0"/>
++						<line number="99" hits="0"/>
++						<line number="100" hits="0"/>
++						<line number="101" hits="0"/>
++						<line number="103" hits="1"/>
++						<line number="104" hits="1"/>
++						<line number="106" hits="1"/>
++						<line number="107" hits="1"/>
++						<line number="109" hits="1"/>
+ 						<line number="110" hits="1"/>
+-						<line number="112" hits="1"/>
+-						<line number="114" hits="1"/>
+-						<line number="116" hits="1"/>
+-						<line number="119" hits="1"/>
+-						<line number="121" hits="1"/>
++						<line number="114" hits="0"/>
++						<line number="117" hits="1"/>
++						<line number="118" hits="1"/>
++						<line number="120" hits="1"/>
++						<line number="121" hits="0"/>
+ 						<line number="122" hits="0"/>
+ 						<line number="123" hits="0"/>
+ 						<line number="124" hits="0"/>
+ 						<line number="126" hits="1"/>
+-						<line number="138" hits="1"/>
+-						<line number="140" hits="1"/>
+-						<line number="142" hits="1"/>
++						<line number="127" hits="0"/>
++						<line number="129" hits="0"/>
++						<line number="130" hits="0"/>
++						<line number="134" hits="0"/>
++						<line number="136" hits="0"/>
++						<line number="137" hits="0"/>
++						<line number="139" hits="0"/>
++						<line number="140" hits="0"/>
++						<line number="141" hits="0"/>
++						<line number="142" hits="0"/>
++						<line number="143" hits="0"/>
+ 						<line number="145" hits="1"/>
+-						<line number="146" hits="1"/>
++						<line number="146" hits="0"/>
++						<line number="148" hits="0"/>
+ 						<line number="150" hits="0"/>
+-						<line number="153" hits="1"/>
+-						<line number="154" hits="1"/>
++						<line number="151" hits="0"/>
++						<line number="152" hits="0"/>
++						<line number="153" hits="0"/>
++						<line number="154" hits="0"/>
+ 						<line number="156" hits="1"/>
+-						<line number="157" hits="0"/>
+-						<line number="158" hits="0"/>
+-						<line number="159" hits="0"/>
++						<line number="157" hits="1"/>
++						<line number="159" hits="1"/>
++						<line number="160" hits="1"/>
+ 						<line number="161" hits="1"/>
+-						<line number="173" hits="0"/>
++						<line number="164" hits="1"/>
++						<line number="165" hits="1"/>
++						<line number="166" hits="1"/>
++						<line number="168" hits="1"/>
++						<line number="169" hits="0"/>
++						<line number="170" hits="0"/>
++						<line number="171" hits="0"/>
++						<line number="173" hits="1"/>
+ 						<line number="175" hits="0"/>
+-						<line number="177" hits="0"/>
+-						<line number="180" hits="0"/>
++						<line number="176" hits="0"/>
++						<line number="178" hits="1"/>
+ 						<line number="181" hits="0"/>
+ 						<line number="183" hits="0"/>
+ 						<line number="184" hits="0"/>
+ 						<line number="185" hits="0"/>
+-						<line number="186" hits="0"/>
+-						<line number="188" hits="1"/>
++						<line number="187" hits="0"/>
++						<line number="189" hits="0"/>
++						<line number="192" hits="0"/>
++						<line number="193" hits="0"/>
++						<line number="196" hits="0"/>
++						<line number="198" hits="0"/>
+ 						<line number="200" hits="0"/>
++						<line number="208" hits="0"/>
++						<line number="210" hits="0"/>
++						<line number="211" hits="0"/>
++						<line number="214" hits="1"/>
++						<line number="215" hits="0"/>
++						<line number="217" hits="0"/>
++						<line number="220" hits="0"/>
++						<line number="223" hits="0"/>
++						<line number="226" hits="0"/>
++						<line number="228" hits="0"/>
++						<line number="229" hits="0"/>
++						<line number="231" hits="0"/>
++						<line number="232" hits="0"/>
++						<line number="233" hits="0"/>
++						<line number="236" hits="1"/>
++						<line number="237" hits="0"/>
++					</lines>
++				</class>
++				<class name="central_hub_tests.py" filename="/ros_ws/src/bsn_ros2/central_hub/central_hub/central_hub_tests.py" complexity="0" line-rate="0" branch-rate="0">
++					<methods/>
++					<lines>
++						<line number="2" hits="0"/>
++						<line number="3" hits="0"/>
++						<line number="4" hits="0"/>
++						<line number="5" hits="0"/>
++						<line number="6" hits="0"/>
++						<line number="7" hits="0"/>
++						<line number="8" hits="0"/>
++						<line number="10" hits="0"/>
++						<line number="13" hits="0"/>
++						<line number="14" hits="0"/>
++						<line number="17" hits="0"/>
++						<line number="18" hits="0"/>
++						<line number="19" hits="0"/>
++						<line number="20" hits="0"/>
++						<line number="21" hits="0"/>
++						<line number="24" hits="0"/>
++						<line number="25" hits="0"/>
++						<line number="26" hits="0"/>
++						<line number="27" hits="0"/>
++						<line number="28" hits="0"/>
++						<line number="29" hits="0"/>
++						<line number="31" hits="0"/>
++						<line number="32" hits="0"/>
++						<line number="34" hits="0"/>
++						<line number="35" hits="0"/>
++						<line number="36" hits="0"/>
++						<line number="37" hits="0"/>
++						<line number="38" hits="0"/>
++						<line number="39" hits="0"/>
++						<line number="40" hits="0"/>
++						<line number="42" hits="0"/>
++						<line number="43" hits="0"/>
++						<line number="44" hits="0"/>
++						<line number="45" hits="0"/>
++						<line number="47" hits="0"/>
++						<line number="49" hits="0"/>
++						<line number="50" hits="0"/>
++						<line number="54" hits="0"/>
++						<line number="55" hits="0"/>
++						<line number="58" hits="0"/>
++						<line number="64" hits="0"/>
++						<line number="65" hits="0"/>
++						<line number="67" hits="0"/>
++						<line number="68" hits="0"/>
++						<line number="71" hits="0"/>
++						<line number="72" hits="0"/>
++						<line number="75" hits="0"/>
++						<line number="81" hits="0"/>
++						<line number="82" hits="0"/>
++						<line number="84" hits="0"/>
++						<line number="85" hits="0"/>
++						<line number="87" hits="0"/>
++						<line number="88" hits="0"/>
++						<line number="90" hits="0"/>
++						<line number="95" hits="0"/>
++						<line number="96" hits="0"/>
++						<line number="97" hits="0"/>
++						<line number="99" hits="0"/>
++						<line number="100" hits="0"/>
++						<line number="102" hits="0"/>
++						<line number="103" hits="0"/>
++						<line number="105" hits="0"/>
++						<line number="110" hits="0"/>
++						<line number="111" hits="0"/>
++						<line number="112" hits="0"/>
++						<line number="114" hits="0"/>
++						<line number="115" hits="0"/>
++						<line number="117" hits="0"/>
++						<line number="118" hits="0"/>
++						<line number="120" hits="0"/>
++						<line number="125" hits="0"/>
++						<line number="130" hits="0"/>
++						<line number="132" hits="0"/>
++						<line number="133" hits="0"/>
++						<line number="134" hits="0"/>
++						<line number="136" hits="0"/>
++						<line number="137" hits="0"/>
++						<line number="140" hits="0"/>
++						<line number="142" hits="0"/>
++						<line number="144" hits="0"/>
++						<line number="145" hits="0"/>
++						<line number="146" hits="0"/>
++						<line number="148" hits="0"/>
++						<line number="149" hits="0"/>
++						<line number="150" hits="0"/>
++						<line number="151" hits="0"/>
++						<line number="154" hits="0"/>
++						<line number="155" hits="0"/>
++						<line number="156" hits="0"/>
++						<line number="157" hits="0"/>
++						<line number="158" hits="0"/>
++						<line number="160" hits="0"/>
++						<line number="162" hits="0"/>
++						<line number="163" hits="0"/>
++						<line number="166" hits="0"/>
++						<line number="167" hits="0"/>
++						<line number="168" hits="0"/>
++						<line number="169" hits="0"/>
++						<line number="172" hits="0"/>
++						<line number="174" hits="0"/>
++						<line number="176" hits="0"/>
++						<line number="177" hits="0"/>
++						<line number="178" hits="0"/>
++						<line number="180" hits="0"/>
++						<line number="183" hits="0"/>
++						<line number="187" hits="0"/>
++						<line number="189" hits="0"/>
++						<line number="191" hits="0"/>
++						<line number="192" hits="0"/>
++						<line number="195" hits="0"/>
++						<line number="196" hits="0"/>
++						<line number="197" hits="0"/>
++						<line number="198" hits="0"/>
++						<line number="201" hits="0"/>
+ 						<line number="202" hits="0"/>
++						<line number="203" hits="0"/>
+ 						<line number="204" hits="0"/>
+-						<line number="205" hits="0"/>
++						<line number="207" hits="0"/>
+ 						<line number="208" hits="0"/>
+-						<line number="209" hits="0"/>
+-						<line number="212" hits="0"/>
++						<line number="210" hits="0"/>
++						<line number="211" hits="0"/>
+ 						<line number="214" hits="0"/>
+ 						<line number="215" hits="0"/>
+ 						<line number="216" hits="0"/>
+ 						<line number="217" hits="0"/>
+-						<line number="219" hits="1"/>
+-						<line number="231" hits="1"/>
+-						<line number="233" hits="1"/>
+-						<line number="235" hits="1"/>
+-						<line number="238" hits="1"/>
+-						<line number="239" hits="1"/>
+-						<line number="242" hits="1"/>
+-						<line number="243" hits="1"/>
+-						<line number="244" hits="1"/>
+-						<line number="246" hits="1"/>
+-						<line number="247" hits="0"/>
+-						<line number="248" hits="0"/>
++						<line number="220" hits="0"/>
++						<line number="221" hits="0"/>
++						<line number="222" hits="0"/>
++						<line number="223" hits="0"/>
++						<line number="226" hits="0"/>
++						<line number="227" hits="0"/>
++						<line number="228" hits="0"/>
++						<line number="230" hits="0"/>
++						<line number="232" hits="0"/>
++						<line number="233" hits="0"/>
++						<line number="236" hits="0"/>
++						<line number="237" hits="0"/>
++						<line number="238" hits="0"/>
++						<line number="239" hits="0"/>
++						<line number="242" hits="0"/>
++						<line number="244" hits="0"/>
++						<line number="246" hits="0"/>
+ 						<line number="249" hits="0"/>
+-						<line number="251" hits="1"/>
++						<line number="253" hits="0"/>
++						<line number="255" hits="0"/>
++						<line number="257" hits="0"/>
+ 						<line number="258" hits="0"/>
+-						<line number="260" hits="1"/>
+-						<line number="268" hits="0"/>
+-						<line number="271" hits="0"/>
+-						<line number="272" hits="0"/>
++						<line number="261" hits="0"/>
++						<line number="262" hits="0"/>
++						<line number="265" hits="0"/>
++						<line number="266" hits="0"/>
++						<line number="267" hits="0"/>
++						<line number="270" hits="0"/>
++						<line number="273" hits="0"/>
+ 						<line number="274" hits="0"/>
+-						<line number="275" hits="0"/>
+-						<line number="276" hits="0"/>
+ 						<line number="277" hits="0"/>
+-						<line number="280" hits="0"/>
++						<line number="278" hits="0"/>
+ 						<line number="281" hits="0"/>
+-						<line number="283" hits="0"/>
++						<line number="282" hits="0"/>
+ 						<line number="284" hits="0"/>
+ 						<line number="285" hits="0"/>
+-						<line number="286" hits="0"/>
+-						<line number="287" hits="0"/>
+-						<line number="288" hits="0"/>
++						<line number="290" hits="0"/>
+ 						<line number="291" hits="0"/>
+-						<line number="293" hits="0"/>
+-						<line number="296" hits="1"/>
+-						<line number="306" hits="0"/>
+-						<line number="309" hits="0"/>
++						<line number="294" hits="0"/>
++						<line number="295" hits="0"/>
++						<line number="296" hits="0"/>
++						<line number="297" hits="0"/>
++						<line number="298" hits="0"/>
++						<line number="299" hits="0"/>
++						<line number="300" hits="0"/>
++						<line number="303" hits="0"/>
++						<line number="305" hits="0"/>
++						<line number="307" hits="0"/>
++						<line number="308" hits="0"/>
+ 						<line number="311" hits="0"/>
+ 						<line number="312" hits="0"/>
+-						<line number="314" hits="0"/>
+ 						<line number="315" hits="0"/>
+ 						<line number="317" hits="0"/>
+ 						<line number="318" hits="0"/>
+-						<line number="321" hits="1"/>
++						<line number="321" hits="0"/>
+ 						<line number="322" hits="0"/>
++						<line number="323" hits="0"/>
++						<line number="326" hits="0"/>
++						<line number="327" hits="0"/>
++						<line number="328" hits="0"/>
++						<line number="330" hits="0"/>
++						<line number="334" hits="0"/>
++						<line number="336" hits="0"/>
++						<line number="338" hits="0"/>
++						<line number="339" hits="0"/>
++						<line number="341" hits="0"/>
++						<line number="343" hits="0"/>
++						<line number="344" hits="0"/>
++						<line number="347" hits="0"/>
++						<line number="350" hits="0"/>
++						<line number="354" hits="0"/>
++						<line number="357" hits="0"/>
++						<line number="358" hits="0"/>
++						<line number="360" hits="0"/>
++						<line number="362" hits="0"/>
++						<line number="363" hits="0"/>
++						<line number="365" hits="0"/>
++						<line number="366" hits="0"/>
++						<line number="367" hits="0"/>
++						<line number="368" hits="0"/>
++						<line number="369" hits="0"/>
++						<line number="370" hits="0"/>
++						<line number="371" hits="0"/>
++						<line number="373" hits="0"/>
++						<line number="374" hits="0"/>
++						<line number="376" hits="0"/>
++						<line number="377" hits="0"/>
++						<line number="380" hits="0"/>
++						<line number="381" hits="0"/>
++						<line number="383" hits="0"/>
++						<line number="384" hits="0"/>
++						<line number="387" hits="0"/>
++						<line number="388" hits="0"/>
++						<line number="390" hits="0"/>
++						<line number="391" hits="0"/>
++						<line number="392" hits="0"/>
++						<line number="394" hits="0"/>
++						<line number="396" hits="0"/>
++						<line number="397" hits="0"/>
++						<line number="400" hits="0"/>
++						<line number="403" hits="0"/>
++						<line number="404" hits="0"/>
++						<line number="408" hits="0"/>
++						<line number="409" hits="0"/>
++						<line number="411" hits="0"/>
++						<line number="412" hits="0"/>
++						<line number="414" hits="0"/>
++						<line number="416" hits="0"/>
++						<line number="417" hits="0"/>
++						<line number="419" hits="0"/>
++						<line number="420" hits="0"/>
++						<line number="421" hits="0"/>
++						<line number="422" hits="0"/>
++						<line number="424" hits="0"/>
++						<line number="425" hits="0"/>
++						<line number="426" hits="0"/>
++						<line number="427" hits="0"/>
++						<line number="429" hits="0"/>
++						<line number="430" hits="0"/>
++						<line number="433" hits="0"/>
++						<line number="434" hits="0"/>
++						<line number="437" hits="0"/>
++						<line number="438" hits="0"/>
++						<line number="441" hits="0"/>
++						<line number="442" hits="0"/>
++						<line number="443" hits="0"/>
++						<line number="445" hits="0"/>
++					</lines>
++				</class>
++			</classes>
++		</package>
++		<package name=".ros_ws.src.bsn_ros2.central_hub.central_hub.components" line-rate="0.3519" branch-rate="0" complexity="0">
++			<classes>
++				<class name="__init__.py" filename="/ros_ws/src/bsn_ros2/central_hub/central_hub/components/__init__.py" complexity="0" line-rate="1" branch-rate="0">
++					<methods/>
++					<lines/>
++				</class>
++				<class name="config_manager.py" filename="/ros_ws/src/bsn_ros2/central_hub/central_hub/components/config_manager.py" complexity="0" line-rate="0.7143" branch-rate="0">
++					<methods/>
++					<lines>
++						<line number="9" hits="1"/>
++						<line number="12" hits="1"/>
++						<line number="19" hits="1"/>
++						<line number="21" hits="1"/>
++						<line number="23" hits="1"/>
++						<line number="24" hits="1"/>
++						<line number="25" hits="1"/>
++						<line number="26" hits="0"/>
++						<line number="27" hits="0"/>
++						<line number="28" hits="0"/>
++						<line number="30" hits="1"/>
++						<line number="39" hits="1"/>
++						<line number="40" hits="0"/>
++						<line number="42" hits="1"/>
++					</lines>
++				</class>
++				<class name="data_fusion.py" filename="/ros_ws/src/bsn_ros2/central_hub/central_hub/components/data_fusion.py" complexity="0" line-rate="0.09091" branch-rate="0">
++					<methods/>
++					<lines>
++						<line number="8" hits="1"/>
++						<line number="10" hits="1"/>
++						<line number="32" hits="1"/>
++						<line number="42" hits="1"/>
++						<line number="44" hits="1"/>
++						<line number="62" hits="0"/>
++						<line number="63" hits="0"/>
++						<line number="66" hits="0"/>
++						<line number="68" hits="0"/>
++						<line number="69" hits="0"/>
++						<line number="72" hits="0"/>
++						<line number="77" hits="0"/>
++						<line number="78" hits="0"/>
++						<line number="79" hits="0"/>
++						<line number="82" hits="0"/>
++						<line number="83" hits="0"/>
++						<line number="84" hits="0"/>
++						<line number="85" hits="0"/>
++						<line number="86" hits="0"/>
++						<line number="89" hits="0"/>
++						<line number="90" hits="0"/>
++						<line number="92" hits="0"/>
++						<line number="93" hits="0"/>
++						<line number="95" hits="0"/>
++						<line number="96" hits="0"/>
++						<line number="97" hits="0"/>
++						<line number="100" hits="0"/>
++						<line number="101" hits="0"/>
++						<line number="102" hits="0"/>
++						<line number="103" hits="0"/>
++						<line number="105" hits="0"/>
++						<line number="108" hits="0"/>
++						<line number="109" hits="0"/>
++						<line number="110" hits="0"/>
++						<line number="112" hits="0"/>
++						<line number="115" hits="0"/>
++						<line number="117" hits="0"/>
++						<line number="118" hits="0"/>
++						<line number="119" hits="0"/>
++						<line number="120" hits="0"/>
++						<line number="121" hits="0"/>
++						<line number="122" hits="0"/>
++						<line number="124" hits="1"/>
++						<line number="140" hits="0"/>
++						<line number="141" hits="0"/>
++						<line number="144" hits="0"/>
++						<line number="145" hits="0"/>
++						<line number="146" hits="0"/>
++						<line number="148" hits="0"/>
++						<line number="149" hits="0"/>
++						<line number="150" hits="0"/>
++						<line number="152" hits="0"/>
++						<line number="153" hits="0"/>
++						<line number="154" hits="0"/>
++						<line number="155" hits="0"/>
++						<line number="158" hits="0"/>
++						<line number="159" hits="0"/>
++						<line number="162" hits="0"/>
++						<line number="163" hits="0"/>
++						<line number="165" hits="0"/>
++						<line number="166" hits="0"/>
++						<line number="167" hits="0"/>
++						<line number="168" hits="0"/>
++						<line number="171" hits="0"/>
++						<line number="172" hits="0"/>
++						<line number="174" hits="0"/>
+ 					</lines>
+ 				</class>
+-				<class name="sensor_tests.py" filename="sensor_tests.py" complexity="0" line-rate="0.8649" branch-rate="0">
++				<class name="publishers.py" filename="/ros_ws/src/bsn_ros2/central_hub/central_hub/components/publishers.py" complexity="0" line-rate="0.2826" branch-rate="0">
++					<methods/>
++					<lines>
++						<line number="9" hits="1"/>
++						<line number="10" hits="1"/>
++						<line number="11" hits="1"/>
++						<line number="12" hits="1"/>
++						<line number="15" hits="1"/>
++						<line number="43" hits="1"/>
++						<line number="53" hits="1"/>
++						<line number="55" hits="1"/>
++						<line number="57" hits="1"/>
++						<line number="65" hits="1"/>
++						<line number="67" hits="1"/>
++						<line number="70" hits="1"/>
++						<line number="71" hits="0"/>
++						<line number="72" hits="0"/>
++						<line number="73" hits="0"/>
++						<line number="75" hits="1"/>
++						<line number="90" hits="0"/>
++						<line number="91" hits="0"/>
++						<line number="92" hits="0"/>
++						<line number="93" hits="0"/>
++						<line number="96" hits="0"/>
++						<line number="98" hits="0"/>
++						<line number="99" hits="0"/>
++						<line number="100" hits="0"/>
++						<line number="101" hits="0"/>
++						<line number="104" hits="0"/>
++						<line number="105" hits="0"/>
++						<line number="106" hits="0"/>
++						<line number="107" hits="0"/>
++						<line number="108" hits="0"/>
++						<line number="109" hits="0"/>
++						<line number="111" hits="0"/>
++						<line number="112" hits="0"/>
++						<line number="113" hits="0"/>
++						<line number="114" hits="0"/>
++						<line number="115" hits="0"/>
++						<line number="116" hits="0"/>
++						<line number="118" hits="0"/>
++						<line number="119" hits="0"/>
++						<line number="120" hits="0"/>
++						<line number="121" hits="0"/>
++						<line number="122" hits="0"/>
++						<line number="123" hits="0"/>
++						<line number="125" hits="0"/>
++						<line number="127" hits="0"/>
++						<line number="128" hits="0"/>
++					</lines>
++				</class>
++				<class name="sensor_data_handler.py" filename="/ros_ws/src/bsn_ros2/central_hub/central_hub/components/sensor_data_handler.py" complexity="0" line-rate="0.7778" branch-rate="0">
++					<methods/>
++					<lines>
++						<line number="9" hits="1"/>
++						<line number="12" hits="1"/>
++						<line number="39" hits="1"/>
++						<line number="49" hits="1"/>
++						<line number="52" hits="1"/>
++						<line number="53" hits="1"/>
++						<line number="58" hits="1"/>
++						<line number="63" hits="1"/>
++						<line number="68" hits="1"/>
++						<line number="73" hits="1"/>
++						<line number="81" hits="1"/>
++						<line number="84" hits="1"/>
++						<line number="87" hits="1"/>
++						<line number="90" hits="1"/>
++						<line number="93" hits="1"/>
++						<line number="96" hits="1"/>
++						<line number="100" hits="1"/>
++						<line number="107" hits="0"/>
++						<line number="108" hits="0"/>
++						<line number="109" hits="0"/>
++						<line number="110" hits="0"/>
++						<line number="111" hits="0"/>
++						<line number="112" hits="0"/>
++						<line number="114" hits="1"/>
++						<line number="127" hits="1"/>
++						<line number="128" hits="0"/>
++						<line number="130" hits="1"/>
++						<line number="134" hits="1"/>
++						<line number="135" hits="0"/>
++						<line number="140" hits="1"/>
++						<line number="141" hits="1"/>
++						<line number="142" hits="1"/>
++						<line number="145" hits="1"/>
++						<line number="148" hits="1"/>
++						<line number="150" hits="1"/>
++						<line number="154" hits="1"/>
++					</lines>
++				</class>
++			</classes>
++		</package>
++		<package name=".ros_ws.src.bsn_ros2.central_hub.central_hub.utils" line-rate="0.1507" branch-rate="0" complexity="0">
++			<classes>
++				<class name="__init__.py" filename="/ros_ws/src/bsn_ros2/central_hub/central_hub/utils/__init__.py" complexity="0" line-rate="1" branch-rate="0">
++					<methods/>
++					<lines/>
++				</class>
++				<class name="risk_analyzer.py" filename="/ros_ws/src/bsn_ros2/central_hub/central_hub/utils/risk_analyzer.py" complexity="0" line-rate="0.1667" branch-rate="0">
++					<methods/>
++					<lines>
++						<line number="1" hits="1"/>
++						<line number="2" hits="1"/>
++						<line number="5" hits="1"/>
++						<line number="6" hits="1"/>
++						<line number="8" hits="1"/>
++						<line number="11" hits="0"/>
++						<line number="12" hits="0"/>
++						<line number="13" hits="0"/>
++						<line number="15" hits="0"/>
++						<line number="17" hits="0"/>
++						<line number="18" hits="0"/>
++						<line number="19" hits="0"/>
++						<line number="20" hits="0"/>
++						<line number="21" hits="0"/>
++						<line number="22" hits="0"/>
++						<line number="23" hits="0"/>
++						<line number="24" hits="0"/>
++						<line number="25" hits="0"/>
++						<line number="28" hits="0"/>
++						<line number="29" hits="0"/>
++						<line number="30" hits="0"/>
++						<line number="34" hits="0"/>
++						<line number="37" hits="0"/>
++						<line number="38" hits="0"/>
++						<line number="41" hits="0"/>
++						<line number="42" hits="0"/>
++						<line number="46" hits="0"/>
++						<line number="47" hits="0"/>
++						<line number="48" hits="0"/>
++						<line number="49" hits="0"/>
++					</lines>
++				</class>
++				<class name="visualization.py" filename="/ros_ws/src/bsn_ros2/central_hub/central_hub/utils/visualization.py" complexity="0" line-rate="0.1395" branch-rate="0">
++					<methods/>
++					<lines>
++						<line number="10" hits="1"/>
++						<line number="31" hits="1"/>
++						<line number="41" hits="1"/>
++						<line number="43" hits="1"/>
++						<line number="62" hits="0"/>
++						<line number="64" hits="0"/>
++						<line number="65" hits="0"/>
++						<line number="66" hits="0"/>
++						<line number="70" hits="0"/>
++						<line number="71" hits="0"/>
++						<line number="72" hits="0"/>
++						<line number="75" hits="0"/>
++						<line number="76" hits="0"/>
++						<line number="77" hits="0"/>
++						<line number="78" hits="0"/>
++						<line number="79" hits="0"/>
++						<line number="80" hits="0"/>
++						<line number="82" hits="0"/>
++						<line number="83" hits="0"/>
++						<line number="84" hits="0"/>
++						<line number="85" hits="0"/>
++						<line number="86" hits="0"/>
++						<line number="87" hits="0"/>
++						<line number="88" hits="0"/>
++						<line number="89" hits="0"/>
++						<line number="90" hits="0"/>
++						<line number="91" hits="0"/>
++						<line number="92" hits="0"/>
++						<line number="93" hits="0"/>
++						<line number="95" hits="0"/>
++						<line number="99" hits="0"/>
++						<line number="102" hits="0"/>
++						<line number="104" hits="1"/>
++						<line number="117" hits="0"/>
++						<line number="118" hits="0"/>
++						<line number="120" hits="0"/>
++						<line number="122" hits="0"/>
++						<line number="124" hits="1"/>
++						<line number="134" hits="0"/>
++						<line number="135" hits="0"/>
++						<line number="137" hits="0"/>
++						<line number="138" hits="0"/>
++						<line number="140" hits="0"/>
++					</lines>
++				</class>
++			</classes>
++		</package>
++		<package name="sensor" line-rate="0.83" branch-rate="0" complexity="0">
++			<classes>
++				<class name="__init__.py" filename="sensor/__init__.py" complexity="0" line-rate="1" branch-rate="0">
++					<methods/>
++					<lines/>
++				</class>
++				<class name="sensor.py" filename="sensor/sensor.py" complexity="0" line-rate="0.8492" branch-rate="0">
++					<methods/>
++					<lines>
++						<line number="9" hits="1"/>
++						<line number="10" hits="1"/>
++						<line number="11" hits="1"/>
++						<line number="12" hits="1"/>
++						<line number="13" hits="1"/>
++						<line number="14" hits="1"/>
++						<line number="15" hits="1"/>
++						<line number="16" hits="1"/>
++						<line number="17" hits="1"/>
++						<line number="18" hits="1"/>
++						<line number="19" hits="1"/>
++						<line number="20" hits="1"/>
++						<line number="21" hits="1"/>
++						<line number="51" hits="1"/>
++						<line number="60" hits="1"/>
++						<line number="62" hits="1"/>
++						<line number="68" hits="1"/>
++						<line number="76" hits="1"/>
++						<line number="78" hits="1"/>
++						<line number="80" hits="1"/>
++						<line number="82" hits="1"/>
++						<line number="84" hits="1"/>
++						<line number="86" hits="1"/>
++						<line number="87" hits="1"/>
++						<line number="89" hits="1"/>
++						<line number="96" hits="1"/>
++						<line number="99" hits="1"/>
++						<line number="100" hits="1"/>
++						<line number="102" hits="1"/>
++						<line number="103" hits="1"/>
++						<line number="104" hits="1"/>
++						<line number="105" hits="1"/>
++						<line number="108" hits="1"/>
++						<line number="109" hits="1"/>
++						<line number="110" hits="1"/>
++						<line number="112" hits="1"/>
++						<line number="113" hits="1"/>
++						<line number="114" hits="1"/>
++						<line number="115" hits="1"/>
++						<line number="116" hits="1"/>
++						<line number="117" hits="1"/>
++						<line number="120" hits="1"/>
++						<line number="121" hits="1"/>
++						<line number="123" hits="1"/>
++						<line number="127" hits="1"/>
++						<line number="140" hits="1"/>
++						<line number="142" hits="1"/>
++						<line number="144" hits="1"/>
++						<line number="145" hits="0"/>
++						<line number="148" hits="1"/>
++						<line number="150" hits="1"/>
++						<line number="151" hits="1"/>
++						<line number="152" hits="1"/>
++						<line number="153" hits="1"/>
++						<line number="154" hits="1"/>
++						<line number="155" hits="1"/>
++						<line number="157" hits="1"/>
++						<line number="169" hits="1"/>
++						<line number="171" hits="1"/>
++						<line number="173" hits="1"/>
++						<line number="176" hits="1"/>
++						<line number="177" hits="1"/>
++						<line number="181" hits="1"/>
++						<line number="182" hits="1"/>
++						<line number="183" hits="1"/>
++						<line number="185" hits="1"/>
++						<line number="186" hits="0"/>
++						<line number="187" hits="0"/>
++						<line number="188" hits="0"/>
++						<line number="189" hits="0"/>
++						<line number="191" hits="1"/>
++						<line number="203" hits="1"/>
++						<line number="205" hits="1"/>
++						<line number="207" hits="1"/>
++						<line number="210" hits="1"/>
++						<line number="211" hits="1"/>
++						<line number="213" hits="1"/>
++						<line number="214" hits="0"/>
++						<line number="215" hits="0"/>
++						<line number="216" hits="0"/>
++						<line number="217" hits="0"/>
++						<line number="219" hits="1"/>
++						<line number="231" hits="1"/>
++						<line number="233" hits="1"/>
++						<line number="235" hits="1"/>
++						<line number="236" hits="1"/>
++						<line number="239" hits="1"/>
++						<line number="240" hits="1"/>
++						<line number="243" hits="1"/>
++						<line number="245" hits="1"/>
++						<line number="246" hits="0"/>
++						<line number="247" hits="0"/>
++						<line number="248" hits="0"/>
++						<line number="249" hits="0"/>
++						<line number="251" hits="1"/>
++						<line number="263" hits="1"/>
++						<line number="265" hits="1"/>
++						<line number="267" hits="1"/>
++						<line number="270" hits="1"/>
++						<line number="271" hits="1"/>
++						<line number="274" hits="1"/>
++						<line number="275" hits="1"/>
++						<line number="276" hits="1"/>
++						<line number="278" hits="1"/>
++						<line number="279" hits="1"/>
++						<line number="280" hits="1"/>
++						<line number="281" hits="1"/>
++						<line number="283" hits="1"/>
++						<line number="290" hits="1"/>
++						<line number="293" hits="1"/>
++						<line number="300" hits="0"/>
++						<line number="301" hits="0"/>
++						<line number="302" hits="0"/>
++						<line number="303" hits="0"/>
++						<line number="304" hits="0"/>
++						<line number="307" hits="1"/>
++						<line number="317" hits="1"/>
++						<line number="320" hits="1"/>
++						<line number="322" hits="1"/>
++						<line number="323" hits="1"/>
++						<line number="325" hits="1"/>
++						<line number="326" hits="1"/>
++						<line number="328" hits="1"/>
++						<line number="329" hits="1"/>
++						<line number="332" hits="1"/>
++						<line number="333" hits="0"/>
++					</lines>
++				</class>
++				<class name="sensor_tests.py" filename="sensor/sensor_tests.py" complexity="0" line-rate="0.7973" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="4" hits="1"/>
+@@ -175,11 +862,11 @@
+ 						<line number="66" hits="1"/>
+ 						<line number="68" hits="1"/>
+ 						<line number="69" hits="1"/>
+-						<line number="71" hits="1"/>
+-						<line number="72" hits="1"/>
+-						<line number="73" hits="1"/>
+-						<line number="75" hits="1"/>
+-						<line number="78" hits="1"/>
++						<line number="71" hits="0"/>
++						<line number="72" hits="0"/>
++						<line number="73" hits="0"/>
++						<line number="75" hits="0"/>
++						<line number="78" hits="0"/>
+ 						<line number="80" hits="1"/>
+ 						<line number="81" hits="1"/>
+ 						<line number="84" hits="0"/>
+@@ -188,271 +875,184 @@
+ 						<line number="91" hits="0"/>
+ 						<line number="92" hits="0"/>
+ 						<line number="94" hits="1"/>
+-						<line number="95" hits="1"/>
+-						<line number="97" hits="1"/>
+-						<line number="98" hits="1"/>
+-						<line number="100" hits="1"/>
+-						<line number="101" hits="1"/>
+-						<line number="103" hits="1"/>
+-						<line number="104" hits="0"/>
+-						<line number="105" hits="1"/>
+-						<line number="106" hits="0"/>
+-						<line number="107" hits="0"/>
+-						<line number="109" hits="1"/>
+-						<line number="110" hits="1"/>
+-						<line number="112" hits="1"/>
+-						<line number="115" hits="1"/>
+-						<line number="118" hits="1"/>
+-						<line number="121" hits="1"/>
+-						<line number="124" hits="1"/>
+-						<line number="128" hits="1"/>
+-						<line number="129" hits="1"/>
+-						<line number="133" hits="1"/>
+-						<line number="134" hits="1"/>
+-						<line number="135" hits="1"/>
+-						<line number="137" hits="1"/>
+-					</lines>
+-				</class>
+-			</classes>
+-		</package>
+-		<package name="components" line-rate="0.8147" branch-rate="0" complexity="0">
+-			<classes>
+-				<class name="__init__.py" filename="components/__init__.py" complexity="0" line-rate="1" branch-rate="0">
+-					<methods/>
+-					<lines/>
+-				</class>
+-				<class name="battery_manager.py" filename="components/battery_manager.py" complexity="0" line-rate="0.6552" branch-rate="0">
+-					<methods/>
+-					<lines>
+-						<line number="9" hits="1"/>
+-						<line number="10" hits="1"/>
+-						<line number="11" hits="1"/>
+-						<line number="14" hits="1"/>
+-						<line number="47" hits="1"/>
+-						<line number="57" hits="1"/>
+-						<line number="60" hits="1"/>
+-						<line number="61" hits="1"/>
+-						<line number="62" hits="1"/>
+-						<line number="63" hits="1"/>
+-						<line number="64" hits="1"/>
+-						<line number="67" hits="1"/>
+-						<line number="75" hits="1"/>
+-						<line number="77" hits="1"/>
+-						<line number="80" hits="1"/>
+-						<line number="85" hits="1"/>
+-						<line number="87" hits="1"/>
+-						<line number="96" hits="1"/>
+-						<line number="97" hits="1"/>
+-						<line number="99" hits="1"/>
+-						<line number="107" hits="0"/>
+-						<line number="108" hits="0"/>
+-						<line number="109" hits="0"/>
+-						<line number="111" hits="0"/>
+-						<line number="113" hits="1"/>
+-						<line number="121" hits="1"/>
+-						<line number="124" hits="1"/>
+-						<line number="125" hits="0"/>
+-						<line number="128" hits="0"/>
+-						<line number="131" hits="1"/>
+-						<line number="132" hits="0"/>
+-						<line number="133" hits="0"/>
+-						<line number="134" hits="0"/>
+-						<line number="135" hits="0"/>
+-						<line number="138" hits="1"/>
+-						<line number="139" hits="0"/>
+-						<line number="142" hits="0"/>
+-						<line number="145" hits="1"/>
+-						<line number="147" hits="1"/>
+-						<line number="154" hits="0"/>
+-						<line number="157" hits="0"/>
+-						<line number="158" hits="0"/>
+-						<line number="160" hits="0"/>
+-						<line number="164" hits="1"/>
+-						<line number="171" hits="0"/>
+-						<line number="174" hits="0"/>
+-						<line number="175" hits="0"/>
+-						<line number="177" hits="0"/>
+-						<line number="181" hits="1"/>
+-						<line number="189" hits="1"/>
+-						<line number="190" hits="1"/>
+-						<line number="191" hits="1"/>
+-						<line number="192" hits="1"/>
+-						<line number="193" hits="1"/>
+-						<line number="194" hits="1"/>
+-						<line number="196" hits="1"/>
+-						<line number="197" hits="1"/>
+-						<line number="200" hits="1"/>
++						<line number="95" hits="1"/>
++						<line number="97" hits="1"/>
++						<line number="98" hits="1"/>
++						<line number="100" hits="1"/>
++						<line number="101" hits="1"/>
++						<line number="103" hits="1"/>
++						<line number="104" hits="0"/>
++						<line number="105" hits="1"/>
++						<line number="106" hits="0"/>
++						<line number="107" hits="0"/>
++						<line number="109" hits="1"/>
++						<line number="110" hits="1"/>
++						<line number="112" hits="1"/>
++						<line number="115" hits="1"/>
++						<line number="118" hits="1"/>
++						<line number="121" hits="1"/>
++						<line number="124" hits="1"/>
++						<line number="128" hits="1"/>
++						<line number="129" hits="1"/>
++						<line number="133" hits="1"/>
++						<line number="134" hits="1"/>
++						<line number="135" hits="1"/>
++						<line number="137" hits="1"/>
+ 					</lines>
+ 				</class>
+-				<class name="config_manager.py" filename="components/config_manager.py" complexity="0" line-rate="1" branch-rate="0">
++			</classes>
++		</package>
++		<package name="sensor.components" line-rate="0.8814" branch-rate="0" complexity="0">
++			<classes>
++				<class name="__init__.py" filename="sensor/components/__init__.py" complexity="0" line-rate="1" branch-rate="0">
++					<methods/>
++					<lines/>
++				</class>
++				<class name="config_manager.py" filename="sensor/components/config_manager.py" complexity="0" line-rate="1" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="10" hits="1"/>
+-						<line number="39" hits="1"/>
+-						<line number="49" hits="1"/>
+-						<line number="52" hits="1"/>
++						<line number="13" hits="1"/>
++						<line number="42" hits="1"/>
+ 						<line number="53" hits="1"/>
+-						<line number="54" hits="1"/>
+-						<line number="57" hits="1"/>
++						<line number="55" hits="1"/>
++						<line number="56" hits="1"/>
+ 						<line number="58" hits="1"/>
+-						<line number="59" hits="1"/>
+-						<line number="62" hits="1"/>
+-						<line number="63" hits="1"/>
+-						<line number="64" hits="1"/>
+-						<line number="65" hits="1"/>
+ 						<line number="66" hits="1"/>
+ 						<line number="69" hits="1"/>
+-						<line number="70" hits="1"/>
+ 						<line number="71" hits="1"/>
+-						<line number="72" hits="1"/>
+-						<line number="73" hits="1"/>
+-						<line number="76" hits="1"/>
+-						<line number="79" hits="1"/>
+-						<line number="82" hits="1"/>
+-						<line number="87" hits="1"/>
++						<line number="74" hits="1"/>
++						<line number="77" hits="1"/>
++						<line number="80" hits="1"/>
++						<line number="85" hits="1"/>
++						<line number="93" hits="1"/>
++						<line number="94" hits="1"/>
+ 						<line number="95" hits="1"/>
+-						<line number="96" hits="1"/>
+-						<line number="97" hits="1"/>
++						<line number="98" hits="1"/>
++						<line number="99" hits="1"/>
+ 						<line number="100" hits="1"/>
+-						<line number="101" hits="1"/>
+-						<line number="102" hits="1"/>
++						<line number="103" hits="1"/>
++						<line number="104" hits="1"/>
+ 						<line number="105" hits="1"/>
+ 						<line number="106" hits="1"/>
+ 						<line number="107" hits="1"/>
+-						<line number="108" hits="1"/>
+-						<line number="109" hits="1"/>
++						<line number="110" hits="1"/>
++						<line number="111" hits="1"/>
+ 						<line number="112" hits="1"/>
+ 						<line number="113" hits="1"/>
+ 						<line number="114" hits="1"/>
+-						<line number="115" hits="1"/>
+-						<line number="116" hits="1"/>
+-						<line number="118" hits="1"/>
+-						<line number="119" hits="1"/>
+ 					</lines>
+ 				</class>
+-				<class name="data_processor.py" filename="components/data_processor.py" complexity="0" line-rate="0.8" branch-rate="0">
++				<class name="data_processor.py" filename="sensor/components/data_processor.py" complexity="0" line-rate="0.8143" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="9" hits="1"/>
+-						<line number="12" hits="1"/>
+-						<line number="42" hits="1"/>
+-						<line number="52" hits="1"/>
+-						<line number="55" hits="1"/>
+-						<line number="58" hits="1"/>
++						<line number="10" hits="1"/>
++						<line number="11" hits="1"/>
++						<line number="14" hits="1"/>
++						<line number="44" hits="1"/>
++						<line number="54" hits="1"/>
++						<line number="57" hits="1"/>
+ 						<line number="60" hits="1"/>
+-						<line number="67" hits="1"/>
+-						<line number="68" hits="1"/>
++						<line number="62" hits="1"/>
++						<line number="69" hits="1"/>
+ 						<line number="70" hits="1"/>
+-						<line number="71" hits="1"/>
+-						<line number="72" hits="0"/>
+-						<line number="74" hits="1"/>
++						<line number="72" hits="1"/>
++						<line number="73" hits="1"/>
++						<line number="74" hits="0"/>
+ 						<line number="76" hits="1"/>
+-						<line number="83" hits="0"/>
++						<line number="78" hits="1"/>
+ 						<line number="85" hits="1"/>
+-						<line number="97" hits="1"/>
+-						<line number="102" hits="1"/>
+-						<line number="103" hits="0"/>
+-						<line number="104" hits="0"/>
+-						<line number="107" hits="1"/>
+-						<line number="110" hits="1"/>
++						<line number="87" hits="1"/>
++						<line number="100" hits="1"/>
++						<line number="101" hits="1"/>
++						<line number="104" hits="1"/>
++						<line number="105" hits="1"/>
++						<line number="108" hits="1"/>
+ 						<line number="111" hits="1"/>
+-						<line number="113" hits="1"/>
+-						<line number="114" hits="0"/>
++						<line number="112" hits="1"/>
++						<line number="114" hits="1"/>
+ 						<line number="115" hits="0"/>
+-						<line number="118" hits="0"/>
+-						<line number="120" hits="1"/>
+-						<line number="124" hits="1"/>
+-						<line number="127" hits="1"/>
+-						<line number="129" hits="1"/>
+-						<line number="144" hits="1"/>
+-						<line number="145" hits="0"/>
+-						<line number="147" hits="1"/>
+-						<line number="152" hits="1"/>
+-						<line number="153" hits="1"/>
+-						<line number="156" hits="1"/>
+-						<line number="159" hits="1"/>
+-						<line number="160" hits="1"/>
++						<line number="116" hits="0"/>
++						<line number="119" hits="0"/>
++						<line number="121" hits="1"/>
++						<line number="125" hits="1"/>
++						<line number="128" hits="1"/>
++						<line number="130" hits="1"/>
++						<line number="145" hits="1"/>
++						<line number="146" hits="1"/>
++						<line number="149" hits="1"/>
++						<line number="150" hits="1"/>
++						<line number="151" hits="0"/>
++						<line number="154" hits="0"/>
++						<line number="155" hits="1"/>
++						<line number="157" hits="1"/>
++						<line number="158" hits="1"/>
+ 						<line number="161" hits="1"/>
+ 						<line number="164" hits="1"/>
+-						<line number="166" hits="0"/>
+-						<line number="169" hits="0"/>
++						<line number="165" hits="1"/>
++						<line number="166" hits="1"/>
++						<line number="169" hits="1"/>
+ 						<line number="171" hits="1"/>
+ 						<line number="174" hits="1"/>
+-						<line number="176" hits="1"/>
+-						<line number="187" hits="1"/>
++						<line number="177" hits="1"/>
++						<line number="179" hits="1"/>
++						<line number="182" hits="1"/>
++						<line number="183" hits="0"/>
++						<line number="184" hits="0"/>
++						<line number="185" hits="0"/>
+ 						<line number="188" hits="0"/>
+ 						<line number="190" hits="1"/>
+-						<line number="195" hits="1"/>
+-						<line number="198" hits="1"/>
+-						<line number="199" hits="1"/>
+ 						<line number="202" hits="1"/>
+-						<line number="205" hits="1"/>
++						<line number="203" hits="1"/>
++						<line number="206" hits="1"/>
+ 						<line number="207" hits="1"/>
++						<line number="209" hits="1"/>
++						<line number="212" hits="1"/>
++						<line number="213" hits="1"/>
++						<line number="216" hits="1"/>
++						<line number="219" hits="1"/>
++						<line number="221" hits="1"/>
++						<line number="224" hits="0"/>
++						<line number="225" hits="0"/>
++						<line number="226" hits="0"/>
+ 					</lines>
+ 				</class>
+-				<class name="publishers.py" filename="components/publishers.py" complexity="0" line-rate="0.9123" branch-rate="0">
++				<class name="publishers.py" filename="sensor/components/publishers.py" complexity="0" line-rate="0.8966" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="9" hits="1"/>
+ 						<line number="10" hits="1"/>
++						<line number="11" hits="1"/>
+ 						<line number="13" hits="1"/>
+ 						<line number="43" hits="1"/>
+ 						<line number="53" hits="1"/>
+-						<line number="54" hits="1"/>
++						<line number="55" hits="1"/>
+ 						<line number="57" hits="1"/>
+-						<line number="60" hits="1"/>
+-						<line number="62" hits="1"/>
+-						<line number="70" hits="1"/>
+-						<line number="75" hits="1"/>
+-						<line number="79" hits="1"/>
++						<line number="64" hits="1"/>
++						<line number="65" hits="1"/>
++						<line number="68" hits="1"/>
++						<line number="69" hits="0"/>
++						<line number="70" hits="0"/>
++						<line number="71" hits="0"/>
++						<line number="73" hits="1"/>
++						<line number="85" hits="1"/>
++						<line number="86" hits="1"/>
++						<line number="88" hits="1"/>
++						<line number="89" hits="1"/>
+ 						<line number="90" hits="1"/>
+-						<line number="91" hits="0"/>
+-						<line number="92" hits="0"/>
++						<line number="91" hits="1"/>
++						<line number="93" hits="1"/>
+ 						<line number="94" hits="1"/>
+ 						<line number="95" hits="1"/>
+ 						<line number="96" hits="1"/>
+ 						<line number="97" hits="1"/>
+ 						<line number="98" hits="1"/>
+-						<line number="99" hits="1"/>
+ 						<line number="100" hits="1"/>
+-						<line number="102" hits="1"/>
+-						<line number="112" hits="1"/>
+-						<line number="113" hits="1"/>
+-						<line number="114" hits="1"/>
+-						<line number="115" hits="1"/>
+-						<line number="116" hits="1"/>
+-						<line number="117" hits="1"/>
+-						<line number="118" hits="1"/>
+-						<line number="120" hits="1"/>
+-						<line number="127" hits="1"/>
+-						<line number="128" hits="1"/>
+-						<line number="129" hits="1"/>
+-						<line number="130" hits="1"/>
+-						<line number="133" hits="1"/>
+-						<line number="135" hits="1"/>
+-						<line number="136" hits="0"/>
+-						<line number="138" hits="1"/>
+-						<line number="140" hits="0"/>
+-						<line number="142" hits="1"/>
+-						<line number="143" hits="1"/>
+-						<line number="145" hits="1"/>
+-						<line number="157" hits="1"/>
+-						<line number="158" hits="0"/>
+-						<line number="160" hits="1"/>
+-						<line number="161" hits="1"/>
+-						<line number="162" hits="1"/>
+-						<line number="163" hits="1"/>
+-						<line number="165" hits="1"/>
+-						<line number="166" hits="1"/>
+-						<line number="167" hits="1"/>
+-						<line number="168" hits="1"/>
+-						<line number="169" hits="1"/>
+-						<line number="170" hits="1"/>
+-						<line number="172" hits="1"/>
+-						<line number="173" hits="1"/>
++						<line number="101" hits="1"/>
+ 					</lines>
+ 				</class>
+-				<class name="risk_manager.py" filename="components/risk_manager.py" complexity="0" line-rate="0.75" branch-rate="0">
++				<class name="risk_manager.py" filename="sensor/components/risk_manager.py" complexity="0" line-rate="0.8958" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="9" hits="1"/>
+@@ -463,57 +1063,57 @@
+ 						<line number="49" hits="1"/>
+ 						<line number="50" hits="1"/>
+ 						<line number="52" hits="1"/>
+-						<line number="61" hits="1"/>
++						<line number="60" hits="1"/>
++						<line number="63" hits="1"/>
+ 						<line number="64" hits="1"/>
+ 						<line number="65" hits="1"/>
+-						<line number="66" hits="1"/>
+-						<line number="68" hits="1"/>
++						<line number="67" hits="1"/>
++						<line number="74" hits="1"/>
+ 						<line number="75" hits="1"/>
+ 						<line number="76" hits="1"/>
+ 						<line number="77" hits="1"/>
+ 						<line number="78" hits="1"/>
+-						<line number="79" hits="1"/>
+-						<line number="82" hits="1"/>
+-						<line number="91" hits="1"/>
+-						<line number="93" hits="1"/>
+-						<line number="99" hits="1"/>
++						<line number="81" hits="1"/>
++						<line number="90" hits="1"/>
++						<line number="92" hits="1"/>
++						<line number="98" hits="1"/>
++						<line number="112" hits="1"/>
+ 						<line number="113" hits="1"/>
+ 						<line number="114" hits="1"/>
+ 						<line number="115" hits="1"/>
+-						<line number="116" hits="1"/>
+-						<line number="119" hits="0"/>
+-						<line number="120" hits="0"/>
++						<line number="118" hits="1"/>
++						<line number="119" hits="1"/>
++						<line number="120" hits="1"/>
+ 						<line number="121" hits="0"/>
+-						<line number="122" hits="0"/>
+-						<line number="123" hits="0"/>
+-						<line number="124" hits="0"/>
+-						<line number="125" hits="0"/>
+-						<line number="127" hits="1"/>
+-						<line number="140" hits="1"/>
+-						<line number="141" hits="0"/>
++						<line number="122" hits="1"/>
++						<line number="123" hits="1"/>
++						<line number="124" hits="1"/>
++						<line number="126" hits="1"/>
++						<line number="139" hits="1"/>
++						<line number="140" hits="0"/>
++						<line number="142" hits="1"/>
+ 						<line number="143" hits="1"/>
+-						<line number="144" hits="1"/>
+-						<line number="146" hits="1"/>
++						<line number="145" hits="1"/>
++						<line number="158" hits="1"/>
+ 						<line number="159" hits="1"/>
+-						<line number="160" hits="0"/>
+-						<line number="162" hits="1"/>
+-						<line number="164" hits="1"/>
+-						<line number="174" hits="0"/>
+-						<line number="176" hits="1"/>
+-						<line number="186" hits="0"/>
+-						<line number="188" hits="1"/>
+-						<line number="198" hits="0"/>
++						<line number="161" hits="1"/>
++						<line number="163" hits="1"/>
++						<line number="173" hits="0"/>
++						<line number="175" hits="1"/>
++						<line number="185" hits="0"/>
++						<line number="187" hits="1"/>
++						<line number="197" hits="0"/>
+ 					</lines>
+ 				</class>
+ 			</classes>
+ 		</package>
+-		<package name="utils" line-rate="0.8438" branch-rate="0" complexity="0">
++		<package name="sensor.utils" line-rate="0.9844" branch-rate="0" complexity="0">
+ 			<classes>
+-				<class name="__init__.py" filename="utils/__init__.py" complexity="0" line-rate="1" branch-rate="0">
++				<class name="__init__.py" filename="sensor/utils/__init__.py" complexity="0" line-rate="1" branch-rate="0">
+ 					<methods/>
+ 					<lines/>
+ 				</class>
+-				<class name="risk_evaluator.py" filename="utils/risk_evaluator.py" complexity="0" line-rate="0.8438" branch-rate="0">
++				<class name="risk_evaluator.py" filename="sensor/utils/risk_evaluator.py" complexity="0" line-rate="0.9844" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="10" hits="1"/>
+@@ -530,8 +1130,8 @@
+ 						<line number="75" hits="1"/>
+ 						<line number="77" hits="1"/>
+ 						<line number="96" hits="1"/>
+-						<line number="97" hits="0"/>
+-						<line number="98" hits="0"/>
++						<line number="97" hits="1"/>
++						<line number="98" hits="1"/>
+ 						<line number="99" hits="1"/>
+ 						<line number="100" hits="1"/>
+ 						<line number="101" hits="1"/>
+@@ -539,30 +1139,30 @@
+ 						<line number="103" hits="1"/>
+ 						<line number="104" hits="1"/>
+ 						<line number="105" hits="1"/>
+-						<line number="107" hits="0"/>
++						<line number="107" hits="1"/>
+ 						<line number="109" hits="1"/>
+ 						<line number="111" hits="1"/>
+ 						<line number="126" hits="1"/>
+ 						<line number="128" hits="1"/>
+ 						<line number="144" hits="1"/>
+-						<line number="145" hits="0"/>
++						<line number="145" hits="1"/>
+ 						<line number="147" hits="1"/>
+ 						<line number="150" hits="1"/>
+ 						<line number="152" hits="1"/>
+ 						<line number="155" hits="1"/>
+ 						<line number="159" hits="1"/>
+-						<line number="161" hits="0"/>
+-						<line number="164" hits="0"/>
++						<line number="161" hits="1"/>
++						<line number="164" hits="1"/>
+ 						<line number="168" hits="1"/>
+ 						<line number="170" hits="1"/>
+ 						<line number="173" hits="1"/>
+ 						<line number="177" hits="1"/>
+-						<line number="179" hits="0"/>
+-						<line number="182" hits="0"/>
++						<line number="179" hits="1"/>
++						<line number="182" hits="1"/>
+ 						<line number="186" hits="1"/>
+ 						<line number="188" hits="1"/>
+ 						<line number="191" hits="1"/>
+-						<line number="195" hits="0"/>
++						<line number="195" hits="1"/>
+ 						<line number="197" hits="1"/>
+ 						<line number="211" hits="1"/>
+ 						<line number="212" hits="1"/>
+diff --git a/shared_components/shared_components/battery_manager.py b/shared_components/shared_components/battery_manager.py
+index 38b17cb..7fa3968 100644
+--- a/shared_components/shared_components/battery_manager.py
++++ b/shared_components/shared_components/battery_manager.py
+@@ -155,9 +155,9 @@ class BatteryManager:
+         
+         # Keep node active but publish recharging status
+         self.node.publisher_manager.publish_status(StatusContent.SUCCESS, Task.RECHARGING)
+-        if self.node.last_event != EventType.RECHARGE:
++        if self.node.config.last_event != EventType.RECHARGE:
+             self.node.publisher_manager.publish_event(EventType.RECHARGE)
+-            self.node.last_event = EventType.RECHARGE
++            self.node.config.last_event = EventType.RECHARGE
+         self.node.get_logger().info(
+             f"Entered recharge mode - processing stopped until battery > 15% {self.battery.current_level:.1f}%"
+         )
+diff --git a/system_monitor/coverage.xml b/system_monitor/coverage.xml
+index e71d581..4cfc630 100644
+--- a/system_monitor/coverage.xml
++++ b/system_monitor/coverage.xml
+@@ -1,18 +1,18 @@
+ <?xml version="1.0" ?>
+-<coverage version="7.4.4" timestamp="1756559370376" lines-valid="377" lines-covered="311" line-rate="0.8249" branches-covered="0" branches-valid="0" branch-rate="0" complexity="0">
++<coverage version="7.4.4" timestamp="1790482101453" lines-valid="551" lines-covered="322" line-rate="0.5844" branches-covered="0" branches-valid="0" branch-rate="0" complexity="0">
+ 	<!-- Generated by coverage.py: https://coverage.readthedocs.io/en/7.4.4 -->
+ 	<!-- Based on https://raw.githubusercontent.com/cobertura/web/master/htdocs/xml/coverage-04.dtd -->
+ 	<sources>
+-		<source>/ros_ws/src/system_monitor/system_monitor</source>
++		<source>/ros_ws/src/bsn_ros2/system_monitor/system_monitor</source>
+ 	</sources>
+ 	<packages>
+-		<package name="." line-rate="0.8249" branch-rate="0" complexity="0">
++		<package name="." line-rate="0.5844" branch-rate="0" complexity="0">
+ 			<classes>
+ 				<class name="__init__.py" filename="__init__.py" complexity="0" line-rate="1" branch-rate="0">
+ 					<methods/>
+ 					<lines/>
+ 				</class>
+-				<class name="logger.py" filename="logger.py" complexity="0" line-rate="0.7256" branch-rate="0">
++				<class name="logger.py" filename="logger.py" complexity="0" line-rate="0.7273" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="4" hits="1"/>
+@@ -21,57 +21,63 @@
+ 						<line number="14" hits="1"/>
+ 						<line number="15" hits="1"/>
+ 						<line number="16" hits="1"/>
+-						<line number="19" hits="1"/>
+-						<line number="61" hits="1"/>
+-						<line number="69" hits="1"/>
+-						<line number="72" hits="1"/>
+-						<line number="73" hits="1"/>
++						<line number="17" hits="1"/>
++						<line number="20" hits="1"/>
++						<line number="62" hits="1"/>
++						<line number="64" hits="1"/>
++						<line number="67" hits="1"/>
++						<line number="68" hits="1"/>
++						<line number="71" hits="1"/>
++						<line number="74" hits="1"/>
++						<line number="75" hits="1"/>
+ 						<line number="76" hits="1"/>
+-						<line number="79" hits="1"/>
++						<line number="77" hits="1"/>
+ 						<line number="80" hits="1"/>
+ 						<line number="81" hits="1"/>
+ 						<line number="82" hits="1"/>
+-						<line number="85" hits="1"/>
+-						<line number="86" hits="1"/>
++						<line number="83" hits="1"/>
++						<line number="84" hits="1"/>
+ 						<line number="87" hits="1"/>
+ 						<line number="88" hits="1"/>
+-						<line number="89" hits="1"/>
++						<line number="90" hits="1"/>
+ 						<line number="92" hits="1"/>
+-						<line number="93" hits="1"/>
+-						<line number="95" hits="1"/>
++						<line number="94" hits="1"/>
+ 						<line number="97" hits="1"/>
+-						<line number="99" hits="1"/>
+-						<line number="102" hits="1"/>
+-						<line number="110" hits="1"/>
++						<line number="105" hits="1"/>
++						<line number="106" hits="1"/>
++						<line number="108" hits="1"/>
++						<line number="109" hits="1"/>
+ 						<line number="111" hits="1"/>
+ 						<line number="113" hits="1"/>
+-						<line number="114" hits="1"/>
+ 						<line number="116" hits="1"/>
++						<line number="117" hits="1"/>
+ 						<line number="118" hits="1"/>
++						<line number="119" hits="1"/>
++						<line number="120" hits="1"/>
+ 						<line number="121" hits="1"/>
+ 						<line number="122" hits="1"/>
+ 						<line number="123" hits="1"/>
+-						<line number="124" hits="1"/>
+ 						<line number="125" hits="1"/>
+ 						<line number="126" hits="1"/>
+-						<line number="127" hits="1"/>
+ 						<line number="128" hits="1"/>
+-						<line number="130" hits="1"/>
+-						<line number="131" hits="1"/>
+-						<line number="133" hits="1"/>
++						<line number="130" hits="0"/>
++						<line number="133" hits="0"/>
++						<line number="134" hits="0"/>
+ 						<line number="135" hits="0"/>
++						<line number="136" hits="0"/>
++						<line number="137" hits="0"/>
+ 						<line number="138" hits="0"/>
+ 						<line number="139" hits="0"/>
+ 						<line number="140" hits="0"/>
+-						<line number="141" hits="0"/>
+ 						<line number="142" hits="0"/>
+ 						<line number="143" hits="0"/>
+-						<line number="144" hits="0"/>
+-						<line number="145" hits="0"/>
++						<line number="145" hits="1"/>
+ 						<line number="147" hits="0"/>
+-						<line number="148" hits="0"/>
+-						<line number="150" hits="1"/>
++						<line number="150" hits="0"/>
++						<line number="151" hits="0"/>
+ 						<line number="152" hits="0"/>
++						<line number="153" hits="0"/>
++						<line number="154" hits="0"/>
+ 						<line number="155" hits="0"/>
+ 						<line number="156" hits="0"/>
+ 						<line number="157" hits="0"/>
+@@ -79,11 +85,11 @@
+ 						<line number="159" hits="0"/>
+ 						<line number="160" hits="0"/>
+ 						<line number="161" hits="0"/>
+-						<line number="162" hits="0"/>
+-						<line number="163" hits="0"/>
+ 						<line number="164" hits="0"/>
+ 						<line number="165" hits="0"/>
+ 						<line number="166" hits="0"/>
++						<line number="167" hits="0"/>
++						<line number="168" hits="0"/>
+ 						<line number="169" hits="0"/>
+ 						<line number="170" hits="0"/>
+ 						<line number="171" hits="0"/>
+@@ -94,94 +100,89 @@
+ 						<line number="176" hits="0"/>
+ 						<line number="177" hits="0"/>
+ 						<line number="178" hits="0"/>
+-						<line number="179" hits="0"/>
+ 						<line number="180" hits="0"/>
+ 						<line number="181" hits="0"/>
+-						<line number="182" hits="0"/>
+-						<line number="183" hits="0"/>
++						<line number="183" hits="1"/>
+ 						<line number="185" hits="0"/>
+ 						<line number="186" hits="0"/>
+ 						<line number="188" hits="1"/>
+-						<line number="190" hits="0"/>
+-						<line number="191" hits="0"/>
++						<line number="190" hits="1"/>
++						<line number="191" hits="1"/>
++						<line number="192" hits="1"/>
+ 						<line number="193" hits="1"/>
+ 						<line number="195" hits="1"/>
+-						<line number="196" hits="1"/>
+ 						<line number="197" hits="1"/>
+-						<line number="198" hits="1"/>
+-						<line number="200" hits="1"/>
+-						<line number="202" hits="1"/>
+-						<line number="204" hits="1"/>
+-						<line number="206" hits="1"/>
+-						<line number="208" hits="1"/>
++						<line number="199" hits="1"/>
++						<line number="201" hits="1"/>
++						<line number="203" hits="1"/>
++						<line number="205" hits="1"/>
++						<line number="207" hits="1"/>
+ 						<line number="210" hits="1"/>
+ 						<line number="212" hits="1"/>
+-						<line number="215" hits="1"/>
+-						<line number="217" hits="1"/>
+-						<line number="227" hits="1"/>
+-						<line number="229" hits="1"/>
++						<line number="222" hits="1"/>
++						<line number="224" hits="1"/>
++						<line number="237" hits="1"/>
++						<line number="238" hits="1"/>
++						<line number="239" hits="1"/>
++						<line number="240" hits="1"/>
++						<line number="241" hits="1"/>
+ 						<line number="242" hits="1"/>
+-						<line number="243" hits="1"/>
+-						<line number="244" hits="1"/>
+ 						<line number="245" hits="1"/>
+-						<line number="246" hits="1"/>
+-						<line number="247" hits="1"/>
+-						<line number="250" hits="1"/>
+-						<line number="253" hits="1"/>
+-						<line number="256" hits="1"/>
++						<line number="248" hits="1"/>
++						<line number="251" hits="1"/>
++						<line number="263" hits="1"/>
++						<line number="264" hits="1"/>
++						<line number="265" hits="1"/>
++						<line number="266" hits="1"/>
++						<line number="267" hits="1"/>
+ 						<line number="268" hits="1"/>
+-						<line number="269" hits="1"/>
+-						<line number="270" hits="1"/>
+ 						<line number="271" hits="1"/>
+-						<line number="272" hits="1"/>
+ 						<line number="273" hits="1"/>
+-						<line number="276" hits="1"/>
++						<line number="275" hits="1"/>
+ 						<line number="278" hits="1"/>
+-						<line number="280" hits="1"/>
+-						<line number="283" hits="1"/>
++						<line number="292" hits="1"/>
++						<line number="293" hits="1"/>
++						<line number="294" hits="1"/>
++						<line number="295" hits="1"/>
++						<line number="296" hits="1"/>
+ 						<line number="297" hits="1"/>
+-						<line number="298" hits="1"/>
+-						<line number="299" hits="1"/>
+ 						<line number="300" hits="1"/>
+-						<line number="301" hits="1"/>
+ 						<line number="302" hits="1"/>
+-						<line number="305" hits="1"/>
+-						<line number="307" hits="1"/>
+-						<line number="309" hits="1"/>
++						<line number="304" hits="1"/>
++						<line number="318" hits="1"/>
++						<line number="319" hits="1"/>
++						<line number="320" hits="1"/>
++						<line number="321" hits="1"/>
++						<line number="322" hits="1"/>
+ 						<line number="323" hits="1"/>
+-						<line number="324" hits="1"/>
+-						<line number="325" hits="1"/>
+ 						<line number="326" hits="1"/>
+-						<line number="327" hits="1"/>
+-						<line number="328" hits="1"/>
+-						<line number="331" hits="1"/>
++						<line number="332" hits="1"/>
+ 						<line number="334" hits="1"/>
+-						<line number="336" hits="1"/>
+-						<line number="339" hits="1"/>
++						<line number="337" hits="1"/>
++						<line number="350" hits="1"/>
++						<line number="351" hits="1"/>
+ 						<line number="352" hits="1"/>
+ 						<line number="353" hits="1"/>
+ 						<line number="354" hits="1"/>
+ 						<line number="355" hits="1"/>
+-						<line number="356" hits="1"/>
+-						<line number="357" hits="1"/>
++						<line number="358" hits="1"/>
+ 						<line number="360" hits="1"/>
+-						<line number="362" hits="1"/>
+-						<line number="365" hits="1"/>
++						<line number="363" hits="1"/>
++						<line number="374" hits="1"/>
+ 						<line number="376" hits="1"/>
+-						<line number="378" hits="1"/>
+-						<line number="381" hits="1"/>
+-						<line number="384" hits="1"/>
++						<line number="379" hits="1"/>
++						<line number="382" hits="1"/>
++						<line number="383" hits="1"/>
+ 						<line number="385" hits="1"/>
+-						<line number="387" hits="1"/>
+-						<line number="388" hits="1"/>
+-						<line number="389" hits="0"/>
+-						<line number="391" hits="1"/>
+-						<line number="392" hits="1"/>
+-						<line number="395" hits="1"/>
+-						<line number="396" hits="0"/>
++						<line number="386" hits="1"/>
++						<line number="387" hits="0"/>
++						<line number="389" hits="1"/>
++						<line number="390" hits="1"/>
++						<line number="393" hits="1"/>
++						<line number="394" hits="0"/>
+ 					</lines>
+ 				</class>
+-				<class name="node_monitor.py" filename="node_monitor.py" complexity="0" line-rate="0.928" branch-rate="0">
++				<class name="node_monitor.py" filename="node_monitor.py" complexity="0" line-rate="0.9265" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="2" hits="1"/>
+@@ -191,127 +192,138 @@
+ 						<line number="13" hits="1"/>
+ 						<line number="14" hits="1"/>
+ 						<line number="15" hits="1"/>
++						<line number="16" hits="1"/>
++						<line number="17" hits="1"/>
+ 						<line number="18" hits="1"/>
+-						<line number="61" hits="1"/>
+-						<line number="69" hits="1"/>
++						<line number="19" hits="1"/>
++						<line number="21" hits="1"/>
++						<line number="64" hits="1"/>
++						<line number="66" hits="1"/>
++						<line number="67" hits="1"/>
+ 						<line number="70" hits="1"/>
++						<line number="71" hits="1"/>
++						<line number="72" hits="1"/>
+ 						<line number="73" hits="1"/>
+ 						<line number="74" hits="1"/>
+-						<line number="75" hits="1"/>
+-						<line number="76" hits="1"/>
+ 						<line number="77" hits="1"/>
++						<line number="78" hits="1"/>
++						<line number="79" hits="1"/>
+ 						<line number="80" hits="1"/>
+ 						<line number="81" hits="1"/>
+-						<line number="82" hits="1"/>
+-						<line number="83" hits="1"/>
+ 						<line number="84" hits="1"/>
+ 						<line number="87" hits="1"/>
+-						<line number="90" hits="1"/>
+-						<line number="91" hits="1"/>
+-						<line number="102" hits="1"/>
+-						<line number="105" hits="1"/>
+-						<line number="108" hits="1"/>
+-						<line number="114" hits="1"/>
+-						<line number="117" hits="1"/>
+-						<line number="120" hits="1"/>
++						<line number="88" hits="1"/>
++						<line number="97" hits="1"/>
++						<line number="98" hits="1"/>
++						<line number="99" hits="1"/>
++						<line number="106" hits="1"/>
++						<line number="109" hits="1"/>
++						<line number="112" hits="1"/>
++						<line number="118" hits="1"/>
+ 						<line number="121" hits="1"/>
+-						<line number="123" hits="1"/>
+ 						<line number="124" hits="1"/>
+-						<line number="126" hits="1"/>
++						<line number="125" hits="1"/>
+ 						<line number="127" hits="1"/>
+-						<line number="129" hits="1"/>
++						<line number="128" hits="1"/>
+ 						<line number="130" hits="1"/>
+-						<line number="131" hits="0"/>
+-						<line number="132" hits="0"/>
+-						<line number="136" hits="1"/>
+-						<line number="139" hits="1"/>
+-						<line number="141" hits="1"/>
+-						<line number="142" hits="1"/>
+-						<line number="144" hits="1"/>
+-						<line number="157" hits="1"/>
+-						<line number="158" hits="1"/>
+-						<line number="159" hits="1"/>
++						<line number="131" hits="1"/>
++						<line number="133" hits="1"/>
++						<line number="134" hits="1"/>
++						<line number="135" hits="0"/>
++						<line number="136" hits="0"/>
++						<line number="140" hits="1"/>
++						<line number="143" hits="1"/>
++						<line number="145" hits="1"/>
++						<line number="146" hits="1"/>
++						<line number="148" hits="1"/>
++						<line number="161" hits="1"/>
+ 						<line number="162" hits="1"/>
+-						<line number="165" hits="1"/>
++						<line number="163" hits="1"/>
+ 						<line number="166" hits="1"/>
+-						<line number="168" hits="1"/>
+-						<line number="171" hits="1"/>
++						<line number="169" hits="1"/>
++						<line number="170" hits="1"/>
+ 						<line number="172" hits="1"/>
+ 						<line number="175" hits="1"/>
+ 						<line number="176" hits="1"/>
+-						<line number="177" hits="1"/>
+-						<line number="178" hits="0"/>
+-						<line number="179" hits="0"/>
+-						<line number="182" hits="1"/>
+-						<line number="183" hits="0"/>
++						<line number="179" hits="1"/>
++						<line number="180" hits="0"/>
++						<line number="181" hits="0"/>
+ 						<line number="185" hits="1"/>
++						<line number="186" hits="0"/>
+ 						<line number="188" hits="1"/>
+-						<line number="189" hits="1"/>
+-						<line number="190" hits="1"/>
+ 						<line number="191" hits="1"/>
++						<line number="192" hits="1"/>
+ 						<line number="193" hits="1"/>
+-						<line number="197" hits="1"/>
+-						<line number="199" hits="1"/>
+-						<line number="212" hits="1"/>
++						<line number="194" hits="1"/>
++						<line number="196" hits="1"/>
++						<line number="200" hits="1"/>
++						<line number="202" hits="1"/>
+ 						<line number="215" hits="1"/>
+-						<line number="216" hits="1"/>
++						<line number="218" hits="1"/>
+ 						<line number="219" hits="1"/>
+-						<line number="220" hits="1"/>
+-						<line number="221" hits="1"/>
+ 						<line number="222" hits="1"/>
++						<line number="223" hits="1"/>
++						<line number="224" hits="1"/>
+ 						<line number="225" hits="1"/>
+-						<line number="226" hits="1"/>
+-						<line number="227" hits="1"/>
+ 						<line number="228" hits="1"/>
+ 						<line number="229" hits="1"/>
+ 						<line number="230" hits="1"/>
++						<line number="231" hits="1"/>
++						<line number="232" hits="1"/>
+ 						<line number="233" hits="1"/>
+-						<line number="234" hits="1"/>
+-						<line number="235" hits="1"/>
+ 						<line number="236" hits="1"/>
++						<line number="237" hits="1"/>
+ 						<line number="238" hits="1"/>
+-						<line number="240" hits="1"/>
+-						<line number="253" hits="1"/>
++						<line number="239" hits="1"/>
++						<line number="241" hits="1"/>
++						<line number="243" hits="1"/>
+ 						<line number="256" hits="1"/>
+-						<line number="257" hits="1"/>
+ 						<line number="259" hits="1"/>
+-						<line number="267" hits="1"/>
+-						<line number="269" hits="1"/>
+-						<line number="270" hits="1"/>
+-						<line number="273" hits="1"/>
+-						<line number="274" hits="1"/>
++						<line number="260" hits="1"/>
++						<line number="262" hits="1"/>
+ 						<line number="275" hits="1"/>
+ 						<line number="276" hits="1"/>
+-						<line number="277" hits="1"/>
+-						<line number="279" hits="1"/>
++						<line number="277" hits="0"/>
++						<line number="278" hits="1"/>
+ 						<line number="283" hits="1"/>
+-						<line number="285" hits="1"/>
+-						<line number="286" hits="1"/>
+-						<line number="287" hits="1"/>
+-						<line number="288" hits="1"/>
+ 						<line number="291" hits="1"/>
+ 						<line number="293" hits="1"/>
++						<line number="294" hits="1"/>
++						<line number="295" hits="1"/>
+ 						<line number="296" hits="1"/>
+ 						<line number="299" hits="1"/>
++						<line number="300" hits="1"/>
++						<line number="301" hits="1"/>
++						<line number="302" hits="1"/>
++						<line number="304" hits="1"/>
++						<line number="308" hits="1"/>
+ 						<line number="310" hits="1"/>
+ 						<line number="311" hits="1"/>
+-						<line number="314" hits="1"/>
+-						<line number="315" hits="1"/>
++						<line number="312" hits="1"/>
++						<line number="313" hits="1"/>
+ 						<line number="316" hits="1"/>
+-						<line number="317" hits="1"/>
+-						<line number="319" hits="1"/>
++						<line number="318" hits="1"/>
+ 						<line number="321" hits="1"/>
+-						<line number="322" hits="0"/>
+-						<line number="323" hits="0"/>
+-						<line number="324" hits="0"/>
+-						<line number="326" hits="1"/>
+-						<line number="327" hits="1"/>
+-						<line number="328" hits="1"/>
+-						<line number="331" hits="1"/>
+-						<line number="332" hits="0"/>
++						<line number="324" hits="1"/>
++						<line number="335" hits="1"/>
++						<line number="336" hits="1"/>
++						<line number="339" hits="1"/>
++						<line number="340" hits="1"/>
++						<line number="341" hits="1"/>
++						<line number="342" hits="1"/>
++						<line number="344" hits="1"/>
++						<line number="346" hits="1"/>
++						<line number="347" hits="0"/>
++						<line number="348" hits="0"/>
++						<line number="349" hits="0"/>
++						<line number="351" hits="1"/>
++						<line number="352" hits="1"/>
++						<line number="353" hits="1"/>
++						<line number="356" hits="1"/>
++						<line number="357" hits="0"/>
+ 					</lines>
+ 				</class>
+-				<class name="param_adapter.py" filename="param_adapter.py" complexity="0" line-rate="0.8636" branch-rate="0">
++				<class name="param_adapter.py" filename="param_adapter.py" complexity="0" line-rate="0.8444" branch-rate="0">
+ 					<methods/>
+ 					<lines>
+ 						<line number="9" hits="1"/>
+@@ -332,76 +344,248 @@
+ 						<line number="96" hits="1"/>
+ 						<line number="97" hits="1"/>
+ 						<line number="102" hits="1"/>
+-						<line number="103" hits="1"/>
+ 						<line number="106" hits="1"/>
+-						<line number="107" hits="1"/>
+-						<line number="110" hits="1"/>
+-						<line number="117" hits="1"/>
+-						<line number="125" hits="1"/>
+-						<line number="127" hits="1"/>
+-						<line number="129" hits="1"/>
++						<line number="109" hits="1"/>
++						<line number="116" hits="1"/>
++						<line number="124" hits="1"/>
++						<line number="126" hits="1"/>
++						<line number="128" hits="1"/>
++						<line number="146" hits="1"/>
+ 						<line number="147" hits="1"/>
+-						<line number="148" hits="1"/>
+-						<line number="150" hits="1"/>
+-						<line number="152" hits="1"/>
+-						<line number="154" hits="1"/>
+-						<line number="159" hits="1"/>
+-						<line number="162" hits="1"/>
+-						<line number="167" hits="1"/>
++						<line number="149" hits="1"/>
++						<line number="151" hits="1"/>
++						<line number="153" hits="1"/>
++						<line number="158" hits="1"/>
++						<line number="161" hits="1"/>
++						<line number="166" hits="1"/>
++						<line number="169" hits="0"/>
+ 						<line number="170" hits="0"/>
+-						<line number="171" hits="0"/>
+-						<line number="173" hits="1"/>
+-						<line number="177" hits="1"/>
+-						<line number="179" hits="1"/>
++						<line number="172" hits="1"/>
++						<line number="176" hits="1"/>
++						<line number="178" hits="1"/>
++						<line number="181" hits="1"/>
+ 						<line number="182" hits="1"/>
+-						<line number="183" hits="1"/>
++						<line number="184" hits="0"/>
+ 						<line number="185" hits="0"/>
+-						<line number="186" hits="0"/>
++						<line number="187" hits="1"/>
+ 						<line number="188" hits="1"/>
+ 						<line number="189" hits="1"/>
+-						<line number="190" hits="1"/>
+-						<line number="192" hits="1"/>
+-						<line number="194" hits="1"/>
+-						<line number="198" hits="1"/>
+-						<line number="199" hits="1"/>
+-						<line number="201" hits="1"/>
++						<line number="191" hits="1"/>
++						<line number="193" hits="1"/>
++						<line number="202" hits="1"/>
+ 						<line number="203" hits="1"/>
+-						<line number="206" hits="1"/>
+-						<line number="208" hits="1"/>
+-						<line number="209" hits="1"/>
+-						<line number="211" hits="0"/>
+-						<line number="214" hits="0"/>
++						<line number="204" hits="1"/>
++						<line number="214" hits="1"/>
+ 						<line number="215" hits="0"/>
+-						<line number="216" hits="0"/>
+-						<line number="218" hits="1"/>
+-						<line number="227" hits="1"/>
++						<line number="216" hits="1"/>
++						<line number="217" hits="1"/>
++						<line number="219" hits="0"/>
++						<line number="221" hits="1"/>
++						<line number="223" hits="1"/>
++						<line number="226" hits="1"/>
+ 						<line number="228" hits="1"/>
+-						<line number="230" hits="1"/>
+-						<line number="232" hits="1"/>
+-						<line number="233" hits="1"/>
+-						<line number="236" hits="1"/>
+-						<line number="237" hits="1"/>
+-						<line number="240" hits="1"/>
+-						<line number="241" hits="1"/>
+-						<line number="244" hits="1"/>
+-						<line number="245" hits="1"/>
+-						<line number="248" hits="1"/>
+-						<line number="259" hits="1"/>
++						<line number="229" hits="1"/>
++						<line number="231" hits="0"/>
++						<line number="238" hits="0"/>
++						<line number="239" hits="0"/>
++						<line number="240" hits="0"/>
++						<line number="242" hits="1"/>
++						<line number="251" hits="1"/>
++						<line number="252" hits="1"/>
++						<line number="254" hits="1"/>
++						<line number="256" hits="1"/>
++						<line number="257" hits="1"/>
+ 						<line number="260" hits="1"/>
+-						<line number="263" hits="1"/>
+-						<line number="264" hits="1"/>
++						<line number="261" hits="1"/>
+ 						<line number="265" hits="1"/>
+-						<line number="266" hits="1"/>
+ 						<line number="268" hits="1"/>
+-						<line number="270" hits="1"/>
+-						<line number="271" hits="0"/>
+-						<line number="272" hits="0"/>
+-						<line number="273" hits="0"/>
+-						<line number="275" hits="1"/>
+-						<line number="276" hits="1"/>
+-						<line number="277" hits="1"/>
+-						<line number="280" hits="1"/>
+-						<line number="281" hits="0"/>
++						<line number="271" hits="1"/>
++						<line number="282" hits="1"/>
++						<line number="283" hits="1"/>
++						<line number="286" hits="1"/>
++						<line number="287" hits="1"/>
++						<line number="288" hits="1"/>
++						<line number="289" hits="1"/>
++						<line number="291" hits="1"/>
++						<line number="293" hits="1"/>
++						<line number="294" hits="0"/>
++						<line number="295" hits="0"/>
++						<line number="296" hits="0"/>
++						<line number="298" hits="1"/>
++						<line number="299" hits="1"/>
++						<line number="300" hits="1"/>
++						<line number="303" hits="1"/>
++						<line number="304" hits="0"/>
++					</lines>
++				</class>
++				<class name="shared_logger_tests.py" filename="shared_logger_tests.py" complexity="0" line-rate="0" branch-rate="0">
++					<methods/>
++					<lines>
++						<line number="1" hits="0"/>
++						<line number="2" hits="0"/>
++						<line number="3" hits="0"/>
++						<line number="6" hits="0"/>
++						<line number="7" hits="0"/>
++						<line number="9" hits="0"/>
++						<line number="10" hits="0"/>
++						<line number="11" hits="0"/>
++						<line number="12" hits="0"/>
++						<line number="13" hits="0"/>
++						<line number="14" hits="0"/>
++						<line number="17" hits="0"/>
++						<line number="18" hits="0"/>
++						<line number="21" hits="0"/>
++						<line number="23" hits="0"/>
++						<line number="24" hits="0"/>
++						<line number="27" hits="0"/>
++						<line number="28" hits="0"/>
++						<line number="31" hits="0"/>
++						<line number="32" hits="0"/>
++						<line number="33" hits="0"/>
++						<line number="34" hits="0"/>
++						<line number="36" hits="0"/>
++						<line number="37" hits="0"/>
++						<line number="40" hits="0"/>
++						<line number="41" hits="0"/>
++						<line number="42" hits="0"/>
++						<line number="43" hits="0"/>
++						<line number="44" hits="0"/>
++						<line number="45" hits="0"/>
++						<line number="47" hits="0"/>
++						<line number="48" hits="0"/>
++						<line number="51" hits="0"/>
++						<line number="52" hits="0"/>
++						<line number="53" hits="0"/>
++						<line number="54" hits="0"/>
++						<line number="55" hits="0"/>
++						<line number="56" hits="0"/>
++						<line number="58" hits="0"/>
++						<line number="59" hits="0"/>
++						<line number="62" hits="0"/>
++						<line number="63" hits="0"/>
++						<line number="64" hits="0"/>
++						<line number="65" hits="0"/>
++						<line number="66" hits="0"/>
++						<line number="67" hits="0"/>
++						<line number="69" hits="0"/>
++						<line number="70" hits="0"/>
++						<line number="73" hits="0"/>
++						<line number="74" hits="0"/>
++						<line number="75" hits="0"/>
++						<line number="76" hits="0"/>
++						<line number="77" hits="0"/>
++						<line number="78" hits="0"/>
++						<line number="80" hits="0"/>
++						<line number="81" hits="0"/>
++						<line number="84" hits="0"/>
++						<line number="85" hits="0"/>
++						<line number="86" hits="0"/>
++						<line number="87" hits="0"/>
++						<line number="88" hits="0"/>
++						<line number="89" hits="0"/>
++						<line number="91" hits="0"/>
++						<line number="92" hits="0"/>
++						<line number="94" hits="0"/>
++						<line number="97" hits="0"/>
++						<line number="98" hits="0"/>
++						<line number="100" hits="0"/>
++						<line number="102" hits="0"/>
++						<line number="103" hits="0"/>
++						<line number="104" hits="0"/>
++						<line number="105" hits="0"/>
++						<line number="106" hits="0"/>
++						<line number="109" hits="0"/>
++						<line number="112" hits="0"/>
++						<line number="113" hits="0"/>
++						<line number="114" hits="0"/>
++						<line number="115" hits="0"/>
++						<line number="118" hits="0"/>
++						<line number="121" hits="0"/>
++						<line number="124" hits="0"/>
++						<line number="125" hits="0"/>
++						<line number="126" hits="0"/>
++						<line number="127" hits="0"/>
++						<line number="130" hits="0"/>
++						<line number="134" hits="0"/>
++						<line number="136" hits="0"/>
++					</lines>
++				</class>
++				<class name="shared_node_monitor_tests.py" filename="shared_node_monitor_tests.py" complexity="0" line-rate="0" branch-rate="0">
++					<methods/>
++					<lines>
++						<line number="21" hits="0"/>
++						<line number="23" hits="0"/>
++						<line number="24" hits="0"/>
++						<line number="25" hits="0"/>
++						<line number="27" hits="0"/>
++						<line number="28" hits="0"/>
++						<line number="29" hits="0"/>
++						<line number="30" hits="0"/>
++						<line number="33" hits="0"/>
++						<line number="36" hits="0"/>
++						<line number="39" hits="0"/>
++						<line number="40" hits="0"/>
++						<line number="42" hits="0"/>
++						<line number="43" hits="0"/>
++						<line number="44" hits="0"/>
++						<line number="45" hits="0"/>
++						<line number="46" hits="0"/>
++						<line number="47" hits="0"/>
++						<line number="48" hits="0"/>
++						<line number="51" hits="0"/>
++						<line number="52" hits="0"/>
++						<line number="53" hits="0"/>
++						<line number="54" hits="0"/>
++						<line number="55" hits="0"/>
++						<line number="57" hits="0"/>
++						<line number="58" hits="0"/>
++						<line number="61" hits="0"/>
++						<line number="62" hits="0"/>
++						<line number="63" hits="0"/>
++						<line number="66" hits="0"/>
++						<line number="67" hits="0"/>
++						<line number="70" hits="0"/>
++						<line number="71" hits="0"/>
++						<line number="72" hits="0"/>
++						<line number="73" hits="0"/>
++						<line number="74" hits="0"/>
++						<line number="76" hits="0"/>
++						<line number="77" hits="0"/>
++						<line number="80" hits="0"/>
++						<line number="81" hits="0"/>
++						<line number="82" hits="0"/>
++						<line number="83" hits="0"/>
++						<line number="85" hits="0"/>
++						<line number="86" hits="0"/>
++						<line number="89" hits="0"/>
++						<line number="90" hits="0"/>
++						<line number="91" hits="0"/>
++						<line number="92" hits="0"/>
++						<line number="94" hits="0"/>
++						<line number="95" hits="0"/>
++						<line number="98" hits="0"/>
++						<line number="99" hits="0"/>
++						<line number="101" hits="0"/>
++						<line number="104" hits="0"/>
++						<line number="105" hits="0"/>
++						<line number="106" hits="0"/>
++						<line number="107" hits="0"/>
++						<line number="108" hits="0"/>
++						<line number="109" hits="0"/>
++						<line number="111" hits="0"/>
++						<line number="113" hits="0"/>
++						<line number="114" hits="0"/>
++						<line number="117" hits="0"/>
++						<line number="120" hits="0"/>
++						<line number="121" hits="0"/>
++						<line number="123" hits="0"/>
++						<line number="125" hits="0"/>
++						<line number="126" hits="0"/>
++						<line number="129" hits="0"/>
++						<line number="132" hits="0"/>
++						<line number="133" hits="0"/>
++						<line number="134" hits="0"/>
++						<line number="136" hits="0"/>
+ 					</lines>
+ 				</class>
+ 			</classes>
+diff --git a/system_monitor/system_monitor/logger.py b/system_monitor/system_monitor/logger.py
+index 91cb80b..119b42e 100644
+--- a/system_monitor/system_monitor/logger.py
++++ b/system_monitor/system_monitor/logger.py
+@@ -325,17 +325,14 @@ class Logger(LifecycleNode):
+         # Publish to persist (for DataAccess)
+         self.persist_pub.publish(persist_msg)
+ 
+-        # No relay to 'reconfigure' here: the enactor already publishes
+-        # directly to 'reconfigure' for delivery (Controller.
+-        # _send_adaptation_command) and log_adapt is fed a separate audit
+-        # copy purely for this persistence step. Relaying too would deliver
+-        # every command twice (once via the enactor's direct publish, once
+-        # via this relay reaching param_adapter a second time) - confirmed
+-        # live before this was removed. self.reconfigure_pub stays declared
+-        # so target_system.feature's topology check (logger publishes
+-        # 'reconfigure') still holds; it is simply unused for delivery now.
++        # Relay to 'reconfigure' (for ParamAdapter). This is the delivery
++        # path, as in ROS1's Logger.cpp:39-47: the enactor publishes only to
++        # log_adapt, so the system log is what sends reconfiguration
++        # requests to the parameter adapter.
++        self.reconfigure_pub.publish(msg)
++
+         self.get_logger().debug(
+-            f"Logged adaptation: {msg.source} -> {msg.target}: {msg.action}")
++            f"Logged and routed adaptation: {msg.source} -> {msg.target}: {msg.action}")
+     
+     def receive_uncertainty(self, msg):
+         """
+diff --git a/system_monitor/system_monitor/node_monitor.py b/system_monitor/system_monitor/node_monitor.py
+index 739fda0..154490b 100644
+--- a/system_monitor/system_monitor/node_monitor.py
++++ b/system_monitor/system_monitor/node_monitor.py
+@@ -61,7 +61,7 @@ class SystemMonitor(Node):
+         ```
+     """
+ 
+-    def __init__(self, node_name: str, parameters= None):
++    def __init__(self, node_name: str = "node_monitor", parameters= None):
+         # initialize LifecycleNode
+         super().__init__(node_name, parameter_overrides=parameters or [])
+         self.get_logger().info("Starting Combined System Monitor")
+@@ -260,7 +260,25 @@ class SystemMonitor(Node):
+         self.get_logger().debug(f"Energy update from {node_name}: {msg.content}")
+ 
+     def check_state_helper(self, node_name):
+-        return self.state_clients[node_name].call_async(GetState)
++        """Last known lifecycle state of `node_name`, from the events this
++        monitor already tracks.
++
++        Deliberately does not call the node's `get_state` service:
++        `check_heartbeats` runs inside a timer callback on this node's own
++        executor, so waiting on a service response there would deadlock, and
++        the previous `call_async(GetState)` both passed the service *class*
++        where rclpy wants a request instance (raising `TypeError` out of the
++        callback and unwinding the whole spin thread, which silently stopped
++        the collect_event -> log_event relay) and returned a Future that could
++        never compare equal to a state constant.
++        """
++        info = self.monitored_nodes.get(node_name)
++        if info is None:
++            return State.PRIMARY_STATE_UNKNOWN
++        return (
++            State.PRIMARY_STATE_ACTIVE if info.get('active')
++            else State.PRIMARY_STATE_INACTIVE
++        )
+ 
+     def check_heartbeats(self):
+         """
+@@ -274,14 +292,14 @@ class SystemMonitor(Node):
+         
+         for node_name, info in self.monitored_nodes.items():
+             time_since_last = current_time - info['last_heartbeat']
++            if time_since_last <= self.heartbeat_timeout:
++                continue
+ 
+-            if self.check_state_helper(node_name) != State.PRIMARY_STATE_ACTIVE:
+-                # Only log warning if node should be active
+-                if time_since_last > self.heartbeat_timeout:
+-                    if info['active']:
+-                        self.get_logger().warn(f"Node {node_name} hasn't sent a heartbeat in {time_since_last:.1f} seconds!")
+-                    elif self.debug:
+-                        self.get_logger().debug(f"Inactive node {node_name} silent for {time_since_last:.1f}s")
++            # Only log warning if node should be active
++            if self.check_state_helper(node_name) == State.PRIMARY_STATE_ACTIVE:
++                self.get_logger().warn(f"Node {node_name} hasn't sent a heartbeat in {time_since_last:.1f} seconds!")
++            elif self.debug:
++                self.get_logger().debug(f"Inactive node {node_name} silent for {time_since_last:.1f}s")
+ 
+     def publish_monitor_status(self):
+         """
+diff --git a/system_monitor/system_monitor/param_adapter.py b/system_monitor/system_monitor/param_adapter.py
+index 7472fa5..4044d0e 100644
+--- a/system_monitor/system_monitor/param_adapter.py
++++ b/system_monitor/system_monitor/param_adapter.py
+@@ -192,23 +192,39 @@ class ParamAdapter(Node):
+ 
+     def receive_adaptation_command(self, msg):
+         """Process and route adaptation commands with name translation"""
+-        
+-        # Translate BSN component name to ROS2 node name. Both the mapping
+-        # and _component_publishers are keyed with a leading slash, while a
+-        # component identifying itself by `node.get_name()` has none, so
+-        # normalize before looking up - otherwise a perfectly valid
+-        # "oximeter_node" misses both tables and falls into the branch below.
++
++        # Translate BSN component name to ROS2 node name. bsn_to_ros_mapping
++        # and the publishers __init__ pre-creates for expected_components are
++        # both keyed with a leading slash, while a component identifying
++        # itself by `node.get_name()` has none, so normalize before looking
++        # up against the mapping - otherwise a perfectly valid
++        # "oximeter_node" misses it and falls into the branch below.
+         original_target = msg.target
+         lookup_target = original_target if original_target.startswith("/") else f"/{original_target}"
+         translated_target = self.bsn_to_ros_mapping.get(lookup_target, lookup_target)
+ 
++        # _component_publishers itself is keyed inconsistently depending on
++        # how an entry was created: __init__'s pre-population uses a leading
++        # slash (matching translated_target above), but module_connect's real
++        # registration path stores the raw, slash-less name a component
++        # reports via node.get_name() - so a dynamically-registered component
++        # never matched translated_target here. Accept both forms rather
++        # than requiring the caller-facing convention to match internal
++        # bookkeeping that isn't actually consistent with itself.
+         if translated_target in self._component_publishers:
++            publisher_key = translated_target
++        elif translated_target.lstrip("/") in self._component_publishers:
++            publisher_key = translated_target.lstrip("/")
++        else:
++            publisher_key = None
++
++        if publisher_key is not None:
+             # Update message target to actual ROS2 node name
+             msg.target = translated_target
+-            
++
+             # Forward to actual component
+-            self._component_publishers[translated_target].publish(msg)
+-            
++            self._component_publishers[publisher_key].publish(msg)
++
+             self.get_logger().info(f"Routed adaptation: {original_target} → {translated_target}")
+             self.get_logger().info(f"Command content: {msg.action}")
+         else:
