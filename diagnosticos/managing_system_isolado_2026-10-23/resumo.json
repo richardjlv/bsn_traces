@@ -3,6 +3,7 @@
     "campaign": "ros2_20261023T122341Z_7sj4kj7u",
     "results": {},
     "exit_code": 1,
+    "timed_out": false,
     "scenario_starts": 0,
     "missing_case_traces": [],
     "coverage": {
@@ -24,6 +25,7 @@
       "passed": 1
     },
     "exit_code": 0,
+    "timed_out": false,
     "scenario_starts": 1,
     "missing_case_traces": [],
     "coverage": {
@@ -47,6 +49,7 @@
       "xfail": 2
     },
     "exit_code": 1,
+    "timed_out": false,
     "scenario_starts": 11,
     "missing_case_traces": [],
     "coverage": {
@@ -68,6 +71,7 @@
       "passed": 1
     },
     "exit_code": 0,
+    "timed_out": false,
     "scenario_starts": 1,
     "missing_case_traces": [],
     "coverage": {
@@ -90,6 +94,7 @@
       "xfail": 2
     },
     "exit_code": 1,
+    "timed_out": false,
     "scenario_starts": 10,
     "missing_case_traces": [],
     "coverage": {
@@ -112,6 +117,7 @@
       "failure": 2
     },
     "exit_code": 1,
+    "timed_out": false,
     "scenario_starts": 6,
     "missing_case_traces": [],
     "coverage": {
@@ -134,6 +140,7 @@
       "failure": 4
     },
     "exit_code": 1,
+    "timed_out": false,
     "scenario_starts": 6,
     "missing_case_traces": [],
     "coverage": {
@@ -155,6 +162,7 @@
       "passed": 6
     },
     "exit_code": 0,
+    "timed_out": false,
     "scenario_starts": 6,
     "missing_case_traces": [],
     "coverage": {
@@ -168,6 +176,53 @@
       "num_partial_branches": 176,
       "covered_branches": 402,
       "missing_branches": 486
+    }
+  },
+  {
+    "campaign": "ros2_20261023T185135Z_6mweno8n",
+    "results": {
+      "passed": 8,
+      "failure": 1
+    },
+    "exit_code": 1,
+    "timed_out": false,
+    "scenario_starts": 9,
+    "missing_case_traces": [],
+    "coverage": {
+      "covered_lines": 2347,
+      "num_statements": 3147,
+      "percent_covered": 70.80545229244115,
+      "percent_covered_display": "71",
+      "missing_lines": 800,
+      "excluded_lines": 0,
+      "num_branches": 888,
+      "num_partial_branches": 198,
+      "covered_branches": 510,
+      "missing_branches": 378
+    }
+  },
+  {
+    "campaign": "ros2_20261023T185710Z_oitpv2vt",
+    "results": {
+      "passed": 2,
+      "xfail": 2,
+      "failure": 6
+    },
+    "exit_code": -9,
+    "timed_out": true,
+    "scenario_starts": 10,
+    "missing_case_traces": [],
+    "coverage": {
+      "covered_lines": 2369,
+      "num_statements": 3147,
+      "percent_covered": 71.79677819083024,
+      "percent_covered_display": "72",
+      "missing_lines": 778,
+      "excluded_lines": 0,
+      "num_branches": 888,
+      "num_partial_branches": 184,
+      "covered_branches": 528,
+      "missing_branches": 360
     }
   }
 ]

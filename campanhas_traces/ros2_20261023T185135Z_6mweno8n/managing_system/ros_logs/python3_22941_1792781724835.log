@@ -1,0 +1,38 @@
+[INFO] [1792781725.804846223] [thermometer_node]: Initialized sensor: thermometer, vital sign: temperature, frequency: 1.0Hz
+[INFO] [1792781725.843081575] [thermometer_node]: Lifecycle Manager initialized
+[INFO] [1792781725.873465776] [thermometer_node]: PublisherManagerBase initialized successfully
+[INFO] [1792781726.923126410] [thermometer_node]: Service not available, waiting again...
+[INFO] [1792781727.939272241] [thermometer_node]: Service not available, waiting again...
+[INFO] [1792781728.489485511] [thermometer_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792781728.490151341] [thermometer_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792781728.533744214] [thermometer_node]: Starting individual lifecycle management...
+[INFO] [1792781728.534777878] [thermometer_node]: Lifecycle auto-management started
+[INFO] [1792781728.538640823] [thermometer_node]: Successfully registered with ParamAdapter
+[INFO] [1792781730.537666505] [thermometer_node]: Auto-configuring node...
+[INFO] [1792781730.538274301] [thermometer_node]: Triggering node configuration...
+[INFO] [1792781730.553155954] [thermometer_node]: Configuring thermometer sensor...
+[INFO] [1792781730.632088777] [thermometer_node]: Risk ranges configured for thermometer: HR0=(0.0, 31.99), MR0=(32.0, 35.99), LR=(36.0, 37.99), MR1=(38.0, 40.99), HR1=(41.0, 50.0)
+[INFO] [1792781730.633094155] [thermometer_node]: Node configuration successful
+[INFO] [1792781731.638675548] [thermometer_node]: Triggering node activation...
+[INFO] [1792781731.644545972] [thermometer_node]: Activating thermometer sensor...
+[INFO] [1792781731.653185244] [thermometer_node]: Node activation successful
+[INFO] [1792781732.553115298] [thermometer_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792781733.526974334] [thermometer_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792781734.549574547] [thermometer_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792781735.594739571] [thermometer_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792781736.569398856] [thermometer_node]: ++Transfer++
+ Value: 36.87629727492738, Risk: 2.39%, Level: low, Battery: 99.6%
+[INFO] [1792781737.614196727] [thermometer_node]: ++Transfer++
+ Value: 36.98934096499865, Risk: 0.11%, Level: low, Battery: 99.4%
+[INFO] [1792781738.526315217] [thermometer_node]: ++Transfer++
+ Value: 36.94123227873162, Risk: 1.08%, Level: low, Battery: 99.3%
+[INFO] [1792781739.539273307] [thermometer_node]: ++Transfer++
+ Value: 36.79274305560614, Risk: 4.07%, Level: low, Battery: 99.2%
+[INFO] [1792781740.531435406] [thermometer_node]: ++Transfer++
+ Value: 36.62399781523279, Risk: 7.46%, Level: low, Battery: 99.1%
+[INFO] [1792781741.524008097] [thermometer_node]: ++Transfer++
+ Value: 36.85031521139009, Risk: 2.91%, Level: low, Battery: 98.9%
+[INFO] [1792781742.540160065] [thermometer_node]: ++Transfer++
+ Value: 36.92344655628584, Risk: 1.44%, Level: low, Battery: 98.8%
+[INFO] [1792781743.574121755] [thermometer_node]: ++Transfer++
+ Value: 36.91019223486431, Risk: 1.70%, Level: low, Battery: 98.7%

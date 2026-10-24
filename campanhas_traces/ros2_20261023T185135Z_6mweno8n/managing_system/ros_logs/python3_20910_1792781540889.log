@@ -1,0 +1,162 @@
+[INFO] [1792781541.903538377] [abpd_node]: Initialized sensor: abpd, vital sign: abpd, frequency: 1.0Hz
+[INFO] [1792781541.951273214] [abpd_node]: Lifecycle Manager initialized
+[INFO] [1792781541.984018575] [abpd_node]: PublisherManagerBase initialized successfully
+[INFO] [1792781541.994320650] [abpd_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792781541.995253536] [abpd_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792781542.011650019] [abpd_node]: Starting individual lifecycle management...
+[INFO] [1792781542.012519709] [abpd_node]: Lifecycle auto-management started
+[INFO] [1792781542.081324960] [abpd_node]: Successfully registered with ParamAdapter
+[INFO] [1792781544.015209532] [abpd_node]: Auto-configuring node...
+[INFO] [1792781544.015832489] [abpd_node]: Triggering node configuration...
+[INFO] [1792781544.025836144] [abpd_node]: Configuring abpd sensor...
+[INFO] [1792781544.080167116] [abpd_node]: Risk ranges configured for abpd: HR0=(-1.0, -1.0), MR0=(-1.0, -1.0), LR=(0.0, 80.0), MR1=(80.0, 90.0), HR1=(90.0, 300.0)
+[INFO] [1792781544.084800408] [abpd_node]: Node configuration successful
+[INFO] [1792781545.092543760] [abpd_node]: Triggering node activation...
+[INFO] [1792781545.096011695] [abpd_node]: Activating abpd sensor...
+[INFO] [1792781545.103631293] [abpd_node]: Node activation successful
+[INFO] [1792781546.062376109] [abpd_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792781547.032626086] [abpd_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792781548.012194222] [abpd_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792781549.032822480] [abpd_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792781550.060912614] [abpd_node]: ++Transfer++
+ Value: 48.37647539085357, Risk: 4.19%, Level: low, Battery: 99.6%
+[INFO] [1792781551.048983415] [abpd_node]: ++Transfer++
+ Value: 39.09276611435618, Risk: 0.45%, Level: low, Battery: 99.4%
+[INFO] [1792781552.057482240] [abpd_node]: ++Transfer++
+ Value: 42.07821280522218, Risk: 1.04%, Level: low, Battery: 99.3%
+[INFO] [1792781553.039595421] [abpd_node]: ++Transfer++
+ Value: 41.83436780619351, Risk: 0.92%, Level: low, Battery: 99.2%
+[INFO] [1792781554.029478475] [abpd_node]: ++Transfer++
+ Value: 47.269745415581994, Risk: 3.63%, Level: low, Battery: 99.1%
+[INFO] [1792781555.052160530] [abpd_node]: ++Transfer++
+ Value: 46.67072592009061, Risk: 3.34%, Level: low, Battery: 98.9%
+[INFO] [1792781556.018947799] [abpd_node]: ++Transfer++
+ Value: 56.6306642027419, Risk: 8.32%, Level: low, Battery: 98.8%
+[INFO] [1792781557.017524707] [abpd_node]: ++Transfer++
+ Value: 59.81082450031279, Risk: 9.91%, Level: low, Battery: 98.7%
+[INFO] [1792781558.038134947] [abpd_node]: ++Transfer++
+ Value: 68.70309679332914, Risk: 14.35%, Level: low, Battery: 98.6%
+[INFO] [1792781559.030064187] [abpd_node]: ++Transfer++
+ Value: 57.49244623039766, Risk: 8.75%, Level: low, Battery: 98.4%
+[INFO] [1792781560.022530133] [abpd_node]: ++Transfer++
+ Value: 55.479227764842314, Risk: 7.74%, Level: low, Battery: 98.3%
+[INFO] [1792781561.028980001] [abpd_node]: ++Transfer++
+ Value: 48.405976257826374, Risk: 4.20%, Level: low, Battery: 98.2%
+[INFO] [1792781562.020429863] [abpd_node]: ++Transfer++
+ Value: 45.7122220008638, Risk: 2.86%, Level: low, Battery: 98.1%
+[INFO] [1792781563.027783709] [abpd_node]: ++Transfer++
+ Value: 36.071152040951375, Risk: 1.96%, Level: low, Battery: 97.9%
+[INFO] [1792781564.031671706] [abpd_node]: ++Transfer++
+ Value: 42.75883179598269, Risk: 1.38%, Level: low, Battery: 97.8%
+[INFO] [1792781565.032304242] [abpd_node]: ++Transfer++
+ Value: 45.78742649858167, Risk: 2.89%, Level: low, Battery: 97.7%
+[INFO] [1792781566.032386175] [abpd_node]: ++Transfer++
+ Value: 51.69453631658121, Risk: 5.85%, Level: low, Battery: 97.6%
+[INFO] [1792781567.029400471] [abpd_node]: ++Transfer++
+ Value: 53.89913055157475, Risk: 6.95%, Level: low, Battery: 97.4%
+[INFO] [1792781568.027576137] [abpd_node]: ++Transfer++
+ Value: 56.79083851315205, Risk: 8.40%, Level: low, Battery: 97.3%
+[INFO] [1792781569.024732083] [abpd_node]: ++Transfer++
+ Value: 64.5757607690405, Risk: 12.29%, Level: low, Battery: 97.2%
+[INFO] [1792781570.032316102] [abpd_node]: ++Transfer++
+ Value: 59.929451794691104, Risk: 9.96%, Level: low, Battery: 97.1%
+[INFO] [1792781571.047750486] [abpd_node]: ++Transfer++
+ Value: 48.99265747458864, Risk: 4.50%, Level: low, Battery: 96.9%
+[INFO] [1792781572.074421481] [abpd_node]: ++Transfer++
+ Value: 38.64578651899261, Risk: 0.68%, Level: low, Battery: 96.8%
+[INFO] [1792781573.043572798] [abpd_node]: ++Transfer++
+ Value: 39.15585738111415, Risk: 0.42%, Level: low, Battery: 96.7%
+[INFO] [1792781574.023834416] [abpd_node]: ++Transfer++
+ Value: 27.7065028167938, Risk: 6.15%, Level: low, Battery: 96.6%
+[INFO] [1792781575.072236365] [abpd_node]: ++Transfer++
+ Value: 17.899468810719416, Risk: 11.05%, Level: low, Battery: 96.4%
+[INFO] [1792781576.083934016] [abpd_node]: ++Transfer++
+ Value: 19.51758032838675, Risk: 10.24%, Level: low, Battery: 96.3%
+[INFO] [1792781577.046420423] [abpd_node]: ++Transfer++
+ Value: 22.817433398816412, Risk: 8.59%, Level: low, Battery: 96.2%
+[INFO] [1792781578.035884581] [abpd_node]: ++Transfer++
+ Value: 20.847273995593092, Risk: 9.58%, Level: low, Battery: 96.1%
+[INFO] [1792781579.047347791] [abpd_node]: ++Transfer++
+ Value: 19.09165784453259, Risk: 10.45%, Level: low, Battery: 95.9%
+[INFO] [1792781580.032679535] [abpd_node]: ++Transfer++
+ Value: 26.532493245167693, Risk: 6.73%, Level: low, Battery: 95.8%
+[INFO] [1792781581.037432098] [abpd_node]: ++Transfer++
+ Value: 37.71016090299061, Risk: 1.14%, Level: low, Battery: 95.7%
+[INFO] [1792781582.047599798] [abpd_node]: ++Transfer++
+ Value: 47.25152515597413, Risk: 3.63%, Level: low, Battery: 95.6%
+[INFO] [1792781583.049638526] [abpd_node]: ++Transfer++
+ Value: 54.53893481930802, Risk: 7.27%, Level: low, Battery: 95.4%
+[INFO] [1792781584.040089874] [abpd_node]: ++Transfer++
+ Value: 53.21211360961644, Risk: 6.61%, Level: low, Battery: 95.3%
+[INFO] [1792781585.032780544] [abpd_node]: ++Transfer++
+ Value: 52.46669773084302, Risk: 6.23%, Level: low, Battery: 95.2%
+[INFO] [1792781586.034541246] [abpd_node]: ++Transfer++
+ Value: 42.814546729431996, Risk: 1.41%, Level: low, Battery: 95.1%
+[INFO] [1792781587.024151920] [abpd_node]: ++Transfer++
+ Value: 40.559682969047195, Risk: 0.28%, Level: low, Battery: 94.9%
+[INFO] [1792781588.030540584] [abpd_node]: ++Transfer++
+ Value: 31.809833172457296, Risk: 4.10%, Level: low, Battery: 94.8%
+[INFO] [1792781589.030229305] [abpd_node]: ++Transfer++
+ Value: 45.40038138502159, Risk: 2.70%, Level: low, Battery: 94.7%
+[INFO] [1792781590.035203931] [abpd_node]: ++Transfer++
+ Value: 45.01441730536659, Risk: 2.51%, Level: low, Battery: 94.6%
+[INFO] [1792781591.034341810] [abpd_node]: ++Transfer++
+ Value: 48.104807762658844, Risk: 4.05%, Level: low, Battery: 94.4%
+[INFO] [1792781592.041485616] [abpd_node]: ++Transfer++
+ Value: 45.47998457133351, Risk: 2.74%, Level: low, Battery: 94.3%
+[INFO] [1792781593.026307420] [abpd_node]: ++Transfer++
+ Value: 53.85362881999985, Risk: 6.93%, Level: low, Battery: 94.2%
+[INFO] [1792781594.023471244] [abpd_node]: ++Transfer++
+ Value: 47.58602628644581, Risk: 3.79%, Level: low, Battery: 94.1%
+[INFO] [1792781595.024359449] [abpd_node]: ++Transfer++
+ Value: 54.88536222971709, Risk: 7.44%, Level: low, Battery: 93.9%
+[INFO] [1792781596.028563829] [abpd_node]: ++Transfer++
+ Value: 50.65639183903496, Risk: 5.33%, Level: low, Battery: 93.8%
+[INFO] [1792781597.056072850] [abpd_node]: ++Transfer++
+ Value: 47.4959931697076, Risk: 3.75%, Level: low, Battery: 93.7%
+[INFO] [1792781598.077164373] [abpd_node]: ++Transfer++
+ Value: 35.44042731116397, Risk: 2.28%, Level: low, Battery: 93.6%
+[INFO] [1792781599.069545322] [abpd_node]: ++Transfer++
+ Value: 29.82146550285443, Risk: 5.09%, Level: low, Battery: 93.4%
+[INFO] [1792781600.067314593] [abpd_node]: ++Transfer++
+ Value: 27.78149417727705, Risk: 6.11%, Level: low, Battery: 93.3%
+[INFO] [1792781601.135125523] [abpd_node]: ++Transfer++
+ Value: 36.965807777736, Risk: 1.52%, Level: low, Battery: 93.2%
+[INFO] [1792781602.036931964] [abpd_node]: ++Transfer++
+ Value: 29.334306302476698, Risk: 5.33%, Level: low, Battery: 93.1%
+[INFO] [1792781603.045216334] [abpd_node]: ++Transfer++
+ Value: 36.730533137951696, Risk: 1.63%, Level: low, Battery: 92.9%
+[INFO] [1792781603.266978348] [abpd_node]: Received adaptation command: freq=1.20
+[INFO] [1792781603.269874610] [abpd_node]: Changing frequency to 1.2Hz
+[INFO] [1792781604.031852144] [abpd_node]: ++Transfer++
+ Value: 46.76771672434539, Risk: 3.38%, Level: low, Battery: 92.8%
+[INFO] [1792781604.184544172] [abpd_node]: Received adaptation command: freq=1.37
+[INFO] [1792781604.185298826] [abpd_node]: Changing frequency to 1.37Hz
+[INFO] [1792781605.032531471] [abpd_node]: ++Transfer++
+ Value: 40.60066182753893, Risk: 0.30%, Level: low, Battery: 92.7%
+[INFO] [1792781605.199561650] [abpd_node]: Received adaptation command: freq=1.57
+[INFO] [1792781605.200273830] [abpd_node]: Changing frequency to 1.57Hz
+[INFO] [1792781606.037683106] [abpd_node]: ++Transfer++
+ Value: 32.373460982423595, Risk: 3.81%, Level: low, Battery: 92.6%
+[INFO] [1792781606.220362823] [abpd_node]: Received adaptation command: freq=1.74
+[INFO] [1792781606.223121389] [abpd_node]: Changing frequency to 1.74Hz
+[INFO] [1792781607.039522058] [abpd_node]: ++Transfer++
+ Value: 38.31903243758203, Risk: 0.84%, Level: low, Battery: 92.4%
+[INFO] [1792781607.234415242] [abpd_node]: Received adaptation command: freq=1.90
+[INFO] [1792781607.235376689] [abpd_node]: Changing frequency to 1.9Hz
+[INFO] [1792781608.041935384] [abpd_node]: ++Transfer++
+ Value: 32.66611033744482, Risk: 3.67%, Level: low, Battery: 92.3%
+[INFO] [1792781608.185884729] [abpd_node]: Received adaptation command: freq=2.02
+[INFO] [1792781608.187062484] [abpd_node]: Changing frequency to 2.02Hz
+[INFO] [1792781609.051085895] [abpd_node]: ++Transfer++
+ Value: 34.44457022904046, Risk: 2.78%, Level: low, Battery: 92.2%
+[INFO] [1792781609.200760446] [abpd_node]: Received adaptation command: freq=2.14
+[INFO] [1792781609.204752805] [abpd_node]: Changing frequency to 2.14Hz
+[INFO] [1792781610.049408998] [abpd_node]: ++Transfer++
+ Value: 34.761693477624405, Risk: 2.62%, Level: low, Battery: 92.1%
+[INFO] [1792781610.239329668] [abpd_node]: Received adaptation command: freq=2.29
+[INFO] [1792781610.240310155] [abpd_node]: Changing frequency to 2.29Hz
+[INFO] [1792781611.033665031] [abpd_node]: ++Transfer++
+ Value: 32.92619210074396, Risk: 3.54%, Level: low, Battery: 91.9%
+[INFO] [1792781611.186388392] [abpd_node]: Received adaptation command: freq=2.47
+[INFO] [1792781611.187862232] [abpd_node]: Changing frequency to 2.47Hz

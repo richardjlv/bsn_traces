@@ -1,0 +1,1 @@
+Campanha incompleta preservada integralmente em `campanha_completa.tar.gz`. O manifesto e os hashes originais estão também disponíveis separadamente. Extraia o arquivo para consultar XML, trace, fontes, logs e cobertura; hashes conferidos contra o conteúdo do arquivo.

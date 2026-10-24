@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="17.766" timestamp="2026-10-23T18:56:05.525047" hostname="bsn-virtualbox"><testcase classname="steps.test_managing_system" name="test_a_failed_adaptation_attempt_is_recorded_in_the_system_log_g4g5" time="14.941"><failure message="subprocess.TimeoutExpired: Command '['ros2', 'service', 'call', '/EffectorRegister', 'bsn_interfaces/srv/EffectorRegister', &quot;{name: 'oximeter_node', connection: false}&quot;]' timed out after 10.0 seconds">request = &lt;FixtureRequest for &lt;Function test_a_failed_adaptation_attempt_is_recorded_in_the_system_log_g4g5&gt;&gt;
+_pytest_bdd_example = {}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+steps/test_managing_system.py:596: in sensor_cannot_receive_adaptation_commands
+    ack = _set_effector_connection(sensor_node, False)
+steps/test_managing_system.py:425: in _set_effector_connection
+    result = subprocess.run(
+/usr/lib/python3.12/subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+/usr/lib/python3.12/subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+/usr/lib/python3.12/subprocess.py:2116: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;Popen: returncode: -9 args: ['ros2', 'service', 'call', '/EffectorRegister'...&gt;
+endtime = 30661.515877696, orig_timeout = 10.0, stdout_seq = []
+stderr_seq = [b"[WARN] [1792781777.465115315] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_A...1777.465127829] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.\n"]
+skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() &gt; endtime:
+&gt;           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['ros2', 'service', 'call', '/EffectorRegister', 'bsn_interfaces/srv/EffectorRegister', "{name: 'oximeter_node', connection: false}"]' timed out after 10.0 seconds
+
+/usr/lib/python3.12/subprocess.py:1253: TimeoutExpired</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,172 @@
+[INFO] [1792781645.436015414] [thermometer_node]: Initialized sensor: thermometer, vital sign: temperature, frequency: 1.0Hz
+[INFO] [1792781645.455786966] [thermometer_node]: Lifecycle Manager initialized
+[INFO] [1792781645.475681869] [thermometer_node]: PublisherManagerBase initialized successfully
+[INFO] [1792781645.785228886] [thermometer_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792781645.785825799] [thermometer_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792781645.789713234] [thermometer_node]: Starting individual lifecycle management...
+[INFO] [1792781645.790275724] [thermometer_node]: Lifecycle auto-management started
+[INFO] [1792781645.796120497] [thermometer_node]: Successfully registered with ParamAdapter
+[INFO] [1792781647.790925586] [thermometer_node]: Auto-configuring node...
+[INFO] [1792781647.791512686] [thermometer_node]: Triggering node configuration...
+[INFO] [1792781647.792109947] [thermometer_node]: Configuring thermometer sensor...
+[INFO] [1792781647.798540179] [thermometer_node]: Risk ranges configured for thermometer: HR0=(0.0, 31.99), MR0=(32.0, 35.99), LR=(36.0, 37.99), MR1=(38.0, 40.99), HR1=(41.0, 50.0)
+[INFO] [1792781647.799160449] [thermometer_node]: Node configuration successful
+[INFO] [1792781648.804879073] [thermometer_node]: Triggering node activation...
+[INFO] [1792781648.805927063] [thermometer_node]: Activating thermometer sensor...
+[INFO] [1792781648.809317683] [thermometer_node]: Node activation successful
+[INFO] [1792781649.803071495] [thermometer_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792781650.796021457] [thermometer_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792781651.799137247] [thermometer_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792781652.804282554] [thermometer_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792781653.807674501] [thermometer_node]: ++Transfer++
+ Value: 37.049796077342975, Risk: 1.10%, Level: low, Battery: 99.6%
+[INFO] [1792781654.810872935] [thermometer_node]: ++Transfer++
+ Value: 37.03842263045612, Risk: 0.87%, Level: low, Battery: 99.4%
+[INFO] [1792781655.798908828] [thermometer_node]: ++Transfer++
+ Value: 37.05094332792832, Risk: 1.12%, Level: low, Battery: 99.3%
+[INFO] [1792781656.817213600] [thermometer_node]: ++Transfer++
+ Value: 37.14393915142187, Risk: 2.99%, Level: low, Battery: 99.2%
+[INFO] [1792781657.802943159] [thermometer_node]: ++Transfer++
+ Value: 37.05402210177725, Risk: 1.19%, Level: low, Battery: 99.1%
+[INFO] [1792781658.802901911] [thermometer_node]: ++Transfer++
+ Value: 37.1193070978501, Risk: 2.50%, Level: low, Battery: 98.9%
+[INFO] [1792781659.800892869] [thermometer_node]: ++Transfer++
+ Value: 37.20069723999627, Risk: 4.13%, Level: low, Battery: 98.8%
+[INFO] [1792781660.811024843] [thermometer_node]: ++Transfer++
+ Value: 36.99089244556891, Risk: 0.08%, Level: low, Battery: 98.7%
+[INFO] [1792781661.837344521] [thermometer_node]: ++Transfer++
+ Value: 36.98951181406549, Risk: 0.11%, Level: low, Battery: 98.6%
+[INFO] [1792781662.796942929] [thermometer_node]: ++Transfer++
+ Value: 37.02744582771988, Risk: 0.65%, Level: low, Battery: 98.4%
+[INFO] [1792781663.803209810] [thermometer_node]: ++Transfer++
+ Value: 36.842913074028104, Risk: 3.06%, Level: low, Battery: 98.3%
+[INFO] [1792781664.805330531] [thermometer_node]: ++Transfer++
+ Value: 36.574943007745986, Risk: 8.44%, Level: low, Battery: 98.2%
+[INFO] [1792781665.809366650] [thermometer_node]: ++Transfer++
+ Value: 36.59257719217279, Risk: 8.09%, Level: low, Battery: 98.1%
+[INFO] [1792781666.819291920] [thermometer_node]: ++Transfer++
+ Value: 36.86683880238222, Risk: 2.58%, Level: low, Battery: 97.9%
+[INFO] [1792781667.816912862] [thermometer_node]: ++Transfer++
+ Value: 36.856261196469596, Risk: 2.79%, Level: low, Battery: 97.8%
+[INFO] [1792781668.797875989] [thermometer_node]: ++Transfer++
+ Value: 36.995555294094366, Risk: 0.01%, Level: low, Battery: 97.7%
+[INFO] [1792781669.812967148] [thermometer_node]: ++Transfer++
+ Value: 36.98474630492259, Risk: 0.21%, Level: low, Battery: 97.6%
+[INFO] [1792781670.812020099] [thermometer_node]: ++Transfer++
+ Value: 37.27583074884152, Risk: 5.64%, Level: low, Battery: 97.4%
+[INFO] [1792781672.069139386] [thermometer_node]: ++Transfer++
+ Value: 37.26246936139868, Risk: 5.38%, Level: low, Battery: 97.3%
+[INFO] [1792781672.806169570] [thermometer_node]: ++Transfer++
+ Value: 36.97022174630926, Risk: 0.50%, Level: low, Battery: 97.2%
+[INFO] [1792781673.795872008] [thermometer_node]: ++Transfer++
+ Value: 37.03580668453267, Risk: 0.82%, Level: low, Battery: 97.1%
+[INFO] [1792781674.801785800] [thermometer_node]: ++Transfer++
+ Value: 37.34826971660226, Risk: 7.10%, Level: low, Battery: 96.9%
+[INFO] [1792781675.801455362] [thermometer_node]: ++Transfer++
+ Value: 37.17362553638196, Risk: 3.59%, Level: low, Battery: 96.8%
+[INFO] [1792781676.799561524] [thermometer_node]: ++Transfer++
+ Value: 37.273395262649764, Risk: 5.60%, Level: low, Battery: 96.7%
+[INFO] [1792781677.797515696] [thermometer_node]: ++Transfer++
+ Value: 37.732267428438874, Risk: 14.82%, Level: low, Battery: 96.6%
+[INFO] [1792781678.806450638] [thermometer_node]: ++Transfer++
+ Value: 38.25757972106413, Risk: 24.79%, Level: moderate, Battery: 96.4%
+[INFO] [1792781679.808122667] [thermometer_node]: ++Transfer++
+ Value: 38.50289269838999, Risk: 28.40%, Level: moderate, Battery: 96.3%
+[INFO] [1792781680.809580176] [thermometer_node]: ++Transfer++
+ Value: 39.15307099557102, Risk: 37.97%, Level: moderate, Battery: 96.2%
+[INFO] [1792781681.801050892] [thermometer_node]: ++Transfer++
+ Value: 39.167433378583176, Risk: 38.18%, Level: moderate, Battery: 96.1%
+[INFO] [1792781682.807378195] [thermometer_node]: ++Transfer++
+ Value: 39.599251145209465, Risk: 44.53%, Level: moderate, Battery: 95.9%
+[INFO] [1792781683.800936288] [thermometer_node]: ++Transfer++
+ Value: 39.49808296517058, Risk: 43.05%, Level: moderate, Battery: 95.8%
+[INFO] [1792781684.796938551] [thermometer_node]: ++Transfer++
+ Value: 39.47288122338269, Risk: 42.67%, Level: moderate, Battery: 95.7%
+[INFO] [1792781685.797571309] [thermometer_node]: ++Transfer++
+ Value: 39.14415105494616, Risk: 37.84%, Level: moderate, Battery: 95.6%
+[INFO] [1792781686.807873989] [thermometer_node]: ++Transfer++
+ Value: 39.168261027703636, Risk: 38.19%, Level: moderate, Battery: 95.4%
+[INFO] [1792781687.803360657] [thermometer_node]: ++Transfer++
+ Value: 38.78402644858214, Risk: 32.54%, Level: moderate, Battery: 95.3%
+[INFO] [1792781688.803898086] [thermometer_node]: ++Transfer++
+ Value: 38.97729745222293, Risk: 35.38%, Level: moderate, Battery: 95.2%
+[INFO] [1792781689.799820811] [thermometer_node]: ++Transfer++
+ Value: 39.14466467268423, Risk: 37.84%, Level: moderate, Battery: 95.1%
+[INFO] [1792781690.803382006] [thermometer_node]: ++Transfer++
+ Value: 39.43928505394928, Risk: 42.18%, Level: moderate, Battery: 94.9%
+[INFO] [1792781691.797124098] [thermometer_node]: ++Transfer++
+ Value: 39.520953246771015, Risk: 43.38%, Level: moderate, Battery: 94.8%
+[INFO] [1792781692.800532215] [thermometer_node]: ++Transfer++
+ Value: 39.425783127701514, Risk: 41.98%, Level: moderate, Battery: 94.7%
+[INFO] [1792781693.800213642] [thermometer_node]: ++Transfer++
+ Value: 39.220062207307365, Risk: 38.95%, Level: moderate, Battery: 94.6%
+[INFO] [1792781694.816536755] [thermometer_node]: ++Transfer++
+ Value: 38.97776010618499, Risk: 35.39%, Level: moderate, Battery: 94.4%
+[INFO] [1792781695.800470584] [thermometer_node]: ++Transfer++
+ Value: 38.881952964309406, Risk: 33.98%, Level: moderate, Battery: 94.3%
+[INFO] [1792781696.818976669] [thermometer_node]: ++Transfer++
+ Value: 38.64036193077103, Risk: 30.42%, Level: moderate, Battery: 94.2%
+[INFO] [1792781697.796473832] [thermometer_node]: ++Transfer++
+ Value: 38.39278343038146, Risk: 26.78%, Level: moderate, Battery: 94.1%
+[INFO] [1792781698.797379190] [thermometer_node]: ++Transfer++
+ Value: 38.10261062707173, Risk: 22.51%, Level: moderate, Battery: 93.9%
+[INFO] [1792781699.801855657] [thermometer_node]: ++Transfer++
+ Value: 38.00691544874606, Risk: 21.10%, Level: moderate, Battery: 93.8%
+[INFO] [1792781700.809340309] [thermometer_node]: ++Transfer++
+ Value: 37.45734659931813, Risk: 9.29%, Level: low, Battery: 93.7%
+[INFO] [1792781701.795408341] [thermometer_node]: ++Transfer++
+ Value: 37.20537729321549, Risk: 4.23%, Level: low, Battery: 93.6%
+[INFO] [1792781702.796600730] [thermometer_node]: ++Transfer++
+ Value: 37.22271305108756, Risk: 4.58%, Level: low, Battery: 93.4%
+[INFO] [1792781703.800734777] [thermometer_node]: ++Transfer++
+ Value: 36.92603663896227, Risk: 1.39%, Level: low, Battery: 93.3%
+[INFO] [1792781704.813177954] [thermometer_node]: ++Transfer++
+ Value: 36.838457943360666, Risk: 3.15%, Level: low, Battery: 93.2%
+[INFO] [1792781705.804828763] [thermometer_node]: ++Transfer++
+ Value: 36.85172019019676, Risk: 2.88%, Level: low, Battery: 93.1%
+[INFO] [1792781706.803152287] [thermometer_node]: ++Transfer++
+ Value: 36.85359212452602, Risk: 2.84%, Level: low, Battery: 92.9%
+[INFO] [1792781706.879031846] [thermometer_node]: Received adaptation command: freq=1.18
+[INFO] [1792781706.879932584] [thermometer_node]: Changing frequency to 1.18Hz
+[INFO] [1792781707.801535344] [thermometer_node]: ++Transfer++
+ Value: 36.90425174250362, Risk: 1.82%, Level: low, Battery: 92.8%
+[INFO] [1792781707.832529115] [thermometer_node]: Received adaptation command: freq=1.37
+[INFO] [1792781707.833099596] [thermometer_node]: Changing frequency to 1.37Hz
+[INFO] [1792781708.814815650] [thermometer_node]: Received adaptation command: freq=1.56
+[INFO] [1792781708.816749154] [thermometer_node]: ++Transfer++
+ Value: 36.97555747747401, Risk: 0.39%, Level: low, Battery: 92.7%
+[INFO] [1792781708.817932720] [thermometer_node]: Changing frequency to 1.56Hz
+[INFO] [1792781709.797221036] [thermometer_node]: ++Transfer++
+ Value: 37.06543364660289, Risk: 1.42%, Level: low, Battery: 92.6%
+[INFO] [1792781709.843302451] [thermometer_node]: Received adaptation command: freq=1.75
+[INFO] [1792781709.843862613] [thermometer_node]: Changing frequency to 1.75Hz
+[INFO] [1792781710.815609940] [thermometer_node]: ++Transfer++
+ Value: 37.25326080999848, Risk: 5.19%, Level: low, Battery: 92.4%
+[INFO] [1792781710.856928744] [thermometer_node]: Received adaptation command: freq=1.94
+[INFO] [1792781710.857511561] [thermometer_node]: Changing frequency to 1.94Hz
+[INFO] [1792781711.810412372] [thermometer_node]: ++Transfer++
+ Value: 37.447883840451674, Risk: 9.10%, Level: low, Battery: 92.3%
+[INFO] [1792781711.851663169] [thermometer_node]: Received adaptation command: freq=2.13
+[INFO] [1792781711.852215041] [thermometer_node]: Changing frequency to 2.13Hz
+[INFO] [1792781712.801330908] [thermometer_node]: ++Transfer++
+ Value: 37.39458643903209, Risk: 8.03%, Level: low, Battery: 92.2%
+[INFO] [1792781712.825316081] [thermometer_node]: Received adaptation command: freq=2.32
+[INFO] [1792781712.826156953] [thermometer_node]: Changing frequency to 2.32Hz
+[INFO] [1792781713.833323042] [thermometer_node]: ++Transfer++
+ Value: 37.518907933511635, Risk: 10.53%, Level: low, Battery: 92.1%
+[INFO] [1792781713.839435748] [thermometer_node]: Received adaptation command: freq=2.51
+[INFO] [1792781713.840822460] [thermometer_node]: Changing frequency to 2.51Hz
+[INFO] [1792781714.799283837] [thermometer_node]: ++Transfer++
+ Value: 37.413524885895505, Risk: 8.41%, Level: low, Battery: 91.9%
+[INFO] [1792781714.835672185] [thermometer_node]: Received adaptation command: freq=2.71
+[INFO] [1792781714.836185216] [thermometer_node]: Changing frequency to 2.71Hz
+[INFO] [1792781715.834135418] [thermometer_node]: ++Transfer++
+ Value: 37.15639046470547, Risk: 3.24%, Level: low, Battery: 91.8%
+[INFO] [1792781715.850960275] [thermometer_node]: Received adaptation command: freq=2.90
+[INFO] [1792781715.852108462] [thermometer_node]: Changing frequency to 2.9Hz
+[INFO] [1792781716.810003881] [thermometer_node]: ++Transfer++
+ Value: 37.612368014096006, Risk: 12.41%, Level: low, Battery: 91.7%
+[INFO] [1792781716.832864026] [thermometer_node]: Received adaptation command: freq=3.09
+[INFO] [1792781716.833650484] [thermometer_node]: Changing frequency to 3.09Hz
+[INFO] [1792781717.816984818] [thermometer_node]: ++Transfer++
+ Value: 38.174588281397334, Risk: 23.57%, Level: moderate, Battery: 91.6%
