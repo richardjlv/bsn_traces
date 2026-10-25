@@ -1,0 +1,56 @@
+[INFO] [1792970867.943831547] [abpd_node]: Initialized sensor: abpd, vital sign: abpd, frequency: 1.0Hz
+[INFO] [1792970867.959580104] [abpd_node]: Lifecycle Manager initialized
+[INFO] [1792970867.970877012] [abpd_node]: PublisherManagerBase initialized successfully
+[INFO] [1792970868.231126029] [abpd_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792970868.231580542] [abpd_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792970868.234765091] [abpd_node]: Starting individual lifecycle management...
+[INFO] [1792970868.235552795] [abpd_node]: Lifecycle auto-management started
+[INFO] [1792970868.236008103] [abpd_node]: Successfully registered with ParamAdapter
+[INFO] [1792970870.235633517] [abpd_node]: Auto-configuring node...
+[INFO] [1792970870.236261525] [abpd_node]: Triggering node configuration...
+[INFO] [1792970870.236722551] [abpd_node]: Configuring abpd sensor...
+[INFO] [1792970870.243540079] [abpd_node]: Risk ranges configured for abpd: HR0=(-1.0, -1.0), MR0=(-1.0, -1.0), LR=(0.0, 80.0), MR1=(80.0, 90.0), HR1=(90.0, 300.0)
+[INFO] [1792970870.244272815] [abpd_node]: Node configuration successful
+[INFO] [1792970871.245462974] [abpd_node]: Triggering node activation...
+[INFO] [1792970871.246067259] [abpd_node]: Activating abpd sensor...
+[INFO] [1792970871.246758620] [abpd_node]: Node activation successful
+[INFO] [1792970872.238937149] [abpd_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792970873.239906424] [abpd_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792970874.248813875] [abpd_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792970875.238908577] [abpd_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792970876.239821606] [abpd_node]: ++Transfer++
+ Value: 50.41532532102825, Risk: 5.21%, Level: low, Battery: 99.6%
+[INFO] [1792970877.241824822] [abpd_node]: ++Transfer++
+ Value: 55.588810827109384, Risk: 7.79%, Level: low, Battery: 99.4%
+[INFO] [1792970878.242226660] [abpd_node]: ++Transfer++
+ Value: 52.805277561108525, Risk: 6.40%, Level: low, Battery: 99.3%
+[INFO] [1792970879.242002241] [abpd_node]: ++Transfer++
+ Value: 56.33470850009486, Risk: 8.17%, Level: low, Battery: 99.2%
+[INFO] [1792970880.241704944] [abpd_node]: ++Transfer++
+ Value: 53.935848876614955, Risk: 6.97%, Level: low, Battery: 99.1%
+[INFO] [1792970881.240753159] [abpd_node]: ++Transfer++
+ Value: 45.42967334457387, Risk: 2.71%, Level: low, Battery: 98.9%
+[INFO] [1792970882.240903619] [abpd_node]: ++Transfer++
+ Value: 42.73200085398487, Risk: 1.37%, Level: low, Battery: 98.8%
+[INFO] [1792970883.240256808] [abpd_node]: ++Transfer++
+ Value: 40.49758512835526, Risk: 0.25%, Level: low, Battery: 98.7%
+[INFO] [1792970884.237882185] [abpd_node]: ++Transfer++
+ Value: 32.42272495131891, Risk: 3.79%, Level: low, Battery: 98.6%
+[INFO] [1792970885.238799203] [abpd_node]: ++Transfer++
+ Value: 24.031046604529237, Risk: 7.98%, Level: low, Battery: 98.4%
+[INFO] [1792970886.237811527] [abpd_node]: ++Transfer++
+ Value: 22.844873768854256, Risk: 8.58%, Level: low, Battery: 98.3%
+[INFO] [1792970887.240564444] [abpd_node]: ++Transfer++
+ Value: 23.806639846810956, Risk: 8.10%, Level: low, Battery: 98.2%
+[INFO] [1792970888.241732194] [abpd_node]: ++Transfer++
+ Value: 33.805641675174016, Risk: 3.10%, Level: low, Battery: 98.1%
+[INFO] [1792970889.240484944] [abpd_node]: ++Transfer++
+ Value: 38.29253734541644, Risk: 0.85%, Level: low, Battery: 97.9%
+[INFO] [1792970890.242622297] [abpd_node]: ++Transfer++
+ Value: 34.99364474534148, Risk: 2.50%, Level: low, Battery: 97.8%
+[INFO] [1792970891.242187251] [abpd_node]: ++Transfer++
+ Value: 46.065320968909106, Risk: 3.03%, Level: low, Battery: 97.7%
+[INFO] [1792970892.245836006] [abpd_node]: ++Transfer++
+ Value: 50.88865023341932, Risk: 5.44%, Level: low, Battery: 97.6%
+[INFO] [1792970893.241901736] [abpd_node]: ++Transfer++
+ Value: 43.15731511279532, Risk: 1.58%, Level: low, Battery: 97.4%

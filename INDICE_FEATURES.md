@@ -32,6 +32,6 @@ XFAIL representa expectativa não atendida. Consulte `step_errors` em `indice_fe
 
 ## Histórico e reprodução
 
-As tentativas anteriores continuam em `campanhas_traces/`, incluindo falhas e coletas interrompidas. A escolha da campanha desta tabela não altera seus resultados nem os agrega retrospectivamente.
+[Repetições de 25/10](diagnosticos/repeticoes_features_2026-10-25/README.md): as três features com falha foram reexecutadas; as falhas reapareceram. As tentativas anteriores continuam em `campanhas_traces/`, incluindo falhas e coletas interrompidas. A escolha da campanha desta tabela não altera seus resultados nem os agrega retrospectivamente.
 
 Para conferir novamente: `python3 ferramentas_traces/gerar_indice_features.py --root .` na raiz deste repositório. O arquivo JSON preserva os nomes exatos das campanhas e casos.

@@ -84,7 +84,7 @@ def main():
  '| Feature | Propriedades | Alcance e limitação |','|---|---|---|']
  lines += [f'| {r["feature"]} | {r["properties"]} | {r["limitation"]} |' for r in rows]
  lines+=['','## Histórico e reprodução','',
- 'As tentativas anteriores continuam em `campanhas_traces/`, incluindo falhas e coletas interrompidas. A escolha da campanha desta tabela não altera seus resultados nem os agrega retrospectivamente.', '',
+ '[Repetições de 25/10](diagnosticos/repeticoes_features_2026-10-25/README.md): as três features com falha foram reexecutadas; as falhas reapareceram. As tentativas anteriores continuam em `campanhas_traces/`, incluindo falhas e coletas interrompidas. A escolha da campanha desta tabela não altera seus resultados nem os agrega retrospectivamente.', '',
  'Para conferir novamente: `python3 ferramentas_traces/gerar_indice_features.py --root .` na raiz deste repositório. O arquivo JSON preserva os nomes exatos das campanhas e casos.']
  (root/'INDICE_FEATURES.md').write_text('\n'.join(lines)+'\n')
  print(f'{len(rows)} features auditadas; índice gerado.')

@@ -1,0 +1,108 @@
+[
+  {
+    "campaign": "ros2_20261025T232415Z_v1iy3ef0",
+    "feature": "check_bsn",
+    "counts": [
+      {
+        "failure": 1,
+        "passed": 7
+      }
+    ],
+    "complete": false,
+    "errors": [
+      {
+        "schema": 1,
+        "event": "step_error",
+        "pid": 8198,
+        "feature_run": "check_bsn",
+        "time_ns": 1792970687903512760,
+        "monotonic_ns": 5769723131609,
+        "exception_type": "KeyError",
+        "message": "'sensor_datapoint'",
+        "nodeid": "steps/test_check_bsn.py::test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the oximeter]",
+        "feature": "Check for bsn features",
+        "feature_file": "/ros_ws/src/bsn_ros2/features/check_bsn.feature",
+        "scenario": "The central hub receives the vital sign reading reported by a body sensor (BSN-P08)",
+        "keyword": "then",
+        "step": "the central hub should receive that reading with the value reported by the oximeter",
+        "line": 9
+      }
+    ]
+  },
+  {
+    "campaign": "ros2_20261025T232722Z_uu8nnywb",
+    "feature": "knowledge_repo",
+    "counts": [
+      {
+        "failure": 1
+      }
+    ],
+    "complete": false,
+    "errors": [
+      {
+        "schema": 1,
+        "event": "step_error",
+        "pid": 10428,
+        "feature_run": "knowledge_repo",
+        "time_ns": 1792970859694289964,
+        "monotonic_ns": 5941513908981,
+        "exception_type": "AssertionError",
+        "message": "Failed to get info for /logger: [WARN] [1792970858.360891673] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.\n  [WARN] [1792970858.360991341] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.\n  Unable to find node '/logger'\n  \nassert 1 == 0\n +  where 1 = CompletedProcess(args=['ros2', 'node', 'info', '/logger'], returncode=1, stdout=b'', stderr=b\"[WARN] [1792970858.360891673] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.\\n[WARN] [1792970858.360991341] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.\\nUnable to find node '/logger'\\n\").returncode",
+        "nodeid": "steps/test_knowledge_repo.py::test_knowledge_repository_wired",
+        "feature": "Ensure knowledge repository components are communicating correctly",
+        "feature_file": "/ros_ws/src/bsn_ros2/features/knowledge_repo.feature",
+        "scenario": "The knowledge repository is wired to the system log and to the central hub",
+        "keyword": "then",
+        "step": "the knowledge repository should subscribe to \"persistence\" published by the system log",
+        "line": 8
+      }
+    ]
+  },
+  {
+    "campaign": "ros2_20261025T232742Z_o1zp8574",
+    "feature": "data_persistance",
+    "counts": [
+      {
+        "failure": 1,
+        "xfail": 1
+      }
+    ],
+    "complete": false,
+    "errors": [
+      {
+        "schema": 1,
+        "event": "step_error",
+        "pid": 10897,
+        "feature_run": "data_persistance",
+        "time_ns": 1792970891077651422,
+        "monotonic_ns": 5972897270208,
+        "exception_type": "AssertionError",
+        "message": "No thermometer reading was captured during the window, so this scenario proved nothing either way: {'header_stamp_sec': [], 'header_stamp_nanosec': [], 'header_frame_id': [], 'sensor_id': [], 'sensor_type': [], 'sensor_datapoint': [], 'risk': [], 'risk_level': [], 'battery_level': []}\nassert False\n +  where False = any(dict_values([[], [], [], [], [], [], [], [], []]))\n +    where dict_values([[], [], [], [], [], [], [], [], []]) = <built-in method values of dict object at 0x7f89e416d8c0>()\n +      where <built-in method values of dict object at 0x7f89e416d8c0> = {'battery_level': [], 'header_frame_id': [], 'header_stamp_nanosec': [], 'header_stamp_sec': [], ...}.values",
+        "nodeid": "steps/test_data_persistance.py::test_reading_persisted_in_knowledge_repository",
+        "feature": "Data Persistence (BSN-P08) - Whether the sensor node has collected some data, eventually the bodyhub will persist it.",
+        "feature_file": "/ros_ws/src/bsn_ros2/features/data_persistance.feature",
+        "scenario": "A vital sign reading collected by a sensor is persisted in the knowledge repository (BSN-P08)",
+        "keyword": "then",
+        "step": "that reading should be retrievable from the knowledge repository with the value reported",
+        "line": 12
+      },
+      {
+        "schema": 1,
+        "event": "step_error",
+        "pid": 10897,
+        "feature_run": "data_persistance",
+        "time_ns": 1792970892977965071,
+        "monotonic_ns": 5974797584025,
+        "exception_type": "AssertionError",
+        "message": "Failed to simulate a knowledge-repository storage failure on logger: stdout='' stderr=\"[WARN] [1792970891.518837480] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.\\n[WARN] [1792970891.518850906] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.\\nSetting parameter failed: Invalid access to undeclared parameter(s): []\\n\"\nassert (0 == 0 and 'successful' in '')\n +  where 0 = CompletedProcess(args=['ros2', 'param', 'set', 'logger', 'storage_failure_simulated', 'true'], returncode=0, stdout=b'', stderr=b\"[WARN] [1792970891.518837480] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.\\n[WARN] [1792970891.518850906] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.\\nSetting parameter failed: Invalid access to undeclared parameter(s): []\\n\").returncode\n +  and   '' = <built-in method decode of bytes object at 0xb390a8>()\n +    where <built-in method decode of bytes object at 0xb390a8> = b''.decode\n +      where b'' = CompletedProcess(args=['ros2', 'param', 'set', 'logger', 'storage_failure_simulated', 'true'], returncode=0, stdout=b'', stderr=b\"[WARN] [1792970891.518837480] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.\\n[WARN] [1792970891.518850906] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.\\nSetting parameter failed: Invalid access to undeclared parameter(s): []\\n\").stdout",
+        "nodeid": "steps/test_data_persistance.py::test_persistence_failure_recorded",
+        "feature": "Data Persistence (BSN-P08) - Whether the sensor node has collected some data, eventually the bodyhub will persist it.",
+        "feature_file": "/ros_ws/src/bsn_ros2/features/data_persistance.feature",
+        "scenario": "A persistence failure is recorded when the knowledge repository cannot store a reading (BSN-P08)",
+        "keyword": "given",
+        "step": "the knowledge repository is experiencing storage failures",
+        "line": 20
+      }
+    ]
+  }
+]

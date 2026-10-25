@@ -1,0 +1,594 @@
+[INFO] [1792970659.936773530] [ecg_node]: Initialized sensor: ecg, vital sign: heart_rate, frequency: 1.0Hz
+[INFO] [1792970659.947744792] [ecg_node]: Lifecycle Manager initialized
+[INFO] [1792970659.968176424] [ecg_node]: PublisherManagerBase initialized successfully
+[INFO] [1792970660.980912128] [ecg_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792970660.981402410] [ecg_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792970660.992064859] [ecg_node]: Starting individual lifecycle management...
+[INFO] [1792970660.992617141] [ecg_node]: Lifecycle auto-management started
+[INFO] [1792970660.999515553] [ecg_node]: Successfully registered with ParamAdapter
+[INFO] [1792970663.255425132] [ecg_node]: Auto-configuring node...
+[INFO] [1792970663.255900081] [ecg_node]: Triggering node configuration...
+[INFO] [1792970663.257006463] [ecg_node]: Configuring ecg sensor...
+[INFO] [1792970663.262666555] [ecg_node]: Risk ranges configured for ecg: HR0=(0.0, 70.0), MR0=(70.0, 85.0), LR=(85.0, 97.0), MR1=(97.0, 115.0), HR1=(115.0, 300.0)
+[INFO] [1792970663.263223903] [ecg_node]: Node configuration successful
+[INFO] [1792970664.264592715] [ecg_node]: Triggering node activation...
+[INFO] [1792970664.265067240] [ecg_node]: Activating ecg sensor...
+[INFO] [1792970664.265887612] [ecg_node]: Node activation successful
+[INFO] [1792970664.998199823] [ecg_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792970666.008222621] [ecg_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792970666.998522751] [ecg_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792970668.000473890] [ecg_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792970669.008670857] [ecg_node]: ++Transfer++
+ Value: 90.97083879806048, Risk: 0.10%, Level: low, Battery: 99.6%
+[INFO] [1792970669.998095505] [ecg_node]: ++Transfer++
+ Value: 90.69288835858897, Risk: 1.02%, Level: low, Battery: 99.4%
+[INFO] [1792970670.998934886] [ecg_node]: ++Transfer++
+ Value: 90.9357586391636, Risk: 0.21%, Level: low, Battery: 99.3%
+[INFO] [1792970671.997679989] [ecg_node]: ++Transfer++
+ Value: 90.66775917505603, Risk: 1.11%, Level: low, Battery: 99.2%
+[INFO] [1792970673.009422490] [ecg_node]: ++Transfer++
+ Value: 89.02017359936531, Risk: 6.60%, Level: low, Battery: 99.1%
+[INFO] [1792970673.998142718] [ecg_node]: ++Transfer++
+ Value: 89.14765086009373, Risk: 6.17%, Level: low, Battery: 98.9%
+[INFO] [1792970674.997467148] [ecg_node]: ++Transfer++
+ Value: 89.6651286364723, Risk: 4.45%, Level: low, Battery: 98.8%
+[INFO] [1792970676.024450691] [ecg_node]: ++Transfer++
+ Value: 90.0153023692911, Risk: 3.28%, Level: low, Battery: 98.7%
+[INFO] [1792970676.997817975] [ecg_node]: ++Transfer++
+ Value: 91.27079062800283, Risk: 0.90%, Level: low, Battery: 98.6%
+[INFO] [1792970678.397212176] [ecg_node]: ++Transfer++
+ Value: 93.31980192911053, Risk: 7.73%, Level: low, Battery: 98.4%
+[INFO] [1792970678.996058998] [ecg_node]: ++Transfer++
+ Value: 93.28851646938321, Risk: 7.63%, Level: low, Battery: 98.3%
+[INFO] [1792970680.008615151] [ecg_node]: ++Transfer++
+ Value: 93.48910766413682, Risk: 8.30%, Level: low, Battery: 98.2%
+[INFO] [1792970680.997691168] [ecg_node]: ++Transfer++
+ Value: 93.23665023177361, Risk: 7.46%, Level: low, Battery: 98.1%
+[INFO] [1792970682.000688085] [ecg_node]: ++Transfer++
+ Value: 93.2125979221474, Risk: 7.38%, Level: low, Battery: 97.9%
+[INFO] [1792970682.994977339] [ecg_node]: ++Transfer++
+ Value: 92.85215836206241, Risk: 6.17%, Level: low, Battery: 97.8%
+[INFO] [1792970683.997372061] [ecg_node]: ++Transfer++
+ Value: 92.67334878962329, Risk: 5.58%, Level: low, Battery: 97.7%
+[INFO] [1792970684.994951143] [ecg_node]: ++Transfer++
+ Value: 92.29940333301234, Risk: 4.33%, Level: low, Battery: 97.6%
+[INFO] [1792970685.997120378] [ecg_node]: ++Transfer++
+ Value: 91.68870685392751, Risk: 2.30%, Level: low, Battery: 97.4%
+[INFO] [1792970686.996943310] [ecg_node]: ++Transfer++
+ Value: 91.20868571173703, Risk: 0.70%, Level: low, Battery: 97.3%
+[INFO] [1792970688.007173912] [ecg_node]: ++Transfer++
+ Value: 89.62036420519664, Risk: 4.60%, Level: low, Battery: 97.2%
+[INFO] [1792970689.006533772] [ecg_node]: ++Transfer++
+ Value: 89.94963855492517, Risk: 3.50%, Level: low, Battery: 97.1%
+[INFO] [1792970690.011688711] [ecg_node]: ++Transfer++
+ Value: 90.30708309398588, Risk: 2.31%, Level: low, Battery: 96.9%
+[INFO] [1792970690.996705822] [ecg_node]: ++Transfer++
+ Value: 90.34583306095128, Risk: 2.18%, Level: low, Battery: 96.8%
+[INFO] [1792970691.997321928] [ecg_node]: ++Transfer++
+ Value: 90.30709720065497, Risk: 2.31%, Level: low, Battery: 96.7%
+[INFO] [1792970693.000013586] [ecg_node]: ++Transfer++
+ Value: 92.34352262541935, Risk: 4.48%, Level: low, Battery: 96.6%
+[INFO] [1792970693.997701360] [ecg_node]: ++Transfer++
+ Value: 92.79599765449811, Risk: 5.99%, Level: low, Battery: 96.4%
+[INFO] [1792970694.997269860] [ecg_node]: ++Transfer++
+ Value: 92.61637347783511, Risk: 5.39%, Level: low, Battery: 96.3%
+[INFO] [1792970695.997870333] [ecg_node]: ++Transfer++
+ Value: 94.39088716937373, Risk: 11.30%, Level: low, Battery: 96.2%
+[INFO] [1792970696.999552880] [ecg_node]: ++Transfer++
+ Value: 94.50639361597072, Risk: 11.69%, Level: low, Battery: 96.1%
+[INFO] [1792970697.998217522] [ecg_node]: ++Transfer++
+ Value: 93.90319928592174, Risk: 9.68%, Level: low, Battery: 95.9%
+[INFO] [1792970698.998554064] [ecg_node]: ++Transfer++
+ Value: 93.65849218208737, Risk: 8.86%, Level: low, Battery: 95.8%
+[INFO] [1792970699.996887136] [ecg_node]: ++Transfer++
+ Value: 92.89452944737798, Risk: 6.32%, Level: low, Battery: 95.7%
+[INFO] [1792970701.011704544] [ecg_node]: ++Transfer++
+ Value: 94.05536538814445, Risk: 10.18%, Level: low, Battery: 95.6%
+[INFO] [1792970701.998522033] [ecg_node]: ++Transfer++
+ Value: 97.33135850234669, Risk: 21.81%, Level: moderate, Battery: 95.4%
+[INFO] [1792970703.006565382] [ecg_node]: ++Transfer++
+ Value: 101.30865482393928, Risk: 31.53%, Level: moderate, Battery: 95.3%
+[INFO] [1792970703.998381189] [ecg_node]: ++Transfer++
+ Value: 103.87456283357024, Risk: 37.80%, Level: moderate, Battery: 95.2%
+[INFO] [1792970704.997228302] [ecg_node]: ++Transfer++
+ Value: 106.93831420596464, Risk: 45.29%, Level: moderate, Battery: 95.1%
+[INFO] [1792970705.997694195] [ecg_node]: ++Transfer++
+ Value: 109.178391528282, Risk: 50.77%, Level: moderate, Battery: 94.9%
+[INFO] [1792970707.000245479] [ecg_node]: ++Transfer++
+ Value: 109.51954054833195, Risk: 51.60%, Level: moderate, Battery: 94.8%
+[INFO] [1792970707.995737743] [ecg_node]: ++Transfer++
+ Value: 106.91752828425425, Risk: 45.24%, Level: moderate, Battery: 94.7%
+[INFO] [1792970708.998846545] [ecg_node]: ++Transfer++
+ Value: 105.79351819270441, Risk: 42.50%, Level: moderate, Battery: 94.6%
+[INFO] [1792970709.997084347] [ecg_node]: ++Transfer++
+ Value: 105.54658646930034, Risk: 41.89%, Level: moderate, Battery: 94.4%
+[INFO] [1792970711.001812968] [ecg_node]: ++Transfer++
+ Value: 103.7109022552277, Risk: 37.40%, Level: moderate, Battery: 94.3%
+[INFO] [1792970711.995370228] [ecg_node]: ++Transfer++
+ Value: 103.63959910682857, Risk: 37.23%, Level: moderate, Battery: 94.2%
+[INFO] [1792970713.006412523] [ecg_node]: ++Transfer++
+ Value: 105.7842040041633, Risk: 42.47%, Level: moderate, Battery: 94.1%
+[INFO] [1792970713.998624736] [ecg_node]: ++Transfer++
+ Value: 106.79241455198205, Risk: 44.94%, Level: moderate, Battery: 93.9%
+[INFO] [1792970715.027764064] [ecg_node]: ++Transfer++
+ Value: 108.05229225102016, Risk: 48.02%, Level: moderate, Battery: 93.8%
+[INFO] [1792970716.004579507] [ecg_node]: ++Transfer++
+ Value: 110.0203479261113, Risk: 52.83%, Level: moderate, Battery: 93.7%
+[INFO] [1792970716.995913500] [ecg_node]: ++Transfer++
+ Value: 110.09990293713388, Risk: 53.02%, Level: moderate, Battery: 93.6%
+[INFO] [1792970717.999015235] [ecg_node]: ++Transfer++
+ Value: 109.65515532695517, Risk: 51.93%, Level: moderate, Battery: 93.4%
+[INFO] [1792970718.997871000] [ecg_node]: ++Transfer++
+ Value: 109.68174512369926, Risk: 52.00%, Level: moderate, Battery: 93.3%
+[INFO] [1792970719.998936591] [ecg_node]: ++Transfer++
+ Value: 107.9329507075266, Risk: 47.72%, Level: moderate, Battery: 93.2%
+[INFO] [1792970720.998002740] [ecg_node]: ++Transfer++
+ Value: 101.64598859034223, Risk: 32.36%, Level: moderate, Battery: 93.1%
+[INFO] [1792970721.997827344] [ecg_node]: ++Transfer++
+ Value: 95.67623947565387, Risk: 15.59%, Level: low, Battery: 92.9%
+[INFO] [1792970722.148503378] [ecg_node]: Received adaptation command: freq=1.27
+[INFO] [1792970722.148789572] [ecg_node]: Changing frequency to 1.27Hz
+[INFO] [1792970722.997131013] [ecg_node]: ++Transfer++
+ Value: 89.98299583742582, Risk: 3.39%, Level: low, Battery: 92.8%
+[INFO] [1792970723.148657225] [ecg_node]: Received adaptation command: freq=1.54
+[INFO] [1792970723.149218176] [ecg_node]: Changing frequency to 1.54Hz
+[INFO] [1792970723.997173169] [ecg_node]: ++Transfer++
+ Value: 83.8078886483598, Risk: 24.50%, Level: moderate, Battery: 92.7%
+[INFO] [1792970724.150668694] [ecg_node]: Received adaptation command: freq=1.81
+[INFO] [1792970724.151148915] [ecg_node]: Changing frequency to 1.81Hz
+[INFO] [1792970725.006458413] [ecg_node]: ++Transfer++
+ Value: 78.95290463659715, Risk: 38.74%, Level: moderate, Battery: 92.6%
+[INFO] [1792970725.154596344] [ecg_node]: Received adaptation command: freq=2.07
+[INFO] [1792970725.155118221] [ecg_node]: Changing frequency to 2.07Hz
+[INFO] [1792970726.005510749] [ecg_node]: ++Transfer++
+ Value: 79.65508732399549, Risk: 36.68%, Level: moderate, Battery: 92.4%
+[INFO] [1792970726.197911179] [ecg_node]: Received adaptation command: freq=2.30
+[INFO] [1792970726.198412156] [ecg_node]: Changing frequency to 2.3Hz
+[INFO] [1792970727.006373236] [ecg_node]: ++Transfer++
+ Value: 77.5202341300762, Risk: 42.94%, Level: moderate, Battery: 92.3%
+[INFO] [1792970727.165057408] [ecg_node]: Received adaptation command: freq=2.54
+[INFO] [1792970727.166295845] [ecg_node]: Changing frequency to 2.54Hz
+[INFO] [1792970728.002365134] [ecg_node]: ++Transfer++
+ Value: 78.21657203180185, Risk: 40.90%, Level: moderate, Battery: 92.2%
+[INFO] [1792970728.250157913] [ecg_node]: Received adaptation command: freq=2.76
+[INFO] [1792970728.250673567] [ecg_node]: Changing frequency to 2.76Hz
+[INFO] [1792970729.006727432] [ecg_node]: ++Transfer++
+ Value: 77.22559823848144, Risk: 43.80%, Level: moderate, Battery: 92.1%
+[INFO] [1792970729.155071674] [ecg_node]: Received adaptation command: freq=2.98
+[INFO] [1792970729.155585946] [ecg_node]: Changing frequency to 2.98Hz
+[INFO] [1792970729.997232427] [ecg_node]: ++Transfer++
+ Value: 77.3136155049393, Risk: 43.55%, Level: moderate, Battery: 91.9%
+[INFO] [1792970730.222083683] [ecg_node]: Received adaptation command: freq=3.23
+[INFO] [1792970730.222599300] [ecg_node]: Changing frequency to 3.23Hz
+[INFO] [1792970731.005335750] [ecg_node]: ++Transfer++
+ Value: 77.44009007821802, Risk: 43.18%, Level: moderate, Battery: 91.8%
+[INFO] [1792970731.155059509] [ecg_node]: Received adaptation command: freq=3.48
+[INFO] [1792970731.155720883] [ecg_node]: Changing frequency to 3.48Hz
+[INFO] [1792970732.006343656] [ecg_node]: ++Transfer++
+ Value: 79.18352673530481, Risk: 38.06%, Level: moderate, Battery: 91.7%
+[INFO] [1792970732.151254563] [ecg_node]: Received adaptation command: freq=3.71
+[INFO] [1792970732.152008547] [ecg_node]: Changing frequency to 3.71Hz
+[INFO] [1792970733.001083085] [ecg_node]: ++Transfer++
+ Value: 78.00556493353324, Risk: 41.52%, Level: moderate, Battery: 91.6%
+[INFO] [1792970733.150061961] [ecg_node]: Received adaptation command: freq=3.92
+[INFO] [1792970733.150541421] [ecg_node]: Changing frequency to 3.92Hz
+[INFO] [1792970733.995749204] [ecg_node]: ++Transfer++
+ Value: 78.67763824093224, Risk: 39.55%, Level: moderate, Battery: 91.4%
+[INFO] [1792970734.156258146] [ecg_node]: Received adaptation command: freq=4.14
+[INFO] [1792970734.156755332] [ecg_node]: Changing frequency to 4.14Hz
+[INFO] [1792970735.001589153] [ecg_node]: ++Transfer++
+ Value: 80.264460078795, Risk: 34.89%, Level: moderate, Battery: 91.3%
+[INFO] [1792970735.149261157] [ecg_node]: Received adaptation command: freq=4.35
+[INFO] [1792970735.149754594] [ecg_node]: Changing frequency to 4.35Hz
+[INFO] [1792970735.997737107] [ecg_node]: ++Transfer++
+ Value: 80.32514000059555, Risk: 34.71%, Level: moderate, Battery: 91.2%
+[INFO] [1792970736.155998957] [ecg_node]: Received adaptation command: freq=4.57
+[INFO] [1792970736.156444788] [ecg_node]: Changing frequency to 4.57Hz
+[INFO] [1792970737.004547338] [ecg_node]: ++Transfer++
+ Value: 79.86328227458178, Risk: 36.07%, Level: moderate, Battery: 91.1%
+[INFO] [1792970737.157575582] [ecg_node]: Received adaptation command: freq=4.78
+[INFO] [1792970737.158083649] [ecg_node]: Changing frequency to 4.78Hz
+[INFO] [1792970737.999541961] [ecg_node]: ++Transfer++
+ Value: 78.73552500704147, Risk: 39.38%, Level: moderate, Battery: 90.9%
+[INFO] [1792970738.150434387] [ecg_node]: Received adaptation command: freq=4.98
+[INFO] [1792970738.150950051] [ecg_node]: Changing frequency to 4.98Hz
+[INFO] [1792970738.997074366] [ecg_node]: ++Transfer++
+ Value: 79.68324954841307, Risk: 36.60%, Level: moderate, Battery: 90.8%
+[INFO] [1792970739.172328638] [ecg_node]: Received adaptation command: freq=5.20
+[INFO] [1792970739.172856079] [ecg_node]: Changing frequency to 5.2Hz
+[INFO] [1792970739.999414316] [ecg_node]: ++Transfer++
+ Value: 78.40698980675825, Risk: 40.34%, Level: moderate, Battery: 90.7%
+[INFO] [1792970740.166557091] [ecg_node]: Received adaptation command: freq=5.41
+[INFO] [1792970740.167091034] [ecg_node]: Changing frequency to 5.41Hz
+[INFO] [1792970740.999692869] [ecg_node]: ++Transfer++
+ Value: 77.25569459153385, Risk: 43.72%, Level: moderate, Battery: 90.6%
+[INFO] [1792970741.154077401] [ecg_node]: Received adaptation command: freq=5.62
+[INFO] [1792970741.154583985] [ecg_node]: Changing frequency to 5.62Hz
+[INFO] [1792970741.999787221] [ecg_node]: ++Transfer++
+ Value: 76.1781343007972, Risk: 46.88%, Level: moderate, Battery: 90.4%
+[INFO] [1792970742.157600166] [ecg_node]: Received adaptation command: freq=5.82
+[INFO] [1792970742.158091153] [ecg_node]: Changing frequency to 5.82Hz
+[INFO] [1792970743.001486783] [ecg_node]: ++Transfer++
+ Value: 77.64785921365089, Risk: 42.57%, Level: moderate, Battery: 90.3%
+[INFO] [1792970743.141837735] [ecg_node]: Received adaptation command: freq=6.02
+[INFO] [1792970743.142350708] [ecg_node]: Changing frequency to 6.02Hz
+[INFO] [1792970744.001837075] [ecg_node]: ++Transfer++
+ Value: 76.81972085008348, Risk: 45.00%, Level: moderate, Battery: 90.2%
+[INFO] [1792970744.153339657] [ecg_node]: Received adaptation command: freq=6.23
+[INFO] [1792970744.153855934] [ecg_node]: Changing frequency to 6.23Hz
+[INFO] [1792970745.007216138] [ecg_node]: ++Transfer++
+ Value: 78.00733918083384, Risk: 41.51%, Level: moderate, Battery: 90.1%
+[INFO] [1792970745.156251298] [ecg_node]: Received adaptation command: freq=6.44
+[INFO] [1792970745.156891544] [ecg_node]: Changing frequency to 6.44Hz
+[INFO] [1792970745.997741245] [ecg_node]: ++Transfer++
+ Value: 77.15759488585908, Risk: 44.00%, Level: moderate, Battery: 89.9%
+[INFO] [1792970746.158361758] [ecg_node]: Received adaptation command: freq=6.66
+[INFO] [1792970746.158851991] [ecg_node]: Changing frequency to 6.66Hz
+[INFO] [1792970747.001395898] [ecg_node]: ++Transfer++
+ Value: 78.52958946155753, Risk: 39.98%, Level: moderate, Battery: 89.8%
+[INFO] [1792970747.145477820] [ecg_node]: Received adaptation command: freq=6.87
+[INFO] [1792970747.145964011] [ecg_node]: Changing frequency to 6.87Hz
+[INFO] [1792970747.997115929] [ecg_node]: ++Transfer++
+ Value: 77.10183625815492, Risk: 44.17%, Level: moderate, Battery: 89.7%
+[INFO] [1792970748.154091736] [ecg_node]: Received adaptation command: freq=7.09
+[INFO] [1792970748.154602474] [ecg_node]: Changing frequency to 7.09Hz
+[INFO] [1792970749.000931613] [ecg_node]: ++Transfer++
+ Value: 76.83863550197302, Risk: 44.94%, Level: moderate, Battery: 89.6%
+[INFO] [1792970749.177289638] [ecg_node]: Received adaptation command: freq=7.30
+[INFO] [1792970749.177614073] [ecg_node]: Changing frequency to 7.3Hz
+[INFO] [1792970749.997610649] [ecg_node]: ++Transfer++
+ Value: 75.578896756763, Risk: 48.64%, Level: moderate, Battery: 89.4%
+[INFO] [1792970750.153164015] [ecg_node]: Received adaptation command: freq=7.50
+[INFO] [1792970750.153673517] [ecg_node]: Changing frequency to 7.5Hz
+[INFO] [1792970750.997966150] [ecg_node]: ++Transfer++
+ Value: 75.90613689180546, Risk: 47.68%, Level: moderate, Battery: 89.3%
+[INFO] [1792970751.157043947] [ecg_node]: Received adaptation command: freq=7.70
+[INFO] [1792970751.157540819] [ecg_node]: Changing frequency to 7.7Hz
+[INFO] [1792970751.998981107] [ecg_node]: ++Transfer++
+ Value: 75.31272651735412, Risk: 49.42%, Level: moderate, Battery: 89.2%
+[INFO] [1792970752.147471599] [ecg_node]: Received adaptation command: freq=7.89
+[INFO] [1792970752.147986614] [ecg_node]: Changing frequency to 7.89Hz
+[INFO] [1792970753.009431507] [ecg_node]: ++Transfer++
+ Value: 76.83068859885232, Risk: 44.96%, Level: moderate, Battery: 89.1%
+[INFO] [1792970753.146383109] [ecg_node]: Received adaptation command: freq=8.09
+[INFO] [1792970753.146983755] [ecg_node]: Changing frequency to 8.09Hz
+[INFO] [1792970754.011555227] [ecg_node]: ++Transfer++
+ Value: 77.09438233811053, Risk: 44.19%, Level: moderate, Battery: 88.9%
+[INFO] [1792970754.205520903] [ecg_node]: Received adaptation command: freq=8.28
+[INFO] [1792970754.206019555] [ecg_node]: Changing frequency to 8.28Hz
+[INFO] [1792970755.010718434] [ecg_node]: ++Transfer++
+ Value: 76.83632945216269, Risk: 44.95%, Level: moderate, Battery: 88.8%
+[INFO] [1792970755.176236647] [ecg_node]: Received adaptation command: freq=8.47
+[INFO] [1792970755.176774154] [ecg_node]: Changing frequency to 8.47Hz
+[INFO] [1792970755.996405464] [ecg_node]: ++Transfer++
+ Value: 78.05808609859567, Risk: 41.36%, Level: moderate, Battery: 88.7%
+[INFO] [1792970756.145916671] [ecg_node]: Received adaptation command: freq=8.66
+[INFO] [1792970756.146460741] [ecg_node]: Changing frequency to 8.66Hz
+[INFO] [1792970756.997115396] [ecg_node]: ++Transfer++
+ Value: 77.72047110069605, Risk: 42.35%, Level: moderate, Battery: 88.6%
+[INFO] [1792970757.146210575] [ecg_node]: Received adaptation command: freq=8.86
+[INFO] [1792970757.146696943] [ecg_node]: Changing frequency to 8.86Hz
+[INFO] [1792970757.998833922] [ecg_node]: ++Transfer++
+ Value: 75.93846546430748, Risk: 47.58%, Level: moderate, Battery: 88.4%
+[INFO] [1792970758.159021129] [ecg_node]: Received adaptation command: freq=9.07
+[INFO] [1792970758.159519832] [ecg_node]: Changing frequency to 9.07Hz
+[INFO] [1792970758.996736582] [ecg_node]: ++Transfer++
+ Value: 78.06684887483668, Risk: 41.34%, Level: moderate, Battery: 88.3%
+[INFO] [1792970759.164467478] [ecg_node]: Received adaptation command: freq=9.27
+[INFO] [1792970759.165118358] [ecg_node]: Changing frequency to 9.27Hz
+[INFO] [1792970759.999389356] [ecg_node]: ++Transfer++
+ Value: 78.74770380848231, Risk: 39.34%, Level: moderate, Battery: 88.2%
+[INFO] [1792970760.157738919] [ecg_node]: Received adaptation command: freq=9.49
+[INFO] [1792970760.158227361] [ecg_node]: Changing frequency to 9.49Hz
+[INFO] [1792970760.994777312] [ecg_node]: ++Transfer++
+ Value: 76.45604956180208, Risk: 46.06%, Level: moderate, Battery: 88.1%
+[INFO] [1792970761.157710305] [ecg_node]: Received adaptation command: freq=9.69
+[INFO] [1792970761.158189427] [ecg_node]: Changing frequency to 9.69Hz
+[INFO] [1792970762.005454755] [ecg_node]: ++Transfer++
+ Value: 79.91935612162035, Risk: 35.90%, Level: moderate, Battery: 87.9%
+[INFO] [1792970762.165169573] [ecg_node]: Received adaptation command: freq=9.90
+[INFO] [1792970762.167470786] [ecg_node]: Changing frequency to 9.9Hz
+[INFO] [1792970763.000675114] [ecg_node]: ++Transfer++
+ Value: 83.69936913356932, Risk: 24.82%, Level: moderate, Battery: 87.8%
+[INFO] [1792970763.148613788] [ecg_node]: Received adaptation command: freq=10.11
+[INFO] [1792970763.149246379] [ecg_node]: Changing frequency to 10.11Hz
+[INFO] [1792970763.998238202] [ecg_node]: ++Transfer++
+ Value: 85.65193428901681, Risk: 17.83%, Level: low, Battery: 87.7%
+[INFO] [1792970764.153745359] [ecg_node]: Received adaptation command: freq=10.33
+[INFO] [1792970764.154200038] [ecg_node]: Changing frequency to 10.33Hz
+[INFO] [1792970764.997634446] [ecg_node]: ++Transfer++
+ Value: 88.76663384517285, Risk: 7.44%, Level: low, Battery: 87.6%
+[INFO] [1792970765.153884846] [ecg_node]: Received adaptation command: freq=10.53
+[INFO] [1792970765.154400129] [ecg_node]: Changing frequency to 10.53Hz
+[INFO] [1792970765.999941051] [ecg_node]: ++Transfer++
+ Value: 93.61102072616394, Risk: 8.70%, Level: low, Battery: 87.4%
+[INFO] [1792970766.188089982] [ecg_node]: Received adaptation command: freq=10.75
+[INFO] [1792970766.188592101] [ecg_node]: Changing frequency to 10.75Hz
+[INFO] [1792970767.001072302] [ecg_node]: ++Transfer++
+ Value: 94.26675162262549, Risk: 10.89%, Level: low, Battery: 87.3%
+[INFO] [1792970767.156125524] [ecg_node]: Received adaptation command: freq=10.92
+[INFO] [1792970767.156654077] [ecg_node]: Changing frequency to 10.92Hz
+[INFO] [1792970768.000570149] [ecg_node]: ++Transfer++
+ Value: 95.57177877645661, Risk: 15.24%, Level: low, Battery: 87.2%
+[INFO] [1792970768.179609789] [ecg_node]: Received adaptation command: freq=11.08
+[INFO] [1792970768.180132234] [ecg_node]: Changing frequency to 11.08Hz
+[INFO] [1792970768.998094501] [ecg_node]: ++Transfer++
+ Value: 93.76428720805637, Risk: 9.21%, Level: low, Battery: 87.1%
+[INFO] [1792970769.163939003] [ecg_node]: Received adaptation command: freq=11.23
+[INFO] [1792970769.169259300] [ecg_node]: Changing frequency to 11.23Hz
+[INFO] [1792970769.999688840] [ecg_node]: ++Transfer++
+ Value: 92.7463570924104, Risk: 5.82%, Level: low, Battery: 86.9%
+[INFO] [1792970770.153171169] [ecg_node]: Received adaptation command: freq=11.39
+[INFO] [1792970770.153767577] [ecg_node]: Changing frequency to 11.39Hz
+[INFO] [1792970770.996154834] [ecg_node]: ++Transfer++
+ Value: 91.94784240720442, Risk: 3.16%, Level: low, Battery: 86.8%
+[INFO] [1792970771.160581952] [ecg_node]: Received adaptation command: freq=11.54
+[INFO] [1792970771.161090081] [ecg_node]: Changing frequency to 11.54Hz
+[INFO] [1792970771.997135901] [ecg_node]: ++Transfer++
+ Value: 90.63085046296503, Risk: 1.23%, Level: low, Battery: 86.7%
+[INFO] [1792970772.142206535] [ecg_node]: Received adaptation command: freq=11.69
+[INFO] [1792970772.142725764] [ecg_node]: Changing frequency to 11.69Hz
+[INFO] [1792970772.996187612] [ecg_node]: ++Transfer++
+ Value: 88.39947856191225, Risk: 8.67%, Level: low, Battery: 86.6%
+[INFO] [1792970773.191990915] [ecg_node]: Received adaptation command: freq=11.85
+[INFO] [1792970773.192560131] [ecg_node]: Changing frequency to 11.85Hz
+[INFO] [1792970774.001633180] [ecg_node]: ++Transfer++
+ Value: 89.481370512895, Risk: 5.06%, Level: low, Battery: 86.4%
+[INFO] [1792970774.158035441] [ecg_node]: Received adaptation command: freq=12.01
+[INFO] [1792970774.158499410] [ecg_node]: Changing frequency to 12.01Hz
+[INFO] [1792970774.999038116] [ecg_node]: ++Transfer++
+ Value: 90.686585443332, Risk: 1.04%, Level: low, Battery: 86.3%
+[INFO] [1792970775.151351137] [ecg_node]: Received adaptation command: freq=12.16
+[INFO] [1792970775.151866083] [ecg_node]: Changing frequency to 12.16Hz
+[INFO] [1792970776.000409601] [ecg_node]: ++Transfer++
+ Value: 90.13596538466538, Risk: 2.88%, Level: low, Battery: 86.2%
+[INFO] [1792970776.150488885] [ecg_node]: Received adaptation command: freq=12.33
+[INFO] [1792970776.150993216] [ecg_node]: Changing frequency to 12.33Hz
+[INFO] [1792970777.007516880] [ecg_node]: ++Transfer++
+ Value: 91.47885776226363, Risk: 1.60%, Level: low, Battery: 86.1%
+[INFO] [1792970777.139684282] [ecg_node]: Received adaptation command: freq=12.53
+[INFO] [1792970777.140273811] [ecg_node]: Changing frequency to 12.53Hz
+[INFO] [1792970777.997336037] [ecg_node]: ++Transfer++
+ Value: 92.17459726204682, Risk: 3.92%, Level: low, Battery: 85.9%
+[INFO] [1792970778.141387898] [ecg_node]: Received adaptation command: freq=12.73
+[INFO] [1792970778.141968882] [ecg_node]: Changing frequency to 12.73Hz
+[INFO] [1792970779.011269267] [ecg_node]: ++Transfer++
+ Value: 91.37303652380172, Risk: 1.24%, Level: low, Battery: 85.8%
+[INFO] [1792970779.146720984] [ecg_node]: Received adaptation command: freq=12.97
+[INFO] [1792970779.147289676] [ecg_node]: Changing frequency to 12.97Hz
+[INFO] [1792970779.996766880] [ecg_node]: ++Transfer++
+ Value: 90.61261407419929, Risk: 1.29%, Level: low, Battery: 85.7%
+[INFO] [1792970780.148788334] [ecg_node]: Received adaptation command: freq=13.21
+[INFO] [1792970780.149341137] [ecg_node]: Changing frequency to 13.21Hz
+[INFO] [1792970781.001315098] [ecg_node]: ++Transfer++
+ Value: 90.1605910611782, Risk: 2.80%, Level: low, Battery: 85.6%
+[INFO] [1792970781.178524463] [ecg_node]: Received adaptation command: freq=13.45
+[INFO] [1792970781.179044075] [ecg_node]: Changing frequency to 13.45Hz
+[INFO] [1792970781.999268296] [ecg_node]: ++Transfer++
+ Value: 90.87510018863169, Risk: 0.42%, Level: low, Battery: 85.4%
+[INFO] [1792970782.157299298] [ecg_node]: Received adaptation command: freq=13.69
+[INFO] [1792970782.157831336] [ecg_node]: Changing frequency to 13.69Hz
+[INFO] [1792970782.996516875] [ecg_node]: ++Transfer++
+ Value: 95.19129498689804, Risk: 13.97%, Level: low, Battery: 85.3%
+[INFO] [1792970783.154507046] [ecg_node]: Received adaptation command: freq=13.93
+[INFO] [1792970783.155018954] [ecg_node]: Changing frequency to 13.93Hz
+[INFO] [1792970783.998711814] [ecg_node]: ++Transfer++
+ Value: 98.63349118354965, Risk: 24.99%, Level: moderate, Battery: 85.2%
+[INFO] [1792970784.150488524] [ecg_node]: Received adaptation command: freq=14.17
+[INFO] [1792970784.150985259] [ecg_node]: Changing frequency to 14.17Hz
+[INFO] [1792970784.995149434] [ecg_node]: ++Transfer++
+ Value: 100.33399556384397, Risk: 29.15%, Level: moderate, Battery: 85.1%
+[INFO] [1792970785.157321082] [ecg_node]: Received adaptation command: freq=14.41
+[INFO] [1792970785.157796098] [ecg_node]: Changing frequency to 14.41Hz
+[INFO] [1792970785.998241663] [ecg_node]: ++Transfer++
+ Value: 103.41718489743701, Risk: 36.69%, Level: moderate, Battery: 84.9%
+[INFO] [1792970786.149367696] [ecg_node]: Received adaptation command: freq=14.66
+[INFO] [1792970786.149859311] [ecg_node]: Changing frequency to 14.66Hz
+[INFO] [1792970786.998444575] [ecg_node]: ++Transfer++
+ Value: 105.84413715958196, Risk: 42.62%, Level: moderate, Battery: 84.8%
+[INFO] [1792970787.188474535] [ecg_node]: Received adaptation command: freq=14.89
+[INFO] [1792970787.189505015] [ecg_node]: Changing frequency to 14.89Hz
+[INFO] [1792970787.995654407] [ecg_node]: ++Transfer++
+ Value: 104.6481477334643, Risk: 39.70%, Level: moderate, Battery: 84.7%
+[INFO] [1792970788.158435533] [ecg_node]: Received adaptation command: freq=15.12
+[INFO] [1792970788.158751174] [ecg_node]: Changing frequency to 15.12Hz
+[INFO] [1792970789.006251802] [ecg_node]: ++Transfer++
+ Value: 105.117476502469, Risk: 40.84%, Level: moderate, Battery: 84.6%
+[INFO] [1792970789.221860905] [ecg_node]: Received adaptation command: freq=15.36
+[INFO] [1792970789.222479380] [ecg_node]: Changing frequency to 15.36Hz
+[INFO] [1792970789.997206682] [ecg_node]: ++Transfer++
+ Value: 105.00441579549226, Risk: 40.57%, Level: moderate, Battery: 84.4%
+[INFO] [1792970790.146661847] [ecg_node]: Received adaptation command: freq=15.58
+[INFO] [1792970790.147170610] [ecg_node]: Changing frequency to 15.58Hz
+[INFO] [1792970790.995575046] [ecg_node]: ++Transfer++
+ Value: 105.98892812508863, Risk: 42.97%, Level: moderate, Battery: 84.3%
+[INFO] [1792970791.159550049] [ecg_node]: Received adaptation command: freq=15.80
+[INFO] [1792970791.160042858] [ecg_node]: Changing frequency to 15.8Hz
+[INFO] [1792970792.006646600] [ecg_node]: ++Transfer++
+ Value: 102.17692513825945, Risk: 33.65%, Level: moderate, Battery: 84.2%
+[INFO] [1792970792.160655853] [ecg_node]: Received adaptation command: freq=16.01
+[INFO] [1792970792.161131969] [ecg_node]: Changing frequency to 16.01Hz
+[INFO] [1792970792.996309734] [ecg_node]: ++Transfer++
+ Value: 99.29495172596044, Risk: 26.61%, Level: moderate, Battery: 84.1%
+[INFO] [1792970793.143385149] [ecg_node]: Received adaptation command: freq=16.23
+[INFO] [1792970793.143944414] [ecg_node]: Changing frequency to 16.23Hz
+[INFO] [1792970793.997417925] [ecg_node]: ++Transfer++
+ Value: 95.12228439722386, Risk: 13.74%, Level: low, Battery: 83.9%
+[INFO] [1792970794.148515086] [ecg_node]: Received adaptation command: freq=16.47
+[INFO] [1792970794.148988448] [ecg_node]: Changing frequency to 16.47Hz
+[INFO] [1792970795.001168692] [ecg_node]: ++Transfer++
+ Value: 92.81302951115815, Risk: 6.04%, Level: low, Battery: 83.8%
+[INFO] [1792970795.152014302] [ecg_node]: Received adaptation command: freq=16.69
+[INFO] [1792970795.152754359] [ecg_node]: Changing frequency to 16.69Hz
+[INFO] [1792970795.999099353] [ecg_node]: ++Transfer++
+ Value: 90.46089868778283, Risk: 1.80%, Level: low, Battery: 83.7%
+[INFO] [1792970796.155025817] [ecg_node]: Received adaptation command: freq=16.93
+[INFO] [1792970796.155683554] [ecg_node]: Changing frequency to 16.93Hz
+[INFO] [1792970797.005671170] [ecg_node]: ++Transfer++
+ Value: 89.47279964024756, Risk: 5.09%, Level: low, Battery: 83.6%
+[INFO] [1792970797.141668263] [ecg_node]: Received adaptation command: freq=17.15
+[INFO] [1792970797.142165884] [ecg_node]: Changing frequency to 17.15Hz
+[INFO] [1792970798.011771435] [ecg_node]: ++Transfer++
+ Value: 89.88540405031958, Risk: 3.72%, Level: low, Battery: 83.4%
+[INFO] [1792970798.153946809] [ecg_node]: Received adaptation command: freq=17.38
+[INFO] [1792970798.154442958] [ecg_node]: Changing frequency to 17.38Hz
+[INFO] [1792970799.008950050] [ecg_node]: ++Transfer++
+ Value: 90.71405501882127, Risk: 0.95%, Level: low, Battery: 83.3%
+[INFO] [1792970799.170271106] [ecg_node]: Received adaptation command: freq=17.62
+[INFO] [1792970799.170775706] [ecg_node]: Changing frequency to 17.62Hz
+[INFO] [1792970799.998612800] [ecg_node]: ++Transfer++
+ Value: 90.51923305206373, Risk: 1.60%, Level: low, Battery: 83.2%
+[INFO] [1792970800.159222527] [ecg_node]: Received adaptation command: freq=17.85
+[INFO] [1792970800.159704507] [ecg_node]: Changing frequency to 17.85Hz
+[INFO] [1792970800.997759387] [ecg_node]: ++Transfer++
+ Value: 90.4767768710172, Risk: 1.74%, Level: low, Battery: 83.1%
+[INFO] [1792970801.166160980] [ecg_node]: Received adaptation command: freq=18.06
+[INFO] [1792970801.166647987] [ecg_node]: Changing frequency to 18.06Hz
+[INFO] [1792970801.995982685] [ecg_node]: ++Transfer++
+ Value: 91.24151238628579, Risk: 0.81%, Level: low, Battery: 82.9%
+[INFO] [1792970802.426853141] [ecg_node]: Received adaptation command: freq=18.29
+[INFO] [1792970802.427379578] [ecg_node]: Changing frequency to 18.29Hz
+[INFO] [1792970802.995684551] [ecg_node]: ++Transfer++
+ Value: 94.2872892695115, Risk: 10.96%, Level: low, Battery: 82.8%
+[INFO] [1792970803.147242499] [ecg_node]: Received adaptation command: freq=18.54
+[INFO] [1792970803.147732208] [ecg_node]: Changing frequency to 18.54Hz
+[INFO] [1792970803.996838593] [ecg_node]: ++Transfer++
+ Value: 97.81138191719984, Risk: 22.98%, Level: moderate, Battery: 82.7%
+[INFO] [1792970804.161635186] [ecg_node]: Received adaptation command: freq=18.79
+[INFO] [1792970804.162168031] [ecg_node]: Changing frequency to 18.79Hz
+[INFO] [1792970805.006896420] [ecg_node]: ++Transfer++
+ Value: 101.14193780787633, Risk: 31.12%, Level: moderate, Battery: 82.6%
+[INFO] [1792970805.197726462] [ecg_node]: Received adaptation command: freq=19.03
+[INFO] [1792970805.198249190] [ecg_node]: Changing frequency to 19.03Hz
+[INFO] [1792970805.996367960] [ecg_node]: ++Transfer++
+ Value: 104.17114146104011, Risk: 38.53%, Level: moderate, Battery: 82.4%
+[INFO] [1792970806.152067245] [ecg_node]: Received adaptation command: freq=19.26
+[INFO] [1792970806.152594759] [ecg_node]: Changing frequency to 19.26Hz
+[INFO] [1792970806.996713217] [ecg_node]: ++Transfer++
+ Value: 106.43295341095613, Risk: 44.06%, Level: moderate, Battery: 82.3%
+[INFO] [1792970807.154086645] [ecg_node]: Received adaptation command: freq=19.49
+[INFO] [1792970807.154577543] [ecg_node]: Changing frequency to 19.49Hz
+[INFO] [1792970808.002279915] [ecg_node]: ++Transfer++
+ Value: 106.83604932903788, Risk: 45.04%, Level: moderate, Battery: 82.2%
+[INFO] [1792970808.141526317] [ecg_node]: Received adaptation command: freq=19.73
+[INFO] [1792970808.142080142] [ecg_node]: Changing frequency to 19.73Hz
+[INFO] [1792970808.999679499] [ecg_node]: ++Transfer++
+ Value: 107.96863172268311, Risk: 47.81%, Level: moderate, Battery: 82.1%
+[INFO] [1792970809.153957996] [ecg_node]: Received adaptation command: freq=19.97
+[INFO] [1792970809.154535016] [ecg_node]: Changing frequency to 19.97Hz
+[INFO] [1792970809.995795880] [ecg_node]: ++Transfer++
+ Value: 109.40543106533933, Risk: 51.32%, Level: moderate, Battery: 81.9%
+[INFO] [1792970810.160855410] [ecg_node]: Received adaptation command: freq=20.19
+[INFO] [1792970810.161419849] [ecg_node]: Changing frequency to 20.19Hz
+[INFO] [1792970810.997508828] [ecg_node]: ++Transfer++
+ Value: 108.31136214685833, Risk: 48.65%, Level: moderate, Battery: 81.8%
+[INFO] [1792970811.164630869] [ecg_node]: Received adaptation command: freq=20.40
+[INFO] [1792970811.165750751] [ecg_node]: Changing frequency to 20.4Hz
+[INFO] [1792970812.000783605] [ecg_node]: ++Transfer++
+ Value: 107.57188607012813, Risk: 46.84%, Level: moderate, Battery: 81.7%
+[INFO] [1792970812.146851546] [ecg_node]: Received adaptation command: freq=20.62
+[INFO] [1792970812.147362629] [ecg_node]: Changing frequency to 20.62Hz
+[INFO] [1792970812.996581182] [ecg_node]: ++Transfer++
+ Value: 107.54853101820106, Risk: 46.79%, Level: moderate, Battery: 81.6%
+[INFO] [1792970813.143226093] [ecg_node]: Received adaptation command: freq=20.83
+[INFO] [1792970813.143828357] [ecg_node]: Changing frequency to 20.83Hz
+[INFO] [1792970814.001549294] [ecg_node]: ++Transfer++
+ Value: 107.1967939969176, Risk: 45.93%, Level: moderate, Battery: 81.4%
+[INFO] [1792970814.152108045] [ecg_node]: Received adaptation command: freq=21.03
+[INFO] [1792970814.152644340] [ecg_node]: Changing frequency to 21.03Hz
+[INFO] [1792970814.998489686] [ecg_node]: ++Transfer++
+ Value: 106.64608879697134, Risk: 44.58%, Level: moderate, Battery: 81.3%
+[INFO] [1792970815.150817074] [ecg_node]: Received adaptation command: freq=21.23
+[INFO] [1792970815.151316166] [ecg_node]: Changing frequency to 21.23Hz
+[INFO] [1792970815.997060991] [ecg_node]: ++Transfer++
+ Value: 106.53733366823647, Risk: 44.31%, Level: moderate, Battery: 81.2%
+[INFO] [1792970816.145270069] [ecg_node]: Received adaptation command: freq=21.43
+[INFO] [1792970816.145747389] [ecg_node]: Changing frequency to 21.43Hz
+[INFO] [1792970816.998257130] [ecg_node]: ++Transfer++
+ Value: 107.69012022758939, Risk: 47.13%, Level: moderate, Battery: 81.1%
+[INFO] [1792970817.156589477] [ecg_node]: Received adaptation command: freq=21.63
+[INFO] [1792970817.157068955] [ecg_node]: Changing frequency to 21.63Hz
+[INFO] [1792970817.995545800] [ecg_node]: ++Transfer++
+ Value: 107.72927929105863, Risk: 47.23%, Level: moderate, Battery: 80.9%
+[INFO] [1792970818.144935365] [ecg_node]: Received adaptation command: freq=21.84
+[INFO] [1792970818.145417681] [ecg_node]: Changing frequency to 21.84Hz
+[INFO] [1792970818.997617171] [ecg_node]: ++Transfer++
+ Value: 106.30730742395663, Risk: 43.75%, Level: moderate, Battery: 80.8%
+[INFO] [1792970819.153267185] [ecg_node]: Received adaptation command: freq=22.05
+[INFO] [1792970819.153767482] [ecg_node]: Changing frequency to 22.05Hz
+[INFO] [1792970819.998394742] [ecg_node]: ++Transfer++
+ Value: 105.04936906749003, Risk: 40.68%, Level: moderate, Battery: 80.7%
+[INFO] [1792970820.298671143] [ecg_node]: Received adaptation command: freq=22.27
+[INFO] [1792970820.299161774] [ecg_node]: Changing frequency to 22.27Hz
+[INFO] [1792970821.003158112] [ecg_node]: ++Transfer++
+ Value: 106.11850699352995, Risk: 43.29%, Level: moderate, Battery: 80.6%
+[INFO] [1792970821.152226428] [ecg_node]: Received adaptation command: freq=22.50
+[INFO] [1792970821.152725800] [ecg_node]: Changing frequency to 22.5Hz
+[INFO] [1792970821.997508252] [ecg_node]: ++Transfer++
+ Value: 107.01888107704947, Risk: 45.49%, Level: moderate, Battery: 80.4%
+[INFO] [1792970822.158886363] [ecg_node]: Received adaptation command: freq=22.73
+[INFO] [1792970822.159378229] [ecg_node]: Changing frequency to 22.73Hz
+[INFO] [1792970823.005316463] [ecg_node]: ++Transfer++
+ Value: 108.02841118847087, Risk: 47.96%, Level: moderate, Battery: 80.3%
+[INFO] [1792970823.374534600] [ecg_node]: Received adaptation command: freq=22.99
+[INFO] [1792970823.375021921] [ecg_node]: Changing frequency to 22.99Hz
+[INFO] [1792970823.998060751] [ecg_node]: ++Transfer++
+ Value: 107.15571137014413, Risk: 45.83%, Level: moderate, Battery: 80.2%
+[INFO] [1792970824.153333943] [ecg_node]: Received adaptation command: freq=23.21
+[INFO] [1792970824.153811515] [ecg_node]: Changing frequency to 23.21Hz
+[INFO] [1792970825.001143916] [ecg_node]: ++Transfer++
+ Value: 106.85718684065603, Risk: 45.10%, Level: moderate, Battery: 80.1%
+[INFO] [1792970825.161755749] [ecg_node]: Received adaptation command: freq=23.42
+[INFO] [1792970825.162213005] [ecg_node]: Changing frequency to 23.42Hz
+[INFO] [1792970826.004452342] [ecg_node]: ++Transfer++
+ Value: 107.58191625976653, Risk: 46.87%, Level: moderate, Battery: 79.9%
+[INFO] [1792970826.163905262] [ecg_node]: Received adaptation command: freq=23.64
+[INFO] [1792970826.164363126] [ecg_node]: Changing frequency to 23.64Hz
+[INFO] [1792970827.004231536] [ecg_node]: ++Transfer++
+ Value: 106.42176444919804, Risk: 44.03%, Level: moderate, Battery: 79.8%
+[INFO] [1792970827.166048921] [ecg_node]: Received adaptation command: freq=23.86
+[INFO] [1792970827.168403070] [ecg_node]: Changing frequency to 23.86Hz
+[INFO] [1792970827.996929780] [ecg_node]: ++Transfer++
+ Value: 104.42270616023163, Risk: 39.14%, Level: moderate, Battery: 79.7%
+[INFO] [1792970828.156658754] [ecg_node]: Received adaptation command: freq=24.06
+[INFO] [1792970828.157195001] [ecg_node]: Changing frequency to 24.06Hz
+[INFO] [1792970828.998623429] [ecg_node]: ++Transfer++
+ Value: 107.18577883175082, Risk: 45.90%, Level: moderate, Battery: 79.6%
+[INFO] [1792970829.162257314] [ecg_node]: Received adaptation command: freq=24.25
+[INFO] [1792970829.162837135] [ecg_node]: Changing frequency to 24.25Hz
+[INFO] [1792970829.996934437] [ecg_node]: ++Transfer++
+ Value: 109.83382451177286, Risk: 52.37%, Level: moderate, Battery: 79.4%
+[INFO] [1792970830.150861529] [ecg_node]: Received adaptation command: freq=24.45
+[INFO] [1792970830.151365785] [ecg_node]: Changing frequency to 24.45Hz
+[INFO] [1792970830.999449673] [ecg_node]: ++Transfer++
+ Value: 110.19960450372805, Risk: 53.27%, Level: moderate, Battery: 79.3%
+[INFO] [1792970831.159858570] [ecg_node]: Received adaptation command: freq=24.65
+[INFO] [1792970831.160346268] [ecg_node]: Changing frequency to 24.65Hz
+[INFO] [1792970831.998919088] [ecg_node]: ++Transfer++
+ Value: 109.04830681481647, Risk: 50.45%, Level: moderate, Battery: 79.2%
+[INFO] [1792970832.156614087] [ecg_node]: Received adaptation command: freq=24.85
+[INFO] [1792970832.157070170] [ecg_node]: Changing frequency to 24.85Hz
+[INFO] [1792970833.002487662] [ecg_node]: ++Transfer++
+ Value: 111.04749324586263, Risk: 55.34%, Level: moderate, Battery: 79.1%
+[INFO] [1792970833.146061018] [ecg_node]: Received adaptation command: freq=25.04
+[INFO] [1792970833.146580158] [ecg_node]: Changing frequency to 25.04Hz
+[INFO] [1792970833.997766025] [ecg_node]: ++Transfer++
+ Value: 110.4107274960129, Risk: 53.78%, Level: moderate, Battery: 78.9%
+[INFO] [1792970834.156459296] [ecg_node]: Received adaptation command: freq=25.23
+[INFO] [1792970834.156938732] [ecg_node]: Changing frequency to 25.23Hz
+[INFO] [1792970834.998103342] [ecg_node]: ++Transfer++
+ Value: 107.46052083755326, Risk: 46.57%, Level: moderate, Battery: 78.8%
+[INFO] [1792970835.158187230] [ecg_node]: Received adaptation command: freq=25.42
+[INFO] [1792970835.158696093] [ecg_node]: Changing frequency to 25.42Hz
+[INFO] [1792970835.996979218] [ecg_node]: ++Transfer++
+ Value: 105.08422999981806, Risk: 40.76%, Level: moderate, Battery: 78.7%
+[INFO] [1792970836.149435267] [ecg_node]: Received adaptation command: freq=25.61
+[INFO] [1792970836.149932683] [ecg_node]: Changing frequency to 25.61Hz
+[INFO] [1792970836.996266253] [ecg_node]: ++Transfer++
+ Value: 108.51521178208573, Risk: 49.15%, Level: moderate, Battery: 78.6%
+[INFO] [1792970837.148183531] [ecg_node]: Received adaptation command: freq=25.80
+[INFO] [1792970837.148688791] [ecg_node]: Changing frequency to 25.8Hz
+[INFO] [1792970837.995546594] [ecg_node]: ++Transfer++
+ Value: 107.59138147710738, Risk: 46.89%, Level: moderate, Battery: 78.4%
+[INFO] [1792970838.151160189] [ecg_node]: Received adaptation command: freq=25.99
+[INFO] [1792970838.151670690] [ecg_node]: Changing frequency to 25.99Hz

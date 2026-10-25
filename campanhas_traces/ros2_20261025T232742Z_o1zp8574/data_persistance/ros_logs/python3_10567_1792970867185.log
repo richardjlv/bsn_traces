@@ -1,0 +1,56 @@
+[INFO] [1792970868.402049816] [ecg_node]: Initialized sensor: ecg, vital sign: heart_rate, frequency: 1.0Hz
+[INFO] [1792970868.405839803] [ecg_node]: Lifecycle Manager initialized
+[INFO] [1792970868.412572724] [ecg_node]: PublisherManagerBase initialized successfully
+[INFO] [1792970868.415808885] [ecg_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792970868.416309760] [ecg_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792970868.424510941] [ecg_node]: Starting individual lifecycle management...
+[INFO] [1792970868.425209632] [ecg_node]: Lifecycle auto-management started
+[INFO] [1792970868.429348068] [ecg_node]: Successfully registered with ParamAdapter
+[INFO] [1792970870.426184638] [ecg_node]: Auto-configuring node...
+[INFO] [1792970870.426620500] [ecg_node]: Triggering node configuration...
+[INFO] [1792970870.427121058] [ecg_node]: Configuring ecg sensor...
+[INFO] [1792970870.430312539] [ecg_node]: Risk ranges configured for ecg: HR0=(0.0, 70.0), MR0=(70.0, 85.0), LR=(85.0, 97.0), MR1=(97.0, 115.0), HR1=(115.0, 300.0)
+[INFO] [1792970870.430876821] [ecg_node]: Node configuration successful
+[INFO] [1792970871.431687480] [ecg_node]: Triggering node activation...
+[INFO] [1792970871.432180299] [ecg_node]: Activating ecg sensor...
+[INFO] [1792970871.436585472] [ecg_node]: Node activation successful
+[INFO] [1792970872.431909855] [ecg_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792970873.429856888] [ecg_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792970874.430648265] [ecg_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792970875.430175314] [ecg_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792970876.429269042] [ecg_node]: ++Transfer++
+ Value: 91.91105959033635, Risk: 3.04%, Level: low, Battery: 99.6%
+[INFO] [1792970877.429920975] [ecg_node]: ++Transfer++
+ Value: 91.12355692164472, Risk: 0.41%, Level: low, Battery: 99.4%
+[INFO] [1792970878.427979362] [ecg_node]: ++Transfer++
+ Value: 91.01599691350215, Risk: 0.05%, Level: low, Battery: 99.3%
+[INFO] [1792970879.428913244] [ecg_node]: ++Transfer++
+ Value: 92.98237735283453, Risk: 6.61%, Level: low, Battery: 99.2%
+[INFO] [1792970880.430029670] [ecg_node]: ++Transfer++
+ Value: 91.14023084996626, Risk: 0.47%, Level: low, Battery: 99.1%
+[INFO] [1792970881.429112419] [ecg_node]: ++Transfer++
+ Value: 89.56176776908613, Risk: 4.79%, Level: low, Battery: 98.9%
+[INFO] [1792970882.430940577] [ecg_node]: ++Transfer++
+ Value: 88.47799990987822, Risk: 8.41%, Level: low, Battery: 98.8%
+[INFO] [1792970883.432628831] [ecg_node]: ++Transfer++
+ Value: 90.06197582067355, Risk: 3.13%, Level: low, Battery: 98.7%
+[INFO] [1792970884.429718151] [ecg_node]: ++Transfer++
+ Value: 88.09705671003744, Risk: 9.68%, Level: low, Battery: 98.6%
+[INFO] [1792970885.431421078] [ecg_node]: ++Transfer++
+ Value: 89.09336886564144, Risk: 6.36%, Level: low, Battery: 98.4%
+[INFO] [1792970886.431286499] [ecg_node]: ++Transfer++
+ Value: 90.94497360989605, Risk: 0.18%, Level: low, Battery: 98.3%
+[INFO] [1792970887.431755720] [ecg_node]: ++Transfer++
+ Value: 93.77171153332691, Risk: 9.24%, Level: low, Battery: 98.2%
+[INFO] [1792970888.430103563] [ecg_node]: ++Transfer++
+ Value: 96.48699023162744, Risk: 18.29%, Level: low, Battery: 98.1%
+[INFO] [1792970889.431167109] [ecg_node]: ++Transfer++
+ Value: 101.21928279176109, Risk: 31.31%, Level: moderate, Battery: 97.9%
+[INFO] [1792970890.430229839] [ecg_node]: ++Transfer++
+ Value: 103.72361355502281, Risk: 37.44%, Level: moderate, Battery: 97.8%
+[INFO] [1792970891.431586756] [ecg_node]: ++Transfer++
+ Value: 107.41069056366692, Risk: 46.45%, Level: moderate, Battery: 97.7%
+[INFO] [1792970892.430460004] [ecg_node]: ++Transfer++
+ Value: 107.61231062580161, Risk: 46.94%, Level: moderate, Battery: 97.6%
+[INFO] [1792970893.430323367] [ecg_node]: ++Transfer++
+ Value: 108.27185705791969, Risk: 48.55%, Level: moderate, Battery: 97.4%
