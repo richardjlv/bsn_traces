@@ -32,3 +32,5 @@ As campanhas gerais ROS 1 (`bsn2`) e ROS 2 (`bsn_ros2`) estão em [cobertura_ger
 - [23/10/2026 — isolamento dos cenários de adaptação](diagnosticos/managing_system_isolado_2026-10-23/README.md): temporal aprovado sozinho e após recuperação em pilha nova; execução completa com 8 PASS, 2 XFAIL e 1 timeout no estímulo de registro, corrigido e aprovado em reexecução individual. XML internos, traces e cobertura preservados.
 
 Atualização de 24/10: a validação completa de `managing_system` permanece pendente. A última tentativa terminou por timeout com 2 PASS, 2 XFAIL e 6 FAIL de topologia. Consulte o [diagnóstico completo](diagnosticos/managing_system_isolado_2026-10-23/README.md), incluindo as correções ainda sem validação ROS.
+
+Atualização de 25/10: [revalidação completa de managing_system](diagnosticos/managing_system_2026-10-25/README.md) concluída com **9 PASS e 2 XFAIL**, 11 casos rastreados e cobertura de 74,90% das linhas e 58,33% dos ramos. Tentativas anteriores permanecem preservadas.

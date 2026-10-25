@@ -1,0 +1,83 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "pytest",
+    "-v",
+    "-rA",
+    "-o",
+    "addopts=",
+    "-p",
+    "no:pytest_cov",
+    "--junitxml=/ros_ws/src/campanhas_traces/ros2_20261025T051128Z_md_b0ax2/managing_system/outer.xml",
+    "/ros_ws/src/bsn_ros2/features/test/test_managing_system_bdd.py"
+  ],
+  "state": "finished",
+  "exit_code": 0,
+  "timed_out": false,
+  "internal_junit": [
+    {
+      "path": "/ros_ws/src/campanhas_traces/ros2_20261025T051128Z_md_b0ax2/managing_system/internal_junit/test_managing_system_topology.xml",
+      "counts": {
+        "passed": 6
+      },
+      "cases": [
+        {
+          "name": "test_the_adaptation_enactor_exchanges_adaptation_strategies_with_the_reliability_engine",
+          "classname": "steps.test_managing_system",
+          "status": "passed",
+          "skip_reason": null
+        },
+        {
+          "name": "test_the_adaptation_enactor_exchanges_adaptation_records_with_the_system_log",
+          "classname": "steps.test_managing_system",
+          "status": "passed",
+          "skip_reason": null
+        },
+        {
+          "name": "test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor event]",
+          "classname": "steps.test_managing_system",
+          "status": "passed",
+          "skip_reason": null
+        },
+        {
+          "name": "test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor status]",
+          "classname": "steps.test_managing_system",
+          "status": "passed",
+          "skip_reason": null
+        },
+        {
+          "name": "test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor energy status]",
+          "classname": "steps.test_managing_system",
+          "status": "passed",
+          "skip_reason": null
+        },
+        {
+          "name": "test_the_system_log_sends_reconfiguration_requests_to_the_parameter_adapter",
+          "classname": "steps.test_managing_system",
+          "status": "passed",
+          "skip_reason": null
+        }
+      ]
+    }
+  ],
+  "scenario_starts": 6,
+  "step_starts": 14,
+  "missing_case_traces": [],
+  "coverage_contexts": [
+    "managing_system"
+  ],
+  "coverage_totals": {
+    "covered_lines": 2341,
+    "num_statements": 3147,
+    "percent_covered": 70.6815365551425,
+    "percent_covered_display": "71",
+    "missing_lines": 806,
+    "excluded_lines": 0,
+    "num_branches": 888,
+    "num_partial_branches": 197,
+    "covered_branches": 511,
+    "missing_branches": 377
+  },
+  "complete": true
+}

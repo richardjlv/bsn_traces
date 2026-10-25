@@ -1,0 +1,46 @@
+[INFO] [1792907476.675142639] [oximeter_node]: Initialized sensor: oximeter, vital sign: oxigenation, frequency: 1.0Hz
+[INFO] [1792907476.704466563] [oximeter_node]: Lifecycle Manager initialized
+[INFO] [1792907476.720239449] [oximeter_node]: PublisherManagerBase initialized successfully
+[INFO] [1792907476.731927625] [oximeter_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792907476.734247447] [oximeter_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792907476.747802164] [oximeter_node]: Starting individual lifecycle management...
+[INFO] [1792907476.748418374] [oximeter_node]: Lifecycle auto-management started
+[INFO] [1792907476.749782419] [oximeter_node]: Successfully registered with ParamAdapter
+[INFO] [1792907478.748814748] [oximeter_node]: Auto-configuring node...
+[INFO] [1792907478.749452151] [oximeter_node]: Triggering node configuration...
+[INFO] [1792907478.750202255] [oximeter_node]: Configuring oximeter sensor...
+[INFO] [1792907478.762416372] [oximeter_node]: Risk ranges configured for oximeter: HR0=(-1.0, -1.0), MR0=(-1.0, -1.0), LR=(65.0, 100.0), MR1=(55.0, 65.0), HR1=(0.0, 55.0)
+[INFO] [1792907478.763088495] [oximeter_node]: Node configuration successful
+[INFO] [1792907479.764942910] [oximeter_node]: Triggering node activation...
+[INFO] [1792907479.765758596] [oximeter_node]: Activating oximeter sensor...
+[INFO] [1792907479.766510789] [oximeter_node]: Node activation successful
+[INFO] [1792907480.759403951] [oximeter_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792907481.759657905] [oximeter_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792907482.768834209] [oximeter_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792907483.785264729] [oximeter_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792907484.755473263] [oximeter_node]: ++Transfer++
+ Value: 80.25934644680862, Risk: 2.56%, Level: low, Battery: 99.6%
+[INFO] [1792907485.767494203] [oximeter_node]: ++Transfer++
+ Value: 83.72166573307398, Risk: 1.40%, Level: low, Battery: 99.4%
+[INFO] [1792907486.753696330] [oximeter_node]: ++Transfer++
+ Value: 86.37886232020422, Risk: 4.43%, Level: low, Battery: 99.3%
+[INFO] [1792907487.768705116] [oximeter_node]: ++Transfer++
+ Value: 89.7138564820182, Risk: 8.24%, Level: low, Battery: 99.2%
+[INFO] [1792907488.758817482] [oximeter_node]: ++Transfer++
+ Value: 89.56456424151595, Risk: 8.07%, Level: low, Battery: 99.1%
+[INFO] [1792907489.755304825] [oximeter_node]: ++Transfer++
+ Value: 84.89880203177356, Risk: 2.74%, Level: low, Battery: 98.9%
+[INFO] [1792907490.452677303] [oximeter_node]: Received adaptation command: freq=5.0
+[INFO] [1792907490.453192282] [oximeter_node]: Changing frequency to 5.0Hz
+[INFO] [1792907490.754701124] [oximeter_node]: ++Transfer++
+ Value: 81.22820361368164, Risk: 1.45%, Level: low, Battery: 98.8%
+[INFO] [1792907490.764654146] [oximeter_node]: Received adaptation command: freq=5.0
+[INFO] [1792907490.771925374] [oximeter_node]: Changing frequency to 5.0Hz
+[INFO] [1792907491.056172375] [oximeter_node]: Received adaptation command: freq=5.0
+[INFO] [1792907491.056526076] [oximeter_node]: Changing frequency to 5.0Hz
+[INFO] [1792907491.357615622] [oximeter_node]: Received adaptation command: freq=5.0
+[INFO] [1792907491.358151545] [oximeter_node]: Changing frequency to 5.0Hz
+[INFO] [1792907491.705252764] [oximeter_node]: Received adaptation command: freq=5.0
+[INFO] [1792907491.705765287] [oximeter_node]: Changing frequency to 5.0Hz
+[INFO] [1792907491.769113064] [oximeter_node]: ++Transfer++
+ Value: 81.03985514995728, Risk: 1.67%, Level: low, Battery: 98.7%

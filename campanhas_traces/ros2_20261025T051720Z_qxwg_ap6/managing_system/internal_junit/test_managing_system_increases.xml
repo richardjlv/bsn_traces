@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="266.026" timestamp="2026-10-25T05:25:43.282834" hostname="bsn-virtualbox"><testcase classname="steps.test_managing_system" name="test_sampling_rate_increases_when_sensor_reliability_falls_below_the_threshold_g4g5" time="173.692"><failure message="AssertionError: Controller never produced an initial oximeter command (90s readiness)&#10;assert None is not None">request = &lt;FixtureRequest for &lt;Function test_sampling_rate_increases_when_sensor_reliability_falls_below_the_threshold_g4g5&gt;&gt;
+_pytest_bdd_example = {}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:108: in _execute_step_function
+    kwargs = {arg: request.getfixturevalue(arg) for arg in get_args(step_func)}
+/usr/lib/python3/dist-packages/_pytest/fixtures.py:585: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+/usr/lib/python3/dist-packages/_pytest/fixtures.py:607: in _get_active_fixturedef
+    self._compute_fixture_value(fixturedef)
+/usr/lib/python3/dist-packages/_pytest/fixtures.py:693: in _compute_fixture_value
+    fixturedef.execute(request=subrequest)
+/usr/lib/python3/dist-packages/_pytest/fixtures.py:1069: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+/usr/lib/python3/dist-packages/pluggy/_hooks.py:501: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+/usr/lib/python3/dist-packages/pluggy/_manager.py:119: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+/usr/lib/python3/dist-packages/_pytest/fixtures.py:1123: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+/usr/lib/python3/dist-packages/_pytest/fixtures.py:895: in call_fixture_func
+    fixture_result = next(generator)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @pytest.fixture(scope="module")
+    def adaptation_log():
+        """One persistent subscriber for every G4/G5 scenario (see _AdaptationCommandLog); module-scoped
+        so rclpy.init()/shutdown() happens once per pytest subprocess."""
+        log = _AdaptationCommandLog(reconfigure_topic("the oximeter"))
+        try:
+            # A fresh controller has a 60-cycle startup period. Readiness is outside
+            # the scenario response budget, and must be evidenced by an actual
+            # command rather than inferred from graph presence or a fixed sleep.
+            first = log.wait_for_any(0, timeout=90.0)
+&gt;           assert first is not None, "Controller never produced an initial oximeter command (90s readiness)"
+E           AssertionError: Controller never produced an initial oximeter command (90s readiness)
+E           assert None is not None
+
+steps/test_managing_system.py:344: AssertionError</failure></testcase></testsuite></testsuites>

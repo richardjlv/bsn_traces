@@ -1,0 +1,36 @@
+[INFO] [1792907476.611877299] [glucosemeter_node]: Initialized sensor: glucosemeter, vital sign: glucose, frequency: 1.0Hz
+[INFO] [1792907476.637804365] [glucosemeter_node]: Lifecycle Manager initialized
+[INFO] [1792907476.660760770] [glucosemeter_node]: PublisherManagerBase initialized successfully
+[INFO] [1792907476.672297971] [glucosemeter_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792907476.674141931] [glucosemeter_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792907476.688885399] [glucosemeter_node]: Starting individual lifecycle management...
+[INFO] [1792907476.689447649] [glucosemeter_node]: Lifecycle auto-management started
+[INFO] [1792907476.699773198] [glucosemeter_node]: Successfully registered with ParamAdapter
+[INFO] [1792907478.690388695] [glucosemeter_node]: Auto-configuring node...
+[INFO] [1792907478.691022815] [glucosemeter_node]: Triggering node configuration...
+[INFO] [1792907478.692427640] [glucosemeter_node]: Configuring glucosemeter sensor...
+[INFO] [1792907478.708563459] [glucosemeter_node]: Risk ranges configured for glucosemeter: HR0=(20.0, 39.99), MR0=(40.0, 54.99), LR=(55.0, 95.99), MR1=(96.0, 119.99), HR1=(120.0, 200.0)
+[INFO] [1792907478.709348876] [glucosemeter_node]: Node configuration successful
+[INFO] [1792907479.712493380] [glucosemeter_node]: Triggering node activation...
+[INFO] [1792907479.713118452] [glucosemeter_node]: Activating glucosemeter sensor...
+[INFO] [1792907479.713941618] [glucosemeter_node]: Node activation successful
+[INFO] [1792907480.695001815] [glucosemeter_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792907481.696186926] [glucosemeter_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792907482.704709580] [glucosemeter_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792907483.696801811] [glucosemeter_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792907484.695475622] [glucosemeter_node]: ++Transfer++
+ Value: 77.74515617077634, Risk: 2.20%, Level: low, Battery: 99.6%
+[INFO] [1792907485.706249058] [glucosemeter_node]: ++Transfer++
+ Value: 75.46097777097597, Risk: 0.03%, Level: low, Battery: 99.4%
+[INFO] [1792907486.694429976] [glucosemeter_node]: ++Transfer++
+ Value: 74.47244464982317, Risk: 1.00%, Level: low, Battery: 99.3%
+[INFO] [1792907487.705861983] [glucosemeter_node]: ++Transfer++
+ Value: 76.73292211719472, Risk: 1.21%, Level: low, Battery: 99.2%
+[INFO] [1792907488.695134577] [glucosemeter_node]: ++Transfer++
+ Value: 76.64836247825198, Risk: 1.13%, Level: low, Battery: 99.1%
+[INFO] [1792907489.695736721] [glucosemeter_node]: ++Transfer++
+ Value: 77.47370620516516, Risk: 1.93%, Level: low, Battery: 98.9%
+[INFO] [1792907490.698239453] [glucosemeter_node]: ++Transfer++
+ Value: 76.28735187007587, Risk: 0.77%, Level: low, Battery: 98.8%
+[INFO] [1792907491.698062597] [glucosemeter_node]: ++Transfer++
+ Value: 72.33228330002038, Risk: 3.09%, Level: low, Battery: 98.7%

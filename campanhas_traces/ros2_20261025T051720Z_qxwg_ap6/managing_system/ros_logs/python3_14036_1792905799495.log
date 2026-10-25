@@ -1,0 +1,1154 @@
+[INFO] [1792905806.938016956] [oximeter_node]: Initialized sensor: oximeter, vital sign: oxigenation, frequency: 1.0Hz
+[INFO] [1792905808.385548641] [oximeter_node]: Lifecycle Manager initialized
+[INFO] [1792905808.432329665] [oximeter_node]: PublisherManagerBase initialized successfully
+[INFO] [1792905808.483409494] [oximeter_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792905808.488718675] [oximeter_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792905808.705789569] [oximeter_node]: Starting individual lifecycle management...
+[INFO] [1792905808.706495186] [oximeter_node]: Lifecycle auto-management started
+[INFO] [1792905808.742367615] [oximeter_node]: Successfully registered with ParamAdapter
+[INFO] [1792905810.711256284] [oximeter_node]: Auto-configuring node...
+[INFO] [1792905810.718720172] [oximeter_node]: Triggering node configuration...
+[INFO] [1792905810.724333521] [oximeter_node]: Configuring oximeter sensor...
+[INFO] [1792905810.797318524] [oximeter_node]: Risk ranges configured for oximeter: HR0=(-1.0, -1.0), MR0=(-1.0, -1.0), LR=(65.0, 100.0), MR1=(55.0, 65.0), HR1=(0.0, 55.0)
+[INFO] [1792905810.798113224] [oximeter_node]: Node configuration successful
+[INFO] [1792905811.800251987] [oximeter_node]: Triggering node activation...
+[INFO] [1792905811.813187761] [oximeter_node]: Activating oximeter sensor...
+[INFO] [1792905811.814256915] [oximeter_node]: Node activation successful
+[INFO] [1792905812.841696912] [oximeter_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792905813.526874702] [oximeter_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792905814.526839363] [oximeter_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792905815.530353638] [oximeter_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792905816.563982131] [oximeter_node]: ++Transfer++
+ Value: 78.91319299362719, Risk: 4.10%, Level: low, Battery: 99.6%
+[INFO] [1792905817.546165023] [oximeter_node]: ++Transfer++
+ Value: 82.09343434003651, Risk: 0.46%, Level: low, Battery: 99.4%
+[INFO] [1792905818.520190282] [oximeter_node]: ++Transfer++
+ Value: 84.81892874802705, Risk: 2.65%, Level: low, Battery: 99.3%
+[INFO] [1792905819.545451036] [oximeter_node]: ++Transfer++
+ Value: 87.47647652438441, Risk: 5.69%, Level: low, Battery: 99.2%
+[INFO] [1792905820.537996172] [oximeter_node]: ++Transfer++
+ Value: 86.78927384710106, Risk: 4.90%, Level: low, Battery: 99.1%
+[INFO] [1792905821.524715088] [oximeter_node]: ++Transfer++
+ Value: 87.7340535598532, Risk: 5.98%, Level: low, Battery: 98.9%
+[INFO] [1792905822.521863468] [oximeter_node]: ++Transfer++
+ Value: 87.27257199325024, Risk: 5.45%, Level: low, Battery: 98.8%
+[INFO] [1792905823.532491356] [oximeter_node]: ++Transfer++
+ Value: 84.39827316386447, Risk: 2.17%, Level: low, Battery: 98.7%
+[INFO] [1792905824.528084734] [oximeter_node]: ++Transfer++
+ Value: 83.20383491001391, Risk: 0.80%, Level: low, Battery: 98.6%
+[INFO] [1792905825.528494265] [oximeter_node]: ++Transfer++
+ Value: 87.07135585116507, Risk: 5.22%, Level: low, Battery: 98.4%
+[INFO] [1792905826.526697729] [oximeter_node]: ++Transfer++
+ Value: 83.46089948098054, Risk: 1.10%, Level: low, Battery: 98.3%
+[INFO] [1792905827.536481234] [oximeter_node]: ++Transfer++
+ Value: 81.60813618278462, Risk: 1.02%, Level: low, Battery: 98.2%
+[INFO] [1792905828.525120989] [oximeter_node]: ++Transfer++
+ Value: 84.70054876615463, Risk: 2.51%, Level: low, Battery: 98.1%
+[INFO] [1792905829.529904850] [oximeter_node]: ++Transfer++
+ Value: 86.06717063005794, Risk: 4.08%, Level: low, Battery: 97.9%
+[INFO] [1792905830.533316184] [oximeter_node]: ++Transfer++
+ Value: 82.08329185939215, Risk: 0.48%, Level: low, Battery: 97.8%
+[INFO] [1792905831.528928613] [oximeter_node]: ++Transfer++
+ Value: 80.79775649592781, Risk: 1.95%, Level: low, Battery: 97.7%
+[INFO] [1792905832.530325883] [oximeter_node]: ++Transfer++
+ Value: 81.65647166240034, Risk: 0.96%, Level: low, Battery: 97.6%
+[INFO] [1792905833.539100914] [oximeter_node]: ++Transfer++
+ Value: 80.10930728068531, Risk: 2.73%, Level: low, Battery: 97.4%
+[INFO] [1792905834.518570993] [oximeter_node]: ++Transfer++
+ Value: 78.57902121062631, Risk: 4.48%, Level: low, Battery: 97.3%
+[INFO] [1792905835.543244237] [oximeter_node]: ++Transfer++
+ Value: 82.99423792793972, Risk: 0.56%, Level: low, Battery: 97.2%
+[INFO] [1792905836.524401952] [oximeter_node]: ++Transfer++
+ Value: 88.19098638372269, Risk: 6.50%, Level: low, Battery: 97.1%
+[INFO] [1792905837.518767202] [oximeter_node]: ++Transfer++
+ Value: 87.94951490495218, Risk: 6.23%, Level: low, Battery: 96.9%
+[INFO] [1792905838.522719468] [oximeter_node]: ++Transfer++
+ Value: 86.62877769194944, Risk: 4.72%, Level: low, Battery: 96.8%
+[INFO] [1792905839.522619890] [oximeter_node]: ++Transfer++
+ Value: 89.83675921392938, Risk: 8.38%, Level: low, Battery: 96.7%
+[INFO] [1792905840.522352179] [oximeter_node]: ++Transfer++
+ Value: 84.33438738253103, Risk: 2.10%, Level: low, Battery: 96.6%
+[INFO] [1792905841.512419001] [oximeter_node]: ++Transfer++
+ Value: 82.39065153818332, Risk: 0.12%, Level: low, Battery: 96.4%
+[INFO] [1792905842.538911234] [oximeter_node]: ++Transfer++
+ Value: 84.47381270689121, Risk: 2.26%, Level: low, Battery: 96.3%
+[INFO] [1792905843.517228610] [oximeter_node]: ++Transfer++
+ Value: 86.32109392617778, Risk: 4.37%, Level: low, Battery: 96.2%
+[INFO] [1792905844.525333904] [oximeter_node]: ++Transfer++
+ Value: 79.76390548071022, Risk: 3.13%, Level: low, Battery: 96.1%
+[INFO] [1792905845.529893569] [oximeter_node]: ++Transfer++
+ Value: 80.82816730588358, Risk: 1.91%, Level: low, Battery: 95.9%
+[INFO] [1792905846.528596127] [oximeter_node]: ++Transfer++
+ Value: 82.38694023039632, Risk: 0.13%, Level: low, Battery: 95.8%
+[INFO] [1792905847.528264809] [oximeter_node]: ++Transfer++
+ Value: 83.20636198284605, Risk: 0.81%, Level: low, Battery: 95.7%
+[INFO] [1792905848.539168142] [oximeter_node]: ++Transfer++
+ Value: 80.6778159782574, Risk: 2.08%, Level: low, Battery: 95.6%
+[INFO] [1792905849.563863398] [oximeter_node]: ++Transfer++
+ Value: 81.82905875376383, Risk: 0.77%, Level: low, Battery: 95.4%
+[INFO] [1792905850.574071220] [oximeter_node]: ++Transfer++
+ Value: 85.05260226215792, Risk: 2.92%, Level: low, Battery: 95.3%
+[INFO] [1792905851.509529572] [oximeter_node]: ++Transfer++
+ Value: 85.21364538834526, Risk: 3.10%, Level: low, Battery: 95.2%
+[INFO] [1792905852.518740537] [oximeter_node]: ++Transfer++
+ Value: 86.74547287953149, Risk: 4.85%, Level: low, Battery: 95.1%
+[INFO] [1792905853.525452524] [oximeter_node]: ++Transfer++
+ Value: 84.79492260343625, Risk: 2.62%, Level: low, Battery: 94.9%
+[INFO] [1792905854.553646845] [oximeter_node]: ++Transfer++
+ Value: 85.29202470913478, Risk: 3.19%, Level: low, Battery: 94.8%
+[INFO] [1792905855.534985779] [oximeter_node]: ++Transfer++
+ Value: 85.9683665449742, Risk: 3.96%, Level: low, Battery: 94.7%
+[INFO] [1792905856.518784386] [oximeter_node]: ++Transfer++
+ Value: 80.63389473808691, Risk: 2.13%, Level: low, Battery: 94.6%
+[INFO] [1792905857.538672304] [oximeter_node]: ++Transfer++
+ Value: 80.08200076035664, Risk: 2.76%, Level: low, Battery: 94.4%
+[INFO] [1792905858.524709997] [oximeter_node]: ++Transfer++
+ Value: 79.73971561332914, Risk: 3.15%, Level: low, Battery: 94.3%
+[INFO] [1792905859.538244702] [oximeter_node]: ++Transfer++
+ Value: 83.19446122172026, Risk: 0.79%, Level: low, Battery: 94.2%
+[INFO] [1792905860.524295769] [oximeter_node]: ++Transfer++
+ Value: 80.02778751631772, Risk: 2.83%, Level: low, Battery: 94.1%
+[INFO] [1792905861.525386644] [oximeter_node]: ++Transfer++
+ Value: 85.00887499528707, Risk: 2.87%, Level: low, Battery: 93.9%
+[INFO] [1792905862.523612751] [oximeter_node]: ++Transfer++
+ Value: 81.40656529627395, Risk: 1.25%, Level: low, Battery: 93.8%
+[INFO] [1792905863.512716359] [oximeter_node]: ++Transfer++
+ Value: 83.22212870050846, Risk: 0.83%, Level: low, Battery: 93.7%
+[INFO] [1792905864.514693473] [oximeter_node]: ++Transfer++
+ Value: 84.35089932735491, Risk: 2.12%, Level: low, Battery: 93.6%
+[INFO] [1792905865.529025023] [oximeter_node]: ++Transfer++
+ Value: 88.55351092618336, Risk: 6.92%, Level: low, Battery: 93.4%
+[INFO] [1792905866.516486623] [oximeter_node]: ++Transfer++
+ Value: 86.32774135281501, Risk: 4.37%, Level: low, Battery: 93.3%
+[INFO] [1792905867.538758387] [oximeter_node]: ++Transfer++
+ Value: 85.93934813981771, Risk: 3.93%, Level: low, Battery: 93.2%
+[INFO] [1792905868.518444001] [oximeter_node]: ++Transfer++
+ Value: 89.05962121765643, Risk: 7.50%, Level: low, Battery: 93.1%
+[INFO] [1792905869.537547418] [oximeter_node]: ++Transfer++
+ Value: 87.5553461336767, Risk: 5.78%, Level: low, Battery: 92.9%
+[INFO] [1792905870.141321464] [oximeter_node]: Received adaptation command: freq=1.42
+[INFO] [1792905870.142039665] [oximeter_node]: Changing frequency to 1.42Hz
+[INFO] [1792905870.544546599] [oximeter_node]: ++Transfer++
+ Value: 84.90356119607522, Risk: 2.75%, Level: low, Battery: 92.8%
+[INFO] [1792905870.636985786] [oximeter_node]: Received adaptation command: freq=1.88
+[INFO] [1792905870.641301568] [oximeter_node]: Changing frequency to 1.88Hz
+[INFO] [1792905871.527434530] [oximeter_node]: ++Transfer++
+ Value: 85.59370598677076, Risk: 3.54%, Level: low, Battery: 92.7%
+[INFO] [1792905871.630431087] [oximeter_node]: Received adaptation command: freq=2.28
+[INFO] [1792905871.631091074] [oximeter_node]: Changing frequency to 2.28Hz
+[INFO] [1792905872.543806126] [oximeter_node]: ++Transfer++
+ Value: 88.23230019817154, Risk: 6.55%, Level: low, Battery: 92.6%
+[INFO] [1792905872.640242432] [oximeter_node]: Received adaptation command: freq=2.66
+[INFO] [1792905872.640940233] [oximeter_node]: Changing frequency to 2.66Hz
+[INFO] [1792905873.522800236] [oximeter_node]: ++Transfer++
+ Value: 88.97615982036271, Risk: 7.40%, Level: low, Battery: 92.4%
+[INFO] [1792905873.773192080] [oximeter_node]: Received adaptation command: freq=3.02
+[INFO] [1792905873.773763669] [oximeter_node]: Changing frequency to 3.02Hz
+[INFO] [1792905874.525500629] [oximeter_node]: ++Transfer++
+ Value: 86.52241614581274, Risk: 4.60%, Level: low, Battery: 92.3%
+[INFO] [1792905874.669576975] [oximeter_node]: Received adaptation command: freq=3.41
+[INFO] [1792905874.670188370] [oximeter_node]: Changing frequency to 3.41Hz
+[INFO] [1792905875.517383266] [oximeter_node]: ++Transfer++
+ Value: 82.89765596590519, Risk: 0.45%, Level: low, Battery: 92.2%
+[INFO] [1792905875.620764944] [oximeter_node]: Received adaptation command: freq=3.73
+[INFO] [1792905875.621419411] [oximeter_node]: Changing frequency to 3.73Hz
+[INFO] [1792905876.521843991] [oximeter_node]: ++Transfer++
+ Value: 82.45898151193327, Risk: 0.05%, Level: low, Battery: 92.1%
+[INFO] [1792905876.617147664] [oximeter_node]: Received adaptation command: freq=4.04
+[INFO] [1792905876.619073541] [oximeter_node]: Changing frequency to 4.04Hz
+[INFO] [1792905877.531537715] [oximeter_node]: ++Transfer++
+ Value: 82.35272166882159, Risk: 0.17%, Level: low, Battery: 91.9%
+[INFO] [1792905877.640786307] [oximeter_node]: Received adaptation command: freq=4.28
+[INFO] [1792905877.643156814] [oximeter_node]: Changing frequency to 4.28Hz
+[INFO] [1792905878.556498456] [oximeter_node]: ++Transfer++
+ Value: 80.154810888747, Risk: 2.68%, Level: low, Battery: 91.8%
+[INFO] [1792905878.646182888] [oximeter_node]: Received adaptation command: freq=4.54
+[INFO] [1792905878.648468428] [oximeter_node]: Changing frequency to 4.54Hz
+[INFO] [1792905879.515612251] [oximeter_node]: ++Transfer++
+ Value: 83.86806695327813, Risk: 1.56%, Level: low, Battery: 91.7%
+[INFO] [1792905879.623618692] [oximeter_node]: Received adaptation command: freq=4.79
+[INFO] [1792905879.624252542] [oximeter_node]: Changing frequency to 4.79Hz
+[INFO] [1792905880.526418432] [oximeter_node]: ++Transfer++
+ Value: 88.59442974012283, Risk: 6.97%, Level: low, Battery: 91.6%
+[INFO] [1792905880.656882300] [oximeter_node]: Received adaptation command: freq=5.07
+[INFO] [1792905880.661598128] [oximeter_node]: Changing frequency to 5.07Hz
+[INFO] [1792905881.547364370] [oximeter_node]: ++Transfer++
+ Value: 85.85703713320837, Risk: 3.84%, Level: low, Battery: 91.4%
+[INFO] [1792905881.625734634] [oximeter_node]: Received adaptation command: freq=5.33
+[INFO] [1792905881.629750405] [oximeter_node]: Changing frequency to 5.33Hz
+[INFO] [1792905882.539927235] [oximeter_node]: ++Transfer++
+ Value: 84.80431427203962, Risk: 2.63%, Level: low, Battery: 91.3%
+[INFO] [1792905882.727092703] [oximeter_node]: Received adaptation command: freq=5.58
+[INFO] [1792905882.734319587] [oximeter_node]: Changing frequency to 5.58Hz
+[INFO] [1792905883.526889418] [oximeter_node]: ++Transfer++
+ Value: 87.7684406618016, Risk: 6.02%, Level: low, Battery: 91.2%
+[INFO] [1792905883.647139844] [oximeter_node]: Received adaptation command: freq=5.82
+[INFO] [1792905883.650184896] [oximeter_node]: Changing frequency to 5.82Hz
+[INFO] [1792905884.524539007] [oximeter_node]: ++Transfer++
+ Value: 82.89740902036856, Risk: 0.45%, Level: low, Battery: 91.1%
+[INFO] [1792905884.624728642] [oximeter_node]: Received adaptation command: freq=6.05
+[INFO] [1792905884.625296367] [oximeter_node]: Changing frequency to 6.05Hz
+[INFO] [1792905885.518231679] [oximeter_node]: ++Transfer++
+ Value: 83.19200519816953, Risk: 0.79%, Level: low, Battery: 90.9%
+[INFO] [1792905885.626155145] [oximeter_node]: Received adaptation command: freq=6.28
+[INFO] [1792905885.626761108] [oximeter_node]: Changing frequency to 6.28Hz
+[INFO] [1792905886.510105799] [oximeter_node]: ++Transfer++
+ Value: 88.39382665489504, Risk: 6.74%, Level: low, Battery: 90.8%
+[INFO] [1792905886.619291637] [oximeter_node]: Received adaptation command: freq=6.51
+[INFO] [1792905886.619906769] [oximeter_node]: Changing frequency to 6.51Hz
+[INFO] [1792905887.513891171] [oximeter_node]: ++Transfer++
+ Value: 91.14720823203905, Risk: 9.88%, Level: low, Battery: 90.7%
+[INFO] [1792905887.641387723] [oximeter_node]: Received adaptation command: freq=6.75
+[INFO] [1792905887.642291554] [oximeter_node]: Changing frequency to 6.75Hz
+[INFO] [1792905888.530471126] [oximeter_node]: ++Transfer++
+ Value: 88.68898805735749, Risk: 7.07%, Level: low, Battery: 90.6%
+[INFO] [1792905888.657258049] [oximeter_node]: Received adaptation command: freq=6.98
+[INFO] [1792905888.660858858] [oximeter_node]: Changing frequency to 6.98Hz
+[INFO] [1792905889.533956279] [oximeter_node]: ++Transfer++
+ Value: 91.37226763527282, Risk: 10.14%, Level: low, Battery: 90.4%
+[INFO] [1792905889.621992493] [oximeter_node]: Received adaptation command: freq=7.22
+[INFO] [1792905889.622623822] [oximeter_node]: Changing frequency to 7.22Hz
+[INFO] [1792905890.528145072] [oximeter_node]: ++Transfer++
+ Value: 87.8567484402304, Risk: 6.12%, Level: low, Battery: 90.3%
+[INFO] [1792905890.913444533] [oximeter_node]: Received adaptation command: freq=7.47
+[INFO] [1792905890.913928576] [oximeter_node]: Changing frequency to 7.47Hz
+[INFO] [1792905891.519292579] [oximeter_node]: ++Transfer++
+ Value: 88.58823895511453, Risk: 6.96%, Level: low, Battery: 90.2%
+[INFO] [1792905891.616381532] [oximeter_node]: Received adaptation command: freq=7.72
+[INFO] [1792905891.617052404] [oximeter_node]: Changing frequency to 7.72Hz
+[INFO] [1792905892.523309752] [oximeter_node]: ++Transfer++
+ Value: 86.65628883544042, Risk: 4.75%, Level: low, Battery: 90.1%
+[INFO] [1792905892.639656037] [oximeter_node]: Received adaptation command: freq=7.96
+[INFO] [1792905892.640252417] [oximeter_node]: Changing frequency to 7.96Hz
+[INFO] [1792905893.550410116] [oximeter_node]: ++Transfer++
+ Value: 87.93750115874973, Risk: 6.21%, Level: low, Battery: 89.9%
+[INFO] [1792905893.635135890] [oximeter_node]: Received adaptation command: freq=8.21
+[INFO] [1792905893.649098600] [oximeter_node]: Changing frequency to 8.21Hz
+[INFO] [1792905894.511105079] [oximeter_node]: ++Transfer++
+ Value: 87.98768471860019, Risk: 6.27%, Level: low, Battery: 89.8%
+[INFO] [1792905894.642727647] [oximeter_node]: Received adaptation command: freq=8.48
+[INFO] [1792905894.643492868] [oximeter_node]: Changing frequency to 8.48Hz
+[INFO] [1792905895.547223989] [oximeter_node]: ++Transfer++
+ Value: 86.97988863155022, Risk: 5.12%, Level: low, Battery: 89.7%
+[INFO] [1792905895.621542660] [oximeter_node]: Received adaptation command: freq=8.75
+[INFO] [1792905895.622300424] [oximeter_node]: Changing frequency to 8.75Hz
+[INFO] [1792905896.541076057] [oximeter_node]: ++Transfer++
+ Value: 84.8492806525419, Risk: 2.68%, Level: low, Battery: 89.6%
+[INFO] [1792905896.624779735] [oximeter_node]: Received adaptation command: freq=9.01
+[INFO] [1792905896.625343377] [oximeter_node]: Changing frequency to 9.01Hz
+[INFO] [1792905897.521345425] [oximeter_node]: ++Transfer++
+ Value: 86.85347693196398, Risk: 4.98%, Level: low, Battery: 89.4%
+[INFO] [1792905897.661657012] [oximeter_node]: Received adaptation command: freq=9.26
+[INFO] [1792905897.662457464] [oximeter_node]: Changing frequency to 9.26Hz
+[INFO] [1792905898.525626497] [oximeter_node]: ++Transfer++
+ Value: 87.13546817695486, Risk: 5.30%, Level: low, Battery: 89.3%
+[INFO] [1792905898.619920344] [oximeter_node]: Received adaptation command: freq=9.50
+[INFO] [1792905898.620719536] [oximeter_node]: Changing frequency to 9.5Hz
+[INFO] [1792905899.529057378] [oximeter_node]: ++Transfer++
+ Value: 86.31934516794608, Risk: 4.36%, Level: low, Battery: 89.2%
+[INFO] [1792905899.616777335] [oximeter_node]: Received adaptation command: freq=9.76
+[INFO] [1792905899.617058303] [oximeter_node]: Changing frequency to 9.76Hz
+[INFO] [1792905900.513425683] [oximeter_node]: ++Transfer++
+ Value: 88.09264532236804, Risk: 6.39%, Level: low, Battery: 89.1%
+[INFO] [1792905900.622549134] [oximeter_node]: Received adaptation command: freq=10.09
+[INFO] [1792905900.623171912] [oximeter_node]: Changing frequency to 10.09Hz
+[INFO] [1792905901.523690999] [oximeter_node]: ++Transfer++
+ Value: 90.63358892786704, Risk: 9.30%, Level: low, Battery: 88.9%
+[INFO] [1792905901.618434441] [oximeter_node]: Received adaptation command: freq=10.39
+[INFO] [1792905901.618980372] [oximeter_node]: Changing frequency to 10.39Hz
+[INFO] [1792905902.533636356] [oximeter_node]: ++Transfer++
+ Value: 83.95457319948528, Risk: 1.66%, Level: low, Battery: 88.8%
+[INFO] [1792905902.650392000] [oximeter_node]: Received adaptation command: freq=10.69
+[INFO] [1792905902.652528059] [oximeter_node]: Changing frequency to 10.69Hz
+[INFO] [1792905903.539247340] [oximeter_node]: ++Transfer++
+ Value: 84.34284472890872, Risk: 2.11%, Level: low, Battery: 88.7%
+[INFO] [1792905903.643056168] [oximeter_node]: Received adaptation command: freq=11.03
+[INFO] [1792905903.643662859] [oximeter_node]: Changing frequency to 11.03Hz
+[INFO] [1792905904.529184262] [oximeter_node]: ++Transfer++
+ Value: 81.40361056276421, Risk: 1.25%, Level: low, Battery: 88.6%
+[INFO] [1792905904.647696189] [oximeter_node]: Received adaptation command: freq=11.38
+[INFO] [1792905904.651500632] [oximeter_node]: Changing frequency to 11.38Hz
+[INFO] [1792905905.538518590] [oximeter_node]: ++Transfer++
+ Value: 79.31914081491601, Risk: 3.64%, Level: low, Battery: 88.4%
+[INFO] [1792905905.630124752] [oximeter_node]: Received adaptation command: freq=11.68
+[INFO] [1792905905.637050445] [oximeter_node]: Changing frequency to 11.68Hz
+[INFO] [1792905906.510012948] [oximeter_node]: ++Transfer++
+ Value: 79.2495160069496, Risk: 3.71%, Level: low, Battery: 88.3%
+[INFO] [1792905906.652563976] [oximeter_node]: Received adaptation command: freq=12.06
+[INFO] [1792905906.656227322] [oximeter_node]: Changing frequency to 12.06Hz
+[INFO] [1792905907.525835464] [oximeter_node]: ++Transfer++
+ Value: 81.98643313644995, Risk: 0.59%, Level: low, Battery: 88.2%
+[INFO] [1792905907.621050576] [oximeter_node]: Received adaptation command: freq=12.46
+[INFO] [1792905907.621598837] [oximeter_node]: Changing frequency to 12.46Hz
+[INFO] [1792905908.525560302] [oximeter_node]: ++Transfer++
+ Value: 81.29702179767025, Risk: 1.37%, Level: low, Battery: 88.1%
+[INFO] [1792905908.652412707] [oximeter_node]: Received adaptation command: freq=12.85
+[INFO] [1792905908.653053302] [oximeter_node]: Changing frequency to 12.85Hz
+[INFO] [1792905909.532619943] [oximeter_node]: ++Transfer++
+ Value: 86.04616161793251, Risk: 4.05%, Level: low, Battery: 87.9%
+[INFO] [1792905909.614538635] [oximeter_node]: Received adaptation command: freq=13.22
+[INFO] [1792905909.615431179] [oximeter_node]: Changing frequency to 13.22Hz
+[INFO] [1792905910.527430580] [oximeter_node]: ++Transfer++
+ Value: 90.4371858646127, Risk: 9.07%, Level: low, Battery: 87.8%
+[INFO] [1792905910.615743552] [oximeter_node]: Received adaptation command: freq=13.57
+[INFO] [1792905910.616328547] [oximeter_node]: Changing frequency to 13.57Hz
+[INFO] [1792905911.530907671] [oximeter_node]: ++Transfer++
+ Value: 88.0342852966194, Risk: 6.32%, Level: low, Battery: 87.7%
+[INFO] [1792905911.649429740] [oximeter_node]: Received adaptation command: freq=13.85
+[INFO] [1792905911.651130815] [oximeter_node]: Changing frequency to 13.85Hz
+[INFO] [1792905912.528901992] [oximeter_node]: ++Transfer++
+ Value: 87.8061251670626, Risk: 6.06%, Level: low, Battery: 87.6%
+[INFO] [1792905912.620450173] [oximeter_node]: Received adaptation command: freq=14.13
+[INFO] [1792905912.621162766] [oximeter_node]: Changing frequency to 14.13Hz
+[INFO] [1792905913.526977354] [oximeter_node]: ++Transfer++
+ Value: 83.38706270949929, Risk: 1.01%, Level: low, Battery: 87.4%
+[INFO] [1792905913.760504041] [oximeter_node]: Received adaptation command: freq=14.38
+[INFO] [1792905913.761155241] [oximeter_node]: Changing frequency to 14.38Hz
+[INFO] [1792905914.523885280] [oximeter_node]: ++Transfer++
+ Value: 80.0725277515818, Risk: 2.77%, Level: low, Battery: 87.3%
+[INFO] [1792905914.623986525] [oximeter_node]: Received adaptation command: freq=14.63
+[INFO] [1792905914.632871313] [oximeter_node]: Changing frequency to 14.63Hz
+[INFO] [1792905915.527698166] [oximeter_node]: ++Transfer++
+ Value: 75.98220006660218, Risk: 7.45%, Level: low, Battery: 87.2%
+[INFO] [1792905915.627710162] [oximeter_node]: Received adaptation command: freq=14.88
+[INFO] [1792905915.628458895] [oximeter_node]: Changing frequency to 14.88Hz
+[INFO] [1792905916.517204502] [oximeter_node]: ++Transfer++
+ Value: 78.01419457602128, Risk: 5.13%, Level: low, Battery: 87.1%
+[INFO] [1792905916.624773855] [oximeter_node]: Received adaptation command: freq=15.20
+[INFO] [1792905916.625411046] [oximeter_node]: Changing frequency to 15.2Hz
+[INFO] [1792905917.549254115] [oximeter_node]: ++Transfer++
+ Value: 82.41794858198418, Risk: 0.09%, Level: low, Battery: 86.9%
+[INFO] [1792905917.693403386] [oximeter_node]: Received adaptation command: freq=15.48
+[INFO] [1792905917.694187535] [oximeter_node]: Changing frequency to 15.48Hz
+[INFO] [1792905918.711342128] [oximeter_node]: ++Transfer++
+ Value: 83.99960734626953, Risk: 1.71%, Level: low, Battery: 86.8%
+[INFO] [1792905918.740733636] [oximeter_node]: Received adaptation command: freq=15.76
+[INFO] [1792905918.744457746] [oximeter_node]: Changing frequency to 15.76Hz
+[INFO] [1792905919.515718076] [oximeter_node]: ++Transfer++
+ Value: 83.53072337628493, Risk: 1.18%, Level: low, Battery: 86.7%
+[INFO] [1792905919.618135101] [oximeter_node]: Received adaptation command: freq=16.05
+[INFO] [1792905919.618842453] [oximeter_node]: Changing frequency to 16.05Hz
+[INFO] [1792905920.535592082] [oximeter_node]: ++Transfer++
+ Value: 88.73784668636691, Risk: 7.13%, Level: low, Battery: 86.6%
+[INFO] [1792905920.703571222] [oximeter_node]: Received adaptation command: freq=16.37
+[INFO] [1792905920.705547532] [oximeter_node]: Changing frequency to 16.37Hz
+[INFO] [1792905921.521971553] [oximeter_node]: ++Transfer++
+ Value: 83.15665900211175, Risk: 0.75%, Level: low, Battery: 86.4%
+[INFO] [1792905921.621740763] [oximeter_node]: Received adaptation command: freq=16.69
+[INFO] [1792905921.622444104] [oximeter_node]: Changing frequency to 16.69Hz
+[INFO] [1792905922.534616209] [oximeter_node]: ++Transfer++
+ Value: 82.72258769013206, Risk: 0.25%, Level: low, Battery: 86.3%
+[INFO] [1792905922.633559065] [oximeter_node]: Received adaptation command: freq=17.04
+[INFO] [1792905922.634294754] [oximeter_node]: Changing frequency to 17.04Hz
+[INFO] [1792905923.528205021] [oximeter_node]: ++Transfer++
+ Value: 86.81001006451396, Risk: 4.93%, Level: low, Battery: 86.2%
+[INFO] [1792905923.620752746] [oximeter_node]: Received adaptation command: freq=17.40
+[INFO] [1792905923.621372486] [oximeter_node]: Changing frequency to 17.4Hz
+[INFO] [1792905924.523896747] [oximeter_node]: ++Transfer++
+ Value: 91.9826905468736, Risk: 10.84%, Level: low, Battery: 86.1%
+[INFO] [1792905924.617942241] [oximeter_node]: Received adaptation command: freq=17.79
+[INFO] [1792905924.618979723] [oximeter_node]: Changing frequency to 17.79Hz
+[INFO] [1792905925.520928985] [oximeter_node]: ++Transfer++
+ Value: 87.31319085050593, Risk: 5.50%, Level: low, Battery: 85.9%
+[INFO] [1792905925.616637069] [oximeter_node]: Received adaptation command: freq=18.15
+[INFO] [1792905925.617543392] [oximeter_node]: Changing frequency to 18.15Hz
+[INFO] [1792905926.522589514] [oximeter_node]: ++Transfer++
+ Value: 89.54659985004426, Risk: 8.05%, Level: low, Battery: 85.8%
+[INFO] [1792905926.644703089] [oximeter_node]: Received adaptation command: freq=18.49
+[INFO] [1792905926.645345974] [oximeter_node]: Changing frequency to 18.49Hz
+[INFO] [1792905927.543047463] [oximeter_node]: ++Transfer++
+ Value: 88.74869469142234, Risk: 7.14%, Level: low, Battery: 85.7%
+[INFO] [1792905927.620251556] [oximeter_node]: Received adaptation command: freq=18.76
+[INFO] [1792905927.621039718] [oximeter_node]: Changing frequency to 18.76Hz
+[INFO] [1792905928.620988101] [oximeter_node]: Received adaptation command: freq=19.03
+[INFO] [1792905928.621704173] [oximeter_node]: Changing frequency to 19.03Hz
+[INFO] [1792905928.873832453] [oximeter_node]: ++Transfer++
+ Value: 87.3091991255464, Risk: 5.50%, Level: low, Battery: 85.6%
+[INFO] [1792905929.518683486] [oximeter_node]: ++Transfer++
+ Value: 83.26041561796447, Risk: 0.87%, Level: low, Battery: 85.4%
+[INFO] [1792905929.623929193] [oximeter_node]: Received adaptation command: freq=19.27
+[INFO] [1792905929.625305024] [oximeter_node]: Changing frequency to 19.27Hz
+[INFO] [1792905930.537033619] [oximeter_node]: ++Transfer++
+ Value: 85.42085503416794, Risk: 3.34%, Level: low, Battery: 85.3%
+[INFO] [1792905931.240487162] [oximeter_node]: Received adaptation command: freq=19.52
+[INFO] [1792905931.241221328] [oximeter_node]: Changing frequency to 19.52Hz
+[INFO] [1792905931.515310232] [oximeter_node]: ++Transfer++
+ Value: 83.93695722479416, Risk: 1.64%, Level: low, Battery: 85.2%
+[INFO] [1792905931.646880212] [oximeter_node]: Received adaptation command: freq=19.77
+[INFO] [1792905931.647567553] [oximeter_node]: Changing frequency to 19.77Hz
+[INFO] [1792905932.535328404] [oximeter_node]: ++Transfer++
+ Value: 84.45241115779956, Risk: 2.23%, Level: low, Battery: 85.1%
+[INFO] [1792905932.657412367] [oximeter_node]: Received adaptation command: freq=20.01
+[INFO] [1792905932.658358352] [oximeter_node]: Changing frequency to 20.01Hz
+[INFO] [1792905933.521206940] [oximeter_node]: ++Transfer++
+ Value: 85.97127507464482, Risk: 3.97%, Level: low, Battery: 84.9%
+[INFO] [1792905933.650870629] [oximeter_node]: Received adaptation command: freq=20.26
+[INFO] [1792905933.651520604] [oximeter_node]: Changing frequency to 20.26Hz
+[INFO] [1792905934.518787037] [oximeter_node]: ++Transfer++
+ Value: 85.15626202461274, Risk: 3.04%, Level: low, Battery: 84.8%
+[INFO] [1792905934.618360592] [oximeter_node]: Received adaptation command: freq=20.52
+[INFO] [1792905934.619056393] [oximeter_node]: Changing frequency to 20.52Hz
+[INFO] [1792905935.525446791] [oximeter_node]: ++Transfer++
+ Value: 84.89137589465096, Risk: 2.73%, Level: low, Battery: 84.7%
+[INFO] [1792905935.647638394] [oximeter_node]: Received adaptation command: freq=20.77
+[INFO] [1792905935.648437765] [oximeter_node]: Changing frequency to 20.77Hz
+[INFO] [1792905936.525667196] [oximeter_node]: ++Transfer++
+ Value: 89.10142470748454, Risk: 7.54%, Level: low, Battery: 84.6%
+[INFO] [1792905936.650574631] [oximeter_node]: Received adaptation command: freq=21.04
+[INFO] [1792905936.651212359] [oximeter_node]: Changing frequency to 21.04Hz
+[INFO] [1792905937.543343899] [oximeter_node]: ++Transfer++
+ Value: 88.79354054084455, Risk: 7.19%, Level: low, Battery: 84.4%
+[INFO] [1792905937.661061851] [oximeter_node]: Received adaptation command: freq=21.31
+[INFO] [1792905937.669812174] [oximeter_node]: Changing frequency to 21.31Hz
+[INFO] [1792905938.524983518] [oximeter_node]: ++Transfer++
+ Value: 88.80005690736985, Risk: 7.20%, Level: low, Battery: 84.3%
+[INFO] [1792905938.639377999] [oximeter_node]: Received adaptation command: freq=21.59
+[INFO] [1792905938.640079994] [oximeter_node]: Changing frequency to 21.59Hz
+[INFO] [1792905939.521033381] [oximeter_node]: ++Transfer++
+ Value: 93.77104196209791, Risk: 12.88%, Level: low, Battery: 84.2%
+[INFO] [1792905939.620453250] [oximeter_node]: Received adaptation command: freq=21.89
+[INFO] [1792905939.621166409] [oximeter_node]: Changing frequency to 21.89Hz
+[INFO] [1792905940.526951882] [oximeter_node]: ++Transfer++
+ Value: 90.91805221019965, Risk: 9.62%, Level: low, Battery: 84.1%
+[INFO] [1792905940.740074804] [oximeter_node]: Received adaptation command: freq=22.23
+[INFO] [1792905940.740611281] [oximeter_node]: Changing frequency to 22.23Hz
+[INFO] [1792905941.540108816] [oximeter_node]: ++Transfer++
+ Value: 91.38460238295166, Risk: 10.15%, Level: low, Battery: 83.9%
+[INFO] [1792905941.654586098] [oximeter_node]: Received adaptation command: freq=22.53
+[INFO] [1792905941.679783377] [oximeter_node]: Changing frequency to 22.53Hz
+[INFO] [1792905942.538844643] [oximeter_node]: ++Transfer++
+ Value: 90.8989066117982, Risk: 9.60%, Level: low, Battery: 83.8%
+[INFO] [1792905942.655363954] [oximeter_node]: Received adaptation command: freq=22.83
+[INFO] [1792905942.656647258] [oximeter_node]: Changing frequency to 22.83Hz
+[INFO] [1792905943.524431343] [oximeter_node]: ++Transfer++
+ Value: 86.3053519357975, Risk: 4.35%, Level: low, Battery: 83.7%
+[INFO] [1792905943.622482470] [oximeter_node]: Received adaptation command: freq=23.13
+[INFO] [1792905943.623144310] [oximeter_node]: Changing frequency to 23.13Hz
+[INFO] [1792905944.526221152] [oximeter_node]: ++Transfer++
+ Value: 82.69255661625682, Risk: 0.22%, Level: low, Battery: 83.6%
+[INFO] [1792905944.633793709] [oximeter_node]: Received adaptation command: freq=23.43
+[INFO] [1792905944.634387040] [oximeter_node]: Changing frequency to 23.43Hz
+[INFO] [1792905945.517034958] [oximeter_node]: ++Transfer++
+ Value: 88.34628435966133, Risk: 6.68%, Level: low, Battery: 83.4%
+[INFO] [1792905945.643721198] [oximeter_node]: Received adaptation command: freq=23.76
+[INFO] [1792905945.644537555] [oximeter_node]: Changing frequency to 23.76Hz
+[INFO] [1792905946.513807702] [oximeter_node]: ++Transfer++
+ Value: 85.3459698371962, Risk: 3.25%, Level: low, Battery: 83.3%
+[INFO] [1792905946.623634842] [oximeter_node]: Received adaptation command: freq=24.11
+[INFO] [1792905946.624326972] [oximeter_node]: Changing frequency to 24.11Hz
+[INFO] [1792905947.516860807] [oximeter_node]: ++Transfer++
+ Value: 80.79408443326844, Risk: 1.95%, Level: low, Battery: 83.2%
+[INFO] [1792905947.622179219] [oximeter_node]: Received adaptation command: freq=24.47
+[INFO] [1792905947.622823618] [oximeter_node]: Changing frequency to 24.47Hz
+[INFO] [1792905948.518680898] [oximeter_node]: ++Transfer++
+ Value: 83.74987804770922, Risk: 1.43%, Level: low, Battery: 83.1%
+[INFO] [1792905948.642306997] [oximeter_node]: Received adaptation command: freq=24.81
+[INFO] [1792905948.642907918] [oximeter_node]: Changing frequency to 24.81Hz
+[INFO] [1792905949.532907811] [oximeter_node]: ++Transfer++
+ Value: 83.97128752361085, Risk: 1.68%, Level: low, Battery: 82.9%
+[INFO] [1792905949.623192897] [oximeter_node]: Received adaptation command: freq=25.16
+[INFO] [1792905949.624306209] [oximeter_node]: Changing frequency to 25.16Hz
+[INFO] [1792905950.524962939] [oximeter_node]: ++Transfer++
+ Value: 84.2556796466442, Risk: 2.01%, Level: low, Battery: 82.8%
+[INFO] [1792905950.637710916] [oximeter_node]: Received adaptation command: freq=25.49
+[INFO] [1792905950.642659391] [oximeter_node]: Changing frequency to 25.49Hz
+[INFO] [1792905951.536561721] [oximeter_node]: ++Transfer++
+ Value: 83.26314494277543, Risk: 0.87%, Level: low, Battery: 82.7%
+[INFO] [1792905951.654054689] [oximeter_node]: Received adaptation command: freq=25.79
+[INFO] [1792905951.655310092] [oximeter_node]: Changing frequency to 25.79Hz
+[INFO] [1792905952.520980645] [oximeter_node]: ++Transfer++
+ Value: 84.45064846351164, Risk: 2.23%, Level: low, Battery: 82.6%
+[INFO] [1792905952.647708055] [oximeter_node]: Received adaptation command: freq=26.10
+[INFO] [1792905952.653955037] [oximeter_node]: Changing frequency to 26.1Hz
+[INFO] [1792905953.525703469] [oximeter_node]: ++Transfer++
+ Value: 79.38262803088477, Risk: 3.56%, Level: low, Battery: 82.4%
+[INFO] [1792905953.617081678] [oximeter_node]: Received adaptation command: freq=26.39
+[INFO] [1792905953.617681426] [oximeter_node]: Changing frequency to 26.39Hz
+[INFO] [1792905954.531296531] [oximeter_node]: ++Transfer++
+ Value: 78.75946771255622, Risk: 4.27%, Level: low, Battery: 82.3%
+[INFO] [1792905954.620059629] [oximeter_node]: Received adaptation command: freq=26.70
+[INFO] [1792905954.620722133] [oximeter_node]: Changing frequency to 26.7Hz
+[INFO] [1792905955.539626327] [oximeter_node]: ++Transfer++
+ Value: 77.8976847030104, Risk: 5.26%, Level: low, Battery: 82.2%
+[INFO] [1792905955.622232036] [oximeter_node]: Received adaptation command: freq=26.94
+[INFO] [1792905955.622978752] [oximeter_node]: Changing frequency to 26.94Hz
+[INFO] [1792905956.541690926] [oximeter_node]: ++Transfer++
+ Value: 75.91485524404996, Risk: 7.53%, Level: low, Battery: 82.1%
+[INFO] [1792905957.150569653] [oximeter_node]: Received adaptation command: freq=27.18
+[INFO] [1792905957.151175534] [oximeter_node]: Changing frequency to 27.18Hz
+[INFO] [1792905957.547131416] [oximeter_node]: ++Transfer++
+ Value: 77.99445286596637, Risk: 5.15%, Level: low, Battery: 81.9%
+[INFO] [1792905957.617853589] [oximeter_node]: Received adaptation command: freq=27.41
+[INFO] [1792905957.618536833] [oximeter_node]: Changing frequency to 27.41Hz
+[INFO] [1792905958.529945038] [oximeter_node]: ++Transfer++
+ Value: 79.60711085150245, Risk: 3.31%, Level: low, Battery: 81.8%
+[INFO] [1792905959.525664667] [oximeter_node]: ++Transfer++
+ Value: 81.17667857211669, Risk: 1.51%, Level: low, Battery: 81.7%
+[INFO] [1792905960.532956713] [oximeter_node]: ++Transfer++
+ Value: 78.36486258623859, Risk: 4.73%, Level: low, Battery: 81.6%
+[INFO] [1792905960.605425875] [oximeter_node]: Received adaptation command: freq=27.66
+[INFO] [1792905960.606107649] [oximeter_node]: Changing frequency to 27.66Hz
+[INFO] [1792905961.531945518] [oximeter_node]: ++Transfer++
+ Value: 79.43644399692577, Risk: 3.50%, Level: low, Battery: 81.4%
+[INFO] [1792905962.516752406] [oximeter_node]: ++Transfer++
+ Value: 78.13929305931308, Risk: 4.98%, Level: low, Battery: 81.3%
+[INFO] [1792905963.283543839] [oximeter_node]: Received adaptation command: freq=28.15
+[INFO] [1792905963.293249804] [oximeter_node]: Changing frequency to 28.15Hz
+[INFO] [1792905963.324586449] [oximeter_node]: Received adaptation command: freq=28.42
+[INFO] [1792905963.325275282] [oximeter_node]: Changing frequency to 28.42Hz
+[INFO] [1792905963.356474544] [oximeter_node]: Received adaptation command: freq=28.68
+[INFO] [1792905963.357087982] [oximeter_node]: Changing frequency to 28.68Hz
+[INFO] [1792905963.514105097] [oximeter_node]: ++Transfer++
+ Value: 80.82403611776897, Risk: 1.92%, Level: low, Battery: 81.2%
+[INFO] [1792905963.621441878] [oximeter_node]: Received adaptation command: freq=28.95
+[INFO] [1792905963.622271964] [oximeter_node]: Changing frequency to 28.95Hz
+[INFO] [1792905964.520762095] [oximeter_node]: ++Transfer++
+ Value: 79.85510343058232, Risk: 3.02%, Level: low, Battery: 81.1%
+[INFO] [1792905964.621168726] [oximeter_node]: Received adaptation command: freq=29.20
+[INFO] [1792905964.627843286] [oximeter_node]: Changing frequency to 29.2Hz
+[INFO] [1792905965.511523159] [oximeter_node]: ++Transfer++
+ Value: 80.42144556067709, Risk: 2.38%, Level: low, Battery: 80.9%
+[INFO] [1792905965.619241940] [oximeter_node]: Received adaptation command: freq=29.46
+[INFO] [1792905965.619815112] [oximeter_node]: Changing frequency to 29.46Hz
+[INFO] [1792905966.530176958] [oximeter_node]: ++Transfer++
+ Value: 84.46848216011145, Risk: 2.25%, Level: low, Battery: 80.8%
+[INFO] [1792905966.616678332] [oximeter_node]: Received adaptation command: freq=29.71
+[INFO] [1792905966.617376034] [oximeter_node]: Changing frequency to 29.71Hz
+[INFO] [1792905967.523906181] [oximeter_node]: ++Transfer++
+ Value: 83.38383402068908, Risk: 1.01%, Level: low, Battery: 80.7%
+[INFO] [1792905967.620842467] [oximeter_node]: Received adaptation command: freq=29.99
+[INFO] [1792905967.621491167] [oximeter_node]: Changing frequency to 29.99Hz
+[INFO] [1792905968.526188886] [oximeter_node]: ++Transfer++
+ Value: 83.66241755456312, Risk: 1.33%, Level: low, Battery: 80.6%
+[INFO] [1792905968.652528740] [oximeter_node]: Received adaptation command: freq=30.26
+[INFO] [1792905968.653078067] [oximeter_node]: Changing frequency to 30.26Hz
+[INFO] [1792905969.511134289] [oximeter_node]: ++Transfer++
+ Value: 83.35629353184143, Risk: 0.98%, Level: low, Battery: 80.4%
+[INFO] [1792905969.650642726] [oximeter_node]: Received adaptation command: freq=30.52
+[INFO] [1792905969.653923085] [oximeter_node]: Changing frequency to 30.52Hz
+[INFO] [1792905970.533246571] [oximeter_node]: ++Transfer++
+ Value: 85.8525292171769, Risk: 3.83%, Level: low, Battery: 80.3%
+[INFO] [1792905970.674811857] [oximeter_node]: Received adaptation command: freq=30.80
+[INFO] [1792905970.677977786] [oximeter_node]: Changing frequency to 30.8Hz
+[INFO] [1792905971.529623470] [oximeter_node]: ++Transfer++
+ Value: 87.28409982382952, Risk: 5.47%, Level: low, Battery: 80.2%
+[INFO] [1792905971.616030596] [oximeter_node]: Received adaptation command: freq=31.06
+[INFO] [1792905971.616807294] [oximeter_node]: Changing frequency to 31.06Hz
+[INFO] [1792905972.523680957] [oximeter_node]: ++Transfer++
+ Value: 86.35437236235826, Risk: 4.40%, Level: low, Battery: 80.1%
+[INFO] [1792905972.620160536] [oximeter_node]: Received adaptation command: freq=31.33
+[INFO] [1792905972.621435644] [oximeter_node]: Changing frequency to 31.33Hz
+[INFO] [1792905973.518907465] [oximeter_node]: ++Transfer++
+ Value: 82.05616906177015, Risk: 0.51%, Level: low, Battery: 79.9%
+[INFO] [1792905973.650162775] [oximeter_node]: Received adaptation command: freq=31.61
+[INFO] [1792905973.650784365] [oximeter_node]: Changing frequency to 31.61Hz
+[INFO] [1792905974.539526119] [oximeter_node]: ++Transfer++
+ Value: 83.35079323414219, Risk: 0.97%, Level: low, Battery: 79.8%
+[INFO] [1792905974.621738782] [oximeter_node]: Received adaptation command: freq=31.85
+[INFO] [1792905974.646563119] [oximeter_node]: Changing frequency to 31.85Hz
+[INFO] [1792905975.513295846] [oximeter_node]: ++Transfer++
+ Value: 79.24197996290869, Risk: 3.72%, Level: low, Battery: 79.7%
+[INFO] [1792905975.617232766] [oximeter_node]: Received adaptation command: freq=32.10
+[INFO] [1792905975.617801028] [oximeter_node]: Changing frequency to 32.1Hz
+[INFO] [1792905976.521975596] [oximeter_node]: ++Transfer++
+ Value: 76.72249968476814, Risk: 6.60%, Level: low, Battery: 79.6%
+[INFO] [1792905976.616035548] [oximeter_node]: Received adaptation command: freq=32.35
+[INFO] [1792905976.616833599] [oximeter_node]: Changing frequency to 32.35Hz
+[INFO] [1792905977.515275558] [oximeter_node]: ++Transfer++
+ Value: 78.03116144925636, Risk: 5.11%, Level: low, Battery: 79.4%
+[INFO] [1792905977.611431294] [oximeter_node]: Received adaptation command: freq=32.61
+[INFO] [1792905977.612012980] [oximeter_node]: Changing frequency to 32.61Hz
+[INFO] [1792905978.526421416] [oximeter_node]: ++Transfer++
+ Value: 77.8327960383655, Risk: 5.33%, Level: low, Battery: 79.3%
+[INFO] [1792905978.613298882] [oximeter_node]: Received adaptation command: freq=32.85
+[INFO] [1792905978.613950019] [oximeter_node]: Changing frequency to 32.85Hz
+[INFO] [1792905979.517864831] [oximeter_node]: ++Transfer++
+ Value: 74.73482922564344, Risk: 8.87%, Level: low, Battery: 79.2%
+[INFO] [1792905979.619884578] [oximeter_node]: Received adaptation command: freq=33.09
+[INFO] [1792905979.620422134] [oximeter_node]: Changing frequency to 33.09Hz
+[INFO] [1792905980.517119058] [oximeter_node]: ++Transfer++
+ Value: 76.19229204712482, Risk: 7.21%, Level: low, Battery: 79.1%
+[INFO] [1792905980.620514555] [oximeter_node]: Received adaptation command: freq=33.30
+[INFO] [1792905980.622643106] [oximeter_node]: Changing frequency to 33.3Hz
+[INFO] [1792905981.517474294] [oximeter_node]: ++Transfer++
+ Value: 72.09314831830281, Risk: 11.89%, Level: low, Battery: 78.9%
+[INFO] [1792905982.007821387] [oximeter_node]: Received adaptation command: freq=33.54
+[INFO] [1792905982.010087267] [oximeter_node]: Changing frequency to 33.54Hz
+[INFO] [1792905982.539556931] [oximeter_node]: ++Transfer++
+ Value: 75.80346980167336, Risk: 7.65%, Level: low, Battery: 78.8%
+[INFO] [1792905982.613877506] [oximeter_node]: Received adaptation command: freq=33.77
+[INFO] [1792905982.614448419] [oximeter_node]: Changing frequency to 33.77Hz
+[INFO] [1792905983.544245835] [oximeter_node]: ++Transfer++
+ Value: 75.81434245392413, Risk: 7.64%, Level: low, Battery: 78.7%
+[INFO] [1792905983.613968540] [oximeter_node]: Received adaptation command: freq=34.02
+[INFO] [1792905983.614654825] [oximeter_node]: Changing frequency to 34.02Hz
+[INFO] [1792905984.521394991] [oximeter_node]: ++Transfer++
+ Value: 79.63340413330793, Risk: 3.28%, Level: low, Battery: 78.6%
+[INFO] [1792905985.186262710] [oximeter_node]: Received adaptation command: freq=34.25
+[INFO] [1792905985.189914597] [oximeter_node]: Changing frequency to 34.25Hz
+[INFO] [1792905985.523603954] [oximeter_node]: ++Transfer++
+ Value: 82.15274092702762, Risk: 0.40%, Level: low, Battery: 78.4%
+[INFO] [1792905985.612167025] [oximeter_node]: Received adaptation command: freq=34.49
+[INFO] [1792905985.612772433] [oximeter_node]: Changing frequency to 34.49Hz
+[INFO] [1792905986.519547675] [oximeter_node]: ++Transfer++
+ Value: 86.48762273950771, Risk: 4.56%, Level: low, Battery: 78.3%
+[INFO] [1792905986.617012356] [oximeter_node]: Received adaptation command: freq=34.73
+[INFO] [1792905986.617950090] [oximeter_node]: Changing frequency to 34.73Hz
+[INFO] [1792905987.519943601] [oximeter_node]: ++Transfer++
+ Value: 83.95599290102358, Risk: 1.66%, Level: low, Battery: 78.2%
+[INFO] [1792905987.610961078] [oximeter_node]: Received adaptation command: freq=34.99
+[INFO] [1792905987.611670345] [oximeter_node]: Changing frequency to 34.99Hz
+[INFO] [1792905988.555643494] [oximeter_node]: ++Transfer++
+ Value: 88.23978433789004, Risk: 6.56%, Level: low, Battery: 78.1%
+[INFO] [1792905988.610481513] [oximeter_node]: Received adaptation command: freq=35.29
+[INFO] [1792905988.612178185] [oximeter_node]: Changing frequency to 35.29Hz
+[INFO] [1792905989.539599516] [oximeter_node]: ++Transfer++
+ Value: 88.5594562324377, Risk: 6.93%, Level: low, Battery: 77.9%
+[INFO] [1792905989.611790940] [oximeter_node]: Received adaptation command: freq=35.57
+[INFO] [1792905989.614299448] [oximeter_node]: Changing frequency to 35.57Hz
+[INFO] [1792905990.529308303] [oximeter_node]: ++Transfer++
+ Value: 89.58448708653107, Risk: 8.10%, Level: low, Battery: 77.8%
+[INFO] [1792905990.671109675] [oximeter_node]: Received adaptation command: freq=35.85
+[INFO] [1792905990.675948938] [oximeter_node]: Changing frequency to 35.85Hz
+[INFO] [1792905991.534320555] [oximeter_node]: ++Transfer++
+ Value: 90.19801675503103, Risk: 8.80%, Level: low, Battery: 77.7%
+[INFO] [1792905992.216352224] [oximeter_node]: Received adaptation command: freq=36.20
+[INFO] [1792905992.216975967] [oximeter_node]: Changing frequency to 36.2Hz
+[INFO] [1792905992.514225578] [oximeter_node]: ++Transfer++
+ Value: 93.80339474912189, Risk: 12.92%, Level: low, Battery: 77.6%
+[INFO] [1792905992.612198175] [oximeter_node]: Received adaptation command: freq=36.56
+[INFO] [1792905992.612859534] [oximeter_node]: Changing frequency to 36.56Hz
+[INFO] [1792905993.513370746] [oximeter_node]: ++Transfer++
+ Value: 92.15355445106687, Risk: 11.03%, Level: low, Battery: 77.4%
+[INFO] [1792905993.619455200] [oximeter_node]: Received adaptation command: freq=36.96
+[INFO] [1792905993.619883637] [oximeter_node]: Changing frequency to 36.96Hz
+[INFO] [1792905994.526947868] [oximeter_node]: ++Transfer++
+ Value: 90.32844262147529, Risk: 8.95%, Level: low, Battery: 77.3%
+[INFO] [1792905994.612786975] [oximeter_node]: Received adaptation command: freq=37.31
+[INFO] [1792905994.613567675] [oximeter_node]: Changing frequency to 37.31Hz
+[INFO] [1792905995.541232530] [oximeter_node]: ++Transfer++
+ Value: 82.70111683646903, Risk: 0.23%, Level: low, Battery: 77.2%
+[INFO] [1792905995.615259099] [oximeter_node]: Received adaptation command: freq=37.65
+[INFO] [1792905995.615931432] [oximeter_node]: Changing frequency to 37.65Hz
+[INFO] [1792905996.517591098] [oximeter_node]: ++Transfer++
+ Value: 77.1301028061065, Risk: 6.14%, Level: low, Battery: 77.1%
+[INFO] [1792905996.617601739] [oximeter_node]: Received adaptation command: freq=37.98
+[INFO] [1792905996.618714969] [oximeter_node]: Changing frequency to 37.98Hz
+[INFO] [1792905997.518404525] [oximeter_node]: ++Transfer++
+ Value: 68.89842808605543, Risk: 15.54%, Level: low, Battery: 76.9%
+[INFO] [1792905997.616247719] [oximeter_node]: Received adaptation command: freq=38.33
+[INFO] [1792905997.616773023] [oximeter_node]: Changing frequency to 38.33Hz
+[INFO] [1792905998.525209401] [oximeter_node]: ++Transfer++
+ Value: 64.090573857988, Risk: 61.00%, Level: moderate, Battery: 76.8%
+[INFO] [1792905998.616278167] [oximeter_node]: Received adaptation command: freq=38.64
+[INFO] [1792905998.616883939] [oximeter_node]: Changing frequency to 38.64Hz
+[INFO] [1792905999.527964099] [oximeter_node]: ++Transfer++
+ Value: 58.59606020962767, Risk: 36.82%, Level: moderate, Battery: 76.7%
+[INFO] [1792905999.614495738] [oximeter_node]: Received adaptation command: freq=38.91
+[INFO] [1792905999.615059914] [oximeter_node]: Changing frequency to 38.91Hz
+[INFO] [1792906000.515926076] [oximeter_node]: ++Transfer++
+ Value: 46.53598269577869, Risk: 94.77%, Level: high, Battery: 76.6%
+[INFO] [1792906000.611379058] [oximeter_node]: Received adaptation command: freq=39.19
+[INFO] [1792906000.613813170] [oximeter_node]: Changing frequency to 39.19Hz
+[INFO] [1792906001.516641521] [oximeter_node]: ++Transfer++
+ Value: 42.23103181081366, Risk: 92.11%, Level: high, Battery: 76.4%
+[INFO] [1792906001.608453499] [oximeter_node]: Received adaptation command: freq=39.49
+[INFO] [1792906001.609005822] [oximeter_node]: Changing frequency to 39.49Hz
+[INFO] [1792906002.517714274] [oximeter_node]: ++Transfer++
+ Value: 31.427705324886084, Risk: 85.43%, Level: high, Battery: 76.3%
+[INFO] [1792906002.612074928] [oximeter_node]: Received adaptation command: freq=39.77
+[INFO] [1792906002.612655891] [oximeter_node]: Changing frequency to 39.77Hz
+[INFO] [1792906003.518234867] [oximeter_node]: ++Transfer++
+ Value: 29.478629913098963, Risk: 84.22%, Level: high, Battery: 76.2%
+[INFO] [1792906004.524857213] [oximeter_node]: ++Transfer++
+ Value: 26.604161596250528, Risk: 82.45%, Level: high, Battery: 76.1%
+[INFO] [1792906004.615490991] [oximeter_node]: Received adaptation command: freq=39.99
+[INFO] [1792906004.616088098] [oximeter_node]: Changing frequency to 39.99Hz
+[INFO] [1792906005.519111809] [oximeter_node]: ++Transfer++
+ Value: 31.095540172310212, Risk: 85.22%, Level: high, Battery: 75.9%
+[INFO] [1792906006.546205406] [oximeter_node]: ++Transfer++
+ Value: 35.85136006056864, Risk: 88.16%, Level: high, Battery: 75.8%
+[INFO] [1792906007.521705599] [oximeter_node]: ++Transfer++
+ Value: 47.405497998404, Risk: 95.31%, Level: high, Battery: 75.7%
+[INFO] [1792906008.519615648] [oximeter_node]: ++Transfer++
+ Value: 50.989625804015745, Risk: 97.52%, Level: high, Battery: 75.6%
+[INFO] [1792906009.709289437] [oximeter_node]: ++Transfer++
+ Value: 54.862057914490435, Risk: 99.91%, Level: high, Battery: 75.4%
+[INFO] [1792906010.532835162] [oximeter_node]: ++Transfer++
+ Value: 63.00003432539611, Risk: 56.20%, Level: moderate, Battery: 75.3%
+[INFO] [1792906011.515867043] [oximeter_node]: ++Transfer++
+ Value: 53.76809828885352, Risk: 99.24%, Level: high, Battery: 75.2%
+[INFO] [1792906012.537195459] [oximeter_node]: ++Transfer++
+ Value: 47.63992535010665, Risk: 95.45%, Level: high, Battery: 75.1%
+[INFO] [1792906013.520091937] [oximeter_node]: ++Transfer++
+ Value: 40.5633086152628, Risk: 91.08%, Level: high, Battery: 74.9%
+[INFO] [1792906014.530961198] [oximeter_node]: ++Transfer++
+ Value: 29.34271990008803, Risk: 84.14%, Level: high, Battery: 74.8%
+[INFO] [1792906015.646697119] [oximeter_node]: ++Transfer++
+ Value: 20.20989317094019, Risk: 78.49%, Level: high, Battery: 74.7%
+[INFO] [1792906016.534968632] [oximeter_node]: ++Transfer++
+ Value: 27.86695976062014, Risk: 83.23%, Level: high, Battery: 74.6%
+[INFO] [1792906017.535093831] [oximeter_node]: ++Transfer++
+ Value: 32.67774613292644, Risk: 86.20%, Level: high, Battery: 74.4%
+[INFO] [1792906018.542351239] [oximeter_node]: ++Transfer++
+ Value: 38.308548988134, Risk: 89.68%, Level: high, Battery: 74.3%
+[INFO] [1792906019.524025859] [oximeter_node]: ++Transfer++
+ Value: 49.987771295560876, Risk: 96.90%, Level: high, Battery: 74.2%
+[INFO] [1792906020.519461357] [oximeter_node]: ++Transfer++
+ Value: 58.794146312793615, Risk: 37.69%, Level: moderate, Battery: 74.1%
+[INFO] [1792906021.533178316] [oximeter_node]: ++Transfer++
+ Value: 66.30686151582871, Risk: 18.51%, Level: low, Battery: 73.9%
+[INFO] [1792906022.513432207] [oximeter_node]: ++Transfer++
+ Value: 74.53557876100619, Risk: 9.10%, Level: low, Battery: 73.8%
+[INFO] [1792906023.513766785] [oximeter_node]: ++Transfer++
+ Value: 81.52203930456815, Risk: 1.12%, Level: low, Battery: 73.7%
+[INFO] [1792906024.518495448] [oximeter_node]: ++Transfer++
+ Value: 84.41410928743184, Risk: 2.19%, Level: low, Battery: 73.6%
+[INFO] [1792906025.519125816] [oximeter_node]: ++Transfer++
+ Value: 85.12059408814095, Risk: 2.99%, Level: low, Battery: 73.4%
+[INFO] [1792906026.534648422] [oximeter_node]: ++Transfer++
+ Value: 82.3896286175759, Risk: 0.13%, Level: low, Battery: 73.3%
+[INFO] [1792906027.541288421] [oximeter_node]: ++Transfer++
+ Value: 82.41817755278973, Risk: 0.09%, Level: low, Battery: 73.2%
+[INFO] [1792906028.543391433] [oximeter_node]: ++Transfer++
+ Value: 77.78588915124227, Risk: 5.39%, Level: low, Battery: 73.1%
+[INFO] [1792906029.532467158] [oximeter_node]: ++Transfer++
+ Value: 75.91355144979242, Risk: 7.53%, Level: low, Battery: 72.9%
+[INFO] [1792906030.518409131] [oximeter_node]: ++Transfer++
+ Value: 81.21763617916466, Risk: 1.47%, Level: low, Battery: 72.8%
+[INFO] [1792906031.520707811] [oximeter_node]: ++Transfer++
+ Value: 81.27670696863314, Risk: 1.40%, Level: low, Battery: 72.7%
+[INFO] [1792906032.527299053] [oximeter_node]: ++Transfer++
+ Value: 80.23627137476862, Risk: 2.59%, Level: low, Battery: 72.6%
+[INFO] [1792906033.521019078] [oximeter_node]: ++Transfer++
+ Value: 80.76353419833967, Risk: 1.98%, Level: low, Battery: 72.4%
+[INFO] [1792906034.513782608] [oximeter_node]: ++Transfer++
+ Value: 80.86200647732548, Risk: 1.87%, Level: low, Battery: 72.3%
+[INFO] [1792906035.521703568] [oximeter_node]: ++Transfer++
+ Value: 78.58175940190279, Risk: 4.48%, Level: low, Battery: 72.2%
+[INFO] [1792906036.539311850] [oximeter_node]: ++Transfer++
+ Value: 77.89490645085434, Risk: 5.26%, Level: low, Battery: 72.1%
+[INFO] [1792906037.517187618] [oximeter_node]: ++Transfer++
+ Value: 78.64330363720713, Risk: 4.41%, Level: low, Battery: 71.9%
+[INFO] [1792906038.523536530] [oximeter_node]: ++Transfer++
+ Value: 83.81038877091883, Risk: 1.50%, Level: low, Battery: 71.8%
+[INFO] [1792906039.521753947] [oximeter_node]: ++Transfer++
+ Value: 85.06382894665978, Risk: 2.93%, Level: low, Battery: 71.7%
+[INFO] [1792906040.549517896] [oximeter_node]: ++Transfer++
+ Value: 88.5398997141821, Risk: 6.90%, Level: low, Battery: 71.6%
+[INFO] [1792906041.511634242] [oximeter_node]: ++Transfer++
+ Value: 92.75931898125347, Risk: 11.72%, Level: low, Battery: 71.4%
+[INFO] [1792906042.535134397] [oximeter_node]: ++Transfer++
+ Value: 87.53566770015759, Risk: 5.76%, Level: low, Battery: 71.3%
+[INFO] [1792906043.518321005] [oximeter_node]: ++Transfer++
+ Value: 86.66196966076787, Risk: 4.76%, Level: low, Battery: 71.2%
+[INFO] [1792906044.516609763] [oximeter_node]: ++Transfer++
+ Value: 91.66703038483875, Risk: 10.48%, Level: low, Battery: 71.1%
+[INFO] [1792906045.526793104] [oximeter_node]: ++Transfer++
+ Value: 89.51753918770744, Risk: 8.02%, Level: low, Battery: 70.9%
+[INFO] [1792906046.526564277] [oximeter_node]: ++Transfer++
+ Value: 89.16998199478677, Risk: 7.62%, Level: low, Battery: 70.8%
+[INFO] [1792906047.526637121] [oximeter_node]: ++Transfer++
+ Value: 89.8307872664949, Risk: 8.38%, Level: low, Battery: 70.7%
+[INFO] [1792906048.517851558] [oximeter_node]: ++Transfer++
+ Value: 90.44056814553015, Risk: 9.07%, Level: low, Battery: 70.6%
+[INFO] [1792906049.528428060] [oximeter_node]: ++Transfer++
+ Value: 88.24929967517316, Risk: 6.57%, Level: low, Battery: 70.4%
+[INFO] [1792906050.518521390] [oximeter_node]: ++Transfer++
+ Value: 89.12683459241762, Risk: 7.57%, Level: low, Battery: 70.3%
+[INFO] [1792906051.518383587] [oximeter_node]: ++Transfer++
+ Value: 86.62566578160856, Risk: 4.72%, Level: low, Battery: 70.2%
+[INFO] [1792906052.517997291] [oximeter_node]: ++Transfer++
+ Value: 88.0137075619584, Risk: 6.30%, Level: low, Battery: 70.1%
+[INFO] [1792906053.524300504] [oximeter_node]: ++Transfer++
+ Value: 84.42930836612138, Risk: 2.20%, Level: low, Battery: 69.9%
+[INFO] [1792906054.532863204] [oximeter_node]: ++Transfer++
+ Value: 84.2218628354475, Risk: 1.97%, Level: low, Battery: 69.8%
+[INFO] [1792906055.527602488] [oximeter_node]: ++Transfer++
+ Value: 83.94903265363843, Risk: 1.66%, Level: low, Battery: 69.7%
+[INFO] [1792906056.523547964] [oximeter_node]: ++Transfer++
+ Value: 85.60597320023842, Risk: 3.55%, Level: low, Battery: 69.6%
+[INFO] [1792906057.517663636] [oximeter_node]: ++Transfer++
+ Value: 83.75411818664335, Risk: 1.43%, Level: low, Battery: 69.4%
+[INFO] [1792906058.524744653] [oximeter_node]: ++Transfer++
+ Value: 86.54582475997233, Risk: 4.62%, Level: low, Battery: 69.3%
+[INFO] [1792906059.515862908] [oximeter_node]: ++Transfer++
+ Value: 86.69777393525465, Risk: 4.80%, Level: low, Battery: 69.2%
+[INFO] [1792906060.545213039] [oximeter_node]: ++Transfer++
+ Value: 86.06129014492129, Risk: 4.07%, Level: low, Battery: 69.1%
+[INFO] [1792906061.514135141] [oximeter_node]: ++Transfer++
+ Value: 86.97123562366572, Risk: 5.11%, Level: low, Battery: 68.9%
+[INFO] [1792906062.547867764] [oximeter_node]: ++Transfer++
+ Value: 89.5841042177886, Risk: 8.10%, Level: low, Battery: 68.8%
+[INFO] [1792906063.526018421] [oximeter_node]: ++Transfer++
+ Value: 87.81045171837826, Risk: 6.07%, Level: low, Battery: 68.7%
+[INFO] [1792906064.511329478] [oximeter_node]: ++Transfer++
+ Value: 88.46398130330685, Risk: 6.82%, Level: low, Battery: 68.6%
+[INFO] [1792906065.515442787] [oximeter_node]: ++Transfer++
+ Value: 90.78880465151852, Risk: 9.47%, Level: low, Battery: 68.4%
+[INFO] [1792906066.515109952] [oximeter_node]: ++Transfer++
+ Value: 87.84089630647196, Risk: 6.10%, Level: low, Battery: 68.3%
+[INFO] [1792906067.519677349] [oximeter_node]: ++Transfer++
+ Value: 85.63306534799368, Risk: 3.58%, Level: low, Battery: 68.2%
+[INFO] [1792906068.521644508] [oximeter_node]: ++Transfer++
+ Value: 81.52354499390461, Risk: 1.12%, Level: low, Battery: 68.1%
+[INFO] [1792906069.553489436] [oximeter_node]: ++Transfer++
+ Value: 75.71969031220488, Risk: 7.75%, Level: low, Battery: 67.9%
+[INFO] [1792906070.538324797] [oximeter_node]: ++Transfer++
+ Value: 67.04573747853127, Risk: 17.66%, Level: low, Battery: 67.8%
+[INFO] [1792906071.565614962] [oximeter_node]: ++Transfer++
+ Value: 63.538966613734075, Risk: 58.57%, Level: moderate, Battery: 67.7%
+[INFO] [1792906072.528849744] [oximeter_node]: ++Transfer++
+ Value: 60.68196793328913, Risk: 46.00%, Level: moderate, Battery: 67.6%
+[INFO] [1792906073.536439758] [oximeter_node]: ++Transfer++
+ Value: 66.987498358871, Risk: 17.73%, Level: low, Battery: 67.4%
+[INFO] [1792906074.515577282] [oximeter_node]: ++Transfer++
+ Value: 67.85219021492517, Risk: 16.74%, Level: low, Battery: 67.3%
+[INFO] [1792906075.556297341] [oximeter_node]: ++Transfer++
+ Value: 70.79321498097923, Risk: 13.38%, Level: low, Battery: 67.2%
+[INFO] [1792906076.518258351] [oximeter_node]: ++Transfer++
+ Value: 76.13281448129142, Risk: 7.28%, Level: low, Battery: 67.1%
+[INFO] [1792906077.514703535] [oximeter_node]: ++Transfer++
+ Value: 78.84783503726095, Risk: 4.17%, Level: low, Battery: 66.9%
+[INFO] [1792906078.525682812] [oximeter_node]: ++Transfer++
+ Value: 74.42768231671683, Risk: 9.23%, Level: low, Battery: 66.8%
+[INFO] [1792906079.522798154] [oximeter_node]: ++Transfer++
+ Value: 76.48066133517611, Risk: 6.88%, Level: low, Battery: 66.7%
+[INFO] [1792906080.511890007] [oximeter_node]: ++Transfer++
+ Value: 77.53171378416539, Risk: 5.68%, Level: low, Battery: 66.6%
+[INFO] [1792906081.532755328] [oximeter_node]: ++Transfer++
+ Value: 73.77780893108248, Risk: 9.97%, Level: low, Battery: 66.4%
+[INFO] [1792906082.536966268] [oximeter_node]: ++Transfer++
+ Value: 77.82296601257829, Risk: 5.35%, Level: low, Battery: 66.3%
+[INFO] [1792906083.531516382] [oximeter_node]: ++Transfer++
+ Value: 78.75814574828829, Risk: 4.28%, Level: low, Battery: 66.2%
+[INFO] [1792906084.541118698] [oximeter_node]: ++Transfer++
+ Value: 76.6692285632968, Risk: 6.66%, Level: low, Battery: 66.1%
+[INFO] [1792906085.519552178] [oximeter_node]: ++Transfer++
+ Value: 74.82145634483224, Risk: 8.78%, Level: low, Battery: 65.9%
+[INFO] [1792906086.521675361] [oximeter_node]: ++Transfer++
+ Value: 77.43896146934233, Risk: 5.78%, Level: low, Battery: 65.8%
+[INFO] [1792906087.529106627] [oximeter_node]: ++Transfer++
+ Value: 72.99434059700604, Risk: 10.86%, Level: low, Battery: 65.7%
+[INFO] [1792906088.522985052] [oximeter_node]: ++Transfer++
+ Value: 72.19915069076039, Risk: 11.77%, Level: low, Battery: 65.6%
+[INFO] [1792906089.543902475] [oximeter_node]: ++Transfer++
+ Value: 77.62968548018367, Risk: 5.57%, Level: low, Battery: 65.4%
+[INFO] [1792906090.520366574] [oximeter_node]: ++Transfer++
+ Value: 81.27970549834487, Risk: 1.39%, Level: low, Battery: 65.3%
+[INFO] [1792906091.574710997] [oximeter_node]: ++Transfer++
+ Value: 77.62873071521355, Risk: 5.57%, Level: low, Battery: 65.2%
+[INFO] [1792906092.529381080] [oximeter_node]: ++Transfer++
+ Value: 79.54478460592473, Risk: 3.38%, Level: low, Battery: 65.1%
+[INFO] [1792906093.537429475] [oximeter_node]: ++Transfer++
+ Value: 79.60138737358679, Risk: 3.31%, Level: low, Battery: 64.9%
+[INFO] [1792906094.521935250] [oximeter_node]: ++Transfer++
+ Value: 76.22389151777443, Risk: 7.17%, Level: low, Battery: 64.8%
+[INFO] [1792906095.520734878] [oximeter_node]: ++Transfer++
+ Value: 75.38700641119794, Risk: 8.13%, Level: low, Battery: 64.7%
+[INFO] [1792906096.534471040] [oximeter_node]: ++Transfer++
+ Value: 75.72556167486482, Risk: 7.74%, Level: low, Battery: 64.6%
+[INFO] [1792906097.558833531] [oximeter_node]: ++Transfer++
+ Value: 74.30618086381347, Risk: 9.36%, Level: low, Battery: 64.4%
+[INFO] [1792906098.545561290] [oximeter_node]: ++Transfer++
+ Value: 78.62512496722655, Risk: 4.43%, Level: low, Battery: 64.3%
+[INFO] [1792906099.527770672] [oximeter_node]: ++Transfer++
+ Value: 82.29219771805519, Risk: 0.24%, Level: low, Battery: 64.2%
+[INFO] [1792906100.513030390] [oximeter_node]: ++Transfer++
+ Value: 85.51145176599597, Risk: 3.44%, Level: low, Battery: 64.1%
+[INFO] [1792906101.523068503] [oximeter_node]: ++Transfer++
+ Value: 89.47200987060529, Risk: 7.97%, Level: low, Battery: 63.9%
+[INFO] [1792906102.526298565] [oximeter_node]: ++Transfer++
+ Value: 88.88106580569736, Risk: 7.29%, Level: low, Battery: 63.8%
+[INFO] [1792906103.519820083] [oximeter_node]: ++Transfer++
+ Value: 88.65895282202078, Risk: 7.04%, Level: low, Battery: 63.7%
+[INFO] [1792906104.514677691] [oximeter_node]: ++Transfer++
+ Value: 83.33543830639368, Risk: 0.95%, Level: low, Battery: 63.6%
+[INFO] [1792906105.527312173] [oximeter_node]: ++Transfer++
+ Value: 80.84300732916878, Risk: 1.89%, Level: low, Battery: 63.5%
+[INFO] [1792906106.530033074] [oximeter_node]: ++Transfer++
+ Value: 82.4650506373193, Risk: 0.04%, Level: low, Battery: 63.3%
+[INFO] [1792906107.534265124] [oximeter_node]: ++Transfer++
+ Value: 85.22420095411121, Risk: 3.11%, Level: low, Battery: 63.2%
+[INFO] [1792906108.518521155] [oximeter_node]: ++Transfer++
+ Value: 79.95596780201154, Risk: 2.91%, Level: low, Battery: 63.1%
+[INFO] [1792906109.531054782] [oximeter_node]: ++Transfer++
+ Value: 82.56208071741372, Risk: 0.07%, Level: low, Battery: 63.0%
+[INFO] [1792906110.538006998] [oximeter_node]: ++Transfer++
+ Value: 80.55430409429778, Risk: 2.22%, Level: low, Battery: 62.8%
+[INFO] [1792906111.538964964] [oximeter_node]: ++Transfer++
+ Value: 74.55563042087462, Risk: 9.08%, Level: low, Battery: 62.7%
+[INFO] [1792906112.518364745] [oximeter_node]: ++Transfer++
+ Value: 74.27239698276601, Risk: 9.40%, Level: low, Battery: 62.6%
+[INFO] [1792906113.518790797] [oximeter_node]: ++Transfer++
+ Value: 78.76907574326181, Risk: 4.26%, Level: low, Battery: 62.5%
+[INFO] [1792906114.522385744] [oximeter_node]: ++Transfer++
+ Value: 80.17400603940716, Risk: 2.66%, Level: low, Battery: 62.3%
+[INFO] [1792906115.530291173] [oximeter_node]: ++Transfer++
+ Value: 84.15921689725465, Risk: 1.90%, Level: low, Battery: 62.2%
+[INFO] [1792906116.520709387] [oximeter_node]: ++Transfer++
+ Value: 83.88565089969119, Risk: 1.58%, Level: low, Battery: 62.1%
+[INFO] [1792906117.528932867] [oximeter_node]: ++Transfer++
+ Value: 81.73262895341136, Risk: 0.88%, Level: low, Battery: 62.0%
+[INFO] [1792906118.517618689] [oximeter_node]: ++Transfer++
+ Value: 83.63725884560327, Risk: 1.30%, Level: low, Battery: 61.8%
+[INFO] [1792906119.515351495] [oximeter_node]: ++Transfer++
+ Value: 83.7188546578529, Risk: 1.39%, Level: low, Battery: 61.7%
+[INFO] [1792906120.515031596] [oximeter_node]: ++Transfer++
+ Value: 76.268394024231, Risk: 7.12%, Level: low, Battery: 61.6%
+[INFO] [1792906121.524626735] [oximeter_node]: ++Transfer++
+ Value: 75.4420119266811, Risk: 8.07%, Level: low, Battery: 61.5%
+[INFO] [1792906122.516632358] [oximeter_node]: ++Transfer++
+ Value: 73.27278404054539, Risk: 10.55%, Level: low, Battery: 61.3%
+[INFO] [1792906123.526427055] [oximeter_node]: ++Transfer++
+ Value: 65.19275720678931, Risk: 19.78%, Level: low, Battery: 61.2%
+[INFO] [1792906124.513555517] [oximeter_node]: ++Transfer++
+ Value: 59.83455840611042, Risk: 42.27%, Level: moderate, Battery: 61.1%
+[INFO] [1792906125.530989560] [oximeter_node]: ++Transfer++
+ Value: 59.37568736015642, Risk: 40.25%, Level: moderate, Battery: 61.0%
+[INFO] [1792906126.524921737] [oximeter_node]: ++Transfer++
+ Value: 59.40204014233261, Risk: 40.37%, Level: moderate, Battery: 60.8%
+[INFO] [1792906127.512165328] [oximeter_node]: ++Transfer++
+ Value: 59.64855165918273, Risk: 41.45%, Level: moderate, Battery: 60.7%
+[INFO] [1792906128.518637648] [oximeter_node]: ++Transfer++
+ Value: 60.99594140313421, Risk: 47.38%, Level: moderate, Battery: 60.6%
+[INFO] [1792906129.545028635] [oximeter_node]: ++Transfer++
+ Value: 61.02719490222945, Risk: 47.52%, Level: moderate, Battery: 60.5%
+[INFO] [1792906130.535921869] [oximeter_node]: ++Transfer++
+ Value: 61.041258075542984, Risk: 47.58%, Level: moderate, Battery: 60.3%
+[INFO] [1792906131.518658600] [oximeter_node]: ++Transfer++
+ Value: 60.70425024708702, Risk: 46.10%, Level: moderate, Battery: 60.2%
+[INFO] [1792906132.520915370] [oximeter_node]: ++Transfer++
+ Value: 61.28466728774511, Risk: 48.65%, Level: moderate, Battery: 60.1%
+[INFO] [1792906133.519982683] [oximeter_node]: ++Transfer++
+ Value: 59.41487558168012, Risk: 40.43%, Level: moderate, Battery: 60.0%
+[INFO] [1792906134.522294157] [oximeter_node]: ++Transfer++
+ Value: 59.071431519556505, Risk: 38.91%, Level: moderate, Battery: 59.8%
+[INFO] [1792906135.528692967] [oximeter_node]: ++Transfer++
+ Value: 59.04894972994721, Risk: 38.82%, Level: moderate, Battery: 59.7%
+[INFO] [1792906136.525208406] [oximeter_node]: ++Transfer++
+ Value: 61.69182272596564, Risk: 50.44%, Level: moderate, Battery: 59.6%
+[INFO] [1792906137.516977303] [oximeter_node]: ++Transfer++
+ Value: 68.32883286308815, Risk: 16.20%, Level: low, Battery: 59.5%
+[INFO] [1792906138.529171132] [oximeter_node]: ++Transfer++
+ Value: 72.92866676150102, Risk: 10.94%, Level: low, Battery: 59.3%
+[INFO] [1792906139.546300092] [oximeter_node]: ++Transfer++
+ Value: 75.18410659085058, Risk: 8.36%, Level: low, Battery: 59.2%
+[INFO] [1792906140.515348908] [oximeter_node]: ++Transfer++
+ Value: 79.29910410513023, Risk: 3.66%, Level: low, Battery: 59.1%
+[INFO] [1792906141.519343989] [oximeter_node]: ++Transfer++
+ Value: 82.37463223085149, Risk: 0.14%, Level: low, Battery: 59.0%
+[INFO] [1792906142.525321827] [oximeter_node]: ++Transfer++
+ Value: 81.35464278657116, Risk: 1.31%, Level: low, Battery: 58.8%
+[INFO] [1792906143.706745331] [oximeter_node]: ++Transfer++
+ Value: 80.88593466469398, Risk: 1.84%, Level: low, Battery: 58.7%
+[INFO] [1792906144.513676308] [oximeter_node]: ++Transfer++
+ Value: 84.56849197940622, Risk: 2.36%, Level: low, Battery: 58.6%
+[INFO] [1792906145.508644759] [oximeter_node]: ++Transfer++
+ Value: 86.18085623393604, Risk: 4.21%, Level: low, Battery: 58.5%
+[INFO] [1792906146.522052580] [oximeter_node]: ++Transfer++
+ Value: 80.41071675403118, Risk: 2.39%, Level: low, Battery: 58.3%
+[INFO] [1792906147.520836729] [oximeter_node]: ++Transfer++
+ Value: 74.58001343110382, Risk: 9.05%, Level: low, Battery: 58.2%
+[INFO] [1792906148.523261177] [oximeter_node]: ++Transfer++
+ Value: 71.46896711216047, Risk: 12.61%, Level: low, Battery: 58.1%
+[INFO] [1792906149.533132945] [oximeter_node]: ++Transfer++
+ Value: 66.26874385767013, Risk: 18.55%, Level: low, Battery: 58.0%
+[INFO] [1792906150.523748537] [oximeter_node]: ++Transfer++
+ Value: 61.30400190810379, Risk: 48.74%, Level: moderate, Battery: 57.8%
+[INFO] [1792906151.543155323] [oximeter_node]: ++Transfer++
+ Value: 63.43053252496851, Risk: 58.09%, Level: moderate, Battery: 57.7%
+[INFO] [1792906152.700748848] [oximeter_node]: ++Transfer++
+ Value: 65.3314137068181, Risk: 19.62%, Level: low, Battery: 57.6%
+[INFO] [1792906153.518392892] [oximeter_node]: ++Transfer++
+ Value: 67.51991710177654, Risk: 17.12%, Level: low, Battery: 57.5%
+[INFO] [1792906154.532735318] [oximeter_node]: ++Transfer++
+ Value: 74.2864435564733, Risk: 9.39%, Level: low, Battery: 57.3%
+[INFO] [1792906155.511021529] [oximeter_node]: ++Transfer++
+ Value: 78.85934964880202, Risk: 4.16%, Level: low, Battery: 57.2%
+[INFO] [1792906156.512158164] [oximeter_node]: ++Transfer++
+ Value: 79.57283720164143, Risk: 3.35%, Level: low, Battery: 57.1%
+[INFO] [1792906157.533878686] [oximeter_node]: ++Transfer++
+ Value: 78.90783056646151, Risk: 4.11%, Level: low, Battery: 57.0%
+[INFO] [1792906158.534907698] [oximeter_node]: ++Transfer++
+ Value: 79.45713950649136, Risk: 3.48%, Level: low, Battery: 56.8%
+[INFO] [1792906159.534872215] [oximeter_node]: ++Transfer++
+ Value: 79.75679905740544, Risk: 3.14%, Level: low, Battery: 56.7%
+[INFO] [1792906160.519222762] [oximeter_node]: ++Transfer++
+ Value: 80.92860463453042, Risk: 1.80%, Level: low, Battery: 56.6%
+[INFO] [1792906161.522618009] [oximeter_node]: ++Transfer++
+ Value: 85.1037720847228, Risk: 2.98%, Level: low, Battery: 56.5%
+[INFO] [1792906162.542187553] [oximeter_node]: ++Transfer++
+ Value: 86.44253538686829, Risk: 4.51%, Level: low, Battery: 56.3%
+[INFO] [1792906163.518535362] [oximeter_node]: ++Transfer++
+ Value: 89.83260410216205, Risk: 8.38%, Level: low, Battery: 56.2%
+[INFO] [1792906164.538147820] [oximeter_node]: ++Transfer++
+ Value: 87.84214570558439, Risk: 6.11%, Level: low, Battery: 56.1%
+[INFO] [1792906165.515129766] [oximeter_node]: ++Transfer++
+ Value: 88.51714094865889, Risk: 6.88%, Level: low, Battery: 56.0%
+[INFO] [1792906166.513338424] [oximeter_node]: ++Transfer++
+ Value: 85.64252757876929, Risk: 3.59%, Level: low, Battery: 55.8%
+[INFO] [1792906167.525674553] [oximeter_node]: ++Transfer++
+ Value: 83.83412153857891, Risk: 1.52%, Level: low, Battery: 55.7%
+[INFO] [1792906168.509465071] [oximeter_node]: ++Transfer++
+ Value: 80.36436365341169, Risk: 2.44%, Level: low, Battery: 55.6%
+[INFO] [1792906169.518049518] [oximeter_node]: ++Transfer++
+ Value: 79.99806589277117, Risk: 2.86%, Level: low, Battery: 55.5%
+[INFO] [1792906170.517863338] [oximeter_node]: ++Transfer++
+ Value: 81.44179789293953, Risk: 1.21%, Level: low, Battery: 55.3%
+[INFO] [1792906171.520330325] [oximeter_node]: ++Transfer++
+ Value: 78.7895769795002, Risk: 4.24%, Level: low, Battery: 55.2%
+[INFO] [1792906172.528923405] [oximeter_node]: ++Transfer++
+ Value: 84.7802561550252, Risk: 2.61%, Level: low, Battery: 55.1%
+[INFO] [1792906173.527378709] [oximeter_node]: ++Transfer++
+ Value: 89.62458939123684, Risk: 8.14%, Level: low, Battery: 55.0%
+[INFO] [1792906174.511979998] [oximeter_node]: ++Transfer++
+ Value: 90.94576347236028, Risk: 9.65%, Level: low, Battery: 54.8%
+[INFO] [1792906175.514824500] [oximeter_node]: ++Transfer++
+ Value: 89.59867440881759, Risk: 8.11%, Level: low, Battery: 54.7%
+[INFO] [1792906176.528851063] [oximeter_node]: ++Transfer++
+ Value: 89.30503873518784, Risk: 7.78%, Level: low, Battery: 54.6%
+[INFO] [1792906177.921992459] [oximeter_node]: ++Transfer++
+ Value: 83.79141349120984, Risk: 1.48%, Level: low, Battery: 54.5%
+[INFO] [1792906178.532448053] [oximeter_node]: ++Transfer++
+ Value: 83.23990011840407, Risk: 0.85%, Level: low, Battery: 54.3%
+[INFO] [1792906179.697485568] [oximeter_node]: ++Transfer++
+ Value: 80.32180644282946, Risk: 2.49%, Level: low, Battery: 54.2%
+[INFO] [1792906180.517768293] [oximeter_node]: ++Transfer++
+ Value: 78.03708810168301, Risk: 5.10%, Level: low, Battery: 54.1%
+[INFO] [1792906181.515503808] [oximeter_node]: ++Transfer++
+ Value: 82.61435256383879, Risk: 0.13%, Level: low, Battery: 54.0%
+[INFO] [1792906182.538392605] [oximeter_node]: ++Transfer++
+ Value: 83.21072825250683, Risk: 0.81%, Level: low, Battery: 53.8%
+[INFO] [1792906183.530029095] [oximeter_node]: ++Transfer++
+ Value: 81.9661234107449, Risk: 0.61%, Level: low, Battery: 53.7%
+[INFO] [1792906184.525906601] [oximeter_node]: ++Transfer++
+ Value: 83.31691511767056, Risk: 0.93%, Level: low, Battery: 53.6%
+[INFO] [1792906185.519830624] [oximeter_node]: ++Transfer++
+ Value: 80.8858492690665, Risk: 1.84%, Level: low, Battery: 53.5%
+[INFO] [1792906186.531115568] [oximeter_node]: ++Transfer++
+ Value: 82.9933022644247, Risk: 0.56%, Level: low, Battery: 53.3%
+[INFO] [1792906187.525482062] [oximeter_node]: ++Transfer++
+ Value: 86.54493288938686, Risk: 4.62%, Level: low, Battery: 53.2%
+[INFO] [1792906188.527235466] [oximeter_node]: ++Transfer++
+ Value: 80.16675256759973, Risk: 2.67%, Level: low, Battery: 53.1%
+[INFO] [1792906189.521685394] [oximeter_node]: ++Transfer++
+ Value: 75.57650616770694, Risk: 7.91%, Level: low, Battery: 53.0%
+[INFO] [1792906190.528416372] [oximeter_node]: ++Transfer++
+ Value: 73.5303018058088, Risk: 10.25%, Level: low, Battery: 52.8%
+[INFO] [1792906191.515958684] [oximeter_node]: ++Transfer++
+ Value: 66.37054243129562, Risk: 18.43%, Level: low, Battery: 52.7%
+[INFO] [1792906192.548061571] [oximeter_node]: ++Transfer++
+ Value: 60.454646695729465, Risk: 45.00%, Level: moderate, Battery: 52.6%
+[INFO] [1792906193.511794453] [oximeter_node]: ++Transfer++
+ Value: 63.67325597388519, Risk: 59.16%, Level: moderate, Battery: 52.5%
+[INFO] [1792906194.533402280] [oximeter_node]: ++Transfer++
+ Value: 68.95950300534615, Risk: 15.47%, Level: low, Battery: 52.3%
+[INFO] [1792906195.523658162] [oximeter_node]: ++Transfer++
+ Value: 73.72227431885955, Risk: 10.03%, Level: low, Battery: 52.2%
+[INFO] [1792906196.518633697] [oximeter_node]: ++Transfer++
+ Value: 80.17243472611548, Risk: 2.66%, Level: low, Battery: 52.1%
+[INFO] [1792906197.510893500] [oximeter_node]: ++Transfer++
+ Value: 83.30126574524043, Risk: 0.92%, Level: low, Battery: 52.0%
+[INFO] [1792906198.521506060] [oximeter_node]: ++Transfer++
+ Value: 84.77685852694194, Risk: 2.60%, Level: low, Battery: 51.8%
+[INFO] [1792906199.532713902] [oximeter_node]: ++Transfer++
+ Value: 85.16033915398425, Risk: 3.04%, Level: low, Battery: 51.7%
+[INFO] [1792906200.516221949] [oximeter_node]: ++Transfer++
+ Value: 87.81859940094557, Risk: 6.08%, Level: low, Battery: 51.6%
+[INFO] [1792906201.530316857] [oximeter_node]: ++Transfer++
+ Value: 85.68599183816472, Risk: 3.64%, Level: low, Battery: 51.5%
+[INFO] [1792906202.508394058] [oximeter_node]: ++Transfer++
+ Value: 89.35793676828082, Risk: 7.84%, Level: low, Battery: 51.3%
+[INFO] [1792906203.521832895] [oximeter_node]: ++Transfer++
+ Value: 87.56480176169582, Risk: 5.79%, Level: low, Battery: 51.2%
+[INFO] [1792906204.523090023] [oximeter_node]: ++Transfer++
+ Value: 86.2898981811742, Risk: 4.33%, Level: low, Battery: 51.1%
+[INFO] [1792906205.520274867] [oximeter_node]: ++Transfer++
+ Value: 85.46667808227001, Risk: 3.39%, Level: low, Battery: 51.0%
+[INFO] [1792906206.536194902] [oximeter_node]: ++Transfer++
+ Value: 83.59683386729228, Risk: 1.25%, Level: low, Battery: 50.8%
+[INFO] [1792906207.519322749] [oximeter_node]: ++Transfer++
+ Value: 82.07273861650506, Risk: 0.49%, Level: low, Battery: 50.7%
+[INFO] [1792906208.509307237] [oximeter_node]: ++Transfer++
+ Value: 82.32358364400086, Risk: 0.20%, Level: low, Battery: 50.6%
+[INFO] [1792906209.513170201] [oximeter_node]: ++Transfer++
+ Value: 77.98786677397322, Risk: 5.16%, Level: low, Battery: 50.5%
+[INFO] [1792906210.510425939] [oximeter_node]: ++Transfer++
+ Value: 71.57134305782357, Risk: 12.49%, Level: low, Battery: 50.3%
+[INFO] [1792906211.530807176] [oximeter_node]: ++Transfer++
+ Value: 68.29159702893998, Risk: 16.24%, Level: low, Battery: 50.2%
+[INFO] [1792906212.528497453] [oximeter_node]: ++Transfer++
+ Value: 62.391330952485056, Risk: 53.52%, Level: moderate, Battery: 50.1%
+[INFO] [1792906213.531047442] [oximeter_node]: ++Transfer++
+ Value: 59.32841142917815, Risk: 40.05%, Level: moderate, Battery: 50.0%
+[INFO] [1792906214.521673325] [oximeter_node]: ++Transfer++
+ Value: 62.46638687563352, Risk: 53.85%, Level: moderate, Battery: 49.8%
+[INFO] [1792906215.513961668] [oximeter_node]: ++Transfer++
+ Value: 70.0459942909769, Risk: 14.23%, Level: low, Battery: 49.7%
+[INFO] [1792906216.526586490] [oximeter_node]: ++Transfer++
+ Value: 77.22270760723555, Risk: 6.03%, Level: low, Battery: 49.6%
+[INFO] [1792906217.515071011] [oximeter_node]: ++Transfer++
+ Value: 81.51326994439412, Risk: 1.13%, Level: low, Battery: 49.5%
+[INFO] [1792906218.521463604] [oximeter_node]: ++Transfer++
+ Value: 83.92390191478192, Risk: 1.63%, Level: low, Battery: 49.3%
+[INFO] [1792906219.520085521] [oximeter_node]: ++Transfer++
+ Value: 87.22246222401122, Risk: 5.40%, Level: low, Battery: 49.2%
+[INFO] [1792906220.522224086] [oximeter_node]: ++Transfer++
+ Value: 85.66793587956646, Risk: 3.62%, Level: low, Battery: 49.1%
+[INFO] [1792906221.512630395] [oximeter_node]: ++Transfer++
+ Value: 84.23951196093333, Risk: 1.99%, Level: low, Battery: 49.0%
+[INFO] [1792906222.521638487] [oximeter_node]: ++Transfer++
+ Value: 82.41461639632116, Risk: 0.10%, Level: low, Battery: 48.8%
+[INFO] [1792906223.515034137] [oximeter_node]: ++Transfer++
+ Value: 84.3686902917145, Risk: 2.14%, Level: low, Battery: 48.7%
+[INFO] [1792906224.509203239] [oximeter_node]: ++Transfer++
+ Value: 78.54363524645859, Risk: 4.52%, Level: low, Battery: 48.6%
+[INFO] [1792906225.513009618] [oximeter_node]: ++Transfer++
+ Value: 74.78236144524587, Risk: 8.82%, Level: low, Battery: 48.5%
+[INFO] [1792906226.525396000] [oximeter_node]: ++Transfer++
+ Value: 72.79280528067075, Risk: 11.09%, Level: low, Battery: 48.3%
+[INFO] [1792906227.520483293] [oximeter_node]: ++Transfer++
+ Value: 78.4827960771993, Risk: 4.59%, Level: low, Battery: 48.2%
+[INFO] [1792906228.509498197] [oximeter_node]: ++Transfer++
+ Value: 82.36361119403728, Risk: 0.16%, Level: low, Battery: 48.1%
+[INFO] [1792906229.517440819] [oximeter_node]: ++Transfer++
+ Value: 83.8026649744402, Risk: 1.49%, Level: low, Battery: 48.0%
+[INFO] [1792906230.520702622] [oximeter_node]: ++Transfer++
+ Value: 86.15094373653703, Risk: 4.17%, Level: low, Battery: 47.8%
+[INFO] [1792906231.516541409] [oximeter_node]: ++Transfer++
+ Value: 89.49713084147768, Risk: 8.00%, Level: low, Battery: 47.7%
+[INFO] [1792906232.513513036] [oximeter_node]: ++Transfer++
+ Value: 85.29535766069748, Risk: 3.19%, Level: low, Battery: 47.6%
+[INFO] [1792906233.513842470] [oximeter_node]: ++Transfer++
+ Value: 81.19282674374134, Risk: 1.49%, Level: low, Battery: 47.5%
+[INFO] [1792906234.527639993] [oximeter_node]: ++Transfer++
+ Value: 84.93350933802228, Risk: 2.78%, Level: low, Battery: 47.3%
+[INFO] [1792906235.515684560] [oximeter_node]: ++Transfer++
+ Value: 84.86790051479707, Risk: 2.71%, Level: low, Battery: 47.2%
+[INFO] [1792906236.856853245] [oximeter_node]: ++Transfer++
+ Value: 83.01441500005191, Risk: 0.59%, Level: low, Battery: 47.1%
+[INFO] [1792906237.522058541] [oximeter_node]: ++Transfer++
+ Value: 86.52192484269236, Risk: 4.60%, Level: low, Battery: 47.0%
+[INFO] [1792906238.518344169] [oximeter_node]: ++Transfer++
+ Value: 84.57745204100073, Risk: 2.37%, Level: low, Battery: 46.8%
+[INFO] [1792906239.517414323] [oximeter_node]: ++Transfer++
+ Value: 83.07841823973743, Risk: 0.66%, Level: low, Battery: 46.7%
+[INFO] [1792906240.517270925] [oximeter_node]: ++Transfer++
+ Value: 82.58214292325886, Risk: 0.09%, Level: low, Battery: 46.6%
+[INFO] [1792906241.510218449] [oximeter_node]: ++Transfer++
+ Value: 83.62745672815981, Risk: 1.29%, Level: low, Battery: 46.5%
+[INFO] [1792906242.525764598] [oximeter_node]: ++Transfer++
+ Value: 78.48993414036838, Risk: 4.58%, Level: low, Battery: 46.3%
+[INFO] [1792906243.513094399] [oximeter_node]: ++Transfer++
+ Value: 82.59701626422228, Risk: 0.11%, Level: low, Battery: 46.2%
+[INFO] [1792906244.519211871] [oximeter_node]: ++Transfer++
+ Value: 84.70629314796939, Risk: 2.52%, Level: low, Battery: 46.1%
+[INFO] [1792906245.525254600] [oximeter_node]: ++Transfer++
+ Value: 84.37643430760576, Risk: 2.14%, Level: low, Battery: 46.0%
+[INFO] [1792906246.517425786] [oximeter_node]: ++Transfer++
+ Value: 80.95978648328564, Risk: 1.76%, Level: low, Battery: 45.8%
+[INFO] [1792906247.518378597] [oximeter_node]: ++Transfer++
+ Value: 85.62465973141975, Risk: 3.57%, Level: low, Battery: 45.7%
+[INFO] [1792906248.514308663] [oximeter_node]: ++Transfer++
+ Value: 86.0463959470667, Risk: 4.05%, Level: low, Battery: 45.6%

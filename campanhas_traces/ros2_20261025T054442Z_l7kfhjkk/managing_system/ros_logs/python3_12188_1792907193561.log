@@ -1,0 +1,368 @@
+[INFO] [1792907194.365025293] [abps_node]: Initialized sensor: abps, vital sign: abps, frequency: 1.0Hz
+[INFO] [1792907194.395948268] [abps_node]: Lifecycle Manager initialized
+[INFO] [1792907194.418869662] [abps_node]: PublisherManagerBase initialized successfully
+[INFO] [1792907194.684956896] [abps_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=True
+[INFO] [1792907194.685447924] [abps_node]: Battery thresholds updated: low=5.0%, recovery=15.0%
+[INFO] [1792907194.693962011] [abps_node]: Starting individual lifecycle management...
+[INFO] [1792907194.694699104] [abps_node]: Lifecycle auto-management started
+[INFO] [1792907194.782894377] [abps_node]: Successfully registered with ParamAdapter
+[INFO] [1792907196.695293269] [abps_node]: Auto-configuring node...
+[INFO] [1792907196.695850063] [abps_node]: Triggering node configuration...
+[INFO] [1792907196.697076938] [abps_node]: Configuring abps sensor...
+[INFO] [1792907196.709907124] [abps_node]: Risk ranges configured for abps: HR0=(-1.0, -1.0), MR0=(-1.0, -1.0), LR=(0.0, 120.0), MR1=(120.0, 140.0), HR1=(140.0, 300.0)
+[INFO] [1792907196.712048942] [abps_node]: Node configuration successful
+[INFO] [1792907197.713462415] [abps_node]: Triggering node activation...
+[INFO] [1792907197.714075549] [abps_node]: Activating abps sensor...
+[INFO] [1792907197.715053933] [abps_node]: Node activation successful
+[INFO] [1792907198.700535224] [abps_node]: Insufficient data for moving average. Current window size: 1
+[INFO] [1792907199.700639431] [abps_node]: Insufficient data for moving average. Current window size: 2
+[INFO] [1792907200.700550207] [abps_node]: Insufficient data for moving average. Current window size: 3
+[INFO] [1792907201.705893032] [abps_node]: Insufficient data for moving average. Current window size: 4
+[INFO] [1792907202.717671261] [abps_node]: ++Transfer++
+ Value: 50.44812295819523, Risk: 3.18%, Level: low, Battery: 99.6%
+[INFO] [1792907203.710429874] [abps_node]: ++Transfer++
+ Value: 53.12980892619372, Risk: 2.29%, Level: low, Battery: 99.4%
+[INFO] [1792907204.721743113] [abps_node]: ++Transfer++
+ Value: 64.44167819557485, Risk: 1.48%, Level: low, Battery: 99.3%
+[INFO] [1792907205.704275019] [abps_node]: ++Transfer++
+ Value: 62.9504107318804, Risk: 0.98%, Level: low, Battery: 99.2%
+[INFO] [1792907206.704828024] [abps_node]: ++Transfer++
+ Value: 45.07213326574421, Risk: 4.98%, Level: low, Battery: 99.1%
+[INFO] [1792907207.706409268] [abps_node]: ++Transfer++
+ Value: 48.29465585911944, Risk: 3.90%, Level: low, Battery: 98.9%
+[INFO] [1792907208.715842312] [abps_node]: ++Transfer++
+ Value: 57.944710974592326, Risk: 0.69%, Level: low, Battery: 98.8%
+[INFO] [1792907209.703079970] [abps_node]: ++Transfer++
+ Value: 61.28729446351183, Risk: 0.43%, Level: low, Battery: 98.7%
+[INFO] [1792907210.712739126] [abps_node]: ++Transfer++
+ Value: 68.73027220576819, Risk: 2.91%, Level: low, Battery: 98.6%
+[INFO] [1792907211.699589118] [abps_node]: ++Transfer++
+ Value: 74.59325178135504, Risk: 4.86%, Level: low, Battery: 98.4%
+[INFO] [1792907212.710633071] [abps_node]: ++Transfer++
+ Value: 63.723593077386475, Risk: 1.24%, Level: low, Battery: 98.3%
+[INFO] [1792907213.704684626] [abps_node]: ++Transfer++
+ Value: 54.74877477585591, Risk: 1.75%, Level: low, Battery: 98.2%
+[INFO] [1792907214.705473197] [abps_node]: ++Transfer++
+ Value: 65.30981094489971, Risk: 1.77%, Level: low, Battery: 98.1%
+[INFO] [1792907215.706876999] [abps_node]: ++Transfer++
+ Value: 69.13144425848341, Risk: 3.04%, Level: low, Battery: 97.9%
+[INFO] [1792907216.701062875] [abps_node]: ++Transfer++
+ Value: 88.05702023835326, Risk: 9.35%, Level: low, Battery: 97.8%
+[INFO] [1792907217.699151559] [abps_node]: ++Transfer++
+ Value: 110.39928074801745, Risk: 16.80%, Level: low, Battery: 97.7%
+[INFO] [1792907218.702580873] [abps_node]: ++Transfer++
+ Value: 130.15455417370407, Risk: 43.34%, Level: moderate, Battery: 97.6%
+[INFO] [1792907219.702575727] [abps_node]: ++Transfer++
+ Value: 130.1853152679612, Risk: 43.41%, Level: moderate, Battery: 97.4%
+[INFO] [1792907220.699015331] [abps_node]: ++Transfer++
+ Value: 131.67536268105124, Risk: 46.69%, Level: moderate, Battery: 97.3%
+[INFO] [1792907221.705455862] [abps_node]: ++Transfer++
+ Value: 132.0730113132468, Risk: 47.56%, Level: moderate, Battery: 97.2%
+[INFO] [1792907222.702329993] [abps_node]: ++Transfer++
+ Value: 131.6571793024097, Risk: 46.65%, Level: moderate, Battery: 97.1%
+[INFO] [1792907223.702233909] [abps_node]: ++Transfer++
+ Value: 130.9440144062967, Risk: 45.08%, Level: moderate, Battery: 96.9%
+[INFO] [1792907224.704988817] [abps_node]: ++Transfer++
+ Value: 130.17159241312748, Risk: 43.38%, Level: moderate, Battery: 96.8%
+[INFO] [1792907225.704035677] [abps_node]: ++Transfer++
+ Value: 128.58999843397422, Risk: 39.90%, Level: moderate, Battery: 96.7%
+[INFO] [1792907226.701254054] [abps_node]: ++Transfer++
+ Value: 131.01270513314222, Risk: 45.23%, Level: moderate, Battery: 96.6%
+[INFO] [1792907227.700403285] [abps_node]: ++Transfer++
+ Value: 132.56236614413868, Risk: 48.64%, Level: moderate, Battery: 96.4%
+[INFO] [1792907228.706565401] [abps_node]: ++Transfer++
+ Value: 130.92181789561548, Risk: 45.03%, Level: moderate, Battery: 96.3%
+[INFO] [1792907229.716379038] [abps_node]: ++Transfer++
+ Value: 130.0205118052179, Risk: 43.05%, Level: moderate, Battery: 96.2%
+[INFO] [1792907230.699816518] [abps_node]: ++Transfer++
+ Value: 129.67886648083334, Risk: 42.29%, Level: moderate, Battery: 96.1%
+[INFO] [1792907231.700144582] [abps_node]: ++Transfer++
+ Value: 127.21784436782718, Risk: 36.88%, Level: moderate, Battery: 95.9%
+[INFO] [1792907232.704802969] [abps_node]: ++Transfer++
+ Value: 125.16686956234007, Risk: 32.37%, Level: moderate, Battery: 95.8%
+[INFO] [1792907233.697998198] [abps_node]: ++Transfer++
+ Value: 125.3374601319885, Risk: 32.74%, Level: moderate, Battery: 95.7%
+[INFO] [1792907234.702881149] [abps_node]: ++Transfer++
+ Value: 103.98699801577018, Risk: 14.66%, Level: low, Battery: 95.6%
+[INFO] [1792907235.700628292] [abps_node]: ++Transfer++
+ Value: 102.35342748153315, Risk: 14.12%, Level: low, Battery: 95.4%
+[INFO] [1792907236.701078761] [abps_node]: ++Transfer++
+ Value: 77.9100529672091, Risk: 5.97%, Level: low, Battery: 95.3%
+[INFO] [1792907237.701464181] [abps_node]: ++Transfer++
+ Value: 66.43632312784828, Risk: 2.15%, Level: low, Battery: 95.2%
+[INFO] [1792907238.706831555] [abps_node]: ++Transfer++
+ Value: 59.885033142910835, Risk: 0.04%, Level: low, Battery: 95.1%
+[INFO] [1792907239.698569467] [abps_node]: ++Transfer++
+ Value: 67.79027163673928, Risk: 2.60%, Level: low, Battery: 94.9%
+[INFO] [1792907240.700420932] [abps_node]: ++Transfer++
+ Value: 52.94993505123176, Risk: 2.35%, Level: low, Battery: 94.8%
+[INFO] [1792907241.698269419] [abps_node]: ++Transfer++
+ Value: 62.00627732811728, Risk: 0.67%, Level: low, Battery: 94.7%
+[INFO] [1792907242.700855740] [abps_node]: ++Transfer++
+ Value: 56.1728803214326, Risk: 1.28%, Level: low, Battery: 94.6%
+[INFO] [1792907243.702091818] [abps_node]: ++Transfer++
+ Value: 51.068937836921314, Risk: 2.98%, Level: low, Battery: 94.4%
+[INFO] [1792907244.703644296] [abps_node]: ++Transfer++
+ Value: 51.887506503625026, Risk: 2.70%, Level: low, Battery: 94.3%
+[INFO] [1792907245.714349601] [abps_node]: ++Transfer++
+ Value: 61.86748372336467, Risk: 0.62%, Level: low, Battery: 94.2%
+[INFO] [1792907246.704308956] [abps_node]: ++Transfer++
+ Value: 70.82137296131394, Risk: 3.61%, Level: low, Battery: 94.1%
+[INFO] [1792907247.704253194] [abps_node]: ++Transfer++
+ Value: 84.38975486127973, Risk: 8.13%, Level: low, Battery: 93.9%
+[INFO] [1792907248.705528019] [abps_node]: ++Transfer++
+ Value: 79.44595900732828, Risk: 6.48%, Level: low, Battery: 93.8%
+[INFO] [1792907249.701857440] [abps_node]: ++Transfer++
+ Value: 83.70645445519735, Risk: 7.90%, Level: low, Battery: 93.7%
+[INFO] [1792907250.707152094] [abps_node]: ++Transfer++
+ Value: 76.19080899410935, Risk: 5.40%, Level: low, Battery: 93.6%
+[INFO] [1792907251.707126335] [abps_node]: ++Transfer++
+ Value: 66.94599238150042, Risk: 2.32%, Level: low, Battery: 93.4%
+[INFO] [1792907252.711712654] [abps_node]: ++Transfer++
+ Value: 68.88913308161791, Risk: 2.96%, Level: low, Battery: 93.3%
+[INFO] [1792907253.703809757] [abps_node]: ++Transfer++
+ Value: 77.25481535765701, Risk: 5.75%, Level: low, Battery: 93.2%
+[INFO] [1792907254.710313055] [abps_node]: ++Transfer++
+ Value: 73.83375275618192, Risk: 4.61%, Level: low, Battery: 93.1%
+[INFO] [1792907255.701588505] [abps_node]: ++Transfer++
+ Value: 112.51043029817417, Risk: 17.50%, Level: low, Battery: 92.9%
+[INFO] [1792907256.046622033] [abps_node]: Received adaptation command: freq=1.19
+[INFO] [1792907256.047268549] [abps_node]: Changing frequency to 1.19Hz
+[INFO] [1792907256.700604341] [abps_node]: ++Transfer++
+ Value: 140.59823332817155, Risk: 66.13%, Level: high, Battery: 92.8%
+[INFO] [1792907257.094690797] [abps_node]: Received adaptation command: freq=1.38
+[INFO] [1792907257.095190633] [abps_node]: Changing frequency to 1.38Hz
+[INFO] [1792907257.698288457] [abps_node]: ++Transfer++
+ Value: 148.48417396692489, Risk: 67.80%, Level: high, Battery: 92.7%
+[INFO] [1792907258.090007227] [abps_node]: Received adaptation command: freq=1.57
+[INFO] [1792907258.090564518] [abps_node]: Changing frequency to 1.57Hz
+[INFO] [1792907258.707113983] [abps_node]: ++Transfer++
+ Value: 189.61035747824832, Risk: 76.54%, Level: high, Battery: 92.6%
+[INFO] [1792907259.077399947] [abps_node]: Received adaptation command: freq=1.76
+[INFO] [1792907259.077947164] [abps_node]: Changing frequency to 1.76Hz
+[INFO] [1792907259.707017690] [abps_node]: ++Transfer++
+ Value: 220.7321837908874, Risk: 83.16%, Level: high, Battery: 92.4%
+[INFO] [1792907260.068494677] [abps_node]: Received adaptation command: freq=1.95
+[INFO] [1792907260.068906515] [abps_node]: Changing frequency to 1.95Hz
+[INFO] [1792907260.714329369] [abps_node]: ++Transfer++
+ Value: 203.22303091713724, Risk: 79.43%, Level: high, Battery: 92.3%
+[INFO] [1792907261.089030639] [abps_node]: Received adaptation command: freq=2.15
+[INFO] [1792907261.089523667] [abps_node]: Changing frequency to 2.15Hz
+[INFO] [1792907261.700423674] [abps_node]: ++Transfer++
+ Value: 218.12771398089154, Risk: 82.60%, Level: high, Battery: 92.2%
+[INFO] [1792907262.060387680] [abps_node]: Received adaptation command: freq=2.35
+[INFO] [1792907262.060911638] [abps_node]: Changing frequency to 2.35Hz
+[INFO] [1792907262.704815500] [abps_node]: ++Transfer++
+ Value: 219.48121312894733, Risk: 82.89%, Level: high, Battery: 92.1%
+[INFO] [1792907263.110086400] [abps_node]: Received adaptation command: freq=2.54
+[INFO] [1792907263.110626731] [abps_node]: Changing frequency to 2.54Hz
+[INFO] [1792907263.702811634] [abps_node]: ++Transfer++
+ Value: 206.6164042594681, Risk: 80.16%, Level: high, Battery: 91.9%
+[INFO] [1792907264.069172931] [abps_node]: Received adaptation command: freq=2.74
+[INFO] [1792907264.069660807] [abps_node]: Changing frequency to 2.74Hz
+[INFO] [1792907264.716259227] [abps_node]: ++Transfer++
+ Value: 194.3459385154465, Risk: 77.55%, Level: high, Battery: 91.8%
+[INFO] [1792907265.087211935] [abps_node]: Received adaptation command: freq=2.94
+[INFO] [1792907265.090732889] [abps_node]: Changing frequency to 2.94Hz
+[INFO] [1792907265.709675201] [abps_node]: ++Transfer++
+ Value: 169.14766763317684, Risk: 72.19%, Level: high, Battery: 91.7%
+[INFO] [1792907266.060860716] [abps_node]: Received adaptation command: freq=3.14
+[INFO] [1792907266.061359546] [abps_node]: Changing frequency to 3.14Hz
+[INFO] [1792907266.708933358] [abps_node]: ++Transfer++
+ Value: 136.6309894139884, Risk: 57.59%, Level: moderate, Battery: 91.6%
+[INFO] [1792907267.077826448] [abps_node]: Received adaptation command: freq=3.33
+[INFO] [1792907267.078130078] [abps_node]: Changing frequency to 3.33Hz
+[INFO] [1792907267.726269768] [abps_node]: ++Transfer++
+ Value: 119.34493932985488, Risk: 19.78%, Level: low, Battery: 91.4%
+[INFO] [1792907268.062724526] [abps_node]: Received adaptation command: freq=3.53
+[INFO] [1792907268.063259653] [abps_node]: Changing frequency to 3.53Hz
+[INFO] [1792907268.699603731] [abps_node]: ++Transfer++
+ Value: 87.37615430415109, Risk: 9.13%, Level: low, Battery: 91.3%
+[INFO] [1792907269.059087060] [abps_node]: Received adaptation command: freq=3.72
+[INFO] [1792907269.059694863] [abps_node]: Changing frequency to 3.72Hz
+[INFO] [1792907269.706226424] [abps_node]: ++Transfer++
+ Value: 61.15028611886047, Risk: 0.38%, Level: low, Battery: 91.2%
+[INFO] [1792907270.069498861] [abps_node]: Received adaptation command: freq=3.91
+[INFO] [1792907270.070118131] [abps_node]: Changing frequency to 3.91Hz
+[INFO] [1792907270.701994016] [abps_node]: ++Transfer++
+ Value: 66.68653929739881, Risk: 2.23%, Level: low, Battery: 91.1%
+[INFO] [1792907271.048088519] [abps_node]: Received adaptation command: freq=4.09
+[INFO] [1792907271.048682455] [abps_node]: Changing frequency to 4.09Hz
+[INFO] [1792907271.704395002] [abps_node]: ++Transfer++
+ Value: 57.14332088841479, Risk: 0.95%, Level: low, Battery: 90.9%
+[INFO] [1792907272.052418357] [abps_node]: Received adaptation command: freq=4.28
+[INFO] [1792907272.052921785] [abps_node]: Changing frequency to 4.28Hz
+[INFO] [1792907272.714014854] [abps_node]: ++Transfer++
+ Value: 49.28403983183186, Risk: 3.57%, Level: low, Battery: 90.8%
+[INFO] [1792907273.062409875] [abps_node]: Received adaptation command: freq=4.47
+[INFO] [1792907273.062941823] [abps_node]: Changing frequency to 4.47Hz
+[INFO] [1792907273.703268187] [abps_node]: ++Transfer++
+ Value: 58.449275199200564, Risk: 0.52%, Level: low, Battery: 90.7%
+[INFO] [1792907274.064499214] [abps_node]: Received adaptation command: freq=4.66
+[INFO] [1792907274.064998338] [abps_node]: Changing frequency to 4.66Hz
+[INFO] [1792907274.701507269] [abps_node]: ++Transfer++
+ Value: 61.50730387516736, Risk: 0.50%, Level: low, Battery: 90.6%
+[INFO] [1792907275.068063051] [abps_node]: Received adaptation command: freq=4.85
+[INFO] [1792907275.068564761] [abps_node]: Changing frequency to 4.85Hz
+[INFO] [1792907275.699881264] [abps_node]: ++Transfer++
+ Value: 68.58194978513959, Risk: 2.86%, Level: low, Battery: 90.4%
+[INFO] [1792907276.076183026] [abps_node]: Received adaptation command: freq=5.05
+[INFO] [1792907276.076706006] [abps_node]: Changing frequency to 5.05Hz
+[INFO] [1792907276.712994041] [abps_node]: ++Transfer++
+ Value: 71.0139107923588, Risk: 3.67%, Level: low, Battery: 90.3%
+[INFO] [1792907277.059919920] [abps_node]: Received adaptation command: freq=5.24
+[INFO] [1792907277.060481007] [abps_node]: Changing frequency to 5.24Hz
+[INFO] [1792907277.710633025] [abps_node]: ++Transfer++
+ Value: 80.45810756929254, Risk: 6.82%, Level: low, Battery: 90.2%
+[INFO] [1792907278.048888715] [abps_node]: Received adaptation command: freq=5.43
+[INFO] [1792907278.049397065] [abps_node]: Changing frequency to 5.43Hz
+[INFO] [1792907278.700457901] [abps_node]: ++Transfer++
+ Value: 63.34841494153473, Risk: 1.12%, Level: low, Battery: 90.1%
+[INFO] [1792907279.054799784] [abps_node]: Received adaptation command: freq=5.62
+[INFO] [1792907279.055362655] [abps_node]: Changing frequency to 5.62Hz
+[INFO] [1792907279.719722066] [abps_node]: ++Transfer++
+ Value: 63.127815023993904, Risk: 1.04%, Level: low, Battery: 89.9%
+[INFO] [1792907280.069630308] [abps_node]: Received adaptation command: freq=5.81
+[INFO] [1792907280.070156497] [abps_node]: Changing frequency to 5.81Hz
+[INFO] [1792907280.707413575] [abps_node]: ++Transfer++
+ Value: 61.97605770373286, Risk: 0.66%, Level: low, Battery: 89.8%
+[INFO] [1792907281.059760295] [abps_node]: Received adaptation command: freq=6.01
+[INFO] [1792907281.060319533] [abps_node]: Changing frequency to 6.01Hz
+[INFO] [1792907281.701823252] [abps_node]: ++Transfer++
+ Value: 64.51906979171059, Risk: 1.51%, Level: low, Battery: 89.7%
+[INFO] [1792907282.085269159] [abps_node]: Received adaptation command: freq=6.20
+[INFO] [1792907282.085908504] [abps_node]: Changing frequency to 6.2Hz
+[INFO] [1792907282.700641582] [abps_node]: ++Transfer++
+ Value: 48.80209923352786, Risk: 3.73%, Level: low, Battery: 89.6%
+[INFO] [1792907283.083725292] [abps_node]: Received adaptation command: freq=6.39
+[INFO] [1792907283.084202581] [abps_node]: Changing frequency to 6.39Hz
+[INFO] [1792907283.702911440] [abps_node]: ++Transfer++
+ Value: 50.77449268610728, Risk: 3.08%, Level: low, Battery: 89.4%
+[INFO] [1792907284.053778161] [abps_node]: Received adaptation command: freq=6.58
+[INFO] [1792907284.054312220] [abps_node]: Changing frequency to 6.58Hz
+[INFO] [1792907284.701974883] [abps_node]: ++Transfer++
+ Value: 58.742896950383354, Risk: 0.42%, Level: low, Battery: 89.3%
+[INFO] [1792907285.066355228] [abps_node]: Received adaptation command: freq=6.77
+[INFO] [1792907285.066884464] [abps_node]: Changing frequency to 6.77Hz
+[INFO] [1792907285.702717280] [abps_node]: ++Transfer++
+ Value: 67.17112985108969, Risk: 2.39%, Level: low, Battery: 89.2%
+[INFO] [1792907286.076288366] [abps_node]: Received adaptation command: freq=6.95
+[INFO] [1792907286.076834049] [abps_node]: Changing frequency to 6.95Hz
+[INFO] [1792907286.704238257] [abps_node]: ++Transfer++
+ Value: 79.09772950288873, Risk: 6.37%, Level: low, Battery: 89.1%
+[INFO] [1792907287.052476486] [abps_node]: Received adaptation command: freq=7.14
+[INFO] [1792907287.053185042] [abps_node]: Changing frequency to 7.14Hz
+[INFO] [1792907287.708279886] [abps_node]: ++Transfer++
+ Value: 105.31270399450315, Risk: 15.10%, Level: low, Battery: 88.9%
+[INFO] [1792907288.058500935] [abps_node]: Received adaptation command: freq=7.34
+[INFO] [1792907288.059030525] [abps_node]: Changing frequency to 7.34Hz
+[INFO] [1792907288.697961062] [abps_node]: ++Transfer++
+ Value: 121.68548005066688, Risk: 24.71%, Level: moderate, Battery: 88.8%
+[INFO] [1792907289.065522722] [abps_node]: Received adaptation command: freq=7.54
+[INFO] [1792907289.066030192] [abps_node]: Changing frequency to 7.54Hz
+[INFO] [1792907289.699654951] [abps_node]: ++Transfer++
+ Value: 131.4524893476948, Risk: 46.20%, Level: moderate, Battery: 88.7%
+[INFO] [1792907290.065753328] [abps_node]: Received adaptation command: freq=7.73
+[INFO] [1792907290.066318217] [abps_node]: Changing frequency to 7.73Hz
+[INFO] [1792907290.705014009] [abps_node]: ++Transfer++
+ Value: 129.00997208658072, Risk: 40.82%, Level: moderate, Battery: 88.6%
+[INFO] [1792907291.050414972] [abps_node]: Received adaptation command: freq=7.93
+[INFO] [1792907291.050899288] [abps_node]: Changing frequency to 7.93Hz
+[INFO] [1792907291.704145081] [abps_node]: ++Transfer++
+ Value: 127.9529220596556, Risk: 38.50%, Level: moderate, Battery: 88.4%
+[INFO] [1792907292.092344952] [abps_node]: Received adaptation command: freq=8.09
+[INFO] [1792907292.092953938] [abps_node]: Changing frequency to 8.09Hz
+[INFO] [1792907292.701711575] [abps_node]: ++Transfer++
+ Value: 124.7489590748975, Risk: 31.45%, Level: moderate, Battery: 88.3%
+[INFO] [1792907293.059693118] [abps_node]: Received adaptation command: freq=8.26
+[INFO] [1792907293.060428953] [abps_node]: Changing frequency to 8.26Hz
+[INFO] [1792907293.701196095] [abps_node]: ++Transfer++
+ Value: 127.22029066235959, Risk: 36.88%, Level: moderate, Battery: 88.2%
+[INFO] [1792907294.062159391] [abps_node]: Received adaptation command: freq=8.42
+[INFO] [1792907294.062649812] [abps_node]: Changing frequency to 8.42Hz
+[INFO] [1792907294.699337637] [abps_node]: ++Transfer++
+ Value: 127.19528707014729, Risk: 36.83%, Level: moderate, Battery: 88.1%
+[INFO] [1792907295.067886971] [abps_node]: Received adaptation command: freq=8.58
+[INFO] [1792907295.068416964] [abps_node]: Changing frequency to 8.58Hz
+[INFO] [1792907295.701479044] [abps_node]: ++Transfer++
+ Value: 148.85701463022806, Risk: 67.88%, Level: high, Battery: 87.9%
+[INFO] [1792907296.074689857] [abps_node]: Received adaptation command: freq=8.74
+[INFO] [1792907296.075188949] [abps_node]: Changing frequency to 8.74Hz
+[INFO] [1792907296.698897875] [abps_node]: ++Transfer++
+ Value: 181.30377176160295, Risk: 74.78%, Level: high, Battery: 87.8%
+[INFO] [1792907297.057878212] [abps_node]: Received adaptation command: freq=8.90
+[INFO] [1792907297.058405043] [abps_node]: Changing frequency to 8.9Hz
+[INFO] [1792907297.700785903] [abps_node]: ++Transfer++
+ Value: 213.5141226878177, Risk: 81.62%, Level: high, Battery: 87.7%
+[INFO] [1792907298.048398792] [abps_node]: Received adaptation command: freq=9.06
+[INFO] [1792907298.048864615] [abps_node]: Changing frequency to 9.06Hz
+[INFO] [1792907298.702258674] [abps_node]: ++Transfer++
+ Value: 233.15641150256678, Risk: 85.80%, Level: high, Battery: 87.6%
+[INFO] [1792907299.057795319] [abps_node]: Received adaptation command: freq=9.22
+[INFO] [1792907299.058483873] [abps_node]: Changing frequency to 9.22Hz
+[INFO] [1792907299.704751886] [abps_node]: ++Transfer++
+ Value: 256.19083679765833, Risk: 90.69%, Level: high, Battery: 87.4%
+[INFO] [1792907300.050747923] [abps_node]: Received adaptation command: freq=9.38
+[INFO] [1792907300.051243821] [abps_node]: Changing frequency to 9.38Hz
+[INFO] [1792907300.705096919] [abps_node]: ++Transfer++
+ Value: 267.21838931363976, Risk: 93.03%, Level: high, Battery: 87.3%
+[INFO] [1792907301.052657139] [abps_node]: Received adaptation command: freq=9.55
+[INFO] [1792907301.053158713] [abps_node]: Changing frequency to 9.55Hz
+[INFO] [1792907301.697192807] [abps_node]: ++Transfer++
+ Value: 251.80242479569634, Risk: 89.76%, Level: high, Battery: 87.2%
+[INFO] [1792907302.057432970] [abps_node]: Received adaptation command: freq=9.76
+[INFO] [1792907302.057918375] [abps_node]: Changing frequency to 9.76Hz
+[INFO] [1792907302.701817659] [abps_node]: ++Transfer++
+ Value: 255.50969548724146, Risk: 90.55%, Level: high, Battery: 87.1%
+[INFO] [1792907303.060570353] [abps_node]: Received adaptation command: freq=9.97
+[INFO] [1792907303.061216705] [abps_node]: Changing frequency to 9.97Hz
+[INFO] [1792907303.714713045] [abps_node]: ++Transfer++
+ Value: 262.34716730051355, Risk: 92.00%, Level: high, Battery: 86.9%
+[INFO] [1792907304.055065174] [abps_node]: Received adaptation command: freq=10.18
+[INFO] [1792907304.055607789] [abps_node]: Changing frequency to 10.18Hz
+[INFO] [1792907304.708333492] [abps_node]: ++Transfer++
+ Value: 270.48284141733154, Risk: 93.73%, Level: high, Battery: 86.8%
+[INFO] [1792907305.089049448] [abps_node]: Received adaptation command: freq=10.39
+[INFO] [1792907305.089564562] [abps_node]: Changing frequency to 10.39Hz
+[INFO] [1792907305.702557439] [abps_node]: ++Transfer++
+ Value: 242.79122563715546, Risk: 87.84%, Level: high, Battery: 86.7%
+[INFO] [1792907306.075772872] [abps_node]: Received adaptation command: freq=10.62
+[INFO] [1792907306.076256646] [abps_node]: Changing frequency to 10.62Hz
+[INFO] [1792907306.706560653] [abps_node]: ++Transfer++
+ Value: 226.51865560662927, Risk: 84.39%, Level: high, Battery: 86.6%
+[INFO] [1792907307.062564650] [abps_node]: Received adaptation command: freq=10.85
+[INFO] [1792907307.063144303] [abps_node]: Changing frequency to 10.85Hz
+[INFO] [1792907307.704575373] [abps_node]: ++Transfer++
+ Value: 192.5408404070785, Risk: 77.16%, Level: high, Battery: 86.4%
+[INFO] [1792907308.052998424] [abps_node]: Received adaptation command: freq=11.08
+[INFO] [1792907308.053576717] [abps_node]: Changing frequency to 11.08Hz
+[INFO] [1792907308.711355639] [abps_node]: ++Transfer++
+ Value: 165.8948213336387, Risk: 71.50%, Level: high, Battery: 86.3%
+[INFO] [1792907309.057357759] [abps_node]: Received adaptation command: freq=11.30
+[INFO] [1792907309.058053800] [abps_node]: Changing frequency to 11.3Hz
+[INFO] [1792907309.712662524] [abps_node]: ++Transfer++
+ Value: 136.93828065552898, Risk: 58.26%, Level: moderate, Battery: 86.2%
+[INFO] [1792907310.062980849] [abps_node]: Received adaptation command: freq=11.50
+[INFO] [1792907310.063525251] [abps_node]: Changing frequency to 11.5Hz
+[INFO] [1792907310.702374235] [abps_node]: ++Transfer++
+ Value: 132.05278227470072, Risk: 47.52%, Level: moderate, Battery: 86.1%
+[INFO] [1792907311.049622075] [abps_node]: Received adaptation command: freq=11.68
+[INFO] [1792907311.050134216] [abps_node]: Changing frequency to 11.68Hz
+[INFO] [1792907311.708300985] [abps_node]: ++Transfer++
+ Value: 130.79754402571604, Risk: 44.75%, Level: moderate, Battery: 85.9%
+[INFO] [1792907312.051570459] [abps_node]: Received adaptation command: freq=11.84
+[INFO] [1792907312.052082453] [abps_node]: Changing frequency to 11.84Hz
+[INFO] [1792907312.705711712] [abps_node]: ++Transfer++
+ Value: 131.05235113238422, Risk: 45.32%, Level: moderate, Battery: 85.8%
+[INFO] [1792907313.065297370] [abps_node]: Received adaptation command: freq=12.01
+[INFO] [1792907313.066401020] [abps_node]: Changing frequency to 12.01Hz
+[INFO] [1792907313.701065116] [abps_node]: ++Transfer++
+ Value: 130.8533682123209, Risk: 44.88%, Level: moderate, Battery: 85.7%
+[INFO] [1792907314.076358532] [abps_node]: Received adaptation command: freq=12.17
+[INFO] [1792907314.076997092] [abps_node]: Changing frequency to 12.17Hz
+[INFO] [1792907314.701739449] [abps_node]: ++Transfer++
+ Value: 129.70239780500802, Risk: 42.35%, Level: moderate, Battery: 85.6%
+[INFO] [1792907315.052775346] [abps_node]: Received adaptation command: freq=12.33
+[INFO] [1792907315.053299831] [abps_node]: Changing frequency to 12.33Hz
+[INFO] [1792907315.699337710] [abps_node]: ++Transfer++
+ Value: 130.1913962194739, Risk: 43.42%, Level: moderate, Battery: 85.4%
