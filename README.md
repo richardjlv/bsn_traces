@@ -2,6 +2,10 @@
 
 Este repositório preserva evidências de execução das features BDD da validação da migração ROS 1--ROS 2. Cada diretório em `campanhas_traces/` é imutável: contém o manifesto, hashes, fontes arquivadas, configuração, resultados JUnit, logs compactados e o trace de eventos dos cenários.
 
+## Índice consolidado
+
+O [índice por feature](INDICE_FEATURES.md) reúne oito campanhas ROS 2 com traces e cobertura, os resultados internos e os limites por propriedade. A seleção inicial de 25/10 contém 38 PASS, dez XFAIL e três FAIL; coleta concluída não significa aprovação funcional. As tentativas anteriores permanecem preservadas.
+
 ## Leitura de uma campanha
 
 Em `<campanha>/<feature>/`:

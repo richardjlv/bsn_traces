@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="22.714" timestamp="2026-10-25T13:38:58.160544" hostname="bsn-virtualbox"><testcase classname="test.test_data_persistance_bdd" name="test_data_persistance_bdd" time="22.613"><failure message="test_data_persistance_bdd.TestDataPersistance.test_bdd_scenarios failed">
+==============================================================================================================================================================================================================================================================================================================================
+FAIL: test_data_persistance_bdd.TestDataPersistance.test_bdd_scenarios
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/ros_ws/src/bsn_ros2/features/test/test_data_persistance_bdd.py", line 46, in test_bdd_scenarios
+    assert result.returncode == 0, (
+AssertionError: steps/test_data_persistance.py failed - see the pytest output above for which scenario and why
+assert 1 == 0
+ +  where 1 = CompletedProcess(args=['/usr/bin/python3', '-m', 'pytest', '-v', 'steps/test_data_persistance.py', '--junitxml=/ros_ws/src/campanhas_traces/ros2_20261025T133856Z_g2_t0zqp/data_persistance/internal_junit/test_data_persistance.xml', '-rA', '-p', 'no:pytest_cov', '-o', 'addopts='], returncode=1).returncode
+</failure></testcase></testsuite></testsuites>

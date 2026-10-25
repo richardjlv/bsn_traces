@@ -1,0 +1,545 @@
+[
+  {
+    "feature": "check_bsn",
+    "campaign": "ros2_20261025T133430Z_5iul_jhu",
+    "counts": {
+      "failure": 1,
+      "passed": 7
+    },
+    "cases": [
+      {
+        "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the oximeter]",
+        "status": "failure"
+      },
+      {
+        "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the ECG sensor]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the thermometer]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the SBP sensor]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the DBP sensor]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the glucometer]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_central_hub_classifies_a_vital_sign_reading_outside_the_normal_range_as_high_risk_bsnp08",
+        "status": "passed"
+      },
+      {
+        "name": "test_no_patient_risk_level_is_reported_while_the_central_hub_is_unavailable_bsnp08",
+        "status": "passed"
+      }
+    ],
+    "collector_complete": false,
+    "exit_code": 1,
+    "scenario_starts": 8,
+    "missing_case_traces": [],
+    "coverage": {
+      "covered_lines": 2064,
+      "num_statements": 3147,
+      "percent_covered": 62.00743494423792,
+      "percent_covered_display": "62",
+      "missing_lines": 1083,
+      "excluded_lines": 0,
+      "num_branches": 888,
+      "num_partial_branches": 186,
+      "covered_branches": 438,
+      "missing_branches": 450
+    },
+    "step_errors": [
+      {
+        "scenario": "The central hub receives the vital sign reading reported by a body sensor (BSN-P08)",
+        "keyword": "then",
+        "step": "the central hub should receive that reading with the value reported by the oximeter",
+        "exception_type": "KeyError",
+        "message": "'oxi_data'"
+      }
+    ],
+    "properties": "BSN-C01, BSN-P09 (recorte alto), BSN-C02",
+    "limitation": "Recepção e risco no recorte exercitado; não comprova todas as categorias ou preservação integral.",
+    "hashes_verified": 98,
+    "coverage_enabled": true
+  },
+  {
+    "feature": "knowledge_repo",
+    "campaign": "ros2_20261025T133738Z_lq2j_aml",
+    "counts": {
+      "failure": 1
+    },
+    "cases": [
+      {
+        "name": "test_knowledge_repository_wired",
+        "status": "failure"
+      }
+    ],
+    "collector_complete": false,
+    "exit_code": 1,
+    "scenario_starts": 1,
+    "missing_case_traces": [],
+    "coverage": {
+      "covered_lines": 2088,
+      "num_statements": 3147,
+      "percent_covered": 61.38785625774474,
+      "percent_covered_display": "61",
+      "missing_lines": 1059,
+      "excluded_lines": 0,
+      "num_branches": 888,
+      "num_partial_branches": 177,
+      "covered_branches": 389,
+      "missing_branches": 499
+    },
+    "step_errors": [
+      {
+        "scenario": "The knowledge repository is wired to the system log and to the central hub",
+        "keyword": "then",
+        "step": "the knowledge repository should subscribe to \"persistence\" published by the system log",
+        "exception_type": "AssertionError",
+        "message": "Failed to get info for /data_access: Unable to find node '/data_access'\n  \nassert 1 == 0\n +  where 1 = CompletedProcess(args=['ros2', 'node', 'info', '/data_access'], returncode=1, stdout=b'', stderr=b\"Unable to find node '/data_access'\\n\").returncode"
+      }
+    ],
+    "properties": "BSN-C06",
+    "limitation": "Conexões e canais anunciados; não comprova armazenamento durável.",
+    "hashes_verified": 61,
+    "coverage_enabled": true
+  },
+  {
+    "feature": "target_system",
+    "campaign": "ros2_20261025T133804Z_lza7ktd9",
+    "counts": {
+      "passed": 18
+    },
+    "cases": [
+      {
+        "name": "test_each_body_sensor_sends_its_readings_to_the_central_hub[the oximeter]",
+        "status": "passed"
+      },
+      {
+        "name": "test_each_body_sensor_sends_its_readings_to_the_central_hub[the ECG sensor]",
+        "status": "passed"
+      },
+      {
+        "name": "test_each_body_sensor_sends_its_readings_to_the_central_hub[the thermometer]",
+        "status": "passed"
+      },
+      {
+        "name": "test_each_body_sensor_sends_its_readings_to_the_central_hub[the SBP sensor]",
+        "status": "passed"
+      },
+      {
+        "name": "test_each_body_sensor_sends_its_readings_to_the_central_hub[the DBP sensor]",
+        "status": "passed"
+      },
+      {
+        "name": "test_each_body_sensor_sends_its_readings_to_the_central_hub[the glucometer]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the oximeter]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the ECG sensor]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the thermometer]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the SBP sensor]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the DBP sensor]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the glucometer]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the central hub]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[blood oxygenation]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[heart rate]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[systolic blood pressure]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[diastolic blood pressure]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[blood glucose]",
+        "status": "passed"
+      }
+    ],
+    "collector_complete": true,
+    "exit_code": 0,
+    "scenario_starts": 18,
+    "missing_case_traces": [],
+    "coverage": {
+      "covered_lines": 2127,
+      "num_statements": 3147,
+      "percent_covered": 63.22180916976456,
+      "percent_covered_display": "63",
+      "missing_lines": 1020,
+      "excluded_lines": 0,
+      "num_branches": 888,
+      "num_partial_branches": 176,
+      "covered_branches": 424,
+      "missing_branches": 464
+    },
+    "step_errors": [],
+    "properties": "BSN-C13–C15",
+    "limitation": "Interfaces e respostas do simulador nas faixas configuradas; topologia não comprova processamento nem aplicação dos comandos.",
+    "hashes_verified": 67,
+    "coverage_enabled": true
+  },
+  {
+    "feature": "data_persistance",
+    "campaign": "ros2_20261025T133856Z_g2_t0zqp",
+    "counts": {
+      "failure": 1,
+      "xfail": 1
+    },
+    "cases": [
+      {
+        "name": "test_reading_persisted_in_knowledge_repository",
+        "status": "failure"
+      },
+      {
+        "name": "test_persistence_failure_recorded",
+        "status": "xfail"
+      }
+    ],
+    "collector_complete": false,
+    "exit_code": 1,
+    "scenario_starts": 2,
+    "missing_case_traces": [],
+    "coverage": {
+      "covered_lines": 2106,
+      "num_statements": 3147,
+      "percent_covered": 62.18091697645601,
+      "percent_covered_display": "62",
+      "missing_lines": 1041,
+      "excluded_lines": 0,
+      "num_branches": 888,
+      "num_partial_branches": 179,
+      "covered_branches": 403,
+      "missing_branches": 485
+    },
+    "step_errors": [
+      {
+        "scenario": "A vital sign reading collected by a sensor is persisted in the knowledge repository (BSN-P08)",
+        "keyword": "then",
+        "step": "that reading should be retrievable from the knowledge repository with the value reported",
+        "exception_type": "AssertionError",
+        "message": "No thermometer reading was captured during the window, so this scenario proved nothing either way: {}\nassert False\n +  where False = any(dict_values([]))\n +    where dict_values([]) = <built-in method values of dict object at 0x7fc808d61380>()\n +      where <built-in method values of dict object at 0x7fc808d61380> = {}.values"
+      },
+      {
+        "scenario": "A persistence failure is recorded when the knowledge repository cannot store a reading (BSN-P08)",
+        "keyword": "given",
+        "step": "the knowledge repository is experiencing storage failures",
+        "exception_type": "AssertionError",
+        "message": "Failed to simulate a knowledge-repository storage failure on logger: stdout='' stderr=\"[WARN] [1792935558.609401789] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.\\n[WARN] [1792935558.614095330] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.\\nSetting parameter failed: Invalid access to undeclared parameter(s): []\\n\"\nassert (0 == 0 and 'successful' in '')\n +  where 0 = CompletedProcess(args=['ros2', 'param', 'set', 'logger', 'storage_failure_simulated', 'true'], returncode=0, stdout=b'', stderr=b\"[WARN] [1792935558.609401789] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.\\n[WARN] [1792935558.614095330] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.\\nSetting parameter failed: Invalid access to undeclared parameter(s): []\\n\").returncode\n +  and   '' = <built-in method decode of bytes object at 0xb390a8>()\n +    where <built-in method decode of bytes object at 0xb390a8> = b''.decode\n +      where b'' = CompletedProcess(args=['ros2', 'param', 'set', 'logger', 'storage_failure_simulated', 'true'], returncode=0, stdout=b'', stderr=b\"[WARN] [1792935558.609401789] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.\\n[WARN] [1792935558.614095330] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.\\nSetting parameter failed: Invalid access to undeclared parameter(s): []\\n\").stdout"
+      }
+    ],
+    "properties": "BSN-P08 (observação parcial), BSN-C03",
+    "limitation": "Encaminhamento em /persist; não equivale à recuperação do valor armazenado.",
+    "hashes_verified": 62,
+    "coverage_enabled": true
+  },
+  {
+    "feature": "health_status",
+    "campaign": "ros2_20261025T133922Z_qom_1chl",
+    "counts": {
+      "passed": 2
+    },
+    "cases": [
+      {
+        "name": "test_a_patient_health_status_is_available_after_a_sensor_reports_a_reading_bsnp10",
+        "status": "passed"
+      },
+      {
+        "name": "test_no_patient_health_status_is_produced_when_the_central_hub_cannot_process_a_reading_bsnp10",
+        "status": "passed"
+      }
+    ],
+    "collector_complete": true,
+    "exit_code": 0,
+    "scenario_starts": 2,
+    "missing_case_traces": [],
+    "coverage": {
+      "covered_lines": 1855,
+      "num_statements": 3147,
+      "percent_covered": 54.721189591078065,
+      "percent_covered_display": "55",
+      "missing_lines": 1292,
+      "excluded_lines": 0,
+      "num_branches": 888,
+      "num_partial_branches": 159,
+      "covered_branches": 353,
+      "missing_branches": 535
+    },
+    "step_errors": [],
+    "properties": "BSN-P10, BSN-C04",
+    "limitation": "Saídas e ausências na montagem ensaiada; conferir estímulo e força das asserções.",
+    "hashes_verified": 65,
+    "coverage_enabled": true
+  },
+  {
+    "feature": "injector",
+    "campaign": "ros2_20261025T134004Z_lsn_55i5",
+    "counts": {
+      "xfail": 7
+    },
+    "cases": [
+      {
+        "name": "test_injector_wired_to_each_body_sensor[the oximeter]",
+        "status": "xfail"
+      },
+      {
+        "name": "test_injector_wired_to_each_body_sensor[the ECG sensor]",
+        "status": "xfail"
+      },
+      {
+        "name": "test_injector_wired_to_each_body_sensor[the thermometer]",
+        "status": "xfail"
+      },
+      {
+        "name": "test_injector_wired_to_each_body_sensor[the SBP sensor]",
+        "status": "xfail"
+      },
+      {
+        "name": "test_injector_wired_to_each_body_sensor[the DBP sensor]",
+        "status": "xfail"
+      },
+      {
+        "name": "test_injector_wired_to_each_body_sensor[the glucometer]",
+        "status": "xfail"
+      },
+      {
+        "name": "test_injector_wired_to_system_log",
+        "status": "xfail"
+      }
+    ],
+    "collector_complete": true,
+    "exit_code": 0,
+    "scenario_starts": 7,
+    "missing_case_traces": [],
+    "coverage": {
+      "covered_lines": 2122,
+      "num_statements": 3147,
+      "percent_covered": 62.874845105328376,
+      "percent_covered_display": "63",
+      "missing_lines": 1025,
+      "excluded_lines": 0,
+      "num_branches": 888,
+      "num_partial_branches": 175,
+      "covered_branches": 415,
+      "missing_branches": 473
+    },
+    "step_errors": [
+      {
+        "scenario": "The uncertainty injector is wired to each body sensor",
+        "keyword": "given",
+        "step": "the uncertainty injector is running",
+        "exception_type": "AssertionError",
+        "message": "Node(s) not online after 5.0s: /injector\nassert not '/injector'"
+      },
+      {
+        "scenario": "The uncertainty injector is wired to each body sensor",
+        "keyword": "given",
+        "step": "the uncertainty injector is running",
+        "exception_type": "AssertionError",
+        "message": "Node(s) not online after 5.0s: /injector\nassert not '/injector'"
+      },
+      {
+        "scenario": "The uncertainty injector is wired to each body sensor",
+        "keyword": "given",
+        "step": "the uncertainty injector is running",
+        "exception_type": "AssertionError",
+        "message": "Node(s) not online after 5.0s: /injector\nassert not '/injector'"
+      },
+      {
+        "scenario": "The uncertainty injector is wired to each body sensor",
+        "keyword": "given",
+        "step": "the uncertainty injector is running",
+        "exception_type": "AssertionError",
+        "message": "Node(s) not online after 5.0s: /injector\nassert not '/injector'"
+      },
+      {
+        "scenario": "The uncertainty injector is wired to each body sensor",
+        "keyword": "given",
+        "step": "the uncertainty injector is running",
+        "exception_type": "AssertionError",
+        "message": "Node(s) not online after 5.0s: /injector\nassert not '/injector'"
+      },
+      {
+        "scenario": "The uncertainty injector is wired to each body sensor",
+        "keyword": "given",
+        "step": "the uncertainty injector is running",
+        "exception_type": "AssertionError",
+        "message": "Node(s) not online after 5.0s: /injector\nassert not '/injector'"
+      },
+      {
+        "scenario": "The uncertainty injector is wired to the system log",
+        "keyword": "given",
+        "step": "the uncertainty injector is running",
+        "exception_type": "AssertionError",
+        "message": "Node(s) not online after 5.0s: /injector\nassert not '/injector'"
+      }
+    ],
+    "properties": "BSN-C05",
+    "limitation": "Falhas esperadas associadas à funcionalidade ausente; não representam aprovação do injetor.",
+    "hashes_verified": 58,
+    "coverage_enabled": true
+  },
+  {
+    "feature": "bsn_p03",
+    "campaign": "ros2_20261025T134059Z_qq2jtc3r",
+    "counts": {
+      "passed": 2
+    },
+    "cases": [
+      {
+        "name": "test_an_emergency_is_reported_within_250_ms_of_a_highrisk_reading_bsnp03",
+        "status": "passed"
+      },
+      {
+        "name": "test_an_emergency_is_reported_within_250_ms_even_while_the_sensor_is_under_sustained_load_bsnp03",
+        "status": "passed"
+      }
+    ],
+    "collector_complete": true,
+    "exit_code": 0,
+    "scenario_starts": 2,
+    "missing_case_traces": [],
+    "coverage": {
+      "covered_lines": 988,
+      "num_statements": 3147,
+      "percent_covered": 28.748451053283766,
+      "percent_covered_display": "29",
+      "missing_lines": 2159,
+      "excluded_lines": 0,
+      "num_branches": 888,
+      "num_partial_branches": 98,
+      "covered_branches": 172,
+      "missing_branches": 716
+    },
+    "step_errors": [],
+    "properties": "BSN-P03 (instrumentação limitada)",
+    "limitation": "Prazo no trecho e oráculo implementados; limites de causalidade e comparabilidade permanecem.",
+    "hashes_verified": 42,
+    "coverage_enabled": true
+  },
+  {
+    "feature": "managing_system",
+    "campaign": "ros2_20261025T054442Z_l7kfhjkk",
+    "counts": {
+      "passed": 9,
+      "xfail": 2
+    },
+    "cases": [
+      {
+        "name": "test_an_adaptation_command_is_issued_within_10_seconds_after_reliability_degradation_g4g5",
+        "status": "passed"
+      },
+      {
+        "name": "test_sampling_rate_increases_when_sensor_reliability_falls_below_the_threshold_g4g5",
+        "status": "passed"
+      },
+      {
+        "name": "test_a_failed_adaptation_attempt_is_recorded_in_the_system_log_g4g5",
+        "status": "passed"
+      },
+      {
+        "name": "test_sampling_rate_decreases_after_sensor_reliability_recovers_g4g5",
+        "status": "xfail"
+      },
+      {
+        "name": "test_no_adaptation_is_triggered_while_sensor_reliability_stays_above_the_threshold_g4g5",
+        "status": "xfail"
+      },
+      {
+        "name": "test_the_adaptation_enactor_exchanges_adaptation_strategies_with_the_reliability_engine",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_adaptation_enactor_exchanges_adaptation_records_with_the_system_log",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor event]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor status]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor energy status]",
+        "status": "passed"
+      },
+      {
+        "name": "test_the_system_log_sends_reconfiguration_requests_to_the_parameter_adapter",
+        "status": "passed"
+      }
+    ],
+    "collector_complete": true,
+    "exit_code": 0,
+    "scenario_starts": 11,
+    "missing_case_traces": [],
+    "coverage": {
+      "covered_lines": 2357,
+      "num_statements": 3147,
+      "percent_covered": 71.25154894671623,
+      "percent_covered_display": "71",
+      "missing_lines": 790,
+      "excluded_lines": 0,
+      "num_branches": 888,
+      "num_partial_branches": 198,
+      "covered_branches": 518,
+      "missing_branches": 370
+    },
+    "step_errors": [
+      {
+        "scenario": "Sampling rate decreases after sensor reliability recovers (G4/G5)",
+        "keyword": "then",
+        "step": "an adaptation command reducing the sampling rate of the oximeter should be issued",
+        "exception_type": "BehaviorExpectationNotMet",
+        "message": "No AdaptationCommand with freq < 10.480Hz (the measured peak) arrived on /reconfigure_oximeter_node in 30.0s after the oximeter's reliability recovered - see ../MANAGING_SYSTEM_GAPS.md's runtime-breakage section"
+      },
+      {
+        "scenario": "No adaptation is triggered while sensor reliability stays above the threshold (G4/G5)",
+        "keyword": "then",
+        "step": "no adaptation command for the oximeter should be issued",
+        "exception_type": "BehaviorExpectationNotMet",
+        "message": "Unexpected AdaptationCommand(s) on /reconfigure_oximeter_node while reliability was supposedly stable"
+      }
+    ],
+    "properties": "BSN-C07–C12",
+    "limitation": "Comandos e registros; recuperação e silêncio não atendidos, sem comprovação da frequência efetiva.",
+    "hashes_verified": 245,
+    "coverage_enabled": true
+  }
+]

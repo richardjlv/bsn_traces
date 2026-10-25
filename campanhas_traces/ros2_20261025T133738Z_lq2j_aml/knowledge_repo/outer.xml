@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="22.894" timestamp="2026-10-25T13:37:40.111028" hostname="bsn-virtualbox"><testcase classname="test.test_knowledge_repo_bdd" name="test_knowledge_repo_bdd" time="22.808"><failure message="test_knowledge_repo_bdd.TestKnowledgeRepo.test_bdd_scenarios failed">
+========================================================================================================================================================================================================================================================================================================================
+FAIL: test_knowledge_repo_bdd.TestKnowledgeRepo.test_bdd_scenarios
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/ros_ws/src/bsn_ros2/features/test/test_knowledge_repo_bdd.py", line 41, in test_bdd_scenarios
+    assert result.returncode == 0, (
+AssertionError: steps/test_knowledge_repo.py failed - see the pytest output above for which scenario and why
+assert 1 == 0
+ +  where 1 = CompletedProcess(args=['/usr/bin/python3', '-m', 'pytest', '-v', 'steps/test_knowledge_repo.py', '--junitxml=/ros_ws/src/campanhas_traces/ros2_20261025T133738Z_lq2j_aml/knowledge_repo/internal_junit/test_knowledge_repo.xml', '-rA', '-p', 'no:pytest_cov', '-o', 'addopts='], returncode=1).returncode
+</failure></testcase></testsuite></testsuites>

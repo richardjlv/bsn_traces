@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="8" time="169.503" timestamp="2026-10-25T13:34:44.054930" hostname="bsn-virtualbox"><testcase classname="steps.test_check_bsn" name="test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the oximeter]" time="19.112"><failure message="KeyError: 'oxi_data'">request = &lt;FixtureRequest for &lt;Function test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the oximeter]&gt;&gt;
+_pytest_bdd_example = {'sensor': 'the oximeter'}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+bdd = namespace(topic_data={'/persist': {}, '/sensor_data/oximeter': {'header_stamp_sec': ['1792935292', '1792935293', '1792...999', '97.69999999999999', '97.57499999999999', '97.44999999999999', '97.32499999999999']}, '/target_system_data': {}})
+sensor = 'the oximeter'
+
+    @then(parsers.parse(
+        "the central hub should receive that reading with the value reported by {sensor}"
+    ))
+    def hub_receives_reading(bdd, sensor):
+        info = SENSORS[sensor]
+        hub_field = f"{info['hub_field']}_data"
+        sensor_data = bdd.topic_data[_sensor_topic(sensor)]
+        target_data = bdd.topic_data[TARGET_SYSTEM_TOPIC]
+&gt;       assert count_matching_elements(sensor_data["sensor_datapoint"], target_data[hub_field]), (
+            f"Mismatch: no matching values between {sensor} readings "
+            f"({sensor_data['sensor_datapoint']}) and the central hub's "
+            f"{hub_field} ({target_data[hub_field]})"
+        )
+E       KeyError: 'oxi_data'
+
+steps/test_check_bsn.py:46: KeyError</failure></testcase><testcase classname="steps.test_check_bsn" name="test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the ECG sensor]" time="12.954" /><testcase classname="steps.test_check_bsn" name="test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the thermometer]" time="12.935" /><testcase classname="steps.test_check_bsn" name="test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the SBP sensor]" time="13.086" /><testcase classname="steps.test_check_bsn" name="test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the DBP sensor]" time="12.991" /><testcase classname="steps.test_check_bsn" name="test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the glucometer]" time="13.079" /><testcase classname="steps.test_check_bsn" name="test_the_central_hub_classifies_a_vital_sign_reading_outside_the_normal_range_as_high_risk_bsnp08" time="72.173" /><testcase classname="steps.test_check_bsn" name="test_no_patient_risk_level_is_reported_while_the_central_hub_is_unavailable_bsnp08" time="12.968" /></testsuite></testsuites>

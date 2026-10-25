@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="1" tests="2" time="10.512" timestamp="2026-10-25T13:39:08.965464" hostname="bsn-virtualbox"><testcase classname="steps.test_data_persistance" name="test_reading_persisted_in_knowledge_repository" time="8.381"><failure message="AssertionError: No thermometer reading was captured during the window, so this scenario proved nothing either way: {}&#10;assert False&#10; +  where False = any(dict_values([]))&#10; +    where dict_values([]) = &lt;built-in method values of dict object at 0x7fc808d61380&gt;()&#10; +      where &lt;built-in method values of dict object at 0x7fc808d61380&gt; = {}.values">request = &lt;FixtureRequest for &lt;Function test_reading_persisted_in_knowledge_repository&gt;&gt;
+_pytest_bdd_example = {}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+bdd = namespace(topic_data={'/target_system_data': {'header_stamp_sec': [], 'header_stamp_nanosec': [], 'header_frame_id': [...bps_data': [], 'abpd_data': [], 'glc_data': [], 'patient_status': []}, '/sensor_data/thermometer': {}, '/persist': {}})
+
+    @then("that reading should be retrievable from the knowledge repository with the value reported")
+    def reading_retrievable_from_knowledge_repository(bdd):
+        # Asserts what ROS1's equivalent step asserted (the sensor's activity reaches /persist), not the literal
+        # "with the value reported", which no version satisfies; stricter than ROS1 in tying the record to *this* sensor.
+        sensor_data = bdd.topic_data[THERMOMETER_TOPIC]
+        persist_data = bdd.topic_data[PERSIST_TOPIC]
+    
+&gt;       assert any(sensor_data.values()), (
+            f"No thermometer reading was captured during the window, so this "
+            f"scenario proved nothing either way: {sensor_data}"
+        )
+E       AssertionError: No thermometer reading was captured during the window, so this scenario proved nothing either way: {}
+E       assert False
+E        +  where False = any(dict_values([]))
+E        +    where dict_values([]) = &lt;built-in method values of dict object at 0x7fc808d61380&gt;()
+E        +      where &lt;built-in method values of dict object at 0x7fc808d61380&gt; = {}.values
+
+steps/test_data_persistance.py:71: AssertionError</failure></testcase><testcase classname="steps.test_data_persistance" name="test_persistence_failure_recorded" time="1.937"><skipped type="pytest.xfail" message="gap in both versions, not a regression: no storage-failure branch in ROS1 (DataAccess.cpp) or ROS2 (logger.py); ROS1's old 'fail' check passed only via /g4t1's unrelated 'fail' Status. See ../DATA_PERSISTANCE_GAPS.md" /></testcase></testsuite></testsuites>

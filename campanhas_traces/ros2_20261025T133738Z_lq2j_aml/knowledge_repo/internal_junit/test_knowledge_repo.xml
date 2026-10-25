@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="9.057" timestamp="2026-10-25T13:37:52.638846" hostname="bsn-virtualbox"><testcase classname="steps.test_knowledge_repo" name="test_knowledge_repository_wired" time="8.867"><failure message="AssertionError: Failed to get info for /data_access: Unable to find node '/data_access'&#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['ros2', 'node', 'info', '/data_access'], returncode=1, stdout=b'', stderr=b&quot;Unable to find node '/data_access'\n&quot;).returncode">request = &lt;FixtureRequest for &lt;Function test_knowledge_repository_wired&gt;&gt;
+_pytest_bdd_example = {}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+steps/test_knowledge_repo.py:53: in knowledge_repository_subscribes_to
+    repo_info = _node_info(KNOWLEDGE_REPO_NODE)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+node_name = 'data_access'
+
+    def _node_info(node_name):
+        """ros2 node info for `node_name`, parsed into publishers/subscribers/services
+        (utils.parsers.get_rosnode_info_ros2). Duplicated across test_*.py files because each runs as its own
+        pytest subprocess."""
+        result = subprocess.run(
+            ["ros2", "node", "info", f"/{node_name}"],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=5,
+        )
+&gt;       assert result.returncode == 0, f"Failed to get info for /{node_name}: {result.stderr.decode()}"
+E       AssertionError: Failed to get info for /data_access: Unable to find node '/data_access'
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['ros2', 'node', 'info', '/data_access'], returncode=1, stdout=b'', stderr=b"Unable to find node '/data_access'\n").returncode
+
+steps/test_knowledge_repo.py:35: AssertionError</failure></testcase></testsuite></testsuites>
