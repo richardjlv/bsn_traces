@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="87" failures="0" disabled="0" errors="0" timestamp="2026-10-26T09:04:02" time="0.002" name="AllTests">
+  <testsuite name="ConfigurationTest" tests="11" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="Constructor" status="run" time="0" classname="ConfigurationTest" />
+    <testcase name="UnknowValue" status="run" time="0" classname="ConfigurationTest" />
+    <testcase name="GetDisplacementNormal" status="run" time="0" classname="ConfigurationTest" />
+    <testcase name="GetDisplacementInverse" status="run" time="0" classname="ConfigurationTest" />
+    <testcase name="GetDisplacementMedium" status="run" time="0" classname="ConfigurationTest" />
+    <testcase name="GetDisplacementInvalidArgument" status="run" time="0" classname="ConfigurationTest" />
+    <testcase name="Low" status="run" time="0" classname="ConfigurationTest" />
+    <testcase name="Medium0" status="run" time="0" classname="ConfigurationTest" />
+    <testcase name="Medium1" status="run" time="0" classname="ConfigurationTest" />
+    <testcase name="High0" status="run" time="0" classname="ConfigurationTest" />
+    <testcase name="High1" status="run" time="0" classname="ConfigurationTest" />
+  </testsuite>
+  <testsuite name="FiltersTest" tests="5" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="InitialAverage" status="run" time="0" classname="FiltersTest" />
+    <testcase name="AverageWithOneValue" status="run" time="0" classname="FiltersTest" />
+    <testcase name="AverageWithFiveValues" status="run" time="0" classname="FiltersTest" />
+    <testcase name="AverageWithLessValues" status="run" time="0" classname="FiltersTest" />
+    <testcase name="AverageWithMoreValues" status="run" time="0" classname="FiltersTest" />
+  </testsuite>
+  <testsuite name="DataGeneratorTest" tests="5" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="GetValue" status="run" time="0" classname="DataGeneratorTest" />
+    <testcase name="GetValueWithWrongCurrentState" status="run" time="0" classname="DataGeneratorTest" />
+    <testcase name="GetValueWithOutOfBoundsState" status="run" time="0" classname="DataGeneratorTest" />
+    <testcase name="NextState" status="run" time="0" classname="DataGeneratorTest" />
+    <testcase name="NextButSameState" status="run" time="0" classname="DataGeneratorTest" />
+  </testsuite>
+  <testsuite name="ContextTest" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="SimpleConstruct" status="run" time="0" classname="ContextTest" />
+  </testsuite>
+  <testsuite name="GoalTest" tests="6" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="SimpleConstruct" status="run" time="0" classname="GoalTest" />
+    <testcase name="AddChild" status="run" time="0" classname="GoalTest" />
+    <testcase name="RemoveChild" status="run" time="0" classname="GoalTest" />
+    <testcase name="RemoveChildNotFound" status="run" time="0" classname="GoalTest" />
+    <testcase name="GetChild" status="run" time="0" classname="GoalTest" />
+    <testcase name="GetChildNotFound" status="run" time="0" classname="GoalTest" />
+  </testsuite>
+  <testsuite name="GoalTreeTest" tests="12" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="SimpleConstruct" status="run" time="0" classname="GoalTreeTest" />
+    <testcase name="AddRootGoal" status="run" time="0" classname="GoalTreeTest" />
+    <testcase name="DoNotAllowMoreThanOneRootGoal" status="run" time="0" classname="GoalTreeTest" />
+    <testcase name="GetSpecificNode" status="run" time="0" classname="GoalTreeTest" />
+    <testcase name="GetTreeSize" status="run" time="0" classname="GoalTreeTest" />
+    <testcase name="AddGoalWOneChild" status="run" time="0" classname="GoalTreeTest" />
+    <testcase name="AddGoalWChildren" status="run" time="0" classname="GoalTreeTest" />
+    <testcase name="AddGoalWMoreChildren" status="run" time="0" classname="GoalTreeTest" />
+    <testcase name="AddTaskWParent" status="run" time="0" classname="GoalTreeTest" />
+    <testcase name="AddGoalAsTaskChild" status="run" time="0" classname="GoalTreeTest" />
+    <testcase name="AddTaskWChildren" status="run" time="0" classname="GoalTreeTest" />
+    <testcase name="GetLeafTasks" status="run" time="0" classname="GoalTreeTest" />
+  </testsuite>
+  <testsuite name="LeafTaskTest" tests="3" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="SimpleConstruct" status="run" time="0" classname="LeafTaskTest" />
+    <testcase name="SimpleConstructNoContext" status="run" time="0" classname="LeafTaskTest" />
+    <testcase name="PreventAddChild" status="run" time="0" classname="LeafTaskTest" />
+  </testsuite>
+  <testsuite name="NodeTest" tests="8" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="SimpleConstruct" status="run" time="0" classname="NodeTest" />
+    <testcase name="AddChild" status="run" time="0" classname="NodeTest" />
+    <testcase name="RemoveChild" status="run" time="0" classname="NodeTest" />
+    <testcase name="RemoveChildNotFound" status="run" time="0" classname="NodeTest" />
+    <testcase name="GetChild" status="run" time="0" classname="NodeTest" />
+    <testcase name="GetChildNotFound" status="run" time="0" classname="NodeTest" />
+    <testcase name="AddChildWChild" status="run" time="0" classname="NodeTest" />
+    <testcase name="AddChildWChildrenWChild" status="run" time="0" classname="NodeTest" />
+  </testsuite>
+  <testsuite name="PropertyTest" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="SimpleConstruct" status="run" time="0" classname="PropertyTest" />
+  </testsuite>
+  <testsuite name="TaskTest" tests="7" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="SimpleConstruct" status="run" time="0" classname="TaskTest" />
+    <testcase name="AddChild" status="run" time="0" classname="TaskTest" />
+    <testcase name="AddGoalAsChild" status="run" time="0" classname="TaskTest" />
+    <testcase name="RemoveChild" status="run" time="0" classname="TaskTest" />
+    <testcase name="RemoveChildNotFound" status="run" time="0" classname="TaskTest" />
+    <testcase name="GetChild" status="run" time="0" classname="TaskTest" />
+    <testcase name="GetChildNotFound" status="run" time="0" classname="TaskTest" />
+  </testsuite>
+  <testsuite name="FormulaTest" tests="8" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="SimpleConstruct" status="run" time="0" classname="FormulaTest" />
+    <testcase name="ConstructWithTermsAndValues" status="run" time="0" classname="FormulaTest" />
+    <testcase name="InvalidFormulaConstruction" status="run" time="0" classname="FormulaTest" />
+    <testcase name="SetAndGetTermsValueMap" status="run" time="0" classname="FormulaTest" />
+    <testcase name="EvaluateForOneTermFormula" status="run" time="0" classname="FormulaTest" />
+    <testcase name="EvaluateNonExistentTerm" status="run" time="0" classname="FormulaTest" />
+    <testcase name="EvaluateForTwoTermFormula" status="run" time="0" classname="FormulaTest" />
+    <testcase name="GetTerms" status="run" time="0" classname="FormulaTest" />
+  </testsuite>
+  <testsuite name="ProcessorTest" tests="10" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="GetThermometerId" status="run" time="0" classname="ProcessorTest" />
+    <testcase name="GetECGId" status="run" time="0" classname="ProcessorTest" />
+    <testcase name="GetOxiemeterId" status="run" time="0" classname="ProcessorTest" />
+    <testcase name="GetBPMSId" status="run" time="0" classname="ProcessorTest" />
+    <testcase name="GetBPMDId" status="run" time="0" classname="ProcessorTest" />
+    <testcase name="GetGlucosemeterId" status="run" time="0" classname="ProcessorTest" />
+    <testcase name="GetUnknownId" status="run" time="0" classname="ProcessorTest" />
+    <testcase name="GetValue" status="run" time="0" classname="ProcessorTest" />
+    <testcase name="FuseEmptyDataVector" status="run" time="0" classname="ProcessorTest" />
+    <testcase name="FuseThreeValues" status="run" time="0" classname="ProcessorTest" />
+  </testsuite>
+  <testsuite name="RangeTest" tests="5" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="TestConstructor" status="run" time="0" classname="RangeTest" />
+    <testcase name="IllegalConstruction" status="run" time="0" classname="RangeTest" />
+    <testcase name="InRange" status="run" time="0" classname="RangeTest" />
+    <testcase name="OutRange" status="run" time="0" classname="RangeTest" />
+    <testcase name="Convert" status="run" time="0.001" classname="RangeTest" />
+  </testsuite>
+  <testsuite name="ResourcesTest" tests="5" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="BasicConstruct" status="run" time="0" classname="ResourcesTest" />
+    <testcase name="Construct" status="run" time="0" classname="ResourcesTest" />
+    <testcase name="InvalidArgumentConstruct" status="run" time="0" classname="ResourcesTest" />
+    <testcase name="ResourceConsume" status="run" time="0" classname="ResourcesTest" />
+    <testcase name="ResourceGeneration" status="run" time="0" classname="ResourcesTest" />
+  </testsuite>
+</testsuites>

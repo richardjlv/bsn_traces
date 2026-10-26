@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="bsn-virtualbox" name="pytest" skipped="0" tests="6" time="16.440" timestamp="2026-10-26T09:05:51.597324"><testcase classname=".TestG3T1_1" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="194" name="test_transfer_with_low_risk_data" time="1.392"><system-out>[INFO] [1793016351.872835]: Servico &apos;getPatientData&apos; mockado iniciado para teste.
+[INFO] [1793016352.025845]: Servico &apos;getPatientData&apos; chamado no teste: oxigenation
+[INFO] [1793016353.032146]: Servico &apos;getPatientData&apos; chamado no teste: oxigenation
+Mensagem recebida no topico oximeter_data: data=90.0
+Received message: 8.57142857143
+[INFO] [1793016353.035671]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_1" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="227" name="test_transfer_with_high_risk_data" time="2.222"><system-out>[INFO] [1793016354.025504]: Servico &apos;getPatientData&apos; (High risk) chamado no teste: oxigenation
+Mensagem recebida no topico oximeter_data: data=50.0
+High risk service mock setup complete.
+[INFO] [1793016355.025898]: Servico &apos;getPatientData&apos; (High risk) chamado no teste: oxigenation
+Mensagem recebida no topico oximeter_data: data=50.0
+Mensagem recebida no topico oximeter_data: data=50.0
+[INFO] [1793016355.258306]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_1" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="261" name="test_transfer_with_mid_risk_data" time="2.208"><system-out>[INFO] [1793016356.026452]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: oxigenation
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mid risk service mock setup complete.
+[INFO] [1793016357.026727]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: oxigenation
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Received message: 43.0, 60
+[INFO] [1793016357.467955]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_1" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="294" name="test_transfer_with_out_of_range_data" time="4.221"><system-out>[INFO] [1793016358.027166]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: oxigenation
+Out of range service mock setup complete.
+[INFO] [1793016359.027263]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: oxigenation
+[INFO] [1793016360.027895]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: oxigenation
+[INFO] [1793016361.028112]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: oxigenation
+[INFO] [1793016361.690736]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_1" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="299" name="test_transfer_with_accuracy_fail" time="3.348"><system-out>[INFO] [1793016362.028322]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: oxigenation
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mid risk service mock setup complete.
+[INFO] [1793016363.028653]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: oxigenation
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+[INFO] [1793016364.028711]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: oxigenation
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+[INFO] [1793016365.028613]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: oxigenation
+[INFO] [1793016365.039633]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_1" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="350" name="test_battery_consumption" time="2.996"><system-out>[INFO] [1793016366.028732]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: oxigenation
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mid risk service mock setup complete.
+[INFO] [1793016367.029257]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: oxigenation
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+[INFO] [1793016368.030060]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: oxigenation
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+Mensagem recebida no topico oximeter_data: data=60.0
+[INFO] [1793016368.036337]: Servico de mock desligado.
+</system-out></testcase></testsuite></testsuites>

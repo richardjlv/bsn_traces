@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="2.222"><testcase classname="rostest.runner.RosTest" name="testtest_knowledge_repo" time="2.2219" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_knowledge_repo.launch] run_id[ab653308-d135-11f1-b1fe-080027591fd7] starting
+&amp;#x001B;[1mstarted roslaunch server http://bsn-virtualbox:36779/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /frequency: 6
+ * /rosdistro: melodic
+ * /rosversion: 1.14.13
+ * /test_module: /home/bsn/Documen...
+
+NODES
+  /
+    collector (probe/collector)
+    data_access (repository/data_access)
+    g4t1 (component/g4t1)
+    logger (logging_infrastructure/logger)
+
+[ROSTEST]setup[/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_knowledge_repo.launch] run_id[ab653308-d135-11f1-b1fe-080027591fd7] done
+[ROSTEST]Running test [test_knowledge_repo]
+&amp;#x001B;[1mROS_MASTER_URI=http://bsn-virtualbox:38171/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to ab653308-d135-11f1-b1fe-080027591fd7&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[logger-1]: started with pid [25657]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[collector-2]: started with pid [25658]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[data_access-3]: started with pid [25660]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[g4t1-4]: started with pid [25663]&amp;#x001B;[0m
+[ROSTEST]running test test_knowledge_repo
+&amp;#x001B;[1mprocess[test_knowledge_repo-5]: started with pid [25669]&amp;#x001B;[0m
+&amp;#x001B;[1m[test_knowledge_repo-5] process has finished cleanly
+log file: /home/bsn/.ros/log/ab653308-d135-11f1-b1fe-080027591fd7/test_knowledge_repo-5*.log&amp;#x001B;[0m
+[ROSTEST]test [test_knowledge_repo] finished
+[ROSTEST]test [test_knowledge_repo] results are in [/home/bsn/Documents/bsn2/build/test_results/component/rosunit-test_knowledge_repo.xml]
+[ROSTEST]test [test_knowledge_repo] results summary: 0 errors, 0 failures, 1 tests
+[ROSTEST][ROSTEST] test [test_knowledge_repo] done
+[ROSTEST]tearDown[/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_knowledge_repo.launch]
+shutting down processing monitor...
+[g4t1-4] killing on exit
+[data_access-3] killing on exit
+[collector-2] killing on exit
+[logger-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_knowledge_repo.launch complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>

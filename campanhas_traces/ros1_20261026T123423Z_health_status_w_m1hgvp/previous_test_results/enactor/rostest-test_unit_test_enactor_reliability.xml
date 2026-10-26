@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="10.584"><testcase classname="rostest.runner.RosTest" name="testtest_enactor_reliability" time="10.5842" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/bsn/Documents/bsn2/src/sa-bsn/system_manager/enactor/test/unit/test_enactor_reliability.launch] run_id[54d2ed50-d135-11f1-b1fe-080027591fd7] starting
+&amp;#x001B;[1mstarted roslaunch server http://bsn-virtualbox:39307/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /adaptation_parameter: reliability
+ * /frequency: 5
+ * /kp: 150
+ * /rosdistro: melodic
+ * /rosversion: 1.14.13
+ * /test_module: /home/bsn/Documen...
+
+NODES
+  /
+    data_access (repository/data_access)
+    enactor (enactor/enactor)
+
+[ROSTEST]setup[/home/bsn/Documents/bsn2/src/sa-bsn/system_manager/enactor/test/unit/test_enactor_reliability.launch] run_id[54d2ed50-d135-11f1-b1fe-080027591fd7] done
+[ROSTEST]Running test [test_enactor_reliability]
+&amp;#x001B;[1mROS_MASTER_URI=http://bsn-virtualbox:37007/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to 54d2ed50-d135-11f1-b1fe-080027591fd7&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[data_access-1]: started with pid [20970]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[enactor-2]: started with pid [20971]&amp;#x001B;[0m
+[ROSTEST]running test test_enactor_reliability
+&amp;#x001B;[1mprocess[test_enactor_reliability-3]: started with pid [20973]&amp;#x001B;[0m
+&amp;#x001B;[1m[test_enactor_reliability-3] process has finished cleanly
+log file: /home/bsn/.ros/log/54d2ed50-d135-11f1-b1fe-080027591fd7/test_enactor_reliability-3*.log&amp;#x001B;[0m
+[ROSTEST]test [test_enactor_reliability] finished
+[ROSTEST]test [test_enactor_reliability] results are in [/home/bsn/Documents/bsn2/build/test_results/enactor/rosunit-test_enactor_reliability.xml]
+[ROSTEST]test [test_enactor_reliability] results summary: 0 errors, 0 failures, 5 tests
+[ROSTEST][ROSTEST] test [test_enactor_reliability] done
+[ROSTEST]tearDown[/home/bsn/Documents/bsn2/src/sa-bsn/system_manager/enactor/test/unit/test_enactor_reliability.launch]
+shutting down processing monitor...
+[data_access-1] killing on exit
+[enactor-2] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/bsn/Documents/bsn2/src/sa-bsn/system_manager/enactor/test/unit/test_enactor_reliability.launch complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>

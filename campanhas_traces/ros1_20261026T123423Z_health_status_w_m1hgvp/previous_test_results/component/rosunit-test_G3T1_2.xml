@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="bsn-virtualbox" name="pytest" skipped="0" tests="6" time="16.274" timestamp="2026-10-26T09:04:03.939194"><testcase classname=".TestG3T1_2" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="194" name="test_transfer_with_low_risk_data" time="1.136"><system-out>[INFO] [1793016244.154559]: Servico &apos;getPatientData&apos; mockado iniciado para teste.
+[INFO] [1793016244.159121]: Servico &apos;getPatientData&apos; chamado no teste: heart_rate
+[INFO] [1793016245.159427]: Servico &apos;getPatientData&apos; chamado no teste: heart_rate
+Mensagem recebida no topico ecg_data: data=90.0
+Received message: 3.33333333333
+[INFO] [1793016245.163803]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_2" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="227" name="test_transfer_with_high_risk_data" time="2.207"><system-out>[INFO] [1793016246.159623]: Servico &apos;getPatientData&apos; (High risk) chamado no teste: heart_rate
+Mensagem recebida no topico ecg_data: data=120.0
+High risk service mock setup complete.
+[INFO] [1793016247.166749]: Servico &apos;getPatientData&apos; (High risk) chamado no teste: heart_rate
+Mensagem recebida no topico ecg_data: data=120.0
+Mensagem recebida no topico ecg_data: data=120.0
+[INFO] [1793016247.371196]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_2" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="261" name="test_transfer_with_mid_risk_data" time="2.210"><system-out>[INFO] [1793016248.167438]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: heart_rate
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mid risk service mock setup complete.
+[INFO] [1793016249.168095]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: heart_rate
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Received message: 28.3333333333, 100.0
+[INFO] [1793016249.581985]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_2" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="294" name="test_transfer_with_out_of_range_data" time="4.222"><system-out>[INFO] [1793016250.187364]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: heart_rate
+Out of range service mock setup complete.
+[INFO] [1793016251.187599]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: heart_rate
+[INFO] [1793016252.188231]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: heart_rate
+[INFO] [1793016253.188683]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: heart_rate
+[INFO] [1793016253.804552]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_2" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="299" name="test_transfer_with_accuracy_fail" time="3.411"><system-out>[INFO] [1793016254.188756]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: heart_rate
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mid risk service mock setup complete.
+[INFO] [1793016255.189309]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: heart_rate
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+[INFO] [1793016256.203274]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: heart_rate
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+[INFO] [1793016257.203113]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: heart_rate
+[INFO] [1793016257.215331]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_2" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="350" name="test_battery_consumption" time="2.994"><system-out>[INFO] [1793016258.203791]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: heart_rate
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mid risk service mock setup complete.
+[INFO] [1793016259.204177]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: heart_rate
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+[INFO] [1793016260.204106]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: heart_rate
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+Mensagem recebida no topico ecg_data: data=100.0
+[INFO] [1793016260.212284]: Servico de mock desligado.
+</system-out></testcase></testsuite></testsuites>

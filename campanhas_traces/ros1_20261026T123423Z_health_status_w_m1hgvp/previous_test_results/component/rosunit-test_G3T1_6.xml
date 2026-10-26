@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="bsn-virtualbox" name="pytest" skipped="0" tests="6" time="16.159" timestamp="2026-10-26T09:05:20.656899"><testcase classname=".TestG3T1_6" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="194" name="test_transfer_with_low_risk_data" time="1.080"><system-out>[INFO] [1793016320.951421]: Servico &apos;getPatientData&apos; mockado iniciado para teste.
+[INFO] [1793016321.793010]: Servico &apos;getPatientData&apos; chamado no teste: glucose
+Mensagem recebida no topico glucosemeter_data: data=90.0
+Received message: 14.1546718712
+[INFO] [1793016321.803859]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_6" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="227" name="test_transfer_with_high_risk_data" time="2.209"><system-out>[INFO] [1793016322.785367]: Servico &apos;getPatientData&apos; (High risk) chamado no teste: glucose
+Mensagem recebida no topico glucosemeter_data: data=200.0
+High risk service mock setup complete.
+[INFO] [1793016323.787031]: Servico &apos;getPatientData&apos; (High risk) chamado no teste: glucose
+Mensagem recebida no topico glucosemeter_data: data=200.0
+Mensagem recebida no topico glucosemeter_data: data=200.0
+[INFO] [1793016324.013998]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_6" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="261" name="test_transfer_with_mid_risk_data" time="2.208"><system-out>[INFO] [1793016324.787047]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: glucose
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mid risk service mock setup complete.
+[INFO] [1793016325.791343]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: glucose
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Received message: 28.3363901626, 100.0
+[INFO] [1793016326.222974]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_6" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="294" name="test_transfer_with_out_of_range_data" time="4.212"><system-out>[INFO] [1793016326.791692]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: glucose
+Out of range service mock setup complete.
+[INFO] [1793016327.792852]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: glucose
+[INFO] [1793016328.797358]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: glucose
+[INFO] [1793016329.800388]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: glucose
+[INFO] [1793016330.436538]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_6" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="299" name="test_transfer_with_accuracy_fail" time="3.371"><system-out>[INFO] [1793016330.799844]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: glucose
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mid risk service mock setup complete.
+[INFO] [1793016331.804254]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: glucose
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+[INFO] [1793016332.799374]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: glucose
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+[INFO] [1793016333.799381]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: glucose
+[INFO] [1793016333.808249]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_6" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="350" name="test_battery_consumption" time="3.005"><system-out>[INFO] [1793016334.801586]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: glucose
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mid risk service mock setup complete.
+[INFO] [1793016335.801723]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: glucose
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+[INFO] [1793016336.802188]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: glucose
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+Mensagem recebida no topico glucosemeter_data: data=100.0
+[INFO] [1793016336.814338]: Servico de mock desligado.
+</system-out></testcase></testsuite></testsuites>

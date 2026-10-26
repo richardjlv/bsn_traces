@@ -1,0 +1,36 @@
+[rospy.client][INFO] 2026-10-26 09:40:29,285: init_node, name[/rostopic_6169_1793018429270], pid[6169]
+[xmlrpc][INFO] 2026-10-26 09:40:29,285: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-26 09:40:29,285: Started XML-RPC server [http://bsn-virtualbox:40413/]
+[rospy.init][INFO] 2026-10-26 09:40:29,285: ROS Slave URI: [http://bsn-virtualbox:40413/]
+[rospy.impl.masterslave][INFO] 2026-10-26 09:40:29,285: _ready: http://bsn-virtualbox:40413/
+[rospy.registration][INFO] 2026-10-26 09:40:29,286: Registering with master node http://bsn-virtualbox:42203/
+[xmlrpc][INFO] 2026-10-26 09:40:29,286: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-26 09:40:29,386: registered with master
+[rospy.rosout][INFO] 2026-10-26 09:40:29,386: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-26 09:40:29,387: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-26 09:40:29,388: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-10-26 09:40:29,410: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:37201/], count 0
+[rospy.internal][INFO] 2026-10-26 09:40:29,411: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:43643/], count 1
+[rospy.internal][INFO] 2026-10-26 09:40:29,412: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:40415/], count 2
+[rospy.internal][INFO] 2026-10-26 09:40:29,412: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:46821/], count 2
+[rospy.internal][INFO] 2026-10-26 09:40:29,412: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:46279/], count 3
+[rospy.internal][INFO] 2026-10-26 09:40:29,414: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:38275/], count 5
+[rospy.internal][INFO] 2026-10-26 09:40:29,414: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:42799/], count 5
+[rospy.core][INFO] 2026-10-26 09:40:32,195: signal_shutdown [signal-15]
+[rospy.internal][INFO] 2026-10-26 09:40:32,197: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:37201/
+[rospy.internal][INFO] 2026-10-26 09:40:32,197: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:43643/
+[rospy.internal][INFO] 2026-10-26 09:40:32,197: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:43643/
+[rospy.topics][ERROR] 2026-10-26 09:40:32,198: Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 858, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.internal][INFO] 2026-10-26 09:40:32,198: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:40415/
+[rospy.internal][INFO] 2026-10-26 09:40:32,198: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:46821/
+[rospy.internal][INFO] 2026-10-26 09:40:32,198: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:46279/
+[rospy.internal][INFO] 2026-10-26 09:40:32,198: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:38275/
+[rospy.internal][INFO] 2026-10-26 09:40:32,198: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:42799/
+[rospy.impl.masterslave][INFO] 2026-10-26 09:40:32,199: signal-15
+[rospy.core][INFO] 2026-10-26 09:40:32,317: signal_shutdown [atexit]

@@ -1,0 +1,16 @@
+[rospy.client][INFO] 2026-10-26 09:40:10,897: init_node, name[/rostopic_5934_1793018410881], pid[5934]
+[xmlrpc][INFO] 2026-10-26 09:40:10,898: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-26 09:40:10,898: Started XML-RPC server [http://bsn-virtualbox:39347/]
+[rospy.impl.masterslave][INFO] 2026-10-26 09:40:10,898: _ready: http://bsn-virtualbox:39347/
+[xmlrpc][INFO] 2026-10-26 09:40:10,898: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-26 09:40:10,898: ROS Slave URI: [http://bsn-virtualbox:39347/]
+[rospy.registration][INFO] 2026-10-26 09:40:10,898: Registering with master node http://bsn-virtualbox:42203/
+[rospy.init][INFO] 2026-10-26 09:40:11,002: registered with master
+[rospy.rosout][INFO] 2026-10-26 09:40:11,003: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-26 09:40:11,004: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-26 09:40:11,005: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-10-26 09:40:11,018: topic[/thermometer_data] adding connection to [http://bsn-virtualbox:38275/], count 0
+[rospy.core][INFO] 2026-10-26 09:40:22,391: signal_shutdown [signal-15]
+[rospy.internal][INFO] 2026-10-26 09:40:22,393: topic[/thermometer_data] removing connection to http://bsn-virtualbox:38275/
+[rospy.impl.masterslave][INFO] 2026-10-26 09:40:22,393: signal-15
+[rospy.core][INFO] 2026-10-26 09:40:22,511: signal_shutdown [atexit]

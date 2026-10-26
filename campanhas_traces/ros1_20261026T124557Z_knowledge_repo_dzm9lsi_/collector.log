@@ -1,0 +1,50 @@
+📁 Diretório desta tentativa: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124557Z_knowledge_repo_dzm9lsi_
+=== rospack find (pacotes com testes novos) ===
+logging_infrastructure: /home/bsn/Documents/bsn2/src/sa-bsn/logging_infrastructure/logger
+effector: /home/bsn/Documents/bsn2/src/sa-bsn/target_system/effectors/param_adapter
+repository: /home/bsn/Documents/bsn2/src/sa-bsn/knowledge_repository/data_access
+enactor: /home/bsn/Documents/bsn2/src/sa-bsn/system_manager/enactor
+Reutilizando binários instrumentados; sem rebuild.
+Python: /usr/bin/python
+ros_pytest: /home/bsn/Documents/bsn2/src/ros_pytest/src/ros_pytest/__init__.pyc
+Python: /usr/bin/python2
+ros_pytest: /home/bsn/Documents/bsn2/src/ros_pytest/src/ros_pytest/__init__.pyc
+🚀 Executando testes...
+[31m[ERROR] [1793018760.224432641]: Failed to connect to effector.[0m
+[31m[ERROR] [1793018761.123851479]: Failed to disconnect from effector.[0m
+... logging to /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124557Z_knowledge_repo_dzm9lsi_/ros_logs/rostest-bsn-virtualbox-8498.log
+[ROSUNIT] Outputting test results to /home/bsn/Documents/bsn2/build/test_results/component/rostest-test_test_bdd_test_knowledge_repo.xml
+[Testcase: testtest_knowledge_repo] ... ok
+
+[ROSTEST]-----------------------------------------------------------------------
+
+[component.rosunit-test_knowledge_repo/test_the_knowledge_repository_is_wired_to_the_system_log_and_to_the_central_hub][passed]
+
+SUMMARY
+[32m * RESULT: SUCCESS[0m
+ * TESTS: 1
+ * ERRORS: 0
+ * FAILURES: 0
+
+rostest log file is in /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124557Z_knowledge_repo_dzm9lsi_/ros_logs/rostest-bsn-virtualbox-8498.log
+📋 Resumo por pacote...
+Summary: 2 tests, 0 errors, 0 failures, 0 skipped
+=== Resumo bruto de todo build/test_results/**/*.xml ===
+build/test_results/component/rostest-test_test_bdd_test_knowledge_repo.xml: PULADO (wrapper duplicado de um rosunit-*.xml no mesmo diretorio)
+build/test_results/component/rosunit-test_knowledge_repo.xml: 1 tests, 0 errors, 0 failures, 0 skipped
+
+TOTAL: 1 tests, 0 errors, 0 failures, 0 skipped
+🧬 Mesclando arquivos .profraw...
+📊 Gerando relatório bruto de cobertura...
+[0;31mwarning: 7 functions have mismatched data
+[0m📊 Gerando relatório de cobertura do código de produção...
+[0;31mwarning: 7 functions have mismatched data
+[0m------------------------------------------------
+✅ Relatório de cobertura gerado; confira os resultados dos testes.
+📂 Dados brutos: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124557Z_knowledge_repo_dzm9lsi_/data
+📈 Relatório consolidado: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124557Z_knowledge_repo_dzm9lsi_/merged.profdata
+🌐 Relatório HTML bruto: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124557Z_knowledge_repo_dzm9lsi_/html/index.html
+🌐 Relatório HTML de produção: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124557Z_knowledge_repo_dzm9lsi_/html_production/index.html
+📄 Fontes selecionadas para produção: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124557Z_knowledge_repo_dzm9lsi_/production_sources.txt
+📝 Logs completos (incluindo avisos LLVM): /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124557Z_knowledge_repo_dzm9lsi_/logs/
+------------------------------------------------

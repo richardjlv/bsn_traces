@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="4.293"><testcase classname="rostest.runner.RosTest" name="testtest_param_adapter" time="4.2925" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/bsn/Documents/bsn2/src/sa-bsn/target_system/effectors/param_adapter/test/unit/test_param_adapter.launch] run_id[c64b83d4-d135-11f1-b1fe-080027591fd7] starting
+&amp;#x001B;[1mstarted roslaunch server http://bsn-virtualbox:40439/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /frequency: 10
+ * /rosdistro: melodic
+ * /rosversion: 1.14.13
+ * /test_module: /home/bsn/Documen...
+
+NODES
+  /
+    param_adapter (effector/param_adapter)
+
+[ROSTEST]setup[/home/bsn/Documents/bsn2/src/sa-bsn/target_system/effectors/param_adapter/test/unit/test_param_adapter.launch] run_id[c64b83d4-d135-11f1-b1fe-080027591fd7] done
+[ROSTEST]Running test [test_param_adapter]
+&amp;#x001B;[1mROS_MASTER_URI=http://bsn-virtualbox:40821/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to c64b83d4-d135-11f1-b1fe-080027591fd7&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[param_adapter-1]: started with pid [26926]&amp;#x001B;[0m
+[ROSTEST]running test test_param_adapter
+&amp;#x001B;[1mprocess[test_param_adapter-2]: started with pid [26927]&amp;#x001B;[0m
+&amp;#x001B;[1m[test_param_adapter-2] process has finished cleanly
+log file: /home/bsn/.ros/log/c64b83d4-d135-11f1-b1fe-080027591fd7/test_param_adapter-2*.log&amp;#x001B;[0m
+[ROSTEST]test [test_param_adapter] finished
+[ROSTEST]test [test_param_adapter] results are in [/home/bsn/Documents/bsn2/build/test_results/effector/rosunit-test_param_adapter.xml]
+[ROSTEST]test [test_param_adapter] results summary: 0 errors, 0 failures, 4 tests
+[ROSTEST][ROSTEST] test [test_param_adapter] done
+[ROSTEST]tearDown[/home/bsn/Documents/bsn2/src/sa-bsn/target_system/effectors/param_adapter/test/unit/test_param_adapter.launch]
+shutting down processing monitor...
+[param_adapter-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/bsn/Documents/bsn2/src/sa-bsn/target_system/effectors/param_adapter/test/unit/test_param_adapter.launch complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>

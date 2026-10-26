@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="4.730"><testcase classname="rostest.runner.RosTest" name="testtest_data_access" time="4.7298" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/bsn/Documents/bsn2/src/sa-bsn/knowledge_repository/data_access/test/unit/test_data_access.launch] run_id[c9307dfc-d135-11f1-b1fe-080027591fd7] starting
+&amp;#x001B;[1mstarted roslaunch server http://bsn-virtualbox:46427/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /frequency: 10000
+ * /rosdistro: melodic
+ * /rosversion: 1.14.13
+ * /test_module: /home/bsn/Documen...
+
+NODES
+  /
+    data_access (repository/data_access)
+
+[ROSTEST]setup[/home/bsn/Documents/bsn2/src/sa-bsn/knowledge_repository/data_access/test/unit/test_data_access.launch] run_id[c9307dfc-d135-11f1-b1fe-080027591fd7] done
+[ROSTEST]Running test [test_data_access]
+&amp;#x001B;[1mROS_MASTER_URI=http://bsn-virtualbox:36003/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to c9307dfc-d135-11f1-b1fe-080027591fd7&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[data_access-1]: started with pid [27104]&amp;#x001B;[0m
+[ROSTEST]running test test_data_access
+&amp;#x001B;[1mprocess[test_data_access-2]: started with pid [27105]&amp;#x001B;[0m
+&amp;#x001B;[1m[test_data_access-2] process has finished cleanly
+log file: /home/bsn/.ros/log/c9307dfc-d135-11f1-b1fe-080027591fd7/test_data_access-2*.log&amp;#x001B;[0m
+[ROSTEST]test [test_data_access] finished
+[ROSTEST]test [test_data_access] results are in [/home/bsn/Documents/bsn2/build/test_results/repository/rosunit-test_data_access.xml]
+[ROSTEST]test [test_data_access] results summary: 0 errors, 0 failures, 5 tests
+[ROSTEST][ROSTEST] test [test_data_access] done
+[ROSTEST]tearDown[/home/bsn/Documents/bsn2/src/sa-bsn/knowledge_repository/data_access/test/unit/test_data_access.launch]
+shutting down processing monitor...
+[data_access-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/bsn/Documents/bsn2/src/sa-bsn/knowledge_repository/data_access/test/unit/test_data_access.launch complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>

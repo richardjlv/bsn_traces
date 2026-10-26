@@ -1,0 +1,40 @@
+[33m[ WARN] [1793019120.294297952]: Engine waiting for DataAccessRequest service to become available...[0m
+[33m[ WARN] [1793019121.990428656]: EngineRequest service advertised successfully![0m
+[31m[ERROR] [1793019124.345662639]: Failed to disconnect from effector.[0m
+[31m[ERROR] [1793019124.345802285]: Failed to disconnect from effector.[0m
+[31m[ERROR] [1793019124.345987123]: Failed to disconnect from effector.[0m
+[31m[ERROR] [1793019124.346058302]: Failed to disconnect from effector.[0m
+[31m[ERROR] [1793019124.346058601]: Failed to disconnect from effector.[0m
+[0m[ INFO] [1793019120.319676669]: Inject [noise_factor=0.000693] at [g3t1_1].[0m
+[0m[ INFO] [1793019120.320945202]: Inject [noise_factor=0.011813] at [g3t1_2].[0m
+[0m[ INFO] [1793019120.320959057]: Inject [noise_factor=0.046967] at [g3t1_3].[0m
+[0m[ INFO] [1793019120.320965298]: Inject [noise_factor=0.011388] at [g3t1_4].[0m
+[0m[ INFO] [1793019120.320972043]: Inject [noise_factor=0.091037] at [g3t1_5].[0m
+[0m[ INFO] [1793019120.320976703]: Inject [noise_factor=0.000761] at [g3t1_6].[0m
+[0m[ INFO] [1793019121.988253675]: Inject [noise_factor=0.016626] at [g3t1_1].[0m
+[0m[ INFO] [1793019121.988278850]: Inject [noise_factor=0.002044] at [g3t1_2].[0m
+[0m[ INFO] [1793019121.988292422]: Inject [noise_factor=0.020474] at [g3t1_4].[0m
+[0m[ INFO] [1793019121.988304349]: Inject [noise_factor=0.020323] at [g3t1_5].[0m
+[0m[ INFO] [1793019123.655450119]: Inject [noise_factor=0.012154] at [g3t1_1].[0m
+[0m[ INFO] [1793019123.655475797]: Inject [noise_factor=0.023911] at [g3t1_2].[0m
+... logging to /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125158Z_injector_napoem29/ros_logs/rostest-bsn-virtualbox-10987.log
+[ROSUNIT] Outputting test results to /home/bsn/Documents/bsn2/build/test_results/component/rostest-test_test_bdd_test_injector.xml
+[Testcase: testtest_injector] ... ok
+
+[ROSTEST]-----------------------------------------------------------------------
+
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_each_body_sensor[the oximeter]][passed]
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_each_body_sensor[the ECG sensor]][passed]
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_each_body_sensor[the thermometer]][passed]
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_each_body_sensor[the SBP sensor]][passed]
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_each_body_sensor[the DBP sensor]][passed]
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_each_body_sensor[the glucometer]][passed]
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_the_system_log][passed]
+
+SUMMARY
+[32m * RESULT: SUCCESS[0m
+ * TESTS: 7
+ * ERRORS: 0
+ * FAILURES: 0
+
+rostest log file is in /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125158Z_injector_napoem29/ros_logs/rostest-bsn-virtualbox-10987.log

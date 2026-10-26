@@ -1,0 +1,101 @@
+📁 Diretório desta tentativa: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124617Z_target_system_xx8t5emn
+=== rospack find (pacotes com testes novos) ===
+logging_infrastructure: /home/bsn/Documents/bsn2/src/sa-bsn/logging_infrastructure/logger
+effector: /home/bsn/Documents/bsn2/src/sa-bsn/target_system/effectors/param_adapter
+repository: /home/bsn/Documents/bsn2/src/sa-bsn/knowledge_repository/data_access
+enactor: /home/bsn/Documents/bsn2/src/sa-bsn/system_manager/enactor
+Reutilizando binários instrumentados; sem rebuild.
+Python: /usr/bin/python
+ros_pytest: /home/bsn/Documents/bsn2/src/ros_pytest/src/ros_pytest/__init__.pyc
+Python: /usr/bin/python2
+ros_pytest: /home/bsn/Documents/bsn2/src/ros_pytest/src/ros_pytest/__init__.pyc
+🚀 Executando testes...
+[33m[ WARN] [1793018778.622522216]: Engine waiting for DataAccessRequest service to become available...[0m
+[33m[ WARN] [1793018780.314840888]: EngineRequest service advertised successfully![0m
+[31m[ERROR] [1793018785.590463099]: SENSOR FAILED: sensor accuracy fail[0m
+[31m[ERROR] [1793018787.587712633]: SENSOR FAILED: sensor accuracy fail[0m
+[31m[ERROR] [1793018787.600136810]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793018794.038748264]: Failed to disconnect from effector.[0m
+[0m[ INFO] [1793018778.652872921]: Inject [noise_factor=0.024161] at [g3t1_1].[0m
+[0m[ INFO] [1793018778.654092183]: Inject [noise_factor=0.017625] at [g3t1_2].[0m
+[0m[ INFO] [1793018778.654111127]: Inject [noise_factor=0.046811] at [g3t1_3].[0m
+[0m[ INFO] [1793018778.654136700]: Inject [noise_factor=0.014214] at [g3t1_4].[0m
+[0m[ INFO] [1793018778.654149906]: Inject [noise_factor=0.097793] at [g3t1_5].[0m
+[0m[ INFO] [1793018778.654165959]: Inject [noise_factor=0.024808] at [g3t1_6].[0m
+[0m[ INFO] [1793018780.319700042]: Inject [noise_factor=0.017548] at [g3t1_1].[0m
+[0m[ INFO] [1793018780.319726076]: Inject [noise_factor=0.004753] at [g3t1_2].[0m
+[0m[ INFO] [1793018780.319893109]: Inject [noise_factor=0.072862] at [g3t1_4].[0m
+[0m[ INFO] [1793018780.319912828]: Inject [noise_factor=0.075143] at [g3t1_5].[0m
+[0m[ INFO] [1793018781.987281358]: Inject [noise_factor=0.018895] at [g3t1_1].[0m
+[0m[ INFO] [1793018781.987309790]: Inject [noise_factor=0.002206] at [g3t1_2].[0m
+[0m[ INFO] [1793018783.654468323]: Inject [noise_factor=0.009472] at [g3t1_1].[0m
+[0m[ INFO] [1793018783.654492346]: Inject [noise_factor=0.000055] at [g3t1_2].[0m
+[0m[ INFO] [1793018783.654507667]: Inject [noise_factor=0.010073] at [g3t1_3].[0m
+[0m[ INFO] [1793018785.322613907]: Inject [noise_factor=0.017033] at [g3t1_1].[0m
+[0m[ INFO] [1793018785.322638600]: Inject [noise_factor=0.016578] at [g3t1_2].[0m
+[0m[ INFO] [1793018785.322652811]: Inject [noise_factor=0.017586] at [g3t1_3].[0m
+[0m[ INFO] [1793018786.989659835]: Inject [noise_factor=0.020692] at [g3t1_1].[0m
+[0m[ INFO] [1793018786.989682707]: Inject [noise_factor=0.019994] at [g3t1_2].[0m
+[0m[ INFO] [1793018788.656673824]: Inject [noise_factor=0.009854] at [g3t1_1].[0m
+[0m[ INFO] [1793018788.656703114]: Inject [noise_factor=0.015366] at [g3t1_2].[0m
+[0m[ INFO] [1793018790.323476419]: Inject [noise_factor=0.019450] at [g3t1_1].[0m
+[0m[ INFO] [1793018790.323503112]: Inject [noise_factor=0.013340] at [g3t1_2].[0m
+[0m[ INFO] [1793018790.323516810]: Inject [noise_factor=0.021512] at [g3t1_3].[0m
+[0m[ INFO] [1793018791.990524061]: Inject [noise_factor=0.022369] at [g3t1_1].[0m
+[0m[ INFO] [1793018791.990646292]: Inject [noise_factor=0.011705] at [g3t1_2].[0m
+[0m[ INFO] [1793018791.990973652]: Inject [noise_factor=0.011648] at [g3t1_3].[0m
+[0m[ INFO] [1793018793.656923656]: Inject [noise_factor=0.024987] at [g3t1_1].[0m
+[0m[ INFO] [1793018793.656952842]: Inject [noise_factor=0.003838] at [g3t1_2].[0m
+... logging to /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124617Z_target_system_xx8t5emn/ros_logs/rostest-bsn-virtualbox-8804.log
+[ROSUNIT] Outputting test results to /home/bsn/Documents/bsn2/build/test_results/component/rostest-test_test_bdd_test_target_system.xml
+[Testcase: testsensor_test] ... ok
+
+[ROSTEST]-----------------------------------------------------------------------
+
+[component.rosunit-sensor_test/test_each_body_sensor_sends_its_readings_to_the_central_hub[the oximeter]][passed]
+[component.rosunit-sensor_test/test_each_body_sensor_sends_its_readings_to_the_central_hub[the ECG sensor]][passed]
+[component.rosunit-sensor_test/test_each_body_sensor_sends_its_readings_to_the_central_hub[the thermometer]][passed]
+[component.rosunit-sensor_test/test_each_body_sensor_sends_its_readings_to_the_central_hub[the SBP sensor]][passed]
+[component.rosunit-sensor_test/test_each_body_sensor_sends_its_readings_to_the_central_hub[the DBP sensor]][passed]
+[component.rosunit-sensor_test/test_each_body_sensor_sends_its_readings_to_the_central_hub[the glucometer]][passed]
+[component.rosunit-sensor_test/test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the oximeter]][passed]
+[component.rosunit-sensor_test/test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the ECG sensor]][passed]
+[component.rosunit-sensor_test/test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the thermometer]][passed]
+[component.rosunit-sensor_test/test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the SBP sensor]][passed]
+[component.rosunit-sensor_test/test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the DBP sensor]][passed]
+[component.rosunit-sensor_test/test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the glucometer]][passed]
+[component.rosunit-sensor_test/test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the central hub]][passed]
+[component.rosunit-sensor_test/test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[blood oxygenation]][passed]
+[component.rosunit-sensor_test/test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[heart rate]][passed]
+[component.rosunit-sensor_test/test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[systolic blood pressure]][passed]
+[component.rosunit-sensor_test/test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[diastolic blood pressure]][passed]
+[component.rosunit-sensor_test/test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[blood glucose]][passed]
+
+SUMMARY
+[32m * RESULT: SUCCESS[0m
+ * TESTS: 18
+ * ERRORS: 0
+ * FAILURES: 0
+
+rostest log file is in /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124617Z_target_system_xx8t5emn/ros_logs/rostest-bsn-virtualbox-8804.log
+📋 Resumo por pacote...
+Summary: 19 tests, 0 errors, 0 failures, 0 skipped
+=== Resumo bruto de todo build/test_results/**/*.xml ===
+build/test_results/component/rostest-test_test_bdd_test_target_system.xml: PULADO (wrapper duplicado de um rosunit-*.xml no mesmo diretorio)
+build/test_results/component/rosunit-sensor_test.xml: 18 tests, 0 errors, 0 failures, 0 skipped
+
+TOTAL: 18 tests, 0 errors, 0 failures, 0 skipped
+🧬 Mesclando arquivos .profraw...
+📊 Gerando relatório bruto de cobertura...
+[0;31mwarning: 31 functions have mismatched data
+[0m📊 Gerando relatório de cobertura do código de produção...
+[0;31mwarning: 31 functions have mismatched data
+[0m------------------------------------------------
+✅ Relatório de cobertura gerado; confira os resultados dos testes.
+📂 Dados brutos: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124617Z_target_system_xx8t5emn/data
+📈 Relatório consolidado: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124617Z_target_system_xx8t5emn/merged.profdata
+🌐 Relatório HTML bruto: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124617Z_target_system_xx8t5emn/html/index.html
+🌐 Relatório HTML de produção: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124617Z_target_system_xx8t5emn/html_production/index.html
+📄 Fontes selecionadas para produção: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124617Z_target_system_xx8t5emn/production_sources.txt
+📝 Logs completos (incluindo avisos LLVM): /home/bsn/Documents/bsn2/traces_features/ros1_20261026T124617Z_target_system_xx8t5emn/logs/
+------------------------------------------------

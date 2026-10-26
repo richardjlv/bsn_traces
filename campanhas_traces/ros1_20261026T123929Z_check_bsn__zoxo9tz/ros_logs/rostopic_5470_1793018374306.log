@@ -1,0 +1,28 @@
+[rospy.client][INFO] 2026-10-26 09:39:34,321: init_node, name[/rostopic_5470_1793018374306], pid[5470]
+[xmlrpc][INFO] 2026-10-26 09:39:34,321: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-26 09:39:34,321: Started XML-RPC server [http://bsn-virtualbox:34719/]
+[rospy.impl.masterslave][INFO] 2026-10-26 09:39:34,321: _ready: http://bsn-virtualbox:34719/
+[rospy.init][INFO] 2026-10-26 09:39:34,321: ROS Slave URI: [http://bsn-virtualbox:34719/]
+[rospy.registration][INFO] 2026-10-26 09:39:34,322: Registering with master node http://bsn-virtualbox:42203/
+[xmlrpc][INFO] 2026-10-26 09:39:34,322: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-26 09:39:34,422: registered with master
+[rospy.rosout][INFO] 2026-10-26 09:39:34,422: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-26 09:39:34,423: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-26 09:39:34,424: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-10-26 09:39:34,442: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:37201/], count 0
+[rospy.internal][INFO] 2026-10-26 09:39:34,442: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:40415/], count 0
+[rospy.internal][INFO] 2026-10-26 09:39:34,443: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:43643/], count 2
+[rospy.internal][INFO] 2026-10-26 09:39:34,443: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:46821/], count 3
+[rospy.internal][INFO] 2026-10-26 09:39:34,444: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:42799/], count 4
+[rospy.internal][INFO] 2026-10-26 09:39:34,445: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:38275/], count 5
+[rospy.internal][INFO] 2026-10-26 09:39:34,445: topic[/collect_energy_status] adding connection to [http://bsn-virtualbox:46279/], count 5
+[rospy.core][INFO] 2026-10-26 09:39:36,241: signal_shutdown [signal-15]
+[rospy.internal][INFO] 2026-10-26 09:39:36,243: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:37201/
+[rospy.internal][INFO] 2026-10-26 09:39:36,243: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:40415/
+[rospy.internal][INFO] 2026-10-26 09:39:36,243: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:43643/
+[rospy.internal][INFO] 2026-10-26 09:39:36,243: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:46821/
+[rospy.internal][INFO] 2026-10-26 09:39:36,244: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:42799/
+[rospy.internal][INFO] 2026-10-26 09:39:36,244: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:38275/
+[rospy.internal][INFO] 2026-10-26 09:39:36,244: topic[/collect_energy_status] removing connection to http://bsn-virtualbox:46279/
+[rospy.impl.masterslave][INFO] 2026-10-26 09:39:36,244: signal-15
+[rospy.core][INFO] 2026-10-26 09:39:36,379: signal_shutdown [atexit]

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="bsn-virtualbox" name="pytest" skipped="1" tests="11" time="34.349" timestamp="2026-10-26T09:04:47.554255"><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_adaptation_enactor_exchanges_adaptation_strategies_with_the_reliability_engine" time="0.736"><system-out>node /enactor, inbound_connections [u&apos;/event&apos;, u&apos;/strategy&apos;] subscriptions: [u&apos;/event&apos;, u&apos;/strategy&apos;]
+missing_topics: []
+is_receiving: True, for topic /strategy and node /enactor
+missing_topics: []
+node /enactor, outbound_connections [u&apos;/log_adapt&apos;, u&apos;/exception&apos;] publications: [u&apos;/exception&apos;, u&apos;/log_adapt&apos;, u&apos;/rosout&apos;]
+missing_topics: []
+node /enactor is publishing to all expected topics.
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_adaptation_enactor_exchanges_adaptation_records_with_the_system_log" time="0.698"><system-out>node /enactor, inbound_connections [u&apos;/event&apos;, u&apos;/strategy&apos;] subscriptions: [u&apos;/event&apos;, u&apos;/strategy&apos;]
+missing_topics: []
+is_receiving: True, for topic /event and node /enactor
+missing_topics: []
+node /enactor, outbound_connections [u&apos;/log_adapt&apos;, u&apos;/exception&apos;] publications: [u&apos;/exception&apos;, u&apos;/log_adapt&apos;, u&apos;/rosout&apos;]
+missing_topics: []
+node /enactor is publishing to all expected topics.
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor event]" time="0.327"><system-out>node /logger, inbound_connections [u&apos;/log_adapt&apos;, u&apos;/log_status&apos;, u&apos;/log_energy_status&apos;, u&apos;/log_event&apos;, u&apos;/log_uncertainty&apos;] subscriptions: [u&apos;/log_adapt&apos;, u&apos;/log_energy_status&apos;, u&apos;/log_event&apos;, u&apos;/log_status&apos;, u&apos;/log_uncertainty&apos;]
+missing_topics: []
+is_receiving: True, for topic /log_event and node /logger
+missing_topics: []
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor status]" time="0.323"><system-out>node /logger, inbound_connections [u&apos;/log_adapt&apos;, u&apos;/log_status&apos;, u&apos;/log_energy_status&apos;, u&apos;/log_event&apos;, u&apos;/log_uncertainty&apos;] subscriptions: [u&apos;/log_adapt&apos;, u&apos;/log_energy_status&apos;, u&apos;/log_event&apos;, u&apos;/log_status&apos;, u&apos;/log_uncertainty&apos;]
+missing_topics: []
+is_receiving: True, for topic /log_status and node /logger
+missing_topics: []
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor energy status]" time="0.325"><system-out>node /logger, inbound_connections [u&apos;/log_adapt&apos;, u&apos;/log_status&apos;, u&apos;/log_energy_status&apos;, u&apos;/log_event&apos;, u&apos;/log_uncertainty&apos;] subscriptions: [u&apos;/log_adapt&apos;, u&apos;/log_energy_status&apos;, u&apos;/log_event&apos;, u&apos;/log_status&apos;, u&apos;/log_uncertainty&apos;]
+missing_topics: []
+is_receiving: True, for topic /log_energy_status and node /logger
+missing_topics: []
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_system_log_sends_reconfiguration_requests_to_the_parameter_adapter" time="0.312"><system-out>node /logger, outbound_connections [u&apos;/reconfigure&apos;, u&apos;/persist&apos;, u&apos;/event&apos;] publications: [u&apos;/event&apos;, u&apos;/persist&apos;, u&apos;/reconfigure&apos;, u&apos;/rosout&apos;, u&apos;/status&apos;]
+missing_topics: []
+node /logger is publishing to all expected topics.
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_sampling_rate_increases_when_sensor_reliability_falls_below_the_threshold_g4g5" time="1.175"><system-out>AdaptationCommand de aumento: /g3t1_1 freq=1.244Hz (baseline=1.0Hz)
+Persist confirmado: type=AdaptationCommand source=/enactor content=freq=0.998500
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_sampling_rate_decreases_after_sensor_reliability_recovers_g4g5" time="21.680"><system-out>Pico de frequencia atingido antes da recuperacao: 25.824Hz
+Persist confirmado: type=AdaptationCommand source=/enactor content=freq=0.998500
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_an_adaptation_command_is_issued_within_10_seconds_after_reliability_degradation_g4g5" time="5.239"></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_no_adaptation_is_triggered_while_sensor_reliability_stays_above_the_threshold_g4g5" time="3.017"><skipped message="" type="pytest.xfail"></skipped></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_a_failed_adaptation_attempt_is_recorded_in_the_system_log_g4g5" time="0.346"><system-out>Persist confirmado mesmo com o sensor desconectado: type=AdaptationCommand source=/enactor content=freq=21.108260
+</system-out></testcase></testsuite></testsuites>

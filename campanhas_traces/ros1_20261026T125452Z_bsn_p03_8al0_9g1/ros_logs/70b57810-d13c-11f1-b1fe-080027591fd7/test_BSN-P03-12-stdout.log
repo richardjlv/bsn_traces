@@ -1,0 +1,28 @@
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.17, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: /home/bsn/Documents/bsn2/build/test_results/component
+plugins: bdd-4.0.2
+collected 2 items
+
+../Documents/bsn2/build/test_results/component ..                        [100%]
+
+=============================== warnings summary ===============================
+/home/bsn/.local/lib/python2.7/site-packages/_pytest/mark/structures.py:335
+  /home/bsn/.local/lib/python2.7/site-packages/_pytest/mark/structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.timing - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+/home/bsn/.local/lib/python2.7/site-packages/_pytest/mark/structures.py:335
+  /home/bsn/.local/lib/python2.7/site-packages/_pytest/mark/structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.bsn-p03 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+/home/bsn/.local/lib/python2.7/site-packages/_pytest/mark/structures.py:335
+  /home/bsn/.local/lib/python2.7/site-packages/_pytest/mark/structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.sad-path - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+::test_an_emergency_is_reported_within_250_ms_of_a_highrisk_reading_bsnp03
+  /home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/conftest.py:112: UserWarning: 'test_BSN-P03' is not a legal ROS base name. This may cause problems with other ROS tools.
+    rospy.init_node('bdd_component_steps', anonymous=True)
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+- generated xml file: /home/bsn/Documents/bsn2/build/test_results/component/rosunit-test_BSN-P03.xml -
+==================== 2 passed, 4 warnings in 38.24 seconds =====================

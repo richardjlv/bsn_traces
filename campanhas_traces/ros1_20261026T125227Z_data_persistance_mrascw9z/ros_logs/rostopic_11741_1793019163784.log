@@ -1,0 +1,24 @@
+[rospy.client][INFO] 2026-10-26 09:52:43,806: init_node, name[/rostopic_11741_1793019163784], pid[11741]
+[xmlrpc][INFO] 2026-10-26 09:52:43,811: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-26 09:52:43,811: Started XML-RPC server [http://bsn-virtualbox:39965/]
+[rospy.init][INFO] 2026-10-26 09:52:43,811: ROS Slave URI: [http://bsn-virtualbox:39965/]
+[rospy.impl.masterslave][INFO] 2026-10-26 09:52:43,812: _ready: http://bsn-virtualbox:39965/
+[rospy.registration][INFO] 2026-10-26 09:52:43,812: Registering with master node http://bsn-virtualbox:45901/
+[xmlrpc][INFO] 2026-10-26 09:52:43,813: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-26 09:52:43,912: registered with master
+[rospy.rosout][INFO] 2026-10-26 09:52:43,912: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-26 09:52:43,913: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-26 09:52:43,914: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-10-26 09:52:43,927: topic[/thermometer_data] adding connection to [http://bsn-virtualbox:33753/], count 0
+[rospy.core][INFO] 2026-10-26 09:52:53,319: signal_shutdown [signal-15]
+[rospy.internal][INFO] 2026-10-26 09:52:53,321: topic[/thermometer_data] removing connection to http://bsn-virtualbox:33753/
+[rospy.internal][INFO] 2026-10-26 09:52:53,321: topic[/thermometer_data] removing connection to http://bsn-virtualbox:33753/
+[rospy.topics][ERROR] 2026-10-26 09:52:53,321: Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 858, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.impl.masterslave][INFO] 2026-10-26 09:52:53,321: signal-15
+[rospy.core][INFO] 2026-10-26 09:52:53,453: signal_shutdown [atexit]

@@ -1,0 +1,71 @@
+📁 Diretório desta tentativa: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125417Z_injector_0b3fl76f
+=== rospack find (pacotes com testes novos) ===
+logging_infrastructure: /home/bsn/Documents/bsn2/src/sa-bsn/logging_infrastructure/logger
+effector: /home/bsn/Documents/bsn2/src/sa-bsn/target_system/effectors/param_adapter
+repository: /home/bsn/Documents/bsn2/src/sa-bsn/knowledge_repository/data_access
+enactor: /home/bsn/Documents/bsn2/src/sa-bsn/system_manager/enactor
+Reutilizando binários instrumentados; sem rebuild.
+Python: /usr/bin/python
+ros_pytest: /home/bsn/Documents/bsn2/src/ros_pytest/src/ros_pytest/__init__.pyc
+Python: /usr/bin/python2
+ros_pytest: /home/bsn/Documents/bsn2/src/ros_pytest/src/ros_pytest/__init__.pyc
+🚀 Executando testes...
+[33m[ WARN] [1793019259.456087754]: Engine waiting for DataAccessRequest service to become available...[0m
+[33m[ WARN] [1793019261.151181026]: EngineRequest service advertised successfully![0m
+[31m[ERROR] [1793019263.781137904]: Failed to disconnect from effector.[0m
+[31m[ERROR] [1793019263.781258711]: Failed to disconnect from effector.[0m
+[31m[ERROR] [1793019263.781326361]: Failed to disconnect from effector.[0m
+[0m[ INFO] [1793019259.451393751]: Inject [noise_factor=0.021175] at [g3t1_1].[0m
+[0m[ INFO] [1793019259.453599529]: Inject [noise_factor=0.009818] at [g3t1_2].[0m
+[0m[ INFO] [1793019259.453618525]: Inject [noise_factor=0.025543] at [g3t1_3].[0m
+[0m[ INFO] [1793019259.453629176]: Inject [noise_factor=0.011429] at [g3t1_4].[0m
+[0m[ INFO] [1793019259.453640433]: Inject [noise_factor=0.024373] at [g3t1_5].[0m
+[0m[ INFO] [1793019259.453652361]: Inject [noise_factor=0.035689] at [g3t1_6].[0m
+[0m[ INFO] [1793019261.118280039]: Inject [noise_factor=0.021334] at [g3t1_1].[0m
+[0m[ INFO] [1793019261.118311571]: Inject [noise_factor=0.002359] at [g3t1_2].[0m
+[0m[ INFO] [1793019261.118336274]: Inject [noise_factor=0.067321] at [g3t1_4].[0m
+[0m[ INFO] [1793019261.118501860]: Inject [noise_factor=0.048059] at [g3t1_5].[0m
+[0m[ INFO] [1793019262.785199431]: Inject [noise_factor=0.020193] at [g3t1_1].[0m
+[0m[ INFO] [1793019262.785231077]: Inject [noise_factor=0.024171] at [g3t1_2].[0m
+... logging to /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125417Z_injector_0b3fl76f/ros_logs/rostest-bsn-virtualbox-12499.log
+[ROSUNIT] Outputting test results to /home/bsn/Documents/bsn2/build/test_results/component/rostest-test_test_bdd_test_injector.xml
+[Testcase: testtest_injector] ... ok
+
+[ROSTEST]-----------------------------------------------------------------------
+
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_each_body_sensor[the oximeter]][passed]
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_each_body_sensor[the ECG sensor]][passed]
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_each_body_sensor[the thermometer]][passed]
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_each_body_sensor[the SBP sensor]][passed]
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_each_body_sensor[the DBP sensor]][passed]
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_each_body_sensor[the glucometer]][passed]
+[component.rosunit-test_injector/test_the_uncertainty_injector_is_wired_to_the_system_log][passed]
+
+SUMMARY
+[32m * RESULT: SUCCESS[0m
+ * TESTS: 7
+ * ERRORS: 0
+ * FAILURES: 0
+
+rostest log file is in /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125417Z_injector_0b3fl76f/ros_logs/rostest-bsn-virtualbox-12499.log
+📋 Resumo por pacote...
+Summary: 8 tests, 0 errors, 0 failures, 0 skipped
+=== Resumo bruto de todo build/test_results/**/*.xml ===
+build/test_results/component/rostest-test_test_bdd_test_injector.xml: PULADO (wrapper duplicado de um rosunit-*.xml no mesmo diretorio)
+build/test_results/component/rosunit-test_injector.xml: 7 tests, 0 errors, 0 failures, 0 skipped
+
+TOTAL: 7 tests, 0 errors, 0 failures, 0 skipped
+🧬 Mesclando arquivos .profraw...
+📊 Gerando relatório bruto de cobertura...
+[0;31mwarning: 31 functions have mismatched data
+[0m📊 Gerando relatório de cobertura do código de produção...
+[0;31mwarning: 31 functions have mismatched data
+[0m------------------------------------------------
+✅ Relatório de cobertura gerado; confira os resultados dos testes.
+📂 Dados brutos: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125417Z_injector_0b3fl76f/data
+📈 Relatório consolidado: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125417Z_injector_0b3fl76f/merged.profdata
+🌐 Relatório HTML bruto: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125417Z_injector_0b3fl76f/html/index.html
+🌐 Relatório HTML de produção: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125417Z_injector_0b3fl76f/html_production/index.html
+📄 Fontes selecionadas para produção: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125417Z_injector_0b3fl76f/production_sources.txt
+📝 Logs completos (incluindo avisos LLVM): /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125417Z_injector_0b3fl76f/logs/
+------------------------------------------------

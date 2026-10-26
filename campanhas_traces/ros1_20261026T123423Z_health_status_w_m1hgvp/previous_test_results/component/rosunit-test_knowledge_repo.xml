@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="bsn-virtualbox" name="pytest" skipped="0" tests="1" time="0.835" timestamp="2026-10-26T09:06:27.089262"><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_knowledge_repository_is_wired_to_the_system_log_and_to_the_central_hub" time="0.788"><system-out>node /data_access, inbound_connections [u&apos;/persist&apos;] subscriptions: [u&apos;/TargetSystemData&apos;, u&apos;/persist&apos;]
+missing_topics: []
+is_receiving: True, for topic /persist and node /data_access
+missing_topics: []
+node /data_access, inbound_connections [u&apos;/persist&apos;, u&apos;/TargetSystemData&apos;] subscriptions: [u&apos;/TargetSystemData&apos;, u&apos;/persist&apos;]
+missing_topics: []
+is_receiving: True, for topic /TargetSystemData and node /data_access
+missing_topics: []
+</system-out></testcase></testsuite></testsuites>

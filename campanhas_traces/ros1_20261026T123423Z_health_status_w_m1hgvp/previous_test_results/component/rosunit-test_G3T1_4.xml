@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="bsn-virtualbox" name="pytest" skipped="0" tests="6" time="16.420" timestamp="2026-10-26T09:04:28.210755"><testcase classname=".TestG3T1_4" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="194" name="test_transfer_with_low_risk_data" time="1.376"><system-out>[INFO] [1793016268.474276]: Servico &apos;getPatientData&apos; mockado iniciado para teste.
+[INFO] [1793016268.618906]: Servico &apos;getPatientData&apos; chamado no teste: abps
+[INFO] [1793016269.619371]: Servico &apos;getPatientData&apos; chamado no teste: abps
+Mensagem recebida no topico abps_data: data=100.0
+Received message: 13.3333333333
+[INFO] [1793016269.630357]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_4" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="227" name="test_transfer_with_high_risk_data" time="2.210"><system-out>[INFO] [1793016270.619826]: Servico &apos;getPatientData&apos; (High risk) chamado no teste: abps
+Mensagem recebida no topico abps_data: data=250.0
+High risk service mock setup complete.
+[INFO] [1793016271.620004]: Servico &apos;getPatientData&apos; (High risk) chamado no teste: abps
+Mensagem recebida no topico abps_data: data=250.0
+Mensagem recebida no topico abps_data: data=250.0
+[INFO] [1793016271.841182]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_4" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="261" name="test_transfer_with_mid_risk_data" time="2.206"><system-out>[INFO] [1793016272.620165]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: abps
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mid risk service mock setup complete.
+[INFO] [1793016273.620386]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: abps
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Received message: 43.0, 130.0
+[INFO] [1793016274.048718]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_4" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="294" name="test_transfer_with_out_of_range_data" time="4.209"><system-out>[INFO] [1793016274.620730]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: abps
+Out of range service mock setup complete.
+[INFO] [1793016275.620800]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: abps
+[INFO] [1793016276.621137]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: abps
+[INFO] [1793016277.621562]: Servico &apos;getPatientData&apos; (Out of range) chamado no teste: abps
+[INFO] [1793016278.258808]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_4" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="299" name="test_transfer_with_accuracy_fail" time="3.402"><system-out>[INFO] [1793016278.621983]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: abps
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mid risk service mock setup complete.
+[INFO] [1793016279.622033]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: abps
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+[INFO] [1793016280.629273]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: abps
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+[INFO] [1793016281.650659]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: abps
+[INFO] [1793016281.661864]: Servico de mock desligado.
+</system-out></testcase><testcase classname=".TestG3T1_4" file="../../../src/sa-bsn/target_system/components/component/test/test_sensor.py" line="350" name="test_battery_consumption" time="2.966"><system-out>[INFO] [1793016282.623096]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: abps
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mid risk service mock setup complete.
+[INFO] [1793016283.623491]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: abps
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+[INFO] [1793016284.623860]: Servico &apos;getPatientData&apos; (Mid risk) chamado no teste: abps
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+Mensagem recebida no topico abps_data: data=130.0
+[INFO] [1793016284.628762]: Servico de mock desligado.
+</system-out></testcase></testsuite></testsuites>

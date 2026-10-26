@@ -1,0 +1,101 @@
+📁 Diretório desta tentativa: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125452Z_bsn_p03_8al0_9g1
+=== rospack find (pacotes com testes novos) ===
+logging_infrastructure: /home/bsn/Documents/bsn2/src/sa-bsn/logging_infrastructure/logger
+effector: /home/bsn/Documents/bsn2/src/sa-bsn/target_system/effectors/param_adapter
+repository: /home/bsn/Documents/bsn2/src/sa-bsn/knowledge_repository/data_access
+enactor: /home/bsn/Documents/bsn2/src/sa-bsn/system_manager/enactor
+Reutilizando binários instrumentados; sem rebuild.
+Python: /usr/bin/python
+ros_pytest: /home/bsn/Documents/bsn2/src/ros_pytest/src/ros_pytest/__init__.pyc
+Python: /usr/bin/python2
+ros_pytest: /home/bsn/Documents/bsn2/src/ros_pytest/src/ros_pytest/__init__.pyc
+🚀 Executando testes...
+[31m[ERROR] [1793019295.583415450]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019296.584486558]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019297.585622061]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019298.585379483]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019299.586824524]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019300.586613195]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019301.587613063]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019302.588241527]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019303.588334720]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019304.590413280]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019305.592560621]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019306.592688952]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019307.593329733]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019308.593909921]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019309.594500023]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019310.594345150]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019311.595211342]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019312.595271345]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019313.595388536]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019314.515387868]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019314.595690302]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019315.596477332]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019316.597085194]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019317.598430529]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019318.597845825]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019319.597548949]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019320.597985330]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019321.598358591]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019322.598349289]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019323.234009412]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019323.600336627]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019324.600745585]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019325.600707822]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019326.601203017]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019327.601312368]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019328.601668555]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019329.601825990]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019330.602455552]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019331.602420503]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019332.602779658]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019333.603561393]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019334.603664749]: SENSOR FAILED: risk data out of boundaries[0m
+[31m[ERROR] [1793019335.267916670]: Failed to disconnect from effector.[0m
+[31m[ERROR] [1793019335.267943046]: Failed to disconnect from effector.[0m
+[31m[ERROR] [1793019335.267989891]: Failed to disconnect from effector.[0m
+
+[ROSTEST WARNINGS]--------------------------------------------------------------
+
+ * WARN: illegal <node> name 'test_BSN-P03'.
+http://ros.org/wiki/Names
+This will likely cause problems with other ROS tools.
+Node xml is <test pkg="ros_pytest" test-name="test_BSN-P03" time-limit="120.0" type="ros_pytest_runner"/>
+... logging to /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125452Z_bsn_p03_8al0_9g1/ros_logs/rostest-bsn-virtualbox-12976.log
+[ROSUNIT] Outputting test results to /home/bsn/Documents/bsn2/build/test_results/component/rostest-test_test_bdd_test_BSN-P03.xml
+[Testcase: testtest_BSN-P03] ... ok
+
+[ROSTEST]-----------------------------------------------------------------------
+
+[component.rosunit-test_BSN-P03/test_an_emergency_is_reported_within_250_ms_of_a_highrisk_reading_bsnp03][passed]
+[component.rosunit-test_BSN-P03/test_an_emergency_is_reported_within_250_ms_even_while_the_sensor_is_under_sustained_load_bsnp03][passed]
+
+SUMMARY
+[32m * RESULT: SUCCESS[0m
+ * TESTS: 2
+ * ERRORS: 0
+ * FAILURES: 0
+
+rostest log file is in /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125452Z_bsn_p03_8al0_9g1/ros_logs/rostest-bsn-virtualbox-12976.log
+📋 Resumo por pacote...
+Summary: 3 tests, 0 errors, 0 failures, 0 skipped
+=== Resumo bruto de todo build/test_results/**/*.xml ===
+build/test_results/component/rostest-test_test_bdd_test_BSN-P03.xml: PULADO (wrapper duplicado de um rosunit-*.xml no mesmo diretorio)
+build/test_results/component/rosunit-test_BSN-P03.xml: 2 tests, 0 errors, 0 failures, 0 skipped
+
+TOTAL: 2 tests, 0 errors, 0 failures, 0 skipped
+🧬 Mesclando arquivos .profraw...
+📊 Gerando relatório bruto de cobertura...
+[0;31mwarning: 10 functions have mismatched data
+[0m📊 Gerando relatório de cobertura do código de produção...
+[0;31mwarning: 10 functions have mismatched data
+[0m------------------------------------------------
+✅ Relatório de cobertura gerado; confira os resultados dos testes.
+📂 Dados brutos: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125452Z_bsn_p03_8al0_9g1/data
+📈 Relatório consolidado: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125452Z_bsn_p03_8al0_9g1/merged.profdata
+🌐 Relatório HTML bruto: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125452Z_bsn_p03_8al0_9g1/html/index.html
+🌐 Relatório HTML de produção: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125452Z_bsn_p03_8al0_9g1/html_production/index.html
+📄 Fontes selecionadas para produção: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125452Z_bsn_p03_8al0_9g1/production_sources.txt
+📝 Logs completos (incluindo avisos LLVM): /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125452Z_bsn_p03_8al0_9g1/logs/
+------------------------------------------------

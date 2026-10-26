@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="5.170"><testcase classname="rostest.runner.RosTest" name="testtest_injector" time="5.1696" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_injector.launch] run_id[6cc2f248-d135-11f1-b1fe-080027591fd7] starting
+&amp;#x001B;[1mstarted roslaunch server http://bsn-virtualbox:44775/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /HighRisk0: 0,70
+ * /HighRisk1: 115,300
+ * /LowRisk: 85,97
+ * /MidRisk0: 70,85
+ * /MidRisk1: 97,115
+ * /abpdHighRisk0: -1,-1
+ * /abpdHighRisk1: 90,300
+ * /abpdLowRisk: 0,80
+ * /abpdMidRisk0: -1,-1
+ * /abpdMidRisk1: 80,90
+ * /abpd_Change: 0.1
+ * /abpd_HighRisk0: -1,-1
+ * /abpd_HighRisk1: 90,300
+ * /abpd_LowRisk: 0,80
+ * /abpd_MidRisk0: -1,-1
+ * /abpd_MidRisk1: 80,90
+ * /abpd_Offset: 10
+ * /abpd_State0: 0,0,0,0,0
+ * /abpd_State1: 0,0,0,0,0
+ * /abpd_State2: 0,0,94,4,2
+ * /abpd_State3: 0,0,50,35,15
+ * /abpd_State4: 0,0,31,25,44
+ * /abpdcomm_accuracy: 100.0
+ * /abpddata_accuracy: 99.0
+ * /abpsHighRisk0: -1,-1
+ * /abpsHighRisk1: 140,300
+ * /abpsLowRisk: 0,120
+ * /abpsMidRisk0: -1,-1
+ * /abpsMidRisk1: 120,140
+ * /abps_Change: 0.1
+ * /abps_HighRisk0: -1,-1
+ * /abps_HighRisk1: 140,300
+ * /abps_LowRisk: 0,120
+ * /abps_MidRisk0: -1,-1
+ * /abps_MidRisk1: 120,140
+ * /abps_Offset: 10
+ * /abps_State0: 0,0,0,0,0
+ * /abps_State1: 0,0,0,0,0
+ * /abps_State2: 0,0,79,18,3
+ * /abps_State3: 0,0,23,64,13
+ * /abps_State4: 0,0,5,26,69
+ * /abpscomm_accuracy: 100.0
+ * /abpsdata_accuracy: 99.0
+ * /accuracy: 99.0
+ * /actuation_freq: 0.2
+ * /comm_accuracy: 100.0
+ * /components: g3t1_1,g3t1_2,g3t...
+ * /connect_sensor: False
+ * /data_accuracy: 99.0
+ * /frequency: 0.6
+ * /g3t1_1/amplitude: 0.025
+ * /g3t1_1/begin: 0
+ * /g3t1_1/duration: 3
+ * /g3t1_1/frequency: 0.5
+ * /g3t1_1/offset: 0
+ * /g3t1_1/type: random
+ * /g3t1_2/amplitude: 0.025
+ * /g3t1_2/begin: 0
+ * /g3t1_2/duration: 3
+ * /g3t1_2/frequency: 0.5
+ * /g3t1_2/offset: 0
+ * /g3t1_2/type: random
+ * /g3t1_3/amplitude: 0.05
+ * /g3t1_3/begin: 0
+ * /g3t1_3/duration: 3
+ * /g3t1_3/frequency: 0.125
+ * /g3t1_3/offset: 0
+ * /g3t1_3/type: random
+ * /g3t1_4/amplitude: 0.1
+ * /g3t1_4/begin: 3
+ * /g3t1_4/duration: 3
+ * /g3t1_4/frequency: 0.05
+ * /g3t1_4/offset: 0.2
+ * /g3t1_4/type: random
+ * /g3t1_5/amplitude: 0.1
+ * /g3t1_5/begin: 3
+ * /g3t1_5/duration: 3
+ * /g3t1_5/frequency: 0.05
+ * /g3t1_5/offset: 0.2
+ * /g3t1_5/type: random
+ * /g3t1_6/amplitude: 0.05
+ * /g3t1_6/begin: 0
+ * /g3t1_6/duration: 3
+ * /g3t1_6/frequency: 0.05
+ * /g3t1_6/offset: 0
+ * /g3t1_6/type: random
+ * /g4t1/amplitude: 0.12
+ * /g4t1/begin: 10
+ * /g4t1/duration: 6000
+ * /g4t1/frequency: 1.1574e-06
+ * /g4t1/offset: 0.2
+ * /g4t1/type: step
+ * /gain: 0.01
+ * /glucose_Change: 0.1
+ * /glucose_HighRisk0: 20,39.99
+ * /glucose_HighRisk1: 120,200
+ * /glucose_LowRisk: 55,95.99
+ * /glucose_MidRisk0: 40,54.99
+ * /glucose_MidRisk1: 96,119.99
+ * /glucose_Offset: 10
+ * /glucose_State0: 20,40,22,15,3
+ * /glucose_State1: 10,50,20,15,5
+ * /glucose_State2: 4,9,65,12,10
+ * /glucose_State3: 0,2,33,50,15
+ * /glucose_State4: 0,0,20,45,35
+ * /heart_rate_Change: 0.1
+ * /heart_rate_HighRisk0: 0,70
+ * /heart_rate_HighRisk1: 115,300
+ * /heart_rate_LowRisk: 85,97
+ * /heart_rate_MidRisk0: 70,85
+ * /heart_rate_MidRisk1: 97,115
+ * /heart_rate_Offset: 10
+ * /heart_rate_State0: 72,21,4,2,1
+ * /heart_rate_State1: 14,61,19,4,2
+ * /heart_rate_State2: 1,17,60,20,2
+ * /heart_rate_State3: 0,2,15,70,13
+ * /heart_rate_State4: 0,1,2,20,77
+ * /highrisk: 66,100
+ * /info_quant: 5
+ * /instant_recharge: True
+ * /kp: 150
+ * /lowrisk: 0,20
+ * /midrisk: 21,65
+ * /monitor_freq: 1
+ * /offset: 0.5
+ * /oxigenation_Change: 0.2
+ * /oxigenation_HighRisk0: -1,-1
+ * /oxigenation_HighRisk1: 0,55
+ * /oxigenation_LowRisk: 65,100
+ * /oxigenation_MidRisk0: -1,-1
+ * /oxigenation_MidRisk1: 55,65
+ * /oxigenation_Offset: 10
+ * /oxigenation_State0: 0,0,0,0,0
+ * /oxigenation_State1: 0,0,0,0,0
+ * /oxigenation_State2: 0,0,90,8,2
+ * /oxigenation_State3: 0,0,75,10,5
+ * /oxigenation_State4: 0,0,5,35,60
+ * /qos_attribute: reliability
+ * /rosdistro: melodic
+ * /rosversion: 1.14.13
+ * /setpoint: 0.9
+ * /start: True
+ * /temperature_Change: 0.1
+ * /temperature_HighRisk0: 0,31.99
+ * /temperature_HighRisk1: 41,50
+ * /temperature_LowRisk: 36,37.99
+ * /temperature_MidRisk0: 32,35.99
+ * /temperature_MidRisk1: 38,40.99
+ * /temperature_Offset: 10
+ * /temperature_State0: 25,51,21,3,0
+ * /temperature_State1: 5,50,43,2,0
+ * /temperature_State2: 0,4,85,11,0
+ * /temperature_State3: 0,1,32,67,0
+ * /temperature_State4: 0,0,0,0,0
+ * /test_module: /home/bsn/Documen...
+ * /vitalSigns: oxigenation, hear...
+
+NODES
+  /
+    collector (probe/collector)
+    data_access (repository/data_access)
+    enactor (enactor/enactor)
+    g3t1_1 (component/g3t1_1)
+    g3t1_2 (component/g3t1_2)
+    g3t1_3 (component/g3t1_3)
+    g3t1_4 (component/g3t1_4)
+    g3t1_5 (component/g3t1_5)
+    g3t1_6 (component/g3t1_6)
+    g4t1 (component/g4t1)
+    injector (injector/injector)
+    logger (logging_infrastructure/logger)
+    param_adapter (effector/param_adapter)
+    patient (patient/patient)
+    reli_engine (adaptation_engine/reli_engine)
+
+[ROSTEST]setup[/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_injector.launch] run_id[6cc2f248-d135-11f1-b1fe-080027591fd7] done
+[ROSTEST]Running test [test_injector]
+&amp;#x001B;[1mROS_MASTER_URI=http://bsn-virtualbox:38181/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to 6cc2f248-d135-11f1-b1fe-080027591fd7&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[patient-1]: started with pid [21949]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[injector-2]: started with pid [21950]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[logger-3]: started with pid [21951]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[data_access-4]: started with pid [21952]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[reli_engine-5]: started with pid [21963]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[enactor-6]: started with pid [21978]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[collector-7]: started with pid [21980]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[param_adapter-8]: started with pid [21981]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[g4t1-9]: started with pid [21983]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[g3t1_1-10]: started with pid [21989]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[g3t1_2-11]: started with pid [21995]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[g3t1_3-12]: started with pid [22005]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[g3t1_4-13]: started with pid [22016]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[g3t1_5-14]: started with pid [22019]&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[g3t1_6-15]: started with pid [22025]&amp;#x001B;[0m
+[ROSTEST]running test test_injector
+&amp;#x001B;[1mprocess[test_injector-16]: started with pid [22036]&amp;#x001B;[0m
+&amp;#x001B;[1m[test_injector-16] process has finished cleanly
+log file: /home/bsn/.ros/log/6cc2f248-d135-11f1-b1fe-080027591fd7/test_injector-16*.log&amp;#x001B;[0m
+[ROSTEST]test [test_injector] finished
+[ROSTEST]test [test_injector] results are in [/home/bsn/Documents/bsn2/build/test_results/component/rosunit-test_injector.xml]
+[ROSTEST]test [test_injector] results summary: 0 errors, 0 failures, 7 tests
+[ROSTEST][ROSTEST] test [test_injector] done
+[ROSTEST]tearDown[/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_injector.launch]
+shutting down processing monitor...
+[g3t1_6-15] killing on exit
+[g3t1_5-14] killing on exit
+[g3t1_3-12] killing on exit
+[g3t1_4-13] killing on exit
+[g3t1_1-10] killing on exit
+[g3t1_2-11] killing on exit
+[g4t1-9] killing on exit
+[param_adapter-8] killing on exit
+[collector-7] killing on exit
+[enactor-6] killing on exit
+[reli_engine-5] killing on exit
+[data_access-4] killing on exit
+[logger-3] killing on exit
+[injector-2] killing on exit
+[patient-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_injector.launch complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>

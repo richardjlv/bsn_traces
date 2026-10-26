@@ -1,0 +1,815 @@
+{
+  "campaigns": [
+    {
+      "campaign": "ros1_20261026T123423Z_health_status_w_m1hgvp",
+      "feature": "health_status",
+      "counts": {
+        "passed": 2
+      },
+      "cases": [
+        {
+          "name": "test_a_patient_health_status_is_available_after_a_sensor_reports_a_reading_bsnp10",
+          "status": "passed"
+        },
+        {
+          "name": "test_no_patient_health_status_is_produced_when_the_central_hub_cannot_process_a_reading_bsnp10",
+          "status": "passed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "count": 4263,
+          "covered": 1679,
+          "percent": 39.38540933614825
+        },
+        "functions": {
+          "count": 420,
+          "covered": 155,
+          "percent": 36.904761904761905
+        },
+        "regions": {
+          "count": 4155,
+          "covered": 1242,
+          "percent": 29.891696750902526
+        }
+      },
+      "raw_export_totals": [
+        {
+          "lines": {
+            "count": 6367,
+            "covered": 2353,
+            "percent": 36
+          },
+          "functions": {
+            "count": 1055,
+            "covered": 288,
+            "percent": 27
+          },
+          "instantiations": {
+            "count": 1576,
+            "covered": 533,
+            "percent": 33
+          },
+          "regions": {
+            "count": 5327,
+            "covered": 1448,
+            "notcovered": 3879,
+            "percent": 27
+          }
+        }
+      ],
+      "filtered_files": 46,
+      "hashes_verified": 313,
+      "source_hashes_verified": 409,
+      "source_contents_unavailable": [
+        "src/CMakeLists.txt"
+      ],
+      "errors": [],
+      "junit": "test_results/component/rosunit-test_health_status.xml"
+    },
+    {
+      "campaign": "ros1_20261026T123929Z_check_bsn__zoxo9tz",
+      "feature": "check_bsn",
+      "counts": {
+        "passed": 8
+      },
+      "cases": [
+        {
+          "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the oximeter]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the ECG sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the thermometer]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the SBP sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the DBP sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the glucometer]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_central_hub_classifies_a_vital_sign_reading_outside_the_normal_range_as_high_risk_bsnp08",
+          "status": "passed"
+        },
+        {
+          "name": "test_no_patient_risk_level_is_reported_while_the_central_hub_is_unavailable_bsnp08",
+          "status": "passed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "count": 4263,
+          "covered": 2798,
+          "percent": 65.63452967393854
+        },
+        "functions": {
+          "count": 420,
+          "covered": 249,
+          "percent": 59.285714285714285
+        },
+        "regions": {
+          "count": 4155,
+          "covered": 2021,
+          "percent": 48.640192539109506
+        }
+      },
+      "raw_export_totals": [
+        {
+          "lines": {
+            "count": 6306,
+            "covered": 3633,
+            "percent": 57
+          },
+          "functions": {
+            "count": 1035,
+            "covered": 419,
+            "percent": 40
+          },
+          "instantiations": {
+            "count": 1555,
+            "covered": 882,
+            "percent": 56
+          },
+          "regions": {
+            "count": 5307,
+            "covered": 2264,
+            "notcovered": 3043,
+            "percent": 42
+          }
+        }
+      ],
+      "filtered_files": 46,
+      "hashes_verified": 277,
+      "source_hashes_verified": 409,
+      "source_contents_unavailable": [
+        "src/CMakeLists.txt"
+      ],
+      "errors": [],
+      "junit": "test_results/component/rosunit-test_check_bsn.xml"
+    },
+    {
+      "campaign": "ros1_20261026T124557Z_knowledge_repo_dzm9lsi_",
+      "feature": "knowledge_repo",
+      "counts": {
+        "passed": 1
+      },
+      "cases": [
+        {
+          "name": "test_the_knowledge_repository_is_wired_to_the_system_log_and_to_the_central_hub",
+          "status": "passed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "count": 4263,
+          "covered": 504,
+          "percent": 11.822660098522167
+        },
+        "functions": {
+          "count": 420,
+          "covered": 65,
+          "percent": 15.476190476190476
+        },
+        "regions": {
+          "count": 4155,
+          "covered": 230,
+          "percent": 5.535499398315283
+        }
+      },
+      "raw_export_totals": [
+        {
+          "lines": {
+            "count": 6379,
+            "covered": 1076,
+            "percent": 16
+          },
+          "functions": {
+            "count": 1059,
+            "covered": 181,
+            "percent": 17
+          },
+          "instantiations": {
+            "count": 1579,
+            "covered": 365,
+            "percent": 23
+          },
+          "regions": {
+            "count": 5331,
+            "covered": 414,
+            "notcovered": 4917,
+            "percent": 7
+          }
+        }
+      ],
+      "filtered_files": 46,
+      "hashes_verified": 215,
+      "source_hashes_verified": 409,
+      "source_contents_unavailable": [
+        "src/CMakeLists.txt"
+      ],
+      "errors": [],
+      "junit": "test_results/component/rosunit-test_knowledge_repo.xml"
+    },
+    {
+      "campaign": "ros1_20261026T124617Z_target_system_xx8t5emn",
+      "feature": "target_system",
+      "counts": {
+        "passed": 18
+      },
+      "cases": [
+        {
+          "name": "test_each_body_sensor_sends_its_readings_to_the_central_hub[the oximeter]",
+          "status": "passed"
+        },
+        {
+          "name": "test_each_body_sensor_sends_its_readings_to_the_central_hub[the ECG sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_each_body_sensor_sends_its_readings_to_the_central_hub[the thermometer]",
+          "status": "passed"
+        },
+        {
+          "name": "test_each_body_sensor_sends_its_readings_to_the_central_hub[the SBP sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_each_body_sensor_sends_its_readings_to_the_central_hub[the DBP sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_each_body_sensor_sends_its_readings_to_the_central_hub[the glucometer]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the oximeter]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the ECG sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the thermometer]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the SBP sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the DBP sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the glucometer]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_parameter_adapter_forwards_reconfiguration_commands_to_each_target[the central hub]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[blood oxygenation]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[heart rate]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[systolic blood pressure]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[diastolic blood pressure]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_patient_simulator_returns_a_current_value_for_each_monitored_vital_sign[blood glucose]",
+          "status": "passed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "count": 4263,
+          "covered": 2568,
+          "percent": 60.23926812104152
+        },
+        "functions": {
+          "count": 420,
+          "covered": 243,
+          "percent": 57.857142857142854
+        },
+        "regions": {
+          "count": 4155,
+          "covered": 1738,
+          "percent": 41.829121540312876
+        }
+      },
+      "raw_export_totals": [
+        {
+          "lines": {
+            "count": 6306,
+            "covered": 3394,
+            "percent": 53
+          },
+          "functions": {
+            "count": 1035,
+            "covered": 410,
+            "percent": 39
+          },
+          "instantiations": {
+            "count": 1555,
+            "covered": 852,
+            "percent": 54
+          },
+          "regions": {
+            "count": 5307,
+            "covered": 1978,
+            "notcovered": 3329,
+            "percent": 37
+          }
+        }
+      ],
+      "filtered_files": 46,
+      "hashes_verified": 242,
+      "source_hashes_verified": 409,
+      "source_contents_unavailable": [
+        "src/CMakeLists.txt"
+      ],
+      "errors": [],
+      "junit": "test_results/component/rosunit-sensor_test.xml"
+    },
+    {
+      "campaign": "ros1_20261026T125158Z_injector_napoem29",
+      "feature": "injector",
+      "counts": {
+        "passed": 7
+      },
+      "cases": [
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_each_body_sensor[the oximeter]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_each_body_sensor[the ECG sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_each_body_sensor[the thermometer]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_each_body_sensor[the SBP sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_each_body_sensor[the DBP sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_each_body_sensor[the glucometer]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_the_system_log",
+          "status": "passed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "count": 4263,
+          "covered": 2295,
+          "percent": 53.83532723434201
+        },
+        "functions": {
+          "count": 420,
+          "covered": 229,
+          "percent": 54.523809523809526
+        },
+        "regions": {
+          "count": 4155,
+          "covered": 1545,
+          "percent": 37.18411552346571
+        }
+      },
+      "raw_export_totals": [
+        {
+          "lines": {
+            "count": 6306,
+            "covered": 3109,
+            "percent": 49
+          },
+          "functions": {
+            "count": 1035,
+            "covered": 392,
+            "percent": 37
+          },
+          "instantiations": {
+            "count": 1555,
+            "covered": 789,
+            "percent": 50
+          },
+          "regions": {
+            "count": 5307,
+            "covered": 1781,
+            "notcovered": 3526,
+            "percent": 33
+          }
+        }
+      ],
+      "filtered_files": 46,
+      "hashes_verified": 236,
+      "source_hashes_verified": 409,
+      "source_contents_unavailable": [
+        "src/CMakeLists.txt"
+      ],
+      "errors": [],
+      "junit": "test_results/component/rosunit-test_injector.xml"
+    },
+    {
+      "campaign": "ros1_20261026T125227Z_data_persistance_mrascw9z",
+      "feature": "data_persistance",
+      "counts": {
+        "passed": 1,
+        "xfail": 1
+      },
+      "cases": [
+        {
+          "name": "test_reading_persisted_in_knowledge_repository",
+          "status": "passed"
+        },
+        {
+          "name": "test_persistence_failure_recorded",
+          "status": "xfail"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "count": 4263,
+          "covered": 1389,
+          "percent": 32.58268824771288
+        },
+        "functions": {
+          "count": 420,
+          "covered": 162,
+          "percent": 38.57142857142857
+        },
+        "regions": {
+          "count": 4155,
+          "covered": 915,
+          "percent": 22.021660649819495
+        }
+      },
+      "raw_export_totals": [
+        {
+          "lines": {
+            "count": 6355,
+            "covered": 2114,
+            "percent": 33
+          },
+          "functions": {
+            "count": 1051,
+            "covered": 305,
+            "percent": 29
+          },
+          "instantiations": {
+            "count": 1571,
+            "covered": 623,
+            "percent": 39
+          },
+          "regions": {
+            "count": 5323,
+            "covered": 1131,
+            "notcovered": 4192,
+            "percent": 21
+          }
+        }
+      ],
+      "filtered_files": 46,
+      "hashes_verified": 229,
+      "source_hashes_verified": 409,
+      "source_contents_unavailable": [
+        "src/CMakeLists.txt"
+      ],
+      "errors": [
+        {
+          "monotonic_s": null,
+          "scenario": "A persistence failure is recorded when the knowledge repository cannot store a reading (BSN-P08)",
+          "keyword": "then",
+          "time_s": 1793019179.497662,
+          "message": "No PersistenceFailure record was logged while the knowledge repository was experiencing storage failures: {'Header.seq': ('0', '0', '0', '0', '0', '0', '0', '0', '0', '0'), 'target': ('', '', '', '', '', '', '', '', '', ''), 'Header.frame_id': ('', '', '', '', '', '', '', '', '', ''), 'timestamp': ('29428272589', '29428455538', '29428513679', '29428834053', '29428979501', '29429218350', '29429363735', '29429586760', '29429662327', '29429774211'), '%time': ('56982', '34094', '30994', '43154', '50068', '37908', '36001', '46969', '41008', '40055'), 'content': ('fail', 'fail', 'fail', 'fail', 'fail', 'fail', 'fail', 'fail', 'fail', 'fail'), 'source': ('/g4t1', '/g4t1', '/g4t1', '/g4t1', '/g4t1', '/g4t1', '/g4t1', '/g4t1', '/g4t1', '/g4t1'), 'Header.stamp': ('-1793019178832264900', '-1793019178832366943', '-1793019178832407951', '-1793019178832624912', '-1793019178832808017', '-1793019178833039045', '-1793019178833151102', '-1793019178833436965', '-1793019178833514928', '-1793019178833606004'), 'type': ('Status', 'Status', 'Status', 'Status', 'Status', 'Status', 'Status', 'Status', 'Status', 'Status')}\nassert set([])",
+          "pid": 11505,
+          "feature": "Data Persistence (BSN-P08) - Whether the sensor node has collected some data, eventually the bodyhub will persist it.",
+          "nodeid": "::test_persistence_failure_recorded",
+          "exception_type": "AssertionError",
+          "step": "a persistence failure record identifying that reading should be available in the system log",
+          "feature_file": "/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/features/data_persistance.feature",
+          "feature_run": "data_persistance",
+          "line": 19,
+          "event": "step_error",
+          "schema": 1
+        }
+      ],
+      "junit": "test_results/component/rosunit-test_data_persistance.xml"
+    },
+    {
+      "campaign": "ros1_20261026T125417Z_injector_0b3fl76f",
+      "feature": "injector",
+      "counts": {
+        "passed": 7
+      },
+      "cases": [
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_each_body_sensor[the oximeter]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_each_body_sensor[the ECG sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_each_body_sensor[the thermometer]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_each_body_sensor[the SBP sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_each_body_sensor[the DBP sensor]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_each_body_sensor[the glucometer]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_uncertainty_injector_is_wired_to_the_system_log",
+          "status": "passed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "count": 4263,
+          "covered": 2295,
+          "percent": 53.83532723434201
+        },
+        "functions": {
+          "count": 420,
+          "covered": 229,
+          "percent": 54.523809523809526
+        },
+        "regions": {
+          "count": 4155,
+          "covered": 1545,
+          "percent": 37.18411552346571
+        }
+      },
+      "raw_export_totals": [
+        {
+          "lines": {
+            "count": 6306,
+            "covered": 3109,
+            "percent": 49
+          },
+          "functions": {
+            "count": 1035,
+            "covered": 392,
+            "percent": 37
+          },
+          "instantiations": {
+            "count": 1555,
+            "covered": 789,
+            "percent": 50
+          },
+          "regions": {
+            "count": 5307,
+            "covered": 1781,
+            "notcovered": 3526,
+            "percent": 33
+          }
+        }
+      ],
+      "filtered_files": 46,
+      "hashes_verified": 236,
+      "source_hashes_verified": 409,
+      "source_contents_unavailable": [
+        "src/CMakeLists.txt"
+      ],
+      "errors": [],
+      "junit": "test_results/component/rosunit-test_injector.xml"
+    },
+    {
+      "campaign": "ros1_20261026T125452Z_bsn_p03_8al0_9g1",
+      "feature": "bsn_p03",
+      "counts": {
+        "passed": 2
+      },
+      "cases": [
+        {
+          "name": "test_an_emergency_is_reported_within_250_ms_of_a_highrisk_reading_bsnp03",
+          "status": "passed"
+        },
+        {
+          "name": "test_an_emergency_is_reported_within_250_ms_even_while_the_sensor_is_under_sustained_load_bsnp03",
+          "status": "passed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "count": 4263,
+          "covered": 1706,
+          "percent": 40.01876612714051
+        },
+        "functions": {
+          "count": 420,
+          "covered": 154,
+          "percent": 36.666666666666664
+        },
+        "regions": {
+          "count": 4155,
+          "covered": 1264,
+          "percent": 30.42117930204573
+        }
+      },
+      "raw_export_totals": [
+        {
+          "lines": {
+            "count": 6367,
+            "covered": 2418,
+            "percent": 37
+          },
+          "functions": {
+            "count": 1055,
+            "covered": 291,
+            "percent": 27
+          },
+          "instantiations": {
+            "count": 1576,
+            "covered": 548,
+            "percent": 34
+          },
+          "regions": {
+            "count": 5327,
+            "covered": 1524,
+            "notcovered": 3803,
+            "percent": 28
+          }
+        }
+      ],
+      "filtered_files": 46,
+      "hashes_verified": 240,
+      "source_hashes_verified": 409,
+      "source_contents_unavailable": [
+        "src/CMakeLists.txt"
+      ],
+      "errors": [],
+      "junit": "test_results/component/rosunit-test_BSN-P03.xml"
+    },
+    {
+      "campaign": "ros1_20261026T125800Z_managing_system_bwq2wgl1",
+      "feature": "managing_system",
+      "counts": {
+        "passed": 10,
+        "xfail": 1
+      },
+      "cases": [
+        {
+          "name": "test_the_adaptation_enactor_exchanges_adaptation_strategies_with_the_reliability_engine",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_adaptation_enactor_exchanges_adaptation_records_with_the_system_log",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor event]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor status]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor energy status]",
+          "status": "passed"
+        },
+        {
+          "name": "test_the_system_log_sends_reconfiguration_requests_to_the_parameter_adapter",
+          "status": "passed"
+        },
+        {
+          "name": "test_sampling_rate_increases_when_sensor_reliability_falls_below_the_threshold_g4g5",
+          "status": "passed"
+        },
+        {
+          "name": "test_sampling_rate_decreases_after_sensor_reliability_recovers_g4g5",
+          "status": "passed"
+        },
+        {
+          "name": "test_an_adaptation_command_is_issued_within_10_seconds_after_reliability_degradation_g4g5",
+          "status": "passed"
+        },
+        {
+          "name": "test_no_adaptation_is_triggered_while_sensor_reliability_stays_above_the_threshold_g4g5",
+          "status": "xfail"
+        },
+        {
+          "name": "test_a_failed_adaptation_attempt_is_recorded_in_the_system_log_g4g5",
+          "status": "passed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "count": 4263,
+          "covered": 2836,
+          "percent": 66.52592071311282
+        },
+        "functions": {
+          "count": 420,
+          "covered": 250,
+          "percent": 59.523809523809526
+        },
+        "regions": {
+          "count": 4155,
+          "covered": 2119,
+          "percent": 50.998796630565586
+        }
+      },
+      "raw_export_totals": [
+        {
+          "lines": {
+            "count": 6306,
+            "covered": 3672,
+            "percent": 58
+          },
+          "functions": {
+            "count": 1035,
+            "covered": 421,
+            "percent": 40
+          },
+          "instantiations": {
+            "count": 1555,
+            "covered": 896,
+            "percent": 57
+          },
+          "regions": {
+            "count": 5307,
+            "covered": 2363,
+            "notcovered": 2944,
+            "percent": 44
+          }
+        }
+      ],
+      "filtered_files": 46,
+      "hashes_verified": 238,
+      "source_hashes_verified": 409,
+      "source_contents_unavailable": [
+        "src/CMakeLists.txt"
+      ],
+      "errors": [
+        {
+          "monotonic_s": null,
+          "scenario": "No adaptation is triggered while sensor reliability stays above the threshold (G4/G5)",
+          "keyword": "then",
+          "time_s": 1793019517.721857,
+          "message": "AdaptationCommand inesperado quando confiabilidade estava estavel: ('/g3t1_1', 'freq=14.680536'). O /reli_engine nao deveria publicar em log_adapt para /g3t1_1 quando |error| < stability_margin * r_ref.\nassert ('/g3t1_1', 'freq=14.680536') is None",
+          "pid": 14835,
+          "feature": "Managing system adapts sensor sampling rate in response to reliability changes",
+          "nodeid": "::test_no_adaptation_is_triggered_while_sensor_reliability_stays_above_the_threshold_g4g5",
+          "exception_type": "AssertionError",
+          "step": "no adaptation command for the oximeter should be issued",
+          "feature_file": "/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/features/managing_system.feature",
+          "feature_run": "managing_system",
+          "line": 66,
+          "event": "step_error",
+          "schema": 1
+        }
+      ],
+      "junit": "test_results/component/rosunit-test_managing_system.xml"
+    }
+  ],
+  "selection": {
+    "health_status": "ros1_20261026T123423Z_health_status_w_m1hgvp",
+    "check_bsn": "ros1_20261026T123929Z_check_bsn__zoxo9tz",
+    "knowledge_repo": "ros1_20261026T124557Z_knowledge_repo_dzm9lsi_",
+    "target_system": "ros1_20261026T124617Z_target_system_xx8t5emn",
+    "injector": "ros1_20261026T125417Z_injector_0b3fl76f",
+    "data_persistance": "ros1_20261026T125227Z_data_persistance_mrascw9z",
+    "bsn_p03": "ros1_20261026T125452Z_bsn_p03_8al0_9g1",
+    "managing_system": "ros1_20261026T125800Z_managing_system_bwq2wgl1"
+  }
+}

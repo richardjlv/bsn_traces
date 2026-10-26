@@ -1,0 +1,629 @@
+[rostest][INFO] 2026-10-26 09:52:29,060: rostest starting with options {'text_mode': False, 'pkg_dir': None, 'results_base_dir': None, 'package': None, 'clear': None, 'reuse_master': None, 'results_filename': None}, args ['/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch']
+[roslaunch][INFO] 2026-10-26 09:52:29,073: loading roscore config file /opt/ros/melodic/etc/ros/roscore.xml
+[roslaunch][INFO] 2026-10-26 09:52:29,162: Added core node of type [rosout/rosout] in namespace [/]
+[roslaunch.config][INFO] 2026-10-26 09:52:29,163: loading config file /home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch
+[roslaunch][INFO] 2026-10-26 09:52:29,163: Added node of type [component/patient_data_service] in namespace [/]
+[roslaunch][INFO] 2026-10-26 09:52:29,201: Added node of type [patient/patient] in namespace [/]
+[roslaunch][INFO] 2026-10-26 09:52:29,203: Added node of type [probe/collector] in namespace [/]
+[roslaunch][INFO] 2026-10-26 09:52:29,203: Added node of type [effector/param_adapter] in namespace [/]
+[roslaunch][INFO] 2026-10-26 09:52:29,204: Added node of type [component/g4t1] in namespace [/]
+[roslaunch][INFO] 2026-10-26 09:52:29,204: Added node of type [component/g3t1_3] in namespace [/]
+[roslaunch][INFO] 2026-10-26 09:52:29,205: Added node of type [logging_infrastructure/logger] in namespace [/]
+[roslaunch][INFO] 2026-10-26 09:52:29,205: Added node of type [repository/data_access] in namespace [/]
+[roslaunch][INFO] 2026-10-26 09:52:29,206: ... selected machine [] for node of type [component/patient_data_service]
+[roslaunch][INFO] 2026-10-26 09:52:29,206: ... selected machine [] for node of type [patient/patient]
+[roslaunch][INFO] 2026-10-26 09:52:29,206: ... selected machine [] for node of type [probe/collector]
+[roslaunch][INFO] 2026-10-26 09:52:29,206: ... selected machine [] for node of type [effector/param_adapter]
+[roslaunch][INFO] 2026-10-26 09:52:29,206: ... selected machine [] for node of type [component/g4t1]
+[roslaunch][INFO] 2026-10-26 09:52:29,206: ... selected machine [] for node of type [component/g3t1_3]
+[roslaunch][INFO] 2026-10-26 09:52:29,206: ... selected machine [] for node of type [logging_infrastructure/logger]
+[roslaunch][INFO] 2026-10-26 09:52:29,206: ... selected machine [] for node of type [repository/data_access]
+[roslaunch][INFO] 2026-10-26 09:52:29,206: ... selected machine [] for node of type [ros_pytest/ros_pytest_runner]
+[rostest][INFO] 2026-10-26 09:52:29,243: setup[/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch] run_id[1a2a9110-d13c-11f1-b1fe-080027591fd7] starting
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,243: start_process_monitor: creating ProcessMonitor
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,243: created process monitor <ProcessMonitor(ProcessMonitor-1, initial daemon)>
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,244: start_process_monitor: ProcessMonitor started
+[roslaunch.parent][INFO] 2026-10-26 09:52:29,244: starting parent XML-RPC server
+[roslaunch.server][INFO] 2026-10-26 09:52:29,244: starting roslaunch XML-RPC server
+[roslaunch.server][INFO] 2026-10-26 09:52:29,244: waiting for roslaunch XML-RPC server to initialize
+[xmlrpc][INFO] 2026-10-26 09:52:29,244: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-26 09:52:29,244: Started XML-RPC server [http://bsn-virtualbox:44361/]
+[xmlrpc][INFO] 2026-10-26 09:52:29,244: xml rpc node: starting XML-RPC server
+[rostest][INFO] 2026-10-26 09:52:29,255: started roslaunch server http://bsn-virtualbox:44361/
+[roslaunch.parent][INFO] 2026-10-26 09:52:29,256: ... parent XML-RPC server started
+[xmlrpc][INFO] 2026-10-26 09:52:29,256: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-26 09:52:29,256: Started XML-RPC server [http://bsn-virtualbox:45901/]
+[xmlrpc][INFO] 2026-10-26 09:52:29,256: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2026-10-26 09:52:29,256: Master initialized: port[0], uri[http://bsn-virtualbox:45901/]
+[rostest][INFO] 2026-10-26 09:52:29,257: _addRostestParent [<rostest.rostest_parent.ROSTestLaunchParent object at 0x7f2916549690>]
+[rostest][INFO] 2026-10-26 09:52:29,257: setup[/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch] run_id[1a2a9110-d13c-11f1-b1fe-080027591fd7] done
+[rostest][INFO] 2026-10-26 09:52:29,257: Running test [test_data_persistance]
+[roslaunch][INFO] 2026-10-26 09:52:29,257: master.is_running[http://bsn-virtualbox:45901/]
+[roslaunch][INFO] 2026-10-26 09:52:29,258: master.is_running[http://bsn-virtualbox:45901/]
+[rostest][INFO] 2026-10-26 09:52:29,259: ROS_MASTER_URI=http://bsn-virtualbox:45901/
+[rostest][INFO] 2026-10-26 09:52:29,260: setting /run_id to 1a2a9110-d13c-11f1-b1fe-080027591fd7
+[rosmaster.master][INFO] 2026-10-26 09:52:29,260: +PARAM [/run_id] by /roslaunch
+[roslaunch][INFO] 2026-10-26 09:52:29,260: setting /roslaunch/uris/host_bsn_virtualbox__44361' to http://bsn-virtualbox:44361/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,260: +PARAM [/roslaunch/uris/host_bsn_virtualbox__44361] by /roslaunch
+[roslaunch][INFO] 2026-10-26 09:52:29,261: load_parameters starting ...
+[rosmaster.master][INFO] 2026-10-26 09:52:29,267: +PARAM [/glucose_MidRisk0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,267: +PARAM [/glucose_MidRisk1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,267: +PARAM [/heart_rate_State4] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,267: +PARAM [/instant_recharge] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,267: +PARAM [/heart_rate_State2] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,267: +PARAM [/heart_rate_State3] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,267: +PARAM [/heart_rate_State0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,267: +PARAM [/heart_rate_State1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,267: +PARAM [/oxigenation_State3] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/oxigenation_State2] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/oxigenation_State1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/oxigenation_State0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/oxigenation_Change] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/abps_MidRisk1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/oxigenation_State4] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/abpd_State0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/abpd_State1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/abpd_State2] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/abpd_State3] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/abpd_State4] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/glucose_State2] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/abps_State2] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/heart_rate_MidRisk0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/heart_rate_MidRisk1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/abpd_MidRisk0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/heart_rate_Change] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/abps_HighRisk0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/glucose_LowRisk] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/abpd_Offset] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/abps_HighRisk1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,268: +PARAM [/temperature_Offset] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/glucose_State3] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/glucose_State0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/glucose_State1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/glucose_State4] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/abps_MidRisk0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/abps_Change] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/abps_State1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/abpd_LowRisk] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/abps_State3] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/abpd_MidRisk1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/start] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/abps_Offset] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/temperature_LowRisk] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/oxigenation_HighRisk1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/glucose_HighRisk1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/abpd_HighRisk1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/abpd_HighRisk0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,269: +PARAM [/temperature_HighRisk1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/temperature_HighRisk0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/temperature_MidRisk0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/abps_LowRisk] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/heart_rate_HighRisk1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/heart_rate_HighRisk0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/oxigenation_Offset] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/frequency] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/heart_rate_LowRisk] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/midrisk] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/highrisk] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/vitalSigns] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/heart_rate_Offset] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/temperature_MidRisk1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/temperature_Change] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/glucose_Change] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,270: +PARAM [/temperature_State0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/temperature_State1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/temperature_State2] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/temperature_State3] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/temperature_State4] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/abps_State0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/glucose_Offset] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/abps_State4] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/oxigenation_MidRisk1] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/oxigenation_MidRisk0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/oxigenation_HighRisk0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/comm_accuracy] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/lowrisk] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/data_accuracy] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/abpd_Change] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/test_module] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,271: +PARAM [/oxigenation_LowRisk] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,272: +PARAM [/glucose_HighRisk0] by /roslaunch
+[rosmaster.master][INFO] 2026-10-26 09:52:29,272: +PARAM [/connect_sensor] by /roslaunch
+[roslaunch][INFO] 2026-10-26 09:52:29,275: ... load_parameters complete
+[roslaunch][INFO] 2026-10-26 09:52:29,275: launch_nodes: launching local nodes ...
+[roslaunch][INFO] 2026-10-26 09:52:29,275: ... preparing to launch node of type [component/patient_data_service]
+[roslaunch][INFO] 2026-10-26 09:52:29,275: create_node_process: package[component] type[patient_data_service] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://bsn-virtualbox:45901/]
+[roslaunch][INFO] 2026-10-26 09:52:29,275: process[patient_data_service-1]: env[{'LC_NUMERIC': 'pt_BR.UTF-8', 'ROS_DISTRO': 'melodic', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_VERSION': '1', 'BSN_TRACE_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/events', 'LC_CTYPE': 'pt_BR.UTF-8', 'WINDOWPATH': '2', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'ROS_LOG_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs', 'XDG_SESSION_TYPE': 'x11', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/bsn/Documents/bsn2/devel/share/common-lisp', 'QT_IM_MODULE': 'ibus', 'LOGNAME': 'bsn', 'USER': 'bsn', 'LLVM_PROFILE_FILE': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/data/coverage_%p.profraw', 'LC_PAPER': 'pt_BR.UTF-8', 'HOME': '/home/bsn', 'CMAKE_PREFIX_PATH': '/home/bsn/Documents/bsn2/devel:/opt/ros/melodic', 'ROS_LOG_FILENAME': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/rostest-bsn-virtualbox-11447.log', 'PATH': '/opt/ros/melodic/bin:/home/bsn/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_SESSION_DESKTOP': 'ubuntu', 'BSN_TRACE_FEATURE': 'data_persistance', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'SSH_AGENT_PID': '3039', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'DISPLAY': ':0', 'SESSION_MANAGER': 'local/bsn-virtualbox:@/tmp/.ICE-unix/2903,unix/bsn-virtualbox:/tmp/.ICE-unix/2903', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'ROS_TEST_RESULTS_DIR': '/home/bsn/Documents/bsn2/build/test_results', 'XDG_VTNR': '2', 'QT_ACCESSIBILITY': '1', 'LD_LIBRARY_PATH': '/home/bsn/Documents/bsn2/devel/lib:/opt/ros/melodic/lib', 'QT4_IM_MODULE': 'xim', 'CLUTTER_IM_MODULE': 'xim', 'BSN_ROS1_RUN': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z', 'XMODIFIERS': '@im=ibus', 'ROS_ETC_DIR': '/opt/ros/melodic/etc/ros', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'PYTEST_PLUGINS': 'bsn_trace_ros1_plugin', 'LC_MONETARY': 'pt_BR.UTF-8', 'USERNAME': 'bsn', 'LANG': 'en_US.UTF-8', 'SHLVL': '2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'BSN_ROS1_LAUNCH': '/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'LC_ADDRESS': 'pt_BR.UTF-8', 'PYTHONPATH': '/home/bsn/Documents/bsn2/src/ros_pytest/src:/home/bsn/Documents/bsn2/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages:/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/bootstrap:/home/bsn/Documents/bsn/devel/lib/python2.7/dist-packages/', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'VTE_VERSION': '5202', 'ROS_ROOT': '/opt/ros/melodic/share/ros', 'GDMSESSION': 'ubuntu', 'IM_CONFIG_PHASE': '2', 'TEXTDOMAINDIR': '/usr/share/locale/', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PKG_CONFIG_PATH': '/home/bsn/Documents/bsn2/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig', 'ROS_PACKAGE_PATH': '/home/bsn/Documents/bsn2/src:/opt/ros/melodic/share', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'XDG_SESSION_ID': '2', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', '_': '/opt/ros/melodic/bin/rostest', 'GTK_MODULES': 'gail:atk-bridge', 'GTK_IM_MODULE': 'ibus', 'DESKTOP_SESSION': 'ubuntu', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GNOME_TERMINAL_SERVICE': ':1.99', 'XDG_SEAT': 'seat0', 'OLDPWD': '/home/bsn/Documents/bsn2', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'PWD': '/home/bsn/Documents/bsn2', 'ROS_MASTER_URI': 'http://bsn-virtualbox:45901/', 'ROS_PYTHON_VERSION': '2', 'COLORTERM': 'truecolor', 'TEXTDOMAIN': 'im-config', 'LC_NAME': 'pt_BR.UTF-8', 'XDG_MENU_PREFIX': 'gnome-', 'LC_TIME': 'pt_BR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/fac0398c_96b6_4ba4_8372_8b7b1d853506'}]
+[roslaunch][INFO] 2026-10-26 09:52:29,311: process[patient_data_service-1]: args[[u'/home/bsn/Documents/bsn2/devel/lib/component/patient_data_service', u'__name:=patient_data_service']]
+[roslaunch][INFO] 2026-10-26 09:52:29,311: ... created process [patient_data_service-1]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,311: ProcessMonitor.register[patient_data_service-1]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,311: ProcessMonitor.register[patient_data_service-1] complete
+[roslaunch][INFO] 2026-10-26 09:52:29,311: ... registered process [patient_data_service-1]
+[roslaunch][INFO] 2026-10-26 09:52:29,311: process[patient_data_service-1]: starting os process
+[roslaunch][INFO] 2026-10-26 09:52:29,311: process[patient_data_service-1]: start w/ args [[u'/home/bsn/Documents/bsn2/devel/lib/component/patient_data_service', u'__name:=patient_data_service', u'__log:=/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/1a2a9110-d13c-11f1-b1fe-080027591fd7/patient_data_service-1.log']]
+[roslaunch][INFO] 2026-10-26 09:52:29,311: process[patient_data_service-1]: cwd will be [/home/bsn/.ros]
+[rostest][INFO] 2026-10-26 09:52:29,313: process[patient_data_service-1]: started with pid [11468]
+[roslaunch][INFO] 2026-10-26 09:52:29,313: ... successfully launched [patient_data_service-1]
+[roslaunch][INFO] 2026-10-26 09:52:29,313: ... preparing to launch node of type [patient/patient]
+[roslaunch][INFO] 2026-10-26 09:52:29,313: create_node_process: package[patient] type[patient] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://bsn-virtualbox:45901/]
+[roslaunch][INFO] 2026-10-26 09:52:29,313: process[patient-2]: env[{'LC_NUMERIC': 'pt_BR.UTF-8', 'ROS_DISTRO': 'melodic', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_VERSION': '1', 'BSN_TRACE_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/events', 'LC_CTYPE': 'pt_BR.UTF-8', 'WINDOWPATH': '2', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'ROS_LOG_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs', 'XDG_SESSION_TYPE': 'x11', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/bsn/Documents/bsn2/devel/share/common-lisp', 'QT_IM_MODULE': 'ibus', 'LOGNAME': 'bsn', 'USER': 'bsn', 'LLVM_PROFILE_FILE': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/data/coverage_%p.profraw', 'LC_PAPER': 'pt_BR.UTF-8', 'HOME': '/home/bsn', 'CMAKE_PREFIX_PATH': '/home/bsn/Documents/bsn2/devel:/opt/ros/melodic', 'ROS_LOG_FILENAME': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/rostest-bsn-virtualbox-11447.log', 'PATH': '/opt/ros/melodic/bin:/home/bsn/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_SESSION_DESKTOP': 'ubuntu', 'BSN_TRACE_FEATURE': 'data_persistance', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'SSH_AGENT_PID': '3039', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'DISPLAY': ':0', 'SESSION_MANAGER': 'local/bsn-virtualbox:@/tmp/.ICE-unix/2903,unix/bsn-virtualbox:/tmp/.ICE-unix/2903', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'ROS_TEST_RESULTS_DIR': '/home/bsn/Documents/bsn2/build/test_results', 'XDG_VTNR': '2', 'QT_ACCESSIBILITY': '1', 'LD_LIBRARY_PATH': '/home/bsn/Documents/bsn2/devel/lib:/opt/ros/melodic/lib', 'QT4_IM_MODULE': 'xim', 'CLUTTER_IM_MODULE': 'xim', 'BSN_ROS1_RUN': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z', 'XMODIFIERS': '@im=ibus', 'ROS_ETC_DIR': '/opt/ros/melodic/etc/ros', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'PYTEST_PLUGINS': 'bsn_trace_ros1_plugin', 'LC_MONETARY': 'pt_BR.UTF-8', 'USERNAME': 'bsn', 'LANG': 'en_US.UTF-8', 'SHLVL': '2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'BSN_ROS1_LAUNCH': '/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'LC_ADDRESS': 'pt_BR.UTF-8', 'PYTHONPATH': '/home/bsn/Documents/bsn2/src/ros_pytest/src:/home/bsn/Documents/bsn2/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages:/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/bootstrap:/home/bsn/Documents/bsn/devel/lib/python2.7/dist-packages/', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'VTE_VERSION': '5202', 'ROS_ROOT': '/opt/ros/melodic/share/ros', 'GDMSESSION': 'ubuntu', 'IM_CONFIG_PHASE': '2', 'TEXTDOMAINDIR': '/usr/share/locale/', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PKG_CONFIG_PATH': '/home/bsn/Documents/bsn2/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig', 'ROS_PACKAGE_PATH': '/home/bsn/Documents/bsn2/src:/opt/ros/melodic/share', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'XDG_SESSION_ID': '2', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', '_': '/opt/ros/melodic/bin/rostest', 'GTK_MODULES': 'gail:atk-bridge', 'GTK_IM_MODULE': 'ibus', 'DESKTOP_SESSION': 'ubuntu', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GNOME_TERMINAL_SERVICE': ':1.99', 'XDG_SEAT': 'seat0', 'OLDPWD': '/home/bsn/Documents/bsn2', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'PWD': '/home/bsn/Documents/bsn2', 'ROS_MASTER_URI': 'http://bsn-virtualbox:45901/', 'ROS_PYTHON_VERSION': '2', 'COLORTERM': 'truecolor', 'TEXTDOMAIN': 'im-config', 'LC_NAME': 'pt_BR.UTF-8', 'XDG_MENU_PREFIX': 'gnome-', 'LC_TIME': 'pt_BR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/fac0398c_96b6_4ba4_8372_8b7b1d853506'}]
+[roslaunch][INFO] 2026-10-26 09:52:29,314: process[patient-2]: args[[u'/home/bsn/Documents/bsn2/devel/lib/patient/patient', u'__name:=patient']]
+[roslaunch][INFO] 2026-10-26 09:52:29,314: ... created process [patient-2]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,314: ProcessMonitor.register[patient-2]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,314: ProcessMonitor.register[patient-2] complete
+[roslaunch][INFO] 2026-10-26 09:52:29,314: ... registered process [patient-2]
+[roslaunch][INFO] 2026-10-26 09:52:29,314: process[patient-2]: starting os process
+[roslaunch][INFO] 2026-10-26 09:52:29,314: process[patient-2]: start w/ args [[u'/home/bsn/Documents/bsn2/devel/lib/patient/patient', u'__name:=patient', u'__log:=/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/1a2a9110-d13c-11f1-b1fe-080027591fd7/patient-2.log']]
+[roslaunch][INFO] 2026-10-26 09:52:29,314: process[patient-2]: cwd will be [/home/bsn/.ros]
+[rostest][INFO] 2026-10-26 09:52:29,320: process[patient-2]: started with pid [11469]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,320: +PUB [/rosout] /patient_data_service http://bsn-virtualbox:41995/
+[roslaunch][INFO] 2026-10-26 09:52:29,320: ... successfully launched [patient-2]
+[roslaunch][INFO] 2026-10-26 09:52:29,321: ... preparing to launch node of type [probe/collector]
+[roslaunch][INFO] 2026-10-26 09:52:29,321: create_node_process: package[probe] type[collector] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://bsn-virtualbox:45901/]
+[roslaunch][INFO] 2026-10-26 09:52:29,321: process[collector-3]: env[{'LC_NUMERIC': 'pt_BR.UTF-8', 'ROS_DISTRO': 'melodic', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_VERSION': '1', 'BSN_TRACE_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/events', 'LC_CTYPE': 'pt_BR.UTF-8', 'WINDOWPATH': '2', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'ROS_LOG_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs', 'XDG_SESSION_TYPE': 'x11', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/bsn/Documents/bsn2/devel/share/common-lisp', 'QT_IM_MODULE': 'ibus', 'LOGNAME': 'bsn', 'USER': 'bsn', 'LLVM_PROFILE_FILE': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/data/coverage_%p.profraw', 'LC_PAPER': 'pt_BR.UTF-8', 'HOME': '/home/bsn', 'CMAKE_PREFIX_PATH': '/home/bsn/Documents/bsn2/devel:/opt/ros/melodic', 'ROS_LOG_FILENAME': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/rostest-bsn-virtualbox-11447.log', 'PATH': '/opt/ros/melodic/bin:/home/bsn/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_SESSION_DESKTOP': 'ubuntu', 'BSN_TRACE_FEATURE': 'data_persistance', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'SSH_AGENT_PID': '3039', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'DISPLAY': ':0', 'SESSION_MANAGER': 'local/bsn-virtualbox:@/tmp/.ICE-unix/2903,unix/bsn-virtualbox:/tmp/.ICE-unix/2903', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'ROS_TEST_RESULTS_DIR': '/home/bsn/Documents/bsn2/build/test_results', 'XDG_VTNR': '2', 'QT_ACCESSIBILITY': '1', 'LD_LIBRARY_PATH': '/home/bsn/Documents/bsn2/devel/lib:/opt/ros/melodic/lib', 'QT4_IM_MODULE': 'xim', 'CLUTTER_IM_MODULE': 'xim', 'BSN_ROS1_RUN': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z', 'XMODIFIERS': '@im=ibus', 'ROS_ETC_DIR': '/opt/ros/melodic/etc/ros', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'PYTEST_PLUGINS': 'bsn_trace_ros1_plugin', 'LC_MONETARY': 'pt_BR.UTF-8', 'USERNAME': 'bsn', 'LANG': 'en_US.UTF-8', 'SHLVL': '2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'BSN_ROS1_LAUNCH': '/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'LC_ADDRESS': 'pt_BR.UTF-8', 'PYTHONPATH': '/home/bsn/Documents/bsn2/src/ros_pytest/src:/home/bsn/Documents/bsn2/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages:/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/bootstrap:/home/bsn/Documents/bsn/devel/lib/python2.7/dist-packages/', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'VTE_VERSION': '5202', 'ROS_ROOT': '/opt/ros/melodic/share/ros', 'GDMSESSION': 'ubuntu', 'IM_CONFIG_PHASE': '2', 'TEXTDOMAINDIR': '/usr/share/locale/', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PKG_CONFIG_PATH': '/home/bsn/Documents/bsn2/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig', 'ROS_PACKAGE_PATH': '/home/bsn/Documents/bsn2/src:/opt/ros/melodic/share', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'XDG_SESSION_ID': '2', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', '_': '/opt/ros/melodic/bin/rostest', 'GTK_MODULES': 'gail:atk-bridge', 'GTK_IM_MODULE': 'ibus', 'DESKTOP_SESSION': 'ubuntu', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GNOME_TERMINAL_SERVICE': ':1.99', 'XDG_SEAT': 'seat0', 'OLDPWD': '/home/bsn/Documents/bsn2', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'PWD': '/home/bsn/Documents/bsn2', 'ROS_MASTER_URI': 'http://bsn-virtualbox:45901/', 'ROS_PYTHON_VERSION': '2', 'COLORTERM': 'truecolor', 'TEXTDOMAIN': 'im-config', 'LC_NAME': 'pt_BR.UTF-8', 'XDG_MENU_PREFIX': 'gnome-', 'LC_TIME': 'pt_BR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/fac0398c_96b6_4ba4_8372_8b7b1d853506'}]
+[roslaunch][INFO] 2026-10-26 09:52:29,321: process[collector-3]: args[[u'/home/bsn/Documents/bsn2/devel/lib/probe/collector', u'__name:=collector']]
+[roslaunch][INFO] 2026-10-26 09:52:29,322: ... created process [collector-3]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,322: ProcessMonitor.register[collector-3]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,322: ProcessMonitor.register[collector-3] complete
+[roslaunch][INFO] 2026-10-26 09:52:29,322: ... registered process [collector-3]
+[roslaunch][INFO] 2026-10-26 09:52:29,322: process[collector-3]: starting os process
+[roslaunch][INFO] 2026-10-26 09:52:29,322: process[collector-3]: start w/ args [[u'/home/bsn/Documents/bsn2/devel/lib/probe/collector', u'__name:=collector', u'__log:=/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/1a2a9110-d13c-11f1-b1fe-080027591fd7/collector-3.log']]
+[roslaunch][INFO] 2026-10-26 09:52:29,322: process[collector-3]: cwd will be [/home/bsn/.ros]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,321: +SERVICE [/patient_data_service/get_loggers] /patient_data_service http://bsn-virtualbox:41995/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,323: +SERVICE [/patient_data_service/set_logger_level] /patient_data_service http://bsn-virtualbox:41995/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,324: +SERVICE [/getPatientData] /patient_data_service http://bsn-virtualbox:41995/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,324: +CACHEDPARAM [/rosout_disable_topics_generation] by /patient_data_service
+[rostest][INFO] 2026-10-26 09:52:29,328: process[collector-3]: started with pid [11474]
+[roslaunch][INFO] 2026-10-26 09:52:29,328: ... successfully launched [collector-3]
+[roslaunch][INFO] 2026-10-26 09:52:29,328: ... preparing to launch node of type [effector/param_adapter]
+[roslaunch][INFO] 2026-10-26 09:52:29,329: create_node_process: package[effector] type[param_adapter] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://bsn-virtualbox:45901/]
+[roslaunch][INFO] 2026-10-26 09:52:29,329: process[param_adapter-4]: env[{'LC_NUMERIC': 'pt_BR.UTF-8', 'ROS_DISTRO': 'melodic', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_VERSION': '1', 'BSN_TRACE_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/events', 'LC_CTYPE': 'pt_BR.UTF-8', 'WINDOWPATH': '2', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'ROS_LOG_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs', 'XDG_SESSION_TYPE': 'x11', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/bsn/Documents/bsn2/devel/share/common-lisp', 'QT_IM_MODULE': 'ibus', 'LOGNAME': 'bsn', 'USER': 'bsn', 'LLVM_PROFILE_FILE': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/data/coverage_%p.profraw', 'LC_PAPER': 'pt_BR.UTF-8', 'HOME': '/home/bsn', 'CMAKE_PREFIX_PATH': '/home/bsn/Documents/bsn2/devel:/opt/ros/melodic', 'ROS_LOG_FILENAME': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/rostest-bsn-virtualbox-11447.log', 'PATH': '/opt/ros/melodic/bin:/home/bsn/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_SESSION_DESKTOP': 'ubuntu', 'BSN_TRACE_FEATURE': 'data_persistance', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'SSH_AGENT_PID': '3039', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'DISPLAY': ':0', 'SESSION_MANAGER': 'local/bsn-virtualbox:@/tmp/.ICE-unix/2903,unix/bsn-virtualbox:/tmp/.ICE-unix/2903', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'ROS_TEST_RESULTS_DIR': '/home/bsn/Documents/bsn2/build/test_results', 'XDG_VTNR': '2', 'QT_ACCESSIBILITY': '1', 'LD_LIBRARY_PATH': '/home/bsn/Documents/bsn2/devel/lib:/opt/ros/melodic/lib', 'QT4_IM_MODULE': 'xim', 'CLUTTER_IM_MODULE': 'xim', 'BSN_ROS1_RUN': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z', 'XMODIFIERS': '@im=ibus', 'ROS_ETC_DIR': '/opt/ros/melodic/etc/ros', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'PYTEST_PLUGINS': 'bsn_trace_ros1_plugin', 'LC_MONETARY': 'pt_BR.UTF-8', 'USERNAME': 'bsn', 'LANG': 'en_US.UTF-8', 'SHLVL': '2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'BSN_ROS1_LAUNCH': '/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'LC_ADDRESS': 'pt_BR.UTF-8', 'PYTHONPATH': '/home/bsn/Documents/bsn2/src/ros_pytest/src:/home/bsn/Documents/bsn2/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages:/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/bootstrap:/home/bsn/Documents/bsn/devel/lib/python2.7/dist-packages/', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'VTE_VERSION': '5202', 'ROS_ROOT': '/opt/ros/melodic/share/ros', 'GDMSESSION': 'ubuntu', 'IM_CONFIG_PHASE': '2', 'TEXTDOMAINDIR': '/usr/share/locale/', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PKG_CONFIG_PATH': '/home/bsn/Documents/bsn2/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig', 'ROS_PACKAGE_PATH': '/home/bsn/Documents/bsn2/src:/opt/ros/melodic/share', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'XDG_SESSION_ID': '2', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', '_': '/opt/ros/melodic/bin/rostest', 'GTK_MODULES': 'gail:atk-bridge', 'GTK_IM_MODULE': 'ibus', 'DESKTOP_SESSION': 'ubuntu', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GNOME_TERMINAL_SERVICE': ':1.99', 'XDG_SEAT': 'seat0', 'OLDPWD': '/home/bsn/Documents/bsn2', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'PWD': '/home/bsn/Documents/bsn2', 'ROS_MASTER_URI': 'http://bsn-virtualbox:45901/', 'ROS_PYTHON_VERSION': '2', 'COLORTERM': 'truecolor', 'TEXTDOMAIN': 'im-config', 'LC_NAME': 'pt_BR.UTF-8', 'XDG_MENU_PREFIX': 'gnome-', 'LC_TIME': 'pt_BR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/fac0398c_96b6_4ba4_8372_8b7b1d853506'}]
+[roslaunch][INFO] 2026-10-26 09:52:29,329: process[param_adapter-4]: args[[u'/home/bsn/Documents/bsn2/devel/lib/effector/param_adapter', u'__name:=param_adapter']]
+[roslaunch][INFO] 2026-10-26 09:52:29,329: ... created process [param_adapter-4]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,329: ProcessMonitor.register[param_adapter-4]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,329: ProcessMonitor.register[param_adapter-4] complete
+[roslaunch][INFO] 2026-10-26 09:52:29,330: ... registered process [param_adapter-4]
+[roslaunch][INFO] 2026-10-26 09:52:29,330: process[param_adapter-4]: starting os process
+[roslaunch][INFO] 2026-10-26 09:52:29,330: process[param_adapter-4]: start w/ args [[u'/home/bsn/Documents/bsn2/devel/lib/effector/param_adapter', u'__name:=param_adapter', u'__log:=/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/1a2a9110-d13c-11f1-b1fe-080027591fd7/param_adapter-4.log']]
+[roslaunch][INFO] 2026-10-26 09:52:29,330: process[param_adapter-4]: cwd will be [/home/bsn/.ros]
+[rostest][INFO] 2026-10-26 09:52:29,337: process[param_adapter-4]: started with pid [11477]
+[roslaunch][INFO] 2026-10-26 09:52:29,337: ... successfully launched [param_adapter-4]
+[roslaunch][INFO] 2026-10-26 09:52:29,337: ... preparing to launch node of type [component/g4t1]
+[roslaunch][INFO] 2026-10-26 09:52:29,337: create_node_process: package[component] type[g4t1] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://bsn-virtualbox:45901/]
+[roslaunch][INFO] 2026-10-26 09:52:29,338: process[g4t1-5]: env[{'LC_NUMERIC': 'pt_BR.UTF-8', 'ROS_DISTRO': 'melodic', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_VERSION': '1', 'BSN_TRACE_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/events', 'LC_CTYPE': 'pt_BR.UTF-8', 'WINDOWPATH': '2', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'ROS_LOG_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs', 'XDG_SESSION_TYPE': 'x11', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/bsn/Documents/bsn2/devel/share/common-lisp', 'QT_IM_MODULE': 'ibus', 'LOGNAME': 'bsn', 'USER': 'bsn', 'LLVM_PROFILE_FILE': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/data/coverage_%p.profraw', 'LC_PAPER': 'pt_BR.UTF-8', 'HOME': '/home/bsn', 'CMAKE_PREFIX_PATH': '/home/bsn/Documents/bsn2/devel:/opt/ros/melodic', 'ROS_LOG_FILENAME': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/rostest-bsn-virtualbox-11447.log', 'PATH': '/opt/ros/melodic/bin:/home/bsn/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_SESSION_DESKTOP': 'ubuntu', 'BSN_TRACE_FEATURE': 'data_persistance', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'SSH_AGENT_PID': '3039', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'DISPLAY': ':0', 'SESSION_MANAGER': 'local/bsn-virtualbox:@/tmp/.ICE-unix/2903,unix/bsn-virtualbox:/tmp/.ICE-unix/2903', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'ROS_TEST_RESULTS_DIR': '/home/bsn/Documents/bsn2/build/test_results', 'XDG_VTNR': '2', 'QT_ACCESSIBILITY': '1', 'LD_LIBRARY_PATH': '/home/bsn/Documents/bsn2/devel/lib:/opt/ros/melodic/lib', 'QT4_IM_MODULE': 'xim', 'CLUTTER_IM_MODULE': 'xim', 'BSN_ROS1_RUN': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z', 'XMODIFIERS': '@im=ibus', 'ROS_ETC_DIR': '/opt/ros/melodic/etc/ros', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'PYTEST_PLUGINS': 'bsn_trace_ros1_plugin', 'LC_MONETARY': 'pt_BR.UTF-8', 'USERNAME': 'bsn', 'LANG': 'en_US.UTF-8', 'SHLVL': '2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'BSN_ROS1_LAUNCH': '/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'LC_ADDRESS': 'pt_BR.UTF-8', 'PYTHONPATH': '/home/bsn/Documents/bsn2/src/ros_pytest/src:/home/bsn/Documents/bsn2/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages:/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/bootstrap:/home/bsn/Documents/bsn/devel/lib/python2.7/dist-packages/', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'VTE_VERSION': '5202', 'ROS_ROOT': '/opt/ros/melodic/share/ros', 'GDMSESSION': 'ubuntu', 'IM_CONFIG_PHASE': '2', 'TEXTDOMAINDIR': '/usr/share/locale/', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PKG_CONFIG_PATH': '/home/bsn/Documents/bsn2/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig', 'ROS_PACKAGE_PATH': '/home/bsn/Documents/bsn2/src:/opt/ros/melodic/share', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'XDG_SESSION_ID': '2', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', '_': '/opt/ros/melodic/bin/rostest', 'GTK_MODULES': 'gail:atk-bridge', 'GTK_IM_MODULE': 'ibus', 'DESKTOP_SESSION': 'ubuntu', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GNOME_TERMINAL_SERVICE': ':1.99', 'XDG_SEAT': 'seat0', 'OLDPWD': '/home/bsn/Documents/bsn2', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'PWD': '/home/bsn/Documents/bsn2', 'ROS_MASTER_URI': 'http://bsn-virtualbox:45901/', 'ROS_PYTHON_VERSION': '2', 'COLORTERM': 'truecolor', 'TEXTDOMAIN': 'im-config', 'LC_NAME': 'pt_BR.UTF-8', 'XDG_MENU_PREFIX': 'gnome-', 'LC_TIME': 'pt_BR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/fac0398c_96b6_4ba4_8372_8b7b1d853506'}]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,338: +PUB [/rosout] /patient http://bsn-virtualbox:39557/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,339: +PUB [/rosout] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,339: +SERVICE [/collector/get_loggers] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,339: +SERVICE [/patient/get_loggers] /patient http://bsn-virtualbox:39557/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,340: +SERVICE [/collector/set_logger_level] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,341: +SERVICE [/patient/set_logger_level] /patient http://bsn-virtualbox:39557/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,341: +PUB [/log_event] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,342: +PUB [/log_status] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,343: +SERVICE [/getPatientData] /patient http://bsn-virtualbox:39557/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,343: +PUB [/rosout] /param_adapter http://bsn-virtualbox:41519/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,344: +PUB [/log_energy_status] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,344: +SERVICE [/param_adapter/get_loggers] /param_adapter http://bsn-virtualbox:41519/
+[roslaunch][INFO] 2026-10-26 09:52:29,345: process[g4t1-5]: args[[u'/home/bsn/Documents/bsn2/devel/lib/component/g4t1', u'__name:=g4t1']]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,345: +SERVICE [/param_adapter/set_logger_level] /param_adapter http://bsn-virtualbox:41519/
+[roslaunch][INFO] 2026-10-26 09:52:29,345: ... created process [g4t1-5]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,346: ProcessMonitor.register[g4t1-5]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,346: ProcessMonitor.register[g4t1-5] complete
+[roslaunch][INFO] 2026-10-26 09:52:29,346: ... registered process [g4t1-5]
+[roslaunch][INFO] 2026-10-26 09:52:29,347: process[g4t1-5]: starting os process
+[rosmaster.master][INFO] 2026-10-26 09:52:29,347: +SERVICE [/EffectorRegister] /param_adapter http://bsn-virtualbox:41519/
+[roslaunch][INFO] 2026-10-26 09:52:29,347: process[g4t1-5]: start w/ args [[u'/home/bsn/Documents/bsn2/devel/lib/component/g4t1', u'__name:=g4t1', u'__log:=/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/1a2a9110-d13c-11f1-b1fe-080027591fd7/g4t1-5.log']]
+[roslaunch][INFO] 2026-10-26 09:52:29,347: process[g4t1-5]: cwd will be [/home/bsn/.ros]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,348: +SUB [/collect_event] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,352: +SUB [/reconfigure] /param_adapter http://bsn-virtualbox:41519/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,353: +SUB [/collect_status] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,355: +SUB [/collect_energy_status] /collector http://bsn-virtualbox:46387/
+[rostest][INFO] 2026-10-26 09:52:29,357: process[g4t1-5]: started with pid [11492]
+[roslaunch][INFO] 2026-10-26 09:52:29,358: ... successfully launched [g4t1-5]
+[roslaunch][INFO] 2026-10-26 09:52:29,358: ... preparing to launch node of type [component/g3t1_3]
+[roslaunch][INFO] 2026-10-26 09:52:29,358: create_node_process: package[component] type[g3t1_3] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://bsn-virtualbox:45901/]
+[roslaunch][INFO] 2026-10-26 09:52:29,359: process[g3t1_3-6]: env[{'LC_NUMERIC': 'pt_BR.UTF-8', 'ROS_DISTRO': 'melodic', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_VERSION': '1', 'BSN_TRACE_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/events', 'LC_CTYPE': 'pt_BR.UTF-8', 'WINDOWPATH': '2', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'ROS_LOG_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs', 'XDG_SESSION_TYPE': 'x11', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/bsn/Documents/bsn2/devel/share/common-lisp', 'QT_IM_MODULE': 'ibus', 'LOGNAME': 'bsn', 'USER': 'bsn', 'LLVM_PROFILE_FILE': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/data/coverage_%p.profraw', 'LC_PAPER': 'pt_BR.UTF-8', 'HOME': '/home/bsn', 'CMAKE_PREFIX_PATH': '/home/bsn/Documents/bsn2/devel:/opt/ros/melodic', 'ROS_LOG_FILENAME': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/rostest-bsn-virtualbox-11447.log', 'PATH': '/opt/ros/melodic/bin:/home/bsn/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_SESSION_DESKTOP': 'ubuntu', 'BSN_TRACE_FEATURE': 'data_persistance', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'SSH_AGENT_PID': '3039', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'DISPLAY': ':0', 'SESSION_MANAGER': 'local/bsn-virtualbox:@/tmp/.ICE-unix/2903,unix/bsn-virtualbox:/tmp/.ICE-unix/2903', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'ROS_TEST_RESULTS_DIR': '/home/bsn/Documents/bsn2/build/test_results', 'XDG_VTNR': '2', 'QT_ACCESSIBILITY': '1', 'LD_LIBRARY_PATH': '/home/bsn/Documents/bsn2/devel/lib:/opt/ros/melodic/lib', 'QT4_IM_MODULE': 'xim', 'CLUTTER_IM_MODULE': 'xim', 'BSN_ROS1_RUN': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z', 'XMODIFIERS': '@im=ibus', 'ROS_ETC_DIR': '/opt/ros/melodic/etc/ros', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'PYTEST_PLUGINS': 'bsn_trace_ros1_plugin', 'LC_MONETARY': 'pt_BR.UTF-8', 'USERNAME': 'bsn', 'LANG': 'en_US.UTF-8', 'SHLVL': '2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'BSN_ROS1_LAUNCH': '/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'LC_ADDRESS': 'pt_BR.UTF-8', 'PYTHONPATH': '/home/bsn/Documents/bsn2/src/ros_pytest/src:/home/bsn/Documents/bsn2/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages:/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/bootstrap:/home/bsn/Documents/bsn/devel/lib/python2.7/dist-packages/', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'VTE_VERSION': '5202', 'ROS_ROOT': '/opt/ros/melodic/share/ros', 'GDMSESSION': 'ubuntu', 'IM_CONFIG_PHASE': '2', 'TEXTDOMAINDIR': '/usr/share/locale/', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PKG_CONFIG_PATH': '/home/bsn/Documents/bsn2/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig', 'ROS_PACKAGE_PATH': '/home/bsn/Documents/bsn2/src:/opt/ros/melodic/share', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'XDG_SESSION_ID': '2', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', '_': '/opt/ros/melodic/bin/rostest', 'GTK_MODULES': 'gail:atk-bridge', 'GTK_IM_MODULE': 'ibus', 'DESKTOP_SESSION': 'ubuntu', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GNOME_TERMINAL_SERVICE': ':1.99', 'XDG_SEAT': 'seat0', 'OLDPWD': '/home/bsn/Documents/bsn2', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'PWD': '/home/bsn/Documents/bsn2', 'ROS_MASTER_URI': 'http://bsn-virtualbox:45901/', 'ROS_PYTHON_VERSION': '2', 'COLORTERM': 'truecolor', 'TEXTDOMAIN': 'im-config', 'LC_NAME': 'pt_BR.UTF-8', 'XDG_MENU_PREFIX': 'gnome-', 'LC_TIME': 'pt_BR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/fac0398c_96b6_4ba4_8372_8b7b1d853506'}]
+[roslaunch][INFO] 2026-10-26 09:52:29,368: process[g3t1_3-6]: args[[u'/home/bsn/Documents/bsn2/devel/lib/component/g3t1_3', u'__name:=g3t1_3']]
+[roslaunch][INFO] 2026-10-26 09:52:29,369: ... created process [g3t1_3-6]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,369: ProcessMonitor.register[g3t1_3-6]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,369: ProcessMonitor.register[g3t1_3-6] complete
+[roslaunch][INFO] 2026-10-26 09:52:29,369: ... registered process [g3t1_3-6]
+[roslaunch][INFO] 2026-10-26 09:52:29,369: process[g3t1_3-6]: starting os process
+[roslaunch][INFO] 2026-10-26 09:52:29,369: process[g3t1_3-6]: start w/ args [[u'/home/bsn/Documents/bsn2/devel/lib/component/g3t1_3', u'__name:=g3t1_3', u'__log:=/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/1a2a9110-d13c-11f1-b1fe-080027591fd7/g3t1_3-6.log']]
+[roslaunch][INFO] 2026-10-26 09:52:29,369: process[g3t1_3-6]: cwd will be [/home/bsn/.ros]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,372: +PUB [/rosout] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,372: +SERVICE [/g4t1/get_loggers] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,372: +SERVICE [/g4t1/set_logger_level] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,373: +CACHEDPARAM [/rosout_disable_topics_generation] by /g4t1
+[rosmaster.master][INFO] 2026-10-26 09:52:29,373: +PUB [/collect_event] /g4t1 http://bsn-virtualbox:39053/
+[rostest][INFO] 2026-10-26 09:52:29,374: process[g3t1_3-6]: started with pid [11493]
+[roslaunch][INFO] 2026-10-26 09:52:29,375: ... successfully launched [g3t1_3-6]
+[roslaunch][INFO] 2026-10-26 09:52:29,375: ... preparing to launch node of type [logging_infrastructure/logger]
+[roslaunch][INFO] 2026-10-26 09:52:29,375: create_node_process: package[logging_infrastructure] type[logger] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://bsn-virtualbox:45901/]
+[roslaunch][INFO] 2026-10-26 09:52:29,375: process[logger-7]: env[{'LC_NUMERIC': 'pt_BR.UTF-8', 'ROS_DISTRO': 'melodic', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_VERSION': '1', 'BSN_TRACE_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/events', 'LC_CTYPE': 'pt_BR.UTF-8', 'WINDOWPATH': '2', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'ROS_LOG_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs', 'XDG_SESSION_TYPE': 'x11', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/bsn/Documents/bsn2/devel/share/common-lisp', 'QT_IM_MODULE': 'ibus', 'LOGNAME': 'bsn', 'USER': 'bsn', 'LLVM_PROFILE_FILE': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/data/coverage_%p.profraw', 'LC_PAPER': 'pt_BR.UTF-8', 'HOME': '/home/bsn', 'CMAKE_PREFIX_PATH': '/home/bsn/Documents/bsn2/devel:/opt/ros/melodic', 'ROS_LOG_FILENAME': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/rostest-bsn-virtualbox-11447.log', 'PATH': '/opt/ros/melodic/bin:/home/bsn/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_SESSION_DESKTOP': 'ubuntu', 'BSN_TRACE_FEATURE': 'data_persistance', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'SSH_AGENT_PID': '3039', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'DISPLAY': ':0', 'SESSION_MANAGER': 'local/bsn-virtualbox:@/tmp/.ICE-unix/2903,unix/bsn-virtualbox:/tmp/.ICE-unix/2903', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'ROS_TEST_RESULTS_DIR': '/home/bsn/Documents/bsn2/build/test_results', 'XDG_VTNR': '2', 'QT_ACCESSIBILITY': '1', 'LD_LIBRARY_PATH': '/home/bsn/Documents/bsn2/devel/lib:/opt/ros/melodic/lib', 'QT4_IM_MODULE': 'xim', 'CLUTTER_IM_MODULE': 'xim', 'BSN_ROS1_RUN': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z', 'XMODIFIERS': '@im=ibus', 'ROS_ETC_DIR': '/opt/ros/melodic/etc/ros', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'PYTEST_PLUGINS': 'bsn_trace_ros1_plugin', 'LC_MONETARY': 'pt_BR.UTF-8', 'USERNAME': 'bsn', 'LANG': 'en_US.UTF-8', 'SHLVL': '2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'BSN_ROS1_LAUNCH': '/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'LC_ADDRESS': 'pt_BR.UTF-8', 'PYTHONPATH': '/home/bsn/Documents/bsn2/src/ros_pytest/src:/home/bsn/Documents/bsn2/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages:/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/bootstrap:/home/bsn/Documents/bsn/devel/lib/python2.7/dist-packages/', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'VTE_VERSION': '5202', 'ROS_ROOT': '/opt/ros/melodic/share/ros', 'GDMSESSION': 'ubuntu', 'IM_CONFIG_PHASE': '2', 'TEXTDOMAINDIR': '/usr/share/locale/', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PKG_CONFIG_PATH': '/home/bsn/Documents/bsn2/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig', 'ROS_PACKAGE_PATH': '/home/bsn/Documents/bsn2/src:/opt/ros/melodic/share', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'XDG_SESSION_ID': '2', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', '_': '/opt/ros/melodic/bin/rostest', 'GTK_MODULES': 'gail:atk-bridge', 'GTK_IM_MODULE': 'ibus', 'DESKTOP_SESSION': 'ubuntu', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GNOME_TERMINAL_SERVICE': ':1.99', 'XDG_SEAT': 'seat0', 'OLDPWD': '/home/bsn/Documents/bsn2', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'PWD': '/home/bsn/Documents/bsn2', 'ROS_MASTER_URI': 'http://bsn-virtualbox:45901/', 'ROS_PYTHON_VERSION': '2', 'COLORTERM': 'truecolor', 'TEXTDOMAIN': 'im-config', 'LC_NAME': 'pt_BR.UTF-8', 'XDG_MENU_PREFIX': 'gnome-', 'LC_TIME': 'pt_BR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/fac0398c_96b6_4ba4_8372_8b7b1d853506'}]
+[roslaunch][INFO] 2026-10-26 09:52:29,375: process[logger-7]: args[[u'/home/bsn/Documents/bsn2/devel/lib/logging_infrastructure/logger', u'__name:=logger']]
+[roslaunch][INFO] 2026-10-26 09:52:29,376: ... created process [logger-7]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,376: ProcessMonitor.register[logger-7]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,376: ProcessMonitor.register[logger-7] complete
+[roslaunch][INFO] 2026-10-26 09:52:29,376: ... registered process [logger-7]
+[roslaunch][INFO] 2026-10-26 09:52:29,376: process[logger-7]: starting os process
+[roslaunch][INFO] 2026-10-26 09:52:29,376: process[logger-7]: start w/ args [[u'/home/bsn/Documents/bsn2/devel/lib/logging_infrastructure/logger', u'__name:=logger', u'__log:=/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/1a2a9110-d13c-11f1-b1fe-080027591fd7/logger-7.log']]
+[roslaunch][INFO] 2026-10-26 09:52:29,376: process[logger-7]: cwd will be [/home/bsn/.ros]
+[rostest][INFO] 2026-10-26 09:52:29,382: process[logger-7]: started with pid [11499]
+[roslaunch][INFO] 2026-10-26 09:52:29,382: ... successfully launched [logger-7]
+[roslaunch][INFO] 2026-10-26 09:52:29,383: ... preparing to launch node of type [repository/data_access]
+[roslaunch][INFO] 2026-10-26 09:52:29,383: create_node_process: package[repository] type[data_access] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://bsn-virtualbox:45901/]
+[roslaunch][INFO] 2026-10-26 09:52:29,383: process[data_access-8]: env[{'LC_NUMERIC': 'pt_BR.UTF-8', 'ROS_DISTRO': 'melodic', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_VERSION': '1', 'BSN_TRACE_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/events', 'LC_CTYPE': 'pt_BR.UTF-8', 'WINDOWPATH': '2', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'ROS_LOG_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs', 'XDG_SESSION_TYPE': 'x11', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/bsn/Documents/bsn2/devel/share/common-lisp', 'QT_IM_MODULE': 'ibus', 'LOGNAME': 'bsn', 'USER': 'bsn', 'LLVM_PROFILE_FILE': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/data/coverage_%p.profraw', 'LC_PAPER': 'pt_BR.UTF-8', 'HOME': '/home/bsn', 'CMAKE_PREFIX_PATH': '/home/bsn/Documents/bsn2/devel:/opt/ros/melodic', 'ROS_LOG_FILENAME': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/rostest-bsn-virtualbox-11447.log', 'PATH': '/opt/ros/melodic/bin:/home/bsn/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_SESSION_DESKTOP': 'ubuntu', 'BSN_TRACE_FEATURE': 'data_persistance', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'SSH_AGENT_PID': '3039', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'DISPLAY': ':0', 'SESSION_MANAGER': 'local/bsn-virtualbox:@/tmp/.ICE-unix/2903,unix/bsn-virtualbox:/tmp/.ICE-unix/2903', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'ROS_TEST_RESULTS_DIR': '/home/bsn/Documents/bsn2/build/test_results', 'XDG_VTNR': '2', 'QT_ACCESSIBILITY': '1', 'LD_LIBRARY_PATH': '/home/bsn/Documents/bsn2/devel/lib:/opt/ros/melodic/lib', 'QT4_IM_MODULE': 'xim', 'CLUTTER_IM_MODULE': 'xim', 'BSN_ROS1_RUN': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z', 'XMODIFIERS': '@im=ibus', 'ROS_ETC_DIR': '/opt/ros/melodic/etc/ros', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'PYTEST_PLUGINS': 'bsn_trace_ros1_plugin', 'LC_MONETARY': 'pt_BR.UTF-8', 'USERNAME': 'bsn', 'LANG': 'en_US.UTF-8', 'SHLVL': '2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'BSN_ROS1_LAUNCH': '/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'LC_ADDRESS': 'pt_BR.UTF-8', 'PYTHONPATH': '/home/bsn/Documents/bsn2/src/ros_pytest/src:/home/bsn/Documents/bsn2/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages:/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/bootstrap:/home/bsn/Documents/bsn/devel/lib/python2.7/dist-packages/', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'VTE_VERSION': '5202', 'ROS_ROOT': '/opt/ros/melodic/share/ros', 'GDMSESSION': 'ubuntu', 'IM_CONFIG_PHASE': '2', 'TEXTDOMAINDIR': '/usr/share/locale/', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PKG_CONFIG_PATH': '/home/bsn/Documents/bsn2/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig', 'ROS_PACKAGE_PATH': '/home/bsn/Documents/bsn2/src:/opt/ros/melodic/share', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'XDG_SESSION_ID': '2', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', '_': '/opt/ros/melodic/bin/rostest', 'GTK_MODULES': 'gail:atk-bridge', 'GTK_IM_MODULE': 'ibus', 'DESKTOP_SESSION': 'ubuntu', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GNOME_TERMINAL_SERVICE': ':1.99', 'XDG_SEAT': 'seat0', 'OLDPWD': '/home/bsn/Documents/bsn2', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'PWD': '/home/bsn/Documents/bsn2', 'ROS_MASTER_URI': 'http://bsn-virtualbox:45901/', 'ROS_PYTHON_VERSION': '2', 'COLORTERM': 'truecolor', 'TEXTDOMAIN': 'im-config', 'LC_NAME': 'pt_BR.UTF-8', 'XDG_MENU_PREFIX': 'gnome-', 'LC_TIME': 'pt_BR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/fac0398c_96b6_4ba4_8372_8b7b1d853506'}]
+[roslaunch][INFO] 2026-10-26 09:52:29,384: process[data_access-8]: args[[u'/home/bsn/Documents/bsn2/devel/lib/repository/data_access', u'__name:=data_access']]
+[roslaunch][INFO] 2026-10-26 09:52:29,384: ... created process [data_access-8]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,384: ProcessMonitor.register[data_access-8]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,384: ProcessMonitor.register[data_access-8] complete
+[roslaunch][INFO] 2026-10-26 09:52:29,384: ... registered process [data_access-8]
+[roslaunch][INFO] 2026-10-26 09:52:29,384: process[data_access-8]: starting os process
+[roslaunch][INFO] 2026-10-26 09:52:29,384: process[data_access-8]: start w/ args [[u'/home/bsn/Documents/bsn2/devel/lib/repository/data_access', u'__name:=data_access', u'__log:=/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/1a2a9110-d13c-11f1-b1fe-080027591fd7/data_access-8.log']]
+[roslaunch][INFO] 2026-10-26 09:52:29,384: process[data_access-8]: cwd will be [/home/bsn/.ros]
+[rostest][INFO] 2026-10-26 09:52:29,392: process[data_access-8]: started with pid [11500]
+[roslaunch][INFO] 2026-10-26 09:52:29,392: ... successfully launched [data_access-8]
+[roslaunch][INFO] 2026-10-26 09:52:29,392: ... launch_nodes complete
+[rostest][INFO] 2026-10-26 09:52:29,392: running test test_data_persistance
+[roslaunch][INFO] 2026-10-26 09:52:29,392: ... preparing to run test [test_data_persistance] of type [ros_pytest/ros_pytest_runner]
+[roslaunch][INFO] 2026-10-26 09:52:29,392: ... preparing to launch node of type [ros_pytest/ros_pytest_runner]
+[roslaunch][INFO] 2026-10-26 09:52:29,392: create_node_process: package[ros_pytest] type[ros_pytest_runner] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://bsn-virtualbox:45901/]
+[roslaunch][INFO] 2026-10-26 09:52:29,393: process[test_data_persistance-9]: env[{'LC_NUMERIC': 'pt_BR.UTF-8', 'ROS_DISTRO': 'melodic', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_VERSION': '1', 'BSN_TRACE_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/events', 'LC_CTYPE': 'pt_BR.UTF-8', 'WINDOWPATH': '2', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'ROS_LOG_DIR': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs', 'XDG_SESSION_TYPE': 'x11', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/bsn/Documents/bsn2/devel/share/common-lisp', 'QT_IM_MODULE': 'ibus', 'LOGNAME': 'bsn', 'USER': 'bsn', 'LLVM_PROFILE_FILE': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/data/coverage_%p.profraw', 'LC_PAPER': 'pt_BR.UTF-8', 'HOME': '/home/bsn', 'CMAKE_PREFIX_PATH': '/home/bsn/Documents/bsn2/devel:/opt/ros/melodic', 'ROS_LOG_FILENAME': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/rostest-bsn-virtualbox-11447.log', 'PATH': '/opt/ros/melodic/bin:/home/bsn/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_SESSION_DESKTOP': 'ubuntu', 'BSN_TRACE_FEATURE': 'data_persistance', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'SSH_AGENT_PID': '3039', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'DISPLAY': ':0', 'SESSION_MANAGER': 'local/bsn-virtualbox:@/tmp/.ICE-unix/2903,unix/bsn-virtualbox:/tmp/.ICE-unix/2903', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'ROS_TEST_RESULTS_DIR': '/home/bsn/Documents/bsn2/build/test_results', 'XDG_VTNR': '2', 'QT_ACCESSIBILITY': '1', 'LD_LIBRARY_PATH': '/home/bsn/Documents/bsn2/devel/lib:/opt/ros/melodic/lib', 'QT4_IM_MODULE': 'xim', 'CLUTTER_IM_MODULE': 'xim', 'BSN_ROS1_RUN': '/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z', 'XMODIFIERS': '@im=ibus', 'ROS_ETC_DIR': '/opt/ros/melodic/etc/ros', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'PYTEST_PLUGINS': 'bsn_trace_ros1_plugin', 'LC_MONETARY': 'pt_BR.UTF-8', 'USERNAME': 'bsn', 'LANG': 'en_US.UTF-8', 'SHLVL': '2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'BSN_ROS1_LAUNCH': '/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'LC_ADDRESS': 'pt_BR.UTF-8', 'PYTHONPATH': '/home/bsn/Documents/bsn2/src/ros_pytest/src:/home/bsn/Documents/bsn2/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages:/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/bootstrap:/home/bsn/Documents/bsn/devel/lib/python2.7/dist-packages/', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'VTE_VERSION': '5202', 'ROS_ROOT': '/opt/ros/melodic/share/ros', 'GDMSESSION': 'ubuntu', 'IM_CONFIG_PHASE': '2', 'TEXTDOMAINDIR': '/usr/share/locale/', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PKG_CONFIG_PATH': '/home/bsn/Documents/bsn2/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig', 'ROS_PACKAGE_PATH': '/home/bsn/Documents/bsn2/src:/opt/ros/melodic/share', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'XDG_SESSION_ID': '2', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', '_': '/opt/ros/melodic/bin/rostest', 'GTK_MODULES': 'gail:atk-bridge', 'GTK_IM_MODULE': 'ibus', 'DESKTOP_SESSION': 'ubuntu', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GNOME_TERMINAL_SERVICE': ':1.99', 'XDG_SEAT': 'seat0', 'OLDPWD': '/home/bsn/Documents/bsn2', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'PWD': '/home/bsn/Documents/bsn2', 'ROS_MASTER_URI': 'http://bsn-virtualbox:45901/', 'ROS_PYTHON_VERSION': '2', 'COLORTERM': 'truecolor', 'TEXTDOMAIN': 'im-config', 'LC_NAME': 'pt_BR.UTF-8', 'XDG_MENU_PREFIX': 'gnome-', 'LC_TIME': 'pt_BR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/fac0398c_96b6_4ba4_8372_8b7b1d853506'}]
+[roslaunch][INFO] 2026-10-26 09:52:29,394: process[test_data_persistance-9]: args[[u'/home/bsn/Documents/bsn2/src/ros_pytest/scripts/ros_pytest_runner', '--gtest_output=xml:/home/bsn/Documents/bsn2/build/test_results/component/rosunit-test_data_persistance.xml', u'__name:=test_data_persistance']]
+[roslaunch][INFO] 2026-10-26 09:52:29,394: ... created process [test_data_persistance-9]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,394: ProcessMonitor.register[test_data_persistance-9]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:29,394: ProcessMonitor.register[test_data_persistance-9] complete
+[roslaunch][INFO] 2026-10-26 09:52:29,394: ... registered process [test_data_persistance-9]
+[roslaunch][INFO] 2026-10-26 09:52:29,394: process[test_data_persistance-9]: starting os process
+[roslaunch][INFO] 2026-10-26 09:52:29,394: process[test_data_persistance-9]: start w/ args [[u'/home/bsn/Documents/bsn2/src/ros_pytest/scripts/ros_pytest_runner', '--gtest_output=xml:/home/bsn/Documents/bsn2/build/test_results/component/rosunit-test_data_persistance.xml', u'__name:=test_data_persistance', u'__log:=/home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/1a2a9110-d13c-11f1-b1fe-080027591fd7/test_data_persistance-9.log']]
+[roslaunch][INFO] 2026-10-26 09:52:29,394: process[test_data_persistance-9]: cwd will be [/home/bsn/.ros]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,395: +PUB [/rosout] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,396: +SERVICE [/g3t1_3/get_loggers] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,396: +SERVICE [/g3t1_3/set_logger_level] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,397: +CACHEDPARAM [/rosout_disable_topics_generation] by /g3t1_3
+[rosmaster.master][INFO] 2026-10-26 09:52:29,397: +PUB [/collect_event] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,402: +PUB [/rosout] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,403: +SERVICE [/logger/get_loggers] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,403: +SERVICE [/logger/set_logger_level] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,403: +PUB [/reconfigure] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,404: +PUB [/persist] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,404: +PUB [/status] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,404: +PUB [/event] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,406: +SUB [/log_adapt] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,408: +SUB [/log_status] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,408: +PUB [/rosout] /data_access http://bsn-virtualbox:44431/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,409: +SERVICE [/data_access/get_loggers] /data_access http://bsn-virtualbox:44431/
+[rostest][INFO] 2026-10-26 09:52:29,409: process[test_data_persistance-9]: started with pid [11505]
+[roslaunch][INFO] 2026-10-26 09:52:29,409: ... successfully launched [test_data_persistance-9]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,410: +SERVICE [/data_access/set_logger_level] /data_access http://bsn-virtualbox:44431/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,415: +SUB [/log_energy_status] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,417: +SUB [/log_event] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,420: +SUB [/log_uncertainty] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,427: +SUB [/persist] /data_access http://bsn-virtualbox:44431/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,428: +SERVICE [/DataAccessRequest] /data_access http://bsn-virtualbox:44431/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,429: +SUB [/TargetSystemData] /data_access http://bsn-virtualbox:44431/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,456: publisherUpdate[/collect_event] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/']
+[rosmaster.master][INFO] 2026-10-26 09:52:29,457: publisherUpdate[/reconfigure] -> http://bsn-virtualbox:41519/ ['http://bsn-virtualbox:39551/']
+[rosmaster.master][INFO] 2026-10-26 09:52:29,458: publisherUpdate[/collect_event] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,459: publisherUpdate[/collect_event] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/', 'http://bsn-virtualbox:33753/']
+[rosmaster.master][INFO] 2026-10-26 09:52:29,459: publisherUpdate[/reconfigure] -> http://bsn-virtualbox:41519/ ['http://bsn-virtualbox:39551/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,459: publisherUpdate[/collect_event] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/', 'http://bsn-virtualbox:33753/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,715: +PUB [/collect_status] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,721: +PUB [/collect_status] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,759: publisherUpdate[/collect_status] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/']
+[rosmaster.master][INFO] 2026-10-26 09:52:29,760: publisherUpdate[/collect_status] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,761: publisherUpdate[/collect_status] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/', 'http://bsn-virtualbox:33753/']
+[rosmaster.master][INFO] 2026-10-26 09:52:29,761: publisherUpdate[/collect_status] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/', 'http://bsn-virtualbox:33753/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-26 09:52:29,963: +PUB [/collect_energy_status] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:29,964: +PUB [/collect_energy_status] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,063: publisherUpdate[/collect_energy_status] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/']
+[rosmaster.master][INFO] 2026-10-26 09:52:30,064: publisherUpdate[/collect_energy_status] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-26 09:52:30,064: publisherUpdate[/collect_energy_status] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/', 'http://bsn-virtualbox:33753/']
+[rosmaster.master][INFO] 2026-10-26 09:52:30,064: publisherUpdate[/collect_energy_status] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/', 'http://bsn-virtualbox:33753/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-26 09:52:30,173: +PUB [/reconfigure_/g4t1] /param_adapter http://bsn-virtualbox:41519/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,174: +CACHEDPARAM [/rosout_disable_topics_generation] by /param_adapter
+[rosmaster.master][INFO] 2026-10-26 09:52:30,175: +PUB [/TargetSystemData] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,176: +SUB [/thermometer_data] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,177: +SUB [/oximeter_data] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,178: +SUB [/ecg_data] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,179: +SUB [/abps_data] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,180: +SUB [/abpd_data] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,181: +SUB [/glucosemeter_data] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,182: +SUB [/reconfigure_/g4t1] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,264: publisherUpdate[/TargetSystemData] -> http://bsn-virtualbox:44431/ ['http://bsn-virtualbox:39053/']
+[rosmaster.master][INFO] 2026-10-26 09:52:30,270: publisherUpdate[/TargetSystemData] -> http://bsn-virtualbox:44431/ ['http://bsn-virtualbox:39053/']: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-26 09:52:30,280: +PUB [/reconfigure_/g3t1_3] /param_adapter http://bsn-virtualbox:41519/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,286: +SUB [/uncertainty_/g3t1_3] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,288: +SUB [/reconfigure_/g3t1_3] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,293: +CACHEDPARAM [/rosout_disable_topics_generation] by /patient
+[rosmaster.master][INFO] 2026-10-26 09:52:30,294: +PUB [/thermometer_data] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,365: publisherUpdate[/thermometer_data] -> http://bsn-virtualbox:39053/ ['http://bsn-virtualbox:33753/']
+[rosmaster.master][INFO] 2026-10-26 09:52:30,367: publisherUpdate[/thermometer_data] -> http://bsn-virtualbox:39053/ ['http://bsn-virtualbox:33753/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-26 09:52:30,625: +PUB [/rosout] /test_data_persistance http://bsn-virtualbox:42791/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,627: +SERVICE [/test_data_persistance/get_loggers] /test_data_persistance http://bsn-virtualbox:42791/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,628: +SERVICE [/test_data_persistance/set_logger_level] /test_data_persistance http://bsn-virtualbox:42791/
+[rosmaster.master][INFO] 2026-10-26 09:52:30,629: +SUB [/thermometer_data] /test_data_persistance http://bsn-virtualbox:42791/
+[rosmaster.master][INFO] 2026-10-26 09:52:31,298: -SUB [/thermometer_data] /test_data_persistance http://bsn-virtualbox:42791/
+[rosmaster.master][INFO] 2026-10-26 09:52:31,299: +SUB [/TargetSystemData] /test_data_persistance http://bsn-virtualbox:42791/
+[rosmaster.master][INFO] 2026-10-26 09:52:31,310: -SUB [/TargetSystemData] /test_data_persistance http://bsn-virtualbox:42791/
+[rosmaster.master][INFO] 2026-10-26 09:52:31,970: +PUB [/rosout] /rostopic_11542_1793019151832 http://bsn-virtualbox:43083/
+[rosmaster.master][INFO] 2026-10-26 09:52:31,977: +SERVICE [/rostopic_11542_1793019151832/get_loggers] /rostopic_11542_1793019151832 http://bsn-virtualbox:43083/
+[rosmaster.master][INFO] 2026-10-26 09:52:31,978: +SERVICE [/rostopic_11542_1793019151832/set_logger_level] /rostopic_11542_1793019151832 http://bsn-virtualbox:43083/
+[rosmaster.master][INFO] 2026-10-26 09:52:31,985: +SUB [/thermometer_data] /rostopic_11542_1793019151832 http://bsn-virtualbox:43083/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,230: +PUB [/rosout] /rostopic_11548_1793019152109 http://bsn-virtualbox:34255/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,232: +SERVICE [/rostopic_11548_1793019152109/get_loggers] /rostopic_11548_1793019152109 http://bsn-virtualbox:34255/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,233: +SERVICE [/rostopic_11548_1793019152109/set_logger_level] /rostopic_11548_1793019152109 http://bsn-virtualbox:34255/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,238: +SUB [/persist] /rostopic_11548_1793019152109 http://bsn-virtualbox:34255/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,280: -SUB [/persist] /rostopic_11548_1793019152109 http://bsn-virtualbox:34255/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,280: -PUB [/rosout] /rostopic_11548_1793019152109 http://bsn-virtualbox:34255/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,280: -SERVICE [/rostopic_11548_1793019152109/get_loggers] /rostopic_11548_1793019152109 rosrpc://bsn-virtualbox:33469
+[rosmaster.master][INFO] 2026-10-26 09:52:32,280: -SERVICE [/rostopic_11548_1793019152109/set_logger_level] /rostopic_11548_1793019152109 rosrpc://bsn-virtualbox:33469
+[rosmaster.master][INFO] 2026-10-26 09:52:32,286: +PUB [/rosout] /rostopic_11553_1793019152162 http://bsn-virtualbox:42437/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,287: +SERVICE [/rostopic_11553_1793019152162/get_loggers] /rostopic_11553_1793019152162 http://bsn-virtualbox:42437/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,288: +SERVICE [/rostopic_11553_1793019152162/set_logger_level] /rostopic_11553_1793019152162 http://bsn-virtualbox:42437/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,292: +SUB [/TargetSystemData] /rostopic_11553_1793019152162 http://bsn-virtualbox:42437/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,294: +PUB [/rosout] /rostopic_11550_1793019152169 http://bsn-virtualbox:35949/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,296: +SERVICE [/rostopic_11550_1793019152169/get_loggers] /rostopic_11550_1793019152169 http://bsn-virtualbox:35949/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,297: +SERVICE [/rostopic_11550_1793019152169/set_logger_level] /rostopic_11550_1793019152169 http://bsn-virtualbox:35949/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,302: +SUB [/log_energy_status] /rostopic_11550_1793019152169 http://bsn-virtualbox:35949/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,320: +PUB [/rosout] /rostopic_11546_1793019152203 http://bsn-virtualbox:40433/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,323: +SERVICE [/rostopic_11546_1793019152203/get_loggers] /rostopic_11546_1793019152203 http://bsn-virtualbox:40433/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,324: +SERVICE [/rostopic_11546_1793019152203/set_logger_level] /rostopic_11546_1793019152203 http://bsn-virtualbox:40433/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,330: -SUB [/TargetSystemData] /rostopic_11553_1793019152162 http://bsn-virtualbox:42437/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,330: -PUB [/rosout] /rostopic_11553_1793019152162 http://bsn-virtualbox:42437/
+[rosmaster.master][INFO] 2026-10-26 09:52:32,330: -SERVICE [/rostopic_11553_1793019152162/get_loggers] /rostopic_11553_1793019152162 rosrpc://bsn-virtualbox:41425
+[rosmaster.master][INFO] 2026-10-26 09:52:32,331: -SERVICE [/rostopic_11553_1793019152162/set_logger_level] /rostopic_11553_1793019152162 rosrpc://bsn-virtualbox:41425
+[rosmaster.master][INFO] 2026-10-26 09:52:32,332: +SUB [/collect_energy_status] /rostopic_11546_1793019152203 http://bsn-virtualbox:40433/
+[rosmaster.master][INFO] 2026-10-26 09:52:41,342: -SUB [/thermometer_data] /rostopic_11542_1793019151832 http://bsn-virtualbox:43083/
+[rosmaster.master][INFO] 2026-10-26 09:52:41,342: -PUB [/rosout] /rostopic_11542_1793019151832 http://bsn-virtualbox:43083/
+[rosmaster.master][INFO] 2026-10-26 09:52:41,342: -SERVICE [/rostopic_11542_1793019151832/set_logger_level] /rostopic_11542_1793019151832 rosrpc://bsn-virtualbox:33523
+[rosmaster.master][INFO] 2026-10-26 09:52:41,342: -SERVICE [/rostopic_11542_1793019151832/get_loggers] /rostopic_11542_1793019151832 rosrpc://bsn-virtualbox:33523
+[rosmaster.master][INFO] 2026-10-26 09:52:42,323: -SUB [/collect_energy_status] /rostopic_11546_1793019152203 http://bsn-virtualbox:40433/
+[rosmaster.master][INFO] 2026-10-26 09:52:42,324: -PUB [/rosout] /rostopic_11546_1793019152203 http://bsn-virtualbox:40433/
+[rosmaster.master][INFO] 2026-10-26 09:52:42,324: -SERVICE [/rostopic_11546_1793019152203/set_logger_level] /rostopic_11546_1793019152203 rosrpc://bsn-virtualbox:36971
+[rosmaster.master][INFO] 2026-10-26 09:52:42,324: -SERVICE [/rostopic_11546_1793019152203/get_loggers] /rostopic_11546_1793019152203 rosrpc://bsn-virtualbox:36971
+[rosmaster.master][INFO] 2026-10-26 09:52:42,324: -SUB [/log_energy_status] /rostopic_11550_1793019152169 http://bsn-virtualbox:35949/
+[rosmaster.master][INFO] 2026-10-26 09:52:42,324: -PUB [/rosout] /rostopic_11550_1793019152169 http://bsn-virtualbox:35949/
+[rosmaster.master][INFO] 2026-10-26 09:52:42,325: -SERVICE [/rostopic_11550_1793019152169/set_logger_level] /rostopic_11550_1793019152169 rosrpc://bsn-virtualbox:45205
+[rosmaster.master][INFO] 2026-10-26 09:52:42,325: -SERVICE [/rostopic_11550_1793019152169/get_loggers] /rostopic_11550_1793019152169 rosrpc://bsn-virtualbox:45205
+[rosmaster.master][INFO] 2026-10-26 09:52:43,902: +PUB [/rosout] /rostopic_11749_1793019163769 http://bsn-virtualbox:44005/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,904: +SERVICE [/rostopic_11749_1793019163769/get_loggers] /rostopic_11749_1793019163769 http://bsn-virtualbox:44005/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,904: +SERVICE [/rostopic_11749_1793019163769/set_logger_level] /rostopic_11749_1793019163769 http://bsn-virtualbox:44005/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,908: +SUB [/log_energy_status] /rostopic_11749_1793019163769 http://bsn-virtualbox:44005/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,913: +PUB [/rosout] /rostopic_11741_1793019163784 http://bsn-virtualbox:39965/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,914: +SERVICE [/rostopic_11741_1793019163784/get_loggers] /rostopic_11741_1793019163784 http://bsn-virtualbox:39965/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,915: +SERVICE [/rostopic_11741_1793019163784/set_logger_level] /rostopic_11741_1793019163784 http://bsn-virtualbox:39965/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,918: +SUB [/thermometer_data] /rostopic_11741_1793019163784 http://bsn-virtualbox:39965/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,942: +PUB [/rosout] /rostopic_11744_1793019163815 http://bsn-virtualbox:34577/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,943: +SERVICE [/rostopic_11744_1793019163815/get_loggers] /rostopic_11744_1793019163815 http://bsn-virtualbox:34577/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,944: +SERVICE [/rostopic_11744_1793019163815/set_logger_level] /rostopic_11744_1793019163815 http://bsn-virtualbox:34577/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,948: +SUB [/collect_energy_status] /rostopic_11744_1793019163815 http://bsn-virtualbox:34577/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,962: +PUB [/rosout] /rostopic_11750_1793019163844 http://bsn-virtualbox:35941/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,962: +PUB [/rosout] /rostopic_11748_1793019163845 http://bsn-virtualbox:35891/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,964: +SERVICE [/rostopic_11748_1793019163845/get_loggers] /rostopic_11748_1793019163845 http://bsn-virtualbox:35891/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,964: +SERVICE [/rostopic_11750_1793019163844/get_loggers] /rostopic_11750_1793019163844 http://bsn-virtualbox:35941/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,965: +SERVICE [/rostopic_11748_1793019163845/set_logger_level] /rostopic_11748_1793019163845 http://bsn-virtualbox:35891/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,965: +SERVICE [/rostopic_11750_1793019163844/set_logger_level] /rostopic_11750_1793019163844 http://bsn-virtualbox:35941/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,969: +SUB [/persist] /rostopic_11748_1793019163845 http://bsn-virtualbox:35891/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,970: +SUB [/TargetSystemData] /rostopic_11750_1793019163844 http://bsn-virtualbox:35941/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,990: -SUB [/persist] /rostopic_11748_1793019163845 http://bsn-virtualbox:35891/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,990: -PUB [/rosout] /rostopic_11748_1793019163845 http://bsn-virtualbox:35891/
+[rosmaster.master][INFO] 2026-10-26 09:52:43,990: -SERVICE [/rostopic_11748_1793019163845/get_loggers] /rostopic_11748_1793019163845 rosrpc://bsn-virtualbox:40229
+[rosmaster.master][INFO] 2026-10-26 09:52:43,990: -SERVICE [/rostopic_11748_1793019163845/set_logger_level] /rostopic_11748_1793019163845 rosrpc://bsn-virtualbox:40229
+[rosmaster.master][INFO] 2026-10-26 09:52:53,320: -SUB [/thermometer_data] /rostopic_11741_1793019163784 http://bsn-virtualbox:39965/
+[rosmaster.master][INFO] 2026-10-26 09:52:53,320: -PUB [/rosout] /rostopic_11741_1793019163784 http://bsn-virtualbox:39965/
+[rosmaster.master][INFO] 2026-10-26 09:52:53,320: -SERVICE [/rostopic_11741_1793019163784/set_logger_level] /rostopic_11741_1793019163784 rosrpc://bsn-virtualbox:33811
+[rosmaster.master][INFO] 2026-10-26 09:52:53,320: -SERVICE [/rostopic_11741_1793019163784/get_loggers] /rostopic_11741_1793019163784 rosrpc://bsn-virtualbox:33811
+[rosmaster.master][INFO] 2026-10-26 09:52:53,328: -SUB [/log_energy_status] /rostopic_11749_1793019163769 http://bsn-virtualbox:44005/
+[rosmaster.master][INFO] 2026-10-26 09:52:53,328: -PUB [/rosout] /rostopic_11749_1793019163769 http://bsn-virtualbox:44005/
+[rosmaster.master][INFO] 2026-10-26 09:52:53,328: -SERVICE [/rostopic_11749_1793019163769/get_loggers] /rostopic_11749_1793019163769 rosrpc://bsn-virtualbox:41523
+[rosmaster.master][INFO] 2026-10-26 09:52:53,328: -SERVICE [/rostopic_11749_1793019163769/set_logger_level] /rostopic_11749_1793019163769 rosrpc://bsn-virtualbox:41523
+[rosmaster.master][INFO] 2026-10-26 09:52:53,334: -SUB [/collect_energy_status] /rostopic_11744_1793019163815 http://bsn-virtualbox:34577/
+[rosmaster.master][INFO] 2026-10-26 09:52:53,334: -PUB [/rosout] /rostopic_11744_1793019163815 http://bsn-virtualbox:34577/
+[rosmaster.master][INFO] 2026-10-26 09:52:53,334: -SERVICE [/rostopic_11744_1793019163815/get_loggers] /rostopic_11744_1793019163815 rosrpc://bsn-virtualbox:44697
+[rosmaster.master][INFO] 2026-10-26 09:52:53,334: -SERVICE [/rostopic_11744_1793019163815/set_logger_level] /rostopic_11744_1793019163815 rosrpc://bsn-virtualbox:44697
+[rosmaster.master][INFO] 2026-10-26 09:52:56,340: -SUB [/TargetSystemData] /rostopic_11750_1793019163844 http://bsn-virtualbox:35941/
+[rosmaster.master][INFO] 2026-10-26 09:52:56,340: -PUB [/rosout] /rostopic_11750_1793019163844 http://bsn-virtualbox:35941/
+[rosmaster.master][INFO] 2026-10-26 09:52:56,340: -SERVICE [/rostopic_11750_1793019163844/get_loggers] /rostopic_11750_1793019163844 rosrpc://bsn-virtualbox:44363
+[rosmaster.master][INFO] 2026-10-26 09:52:56,340: -SERVICE [/rostopic_11750_1793019163844/set_logger_level] /rostopic_11750_1793019163844 rosrpc://bsn-virtualbox:44363
+[rosmaster.master][INFO] 2026-10-26 09:52:58,816: +PUB [/rosout] /rostopic_11951_1793019178699 http://bsn-virtualbox:37097/
+[rosmaster.master][INFO] 2026-10-26 09:52:58,818: +SERVICE [/rostopic_11951_1793019178699/get_loggers] /rostopic_11951_1793019178699 http://bsn-virtualbox:37097/
+[rosmaster.master][INFO] 2026-10-26 09:52:58,819: +SERVICE [/rostopic_11951_1793019178699/set_logger_level] /rostopic_11951_1793019178699 http://bsn-virtualbox:37097/
+[rosmaster.master][INFO] 2026-10-26 09:52:58,822: +SUB [/persist] /rostopic_11951_1793019178699 http://bsn-virtualbox:37097/
+[rosmaster.master][INFO] 2026-10-26 09:52:58,845: -SUB [/persist] /rostopic_11951_1793019178699 http://bsn-virtualbox:37097/
+[rosmaster.master][INFO] 2026-10-26 09:52:58,845: -PUB [/rosout] /rostopic_11951_1793019178699 http://bsn-virtualbox:37097/
+[rosmaster.master][INFO] 2026-10-26 09:52:58,845: -SERVICE [/rostopic_11951_1793019178699/set_logger_level] /rostopic_11951_1793019178699 rosrpc://bsn-virtualbox:33609
+[rosmaster.master][INFO] 2026-10-26 09:52:58,845: -SERVICE [/rostopic_11951_1793019178699/get_loggers] /rostopic_11951_1793019178699 rosrpc://bsn-virtualbox:33609
+[rosmaster.master][INFO] 2026-10-26 09:52:59,552: -PUB [/rosout] /test_data_persistance http://bsn-virtualbox:42791/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,552: -SERVICE [/test_data_persistance/set_logger_level] /test_data_persistance rosrpc://bsn-virtualbox:34963
+[rosmaster.master][INFO] 2026-10-26 09:52:59,552: -SERVICE [/test_data_persistance/get_loggers] /test_data_persistance rosrpc://bsn-virtualbox:34963
+[rostest][INFO] 2026-10-26 09:52:59,748: [test_data_persistance-9] process has finished cleanly
+log file: /home/bsn/Documents/bsn2/traces_features/ros1_20261026T125227Z_data_persistance_mrascw9z/ros_logs/1a2a9110-d13c-11f1-b1fe-080027591fd7/test_data_persistance-9*.log
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,748: ProcessMonitor.unregister[test_data_persistance-9] starting
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,748: ProcessMonitor.unregister[test_data_persistance-9] complete
+[rostest][INFO] 2026-10-26 09:52:59,807: test [test_data_persistance] finished
+[rostest][INFO] 2026-10-26 09:52:59,807: test [test_data_persistance] results are in [/home/bsn/Documents/bsn2/build/test_results/component/rosunit-test_data_persistance.xml]
+[rostest][INFO] 2026-10-26 09:52:59,820: test [test_data_persistance] results summary: 0 errors, 0 failures, 2 tests
+[rostest][INFO] 2026-10-26 09:52:59,820: [ROSTEST] test [test_data_persistance] done
+[rostest][INFO] 2026-10-26 09:52:59,820: tearDown[/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch]
+[roslaunch][INFO] 2026-10-26 09:52:59,820: runner.stop()
+[rostest][INFO] 2026-10-26 09:52:59,820: shutting down processing monitor...
+[roslaunch][INFO] 2026-10-26 09:52:59,820: shutting down processing monitor <ProcessMonitor(ProcessMonitor-1, started daemon 139814438287104)>
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,820: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, started daemon 139814438287104)>
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,848: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 139814438287104)>
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,849: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 139814438287104)>: remaining procs are [<roslaunch.nodeprocess.LocalProcess object at 0x7f2914075c50>, <roslaunch.nodeprocess.LocalProcess object at 0x7f29140754d0>, <roslaunch.nodeprocess.LocalProcess object at 0x7f2914084ed0>, <roslaunch.nodeprocess.LocalProcess object at 0x7f2914084f50>, <roslaunch.nodeprocess.LocalProcess object at 0x7f2916614190>, <roslaunch.nodeprocess.LocalProcess object at 0x7f29166149d0>, <roslaunch.nodeprocess.LocalProcess object at 0x7f2916614750>, <roslaunch.nodeprocess.LocalProcess object at 0x7f2916627fd0>]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,849: ProcessMonitor exit: killing data_access-8
+[rostest][INFO] 2026-10-26 09:52:59,849: [data_access-8] killing on exit
+[roslaunch][INFO] 2026-10-26 09:52:59,849: process[data_access-8]: killing os process with pid[11500] pgid[11500]
+[roslaunch][INFO] 2026-10-26 09:52:59,849: [data_access-8] sending SIGINT to pgid [11500]
+[roslaunch][INFO] 2026-10-26 09:52:59,850: [data_access-8] sent SIGINT to pgid [11500]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,850: ProcessMonitor exit: killing logger-7
+[rostest][INFO] 2026-10-26 09:52:59,850: [logger-7] killing on exit
+[roslaunch][INFO] 2026-10-26 09:52:59,850: process[logger-7]: killing os process with pid[11499] pgid[11499]
+[roslaunch][INFO] 2026-10-26 09:52:59,850: [logger-7] sending SIGINT to pgid [11499]
+[roslaunch][INFO] 2026-10-26 09:52:59,850: [logger-7] sent SIGINT to pgid [11499]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,850: ProcessMonitor exit: killing g3t1_3-6
+[rostest][INFO] 2026-10-26 09:52:59,857: [g3t1_3-6] killing on exit
+[roslaunch][INFO] 2026-10-26 09:52:59,857: process[g3t1_3-6]: killing os process with pid[11493] pgid[11493]
+[roslaunch][INFO] 2026-10-26 09:52:59,857: [g3t1_3-6] sending SIGINT to pgid [11493]
+[roslaunch][INFO] 2026-10-26 09:52:59,857: [g3t1_3-6] sent SIGINT to pgid [11493]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,858: ProcessMonitor exit: killing g4t1-5
+[rostest][INFO] 2026-10-26 09:52:59,858: [g4t1-5] killing on exit
+[roslaunch][INFO] 2026-10-26 09:52:59,858: process[g4t1-5]: killing os process with pid[11492] pgid[11492]
+[roslaunch][INFO] 2026-10-26 09:52:59,858: [g4t1-5] sending SIGINT to pgid [11492]
+[roslaunch][INFO] 2026-10-26 09:52:59,858: [g4t1-5] sent SIGINT to pgid [11492]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,861: ProcessMonitor exit: killing param_adapter-4
+[rostest][INFO] 2026-10-26 09:52:59,866: [param_adapter-4] killing on exit
+[rosmaster.master][INFO] 2026-10-26 09:52:59,862: publisherUpdate[/reconfigure_/g3t1_3] -> http://bsn-virtualbox:33753/ []
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,866: ProcessMonitor exit: killing collector-3
+[rostest][INFO] 2026-10-26 09:52:59,867: [collector-3] killing on exit
+[roslaunch][INFO] 2026-10-26 09:52:59,867: process[collector-3]: killing os process with pid[11474] pgid[11474]
+[roslaunch][INFO] 2026-10-26 09:52:59,867: [collector-3] sending SIGINT to pgid [11474]
+[roslaunch][INFO] 2026-10-26 09:52:59,867: [collector-3] sent SIGINT to pgid [11474]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,866: ProcessMonitor exit: killing patient-2
+[rostest][INFO] 2026-10-26 09:52:59,867: [patient-2] killing on exit
+[roslaunch][INFO] 2026-10-26 09:52:59,867: process[patient-2]: killing os process with pid[11469] pgid[11469]
+[roslaunch][INFO] 2026-10-26 09:52:59,867: [patient-2] sending SIGINT to pgid [11469]
+[roslaunch][INFO] 2026-10-26 09:52:59,867: [patient-2] sent SIGINT to pgid [11469]
+[roslaunch.pmon][INFO] 2026-10-26 09:52:59,866: ProcessMonitor exit: killing patient_data_service-1
+[rostest][INFO] 2026-10-26 09:52:59,867: [patient_data_service-1] killing on exit
+[roslaunch][INFO] 2026-10-26 09:52:59,867: process[patient_data_service-1]: killing os process with pid[11468] pgid[11468]
+[roslaunch][INFO] 2026-10-26 09:52:59,867: [patient_data_service-1] sending SIGINT to pgid [11468]
+[roslaunch][INFO] 2026-10-26 09:52:59,867: [patient_data_service-1] sent SIGINT to pgid [11468]
+[rosmaster.master][INFO] 2026-10-26 09:52:59,868: publisherUpdate[/reconfigure_/g3t1_3] -> http://bsn-virtualbox:33753/ []: sec=0.00, result=[1, '', 0]
+[roslaunch][INFO] 2026-10-26 09:52:59,869: process[param_adapter-4]: killing os process with pid[11477] pgid[11477]
+[roslaunch][INFO] 2026-10-26 09:52:59,869: [param_adapter-4] sending SIGINT to pgid [11477]
+[roslaunch][INFO] 2026-10-26 09:52:59,869: [param_adapter-4] sent SIGINT to pgid [11477]
+[rosmaster.master][INFO] 2026-10-26 09:52:59,861: -PUB [/reconfigure_/g3t1_3] /param_adapter http://bsn-virtualbox:41519/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,920: -PUB [/rosout] /data_access http://bsn-virtualbox:44431/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,921: -SUB [/persist] /data_access http://bsn-virtualbox:44431/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,921: -SUB [/TargetSystemData] /data_access http://bsn-virtualbox:44431/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,921: -SERVICE [/data_access/get_loggers] /data_access rosrpc://bsn-virtualbox:44695
+[rosmaster.master][INFO] 2026-10-26 09:52:59,922: -SERVICE [/data_access/set_logger_level] /data_access rosrpc://bsn-virtualbox:44695
+[rosmaster.master][INFO] 2026-10-26 09:52:59,922: -SERVICE [/DataAccessRequest] /data_access rosrpc://bsn-virtualbox:44695
+[rosmaster.master][INFO] 2026-10-26 09:52:59,929: -PUB [/rosout] /patient http://bsn-virtualbox:39557/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,930: -SERVICE [/patient/get_loggers] /patient rosrpc://bsn-virtualbox:45819
+[rosmaster.master][INFO] 2026-10-26 09:52:59,930: -SERVICE [/patient/set_logger_level] /patient rosrpc://bsn-virtualbox:45819
+[rosmaster.master][INFO] 2026-10-26 09:52:59,930: -SERVICE [/getPatientData] /patient rosrpc://bsn-virtualbox:45819
+[rosmaster.master][INFO] 2026-10-26 09:52:59,931: -CACHEDPARAM [/rosout_disable_topics_generation] by /patient
+[rosmaster.master][INFO] 2026-10-26 09:52:59,934: -PUB [/rosout] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,934: -PUB [/reconfigure] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,935: -PUB [/persist] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,935: -PUB [/status] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,935: -PUB [/event] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,935: -SUB [/log_adapt] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,936: -SUB [/log_status] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,944: -SUB [/log_energy_status] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,945: -SUB [/log_event] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,945: -SUB [/log_uncertainty] /logger http://bsn-virtualbox:39551/
+[rosmaster.master][INFO] 2026-10-26 09:52:59,945: -SERVICE [/logger/get_loggers] /logger rosrpc://bsn-virtualbox:51249
+[rosmaster.master][INFO] 2026-10-26 09:52:59,945: -SERVICE [/logger/set_logger_level] /logger rosrpc://bsn-virtualbox:51249
+[roslaunch][INFO] 2026-10-26 09:52:59,950: process[data_access-8]: SIGINT killed with return value 0
+[roslaunch][INFO] 2026-10-26 09:52:59,969: process[patient-2]: SIGINT killed with return value 0
+[rosmaster.master][INFO] 2026-10-26 09:52:59,969: publisherUpdate[/reconfigure] -> http://bsn-virtualbox:41519/ []
+[rosmaster.master][INFO] 2026-10-26 09:52:59,970: publisherUpdate[/reconfigure] -> http://bsn-virtualbox:41519/ []: sec=0.00, result=[0, 'Unknown Error', 0]
+[rosmaster.master][INFO] 2026-10-26 09:53:00,049: -PUB [/rosout] /collector http://bsn-virtualbox:46387/
+[roslaunch][INFO] 2026-10-26 09:53:00,053: process[logger-7]: SIGINT killed with return value 0
+[rosmaster.master][INFO] 2026-10-26 09:53:00,054: -PUB [/log_event] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,057: -PUB [/log_status] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,059: -PUB [/log_energy_status] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,061: -SUB [/collect_event] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,064: -SUB [/collect_status] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,070: -PUB [/rosout] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,070: -PUB [/collect_event] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,071: -PUB [/collect_status] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,071: -PUB [/collect_energy_status] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,071: -PUB [/thermometer_data] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,072: -SUB [/uncertainty_/g3t1_3] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,072: -SUB [/reconfigure_/g3t1_3] /g3t1_3 http://bsn-virtualbox:33753/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,072: -SERVICE [/g3t1_3/get_loggers] /g3t1_3 rosrpc://bsn-virtualbox:50623
+[rosmaster.master][INFO] 2026-10-26 09:53:00,072: -SERVICE [/g3t1_3/set_logger_level] /g3t1_3 rosrpc://bsn-virtualbox:50623
+[rosmaster.master][INFO] 2026-10-26 09:53:00,072: -CACHEDPARAM [/rosout_disable_topics_generation] by /g3t1_3
+[xmlrpc][ERROR] 2026-10-26 09:53:00,073: Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 599, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 655, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 342, in handle
+    self.handle_one_request()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 310, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python2.7/socket.py", line 480, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+
+[rosmaster.master][INFO] 2026-10-26 09:53:00,073: -SUB [/collect_energy_status] /collector http://bsn-virtualbox:46387/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,077: -SERVICE [/collector/get_loggers] /collector rosrpc://bsn-virtualbox:46201
+[rosmaster.master][INFO] 2026-10-26 09:53:00,077: -PUB [/rosout] /param_adapter http://bsn-virtualbox:41519/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,078: -PUB [/reconfigure_/g4t1] /param_adapter http://bsn-virtualbox:41519/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,078: -SUB [/reconfigure] /param_adapter http://bsn-virtualbox:41519/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,078: -SERVICE [/param_adapter/get_loggers] /param_adapter rosrpc://bsn-virtualbox:35533
+[rosmaster.master][INFO] 2026-10-26 09:53:00,079: -SERVICE [/param_adapter/set_logger_level] /param_adapter rosrpc://bsn-virtualbox:35533
+[rosmaster.master][INFO] 2026-10-26 09:53:00,079: -SERVICE [/EffectorRegister] /param_adapter rosrpc://bsn-virtualbox:35533
+[rosmaster.master][INFO] 2026-10-26 09:53:00,079: -CACHEDPARAM [/rosout_disable_topics_generation] by /param_adapter
+[rosmaster.master][INFO] 2026-10-26 09:53:00,081: -SERVICE [/collector/set_logger_level] /collector rosrpc://bsn-virtualbox:46201
+[rosmaster.master][INFO] 2026-10-26 09:53:00,102: -PUB [/rosout] /patient_data_service http://bsn-virtualbox:41995/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,103: -SERVICE [/patient_data_service/get_loggers] /patient_data_service rosrpc://bsn-virtualbox:53245
+[rosmaster.master][INFO] 2026-10-26 09:53:00,104: -SERVICE [/patient_data_service/set_logger_level] /patient_data_service rosrpc://bsn-virtualbox:53245
+[rosmaster.master][INFO] 2026-10-26 09:53:00,109: -SERVICE [/getPatientData] /patient_data_service rosrpc://bsn-virtualbox:53245
+[rosmaster.master][INFO] 2026-10-26 09:53:00,110: -CACHEDPARAM [/rosout_disable_topics_generation] by /patient_data_service
+[rosmaster.master][INFO] 2026-10-26 09:53:00,125: publisherUpdate[/collect_energy_status] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/']
+[rosmaster.master][INFO] 2026-10-26 09:53:00,126: publisherUpdate[/collect_energy_status] -> http://bsn-virtualbox:46387/ ['http://bsn-virtualbox:39053/']: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.threadpool][ERROR] 2026-10-26 09:53:00,126: Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1316, in single_request
+    return self.parse_response(response)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1493, in parse_response
+    return u.close()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 800, in close
+    raise Fault(**self._stack[0])
+Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2026-10-26 09:53:00,126: publisherUpdate[/thermometer_data] -> http://bsn-virtualbox:39053/ []
+[rosmaster.master][INFO] 2026-10-26 09:53:00,127: publisherUpdate[/thermometer_data] -> http://bsn-virtualbox:39053/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-10-26 09:53:00,127: publisherUpdate[/reconfigure_/g4t1] -> http://bsn-virtualbox:39053/ []
+[rosmaster.master][INFO] 2026-10-26 09:53:00,127: publisherUpdate[/reconfigure_/g4t1] -> http://bsn-virtualbox:39053/ []: sec=0.00, result=[1, '', 0]
+[roslaunch][INFO] 2026-10-26 09:53:00,159: process[g3t1_3-6]: SIGINT killed with return value 0
+[roslaunch][INFO] 2026-10-26 09:53:00,170: process[patient_data_service-1]: SIGINT killed with return value 0
+[roslaunch][INFO] 2026-10-26 09:53:00,171: process[param_adapter-4]: SIGINT killed with return value 0
+[rosmaster.master][INFO] 2026-10-26 09:53:00,229: -PUB [/rosout] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,229: -PUB [/collect_event] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,229: -PUB [/collect_status] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,230: -PUB [/collect_energy_status] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,230: -PUB [/TargetSystemData] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,230: -SUB [/thermometer_data] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,231: -SUB [/oximeter_data] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,231: -SUB [/ecg_data] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,231: -SUB [/abps_data] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,231: -SUB [/abpd_data] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,232: -SUB [/glucosemeter_data] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,232: -SUB [/reconfigure_/g4t1] /g4t1 http://bsn-virtualbox:39053/
+[rosmaster.master][INFO] 2026-10-26 09:53:00,232: -SERVICE [/g4t1/get_loggers] /g4t1 rosrpc://bsn-virtualbox:59679
+[rosmaster.master][INFO] 2026-10-26 09:53:00,232: -SERVICE [/g4t1/set_logger_level] /g4t1 rosrpc://bsn-virtualbox:59679
+[rosmaster.master][INFO] 2026-10-26 09:53:00,233: -CACHEDPARAM [/rosout_disable_topics_generation] by /g4t1
+[roslaunch][INFO] 2026-10-26 09:53:00,261: process[g4t1-5]: SIGINT killed with return value 0
+[roslaunch][INFO] 2026-10-26 09:53:00,271: process[collector-3]: SIGINT killed with return value 0
+[roslaunch.pmon][INFO] 2026-10-26 09:53:00,271: ProcessMonitor exit: cleaning up data structures and signals
+[roslaunch.pmon][INFO] 2026-10-26 09:53:00,271: ProcessMonitor exit: pmon has shutdown
+[rostest][INFO] 2026-10-26 09:53:00,271: ... shutting down processing monitor complete
+[roslaunch.pmon][INFO] 2026-10-26 09:53:00,271: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 139814438287104)>
+[rostest][INFO] 2026-10-26 09:53:00,272: rostest teardown /home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_data_persistance.launch complete
+[rostest][INFO] 2026-10-26 09:53:00,286: finally rostest parent tearDown [<rostest.rostest_parent.ROSTestLaunchParent object at 0x7f2916549690>]
+[roslaunch][INFO] 2026-10-26 09:53:00,287: runner.stop()
+[roslaunch][INFO] 2026-10-26 09:53:00,287: ... roslaunch runner has already been stopped
+[rostest][INFO] 2026-10-26 09:53:00,287: calling pmon_shutdown
+[rostest][INFO] 2026-10-26 09:53:00,287: ... done calling pmon_shutdown
+[rospy.core][INFO] 2026-10-26 09:53:00,287: signal_shutdown [atexit]

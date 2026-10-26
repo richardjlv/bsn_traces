@@ -1,0 +1,19 @@
+[rospy.client][INFO] 2026-10-26 09:52:30,523: init_node, name[/test_data_persistance], pid[11505]
+[xmlrpc][INFO] 2026-10-26 09:52:30,523: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-10-26 09:52:30,523: Started XML-RPC server [http://bsn-virtualbox:42791/]
+[rospy.impl.masterslave][INFO] 2026-10-26 09:52:30,523: _ready: http://bsn-virtualbox:42791/
+[rospy.init][INFO] 2026-10-26 09:52:30,524: ROS Slave URI: [http://bsn-virtualbox:42791/]
+[rospy.registration][INFO] 2026-10-26 09:52:30,524: Registering with master node http://bsn-virtualbox:45901/
+[xmlrpc][INFO] 2026-10-26 09:52:30,524: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-10-26 09:52:30,624: registered with master
+[rospy.rosout][INFO] 2026-10-26 09:52:30,624: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-10-26 09:52:30,625: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-10-26 09:52:30,626: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-10-26 09:52:30,641: topic[/thermometer_data] adding connection to [http://bsn-virtualbox:33753/], count 0
+[rospy.internal][INFO] 2026-10-26 09:52:31,297: topic impl's ref count is zero, deleting topic /thermometer_data...
+[rospy.internal][INFO] 2026-10-26 09:52:31,297: topic[/thermometer_data] removing connection to http://bsn-virtualbox:33753/
+[rospy.internal][INFO] 2026-10-26 09:52:31,306: topic[/TargetSystemData] adding connection to [http://bsn-virtualbox:39053/], count 0
+[rospy.internal][INFO] 2026-10-26 09:52:31,309: topic impl's ref count is zero, deleting topic /TargetSystemData...
+[rospy.internal][INFO] 2026-10-26 09:52:31,310: topic[/TargetSystemData] removing connection to http://bsn-virtualbox:39053/
+[rospy.core][INFO] 2026-10-26 09:52:59,551: signal_shutdown [atexit]
+[rospy.impl.masterslave][INFO] 2026-10-26 09:52:59,553: atexit

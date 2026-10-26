@@ -1,0 +1,22 @@
+[33m[ WARN] [1793018088.338578874]: Shutdown request received.[0m
+[33m[ WARN] [1793018088.338620952]: Reason given for shutdown: [user request][0m
+[31m[ERROR] [1793018104.001539764]: Failed to disconnect from effector.[0m
+[31m[ERROR] [1793018104.001536968]: Failed to disconnect from effector.[0m
+[31m[ERROR] [1793018104.001620421]: Failed to disconnect from effector.[0m
+[31m[ERROR] [1793018104.001680342]: Failed to disconnect from effector.[0m
+... logging to /home/bsn/Documents/bsn2/traces_features/ros1_20261026T123423Z_health_status_w_m1hgvp/ros_logs/rostest-bsn-virtualbox-2729.log
+[ROSUNIT] Outputting test results to /home/bsn/Documents/bsn2/build/test_results/component/rostest-test_test_bdd_test_health_status.xml
+[Testcase: testtest_health_status] ... ok
+
+[ROSTEST]-----------------------------------------------------------------------
+
+[component.rosunit-test_health_status/test_a_patient_health_status_is_available_after_a_sensor_reports_a_reading_bsnp10][passed]
+[component.rosunit-test_health_status/test_no_patient_health_status_is_produced_when_the_central_hub_cannot_process_a_reading_bsnp10][passed]
+
+SUMMARY
+[32m * RESULT: SUCCESS[0m
+ * TESTS: 2
+ * ERRORS: 0
+ * FAILURES: 0
+
+rostest log file is in /home/bsn/Documents/bsn2/traces_features/ros1_20261026T123423Z_health_status_w_m1hgvp/ros_logs/rostest-bsn-virtualbox-2729.log

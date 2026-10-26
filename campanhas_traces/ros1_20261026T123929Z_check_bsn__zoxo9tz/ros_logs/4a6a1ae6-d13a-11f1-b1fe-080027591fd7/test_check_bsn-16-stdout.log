@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.17, pytest-4.6.11, py-1.11.0, pluggy-0.13.1
+rootdir: /home/bsn/Documents/bsn2/build/test_results/component
+plugins: bdd-4.0.2
+collected 8 items
+
+../Documents/bsn2/build/test_results/component ........                  [100%]
+
+=============================== warnings summary ===============================
+/home/bsn/.local/lib/python2.7/site-packages/_pytest/mark/structures.py:335
+  /home/bsn/.local/lib/python2.7/site-packages/_pytest/mark/structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.bsn-p08 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+/home/bsn/.local/lib/python2.7/site-packages/_pytest/mark/structures.py:335
+  /home/bsn/.local/lib/python2.7/site-packages/_pytest/mark/structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.behavior - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+/home/bsn/.local/lib/python2.7/site-packages/_pytest/mark/structures.py:335
+  /home/bsn/.local/lib/python2.7/site-packages/_pytest/mark/structures.py:335: PytestUnknownMarkWarning: Unknown pytest.mark.sad-path - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+- generated xml file: /home/bsn/Documents/bsn2/build/test_results/component/rosunit-test_check_bsn.xml -
+==================== 8 passed, 3 warnings in 147.07 seconds ====================
