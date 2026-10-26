@@ -14,3 +14,7 @@ No ROS 1, consulte `ros1/relatorios/report_production.log`. O arquivo compactado
 Estas campanhas gerais são distintas das campanhas de 22/10 em `campanhas_traces`, que executaram cada feature separadamente, com inicialização e encerramento próprios. As aprovações posteriores sem cobertura não substituem as medições anteriores. A cobertura por feature inclui também a montagem e a finalização dos processos; não mede exclusivamente as asserções de cada cenário.
 
 Não houve reexecução dos testes nesta publicação. A preservação integral dos arquivos disponíveis não garante que todos os processos tenham gravado seus perfis durante a campanha original.
+
+## Atualização ROS 1 de 26/10/2026
+
+A [nova campanha geral ROS 1](ros1_2026-10-26/README.md) registra 241 PASS e dois XFAIL em 243 casos internos, com 3.443/4.263 linhas cobertas (80,76%). Os resultados de setembro permanecem preservados.
