@@ -94,3 +94,5 @@ python2 ../ferramentas_traces/fechamento/validar_persistencia_controlada.py --ro
 ```
 
 ROS 2 validado em `persistencia_ros2_20261027T184744Z_yjoqaqkq`: 30 registros recuperados, com campos e ordem conferidos. Isso não valida persistência de leituras fisiológicas nem consulta pela API.
+
+Conferência pareada concluída: `persistencia_ros1_20261027T185045Z_xWH4g_` recuperou os mesmos 30 registros esperados, com o mesmo executor ROS 2. A origem exclusiva de campanha é normalizada apenas na comparação entre versões.
