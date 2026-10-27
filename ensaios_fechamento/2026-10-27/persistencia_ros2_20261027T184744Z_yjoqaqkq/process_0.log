@@ -1,0 +1,29 @@
+[WARN] [1793126865.507798921] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+[WARN] [1793126865.507817278] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+[INFO] [1793126865.567416075] [data_access]: Starting DataAccess component
+[INFO] [1793126865.568480098] [data_access]: Initializing component in status and events: g3t1_4
+[INFO] [1793126865.568914231] [data_access]: Initializing component in status and events: g3t1_2
+[INFO] [1793126865.569260619] [data_access]: Initializing component in status and events: g3t1_5
+[INFO] [1793126865.569547765] [data_access]: Initializing component in status and events: g3t1_3
+[INFO] [1793126865.569860160] [data_access]: Initializing component in status and events: g3t1_6
+[INFO] [1793126865.570106779] [data_access]: Initializing component in status and events: g3t1_1
+[INFO] [1793126865.570355775] [data_access]: Initializing component in status and events: g4t1
+[INFO] [1793126865.574010408] [data_access]: Loaded and parsed reliability formula: ((CTX_G3_T1_1*F_G3_T1_1*R_G3_T1_1*CTX_G3_T1_2*F_G3_T1_2*R_G3_T1_2*CTX_G3_T1_3*F_G3_T1_3*R_G3_T1_3*CTX_G3_T1_4*F_G3_T1_4*R_G3_T1_4*CTX_G3_T1_5*F_G3_T1_5*R_G3_T1_5*CTX_G3_T1_6*F_G3_T1_6*R_G3_T1_6)*CTX_G4_T1*F_G4_T1*R_G4_T1)
+[INFO] [1793126865.574629763] [data_access]: Loaded cost formula
+[INFO] [1793126865.575230854] [data_access]: Loaded goal model
+[INFO] [1793126865.575663730] [data_access]: DataAccess initialized successfully
+[INFO] [1793126865.576008337] [data_access]: DataAccess node started
+Traceback (most recent call last):
+  File "/ros_ws/install/adaptation/lib/adaptation/data_access", line 33, in <module>
+    sys.exit(load_entry_point('adaptation', 'console_scripts', 'data_access')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ros_ws/build/adaptation/adaptation/data_access/data_access.py", line 799, in main
+    rclpy.shutdown()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+    _shutdown(context=context)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+    context.shutdown()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+    self.__context.shutdown()
+rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[ros2run]: Process exited with failure 1

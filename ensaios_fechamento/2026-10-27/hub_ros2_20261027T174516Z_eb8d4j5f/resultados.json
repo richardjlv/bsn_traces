@@ -1,0 +1,276 @@
+{
+  "ros": "2",
+  "boundary": "six synthetic sensor topics -> hub output",
+  "frequency_hz": 6,
+  "repetitions": 3,
+  "phases": [
+    {
+      "repeat": 0,
+      "phase": "baixo",
+      "risks": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "data_markers": [
+        1000.0,
+        1001.0,
+        1002.0,
+        1003.0,
+        1004.0,
+        1005.0
+      ],
+      "expected": 20.0,
+      "start": 6420.31225175,
+      "passed": true,
+      "samples": 29,
+      "stable_samples": 17,
+      "latency_s": 0.1667872329999227,
+      "within_250ms": true
+    },
+    {
+      "repeat": 0,
+      "phase": "alto",
+      "risks": [
+        90,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "data_markers": [
+        1010.0,
+        1011.0,
+        1012.0,
+        1013.0,
+        1014.0,
+        1015.0
+      ],
+      "expected": 90.0,
+      "start": 6425.313646851,
+      "passed": true,
+      "samples": 31,
+      "stable_samples": 18,
+      "latency_s": 0.1678631859995221,
+      "within_250ms": true
+    },
+    {
+      "repeat": 0,
+      "phase": "recuperado",
+      "risks": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "data_markers": [
+        1020.0,
+        1021.0,
+        1022.0,
+        1023.0,
+        1024.0,
+        1025.0
+      ],
+      "expected": 20.0,
+      "start": 6430.314038599,
+      "passed": true,
+      "samples": 30,
+      "stable_samples": 18,
+      "latency_s": 0.16451291300018056,
+      "within_250ms": true
+    },
+    {
+      "repeat": 1,
+      "phase": "baixo",
+      "risks": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "data_markers": [
+        1100.0,
+        1101.0,
+        1102.0,
+        1103.0,
+        1104.0,
+        1105.0
+      ],
+      "expected": 20.0,
+      "start": 6435.316942179,
+      "passed": true,
+      "samples": 30,
+      "stable_samples": 19,
+      "latency_s": 0.1650928950002708,
+      "within_250ms": true
+    },
+    {
+      "repeat": 1,
+      "phase": "alto",
+      "risks": [
+        90,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "data_markers": [
+        1110.0,
+        1111.0,
+        1112.0,
+        1113.0,
+        1114.0,
+        1115.0
+      ],
+      "expected": 90.0,
+      "start": 6440.317202831,
+      "passed": true,
+      "samples": 30,
+      "stable_samples": 18,
+      "latency_s": 0.16162920100032352,
+      "within_250ms": true
+    },
+    {
+      "repeat": 1,
+      "phase": "recuperado",
+      "risks": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "data_markers": [
+        1120.0,
+        1121.0,
+        1122.0,
+        1123.0,
+        1124.0,
+        1125.0
+      ],
+      "expected": 20.0,
+      "start": 6445.317739765,
+      "passed": true,
+      "samples": 30,
+      "stable_samples": 18,
+      "latency_s": 0.16174150200004078,
+      "within_250ms": true
+    },
+    {
+      "repeat": 2,
+      "phase": "baixo",
+      "risks": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "data_markers": [
+        1200.0,
+        1201.0,
+        1202.0,
+        1203.0,
+        1204.0,
+        1205.0
+      ],
+      "expected": 20.0,
+      "start": 6450.318635105,
+      "passed": true,
+      "samples": 30,
+      "stable_samples": 18,
+      "latency_s": 0.1601734559999386,
+      "within_250ms": true
+    },
+    {
+      "repeat": 2,
+      "phase": "alto",
+      "risks": [
+        90,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "data_markers": [
+        1210.0,
+        1211.0,
+        1212.0,
+        1213.0,
+        1214.0,
+        1215.0
+      ],
+      "expected": 90.0,
+      "start": 6455.319395755,
+      "passed": true,
+      "samples": 30,
+      "stable_samples": 18,
+      "latency_s": 0.15943739300018933,
+      "within_250ms": true
+    },
+    {
+      "repeat": 2,
+      "phase": "recuperado",
+      "risks": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "data_markers": [
+        1220.0,
+        1221.0,
+        1222.0,
+        1223.0,
+        1224.0,
+        1225.0
+      ],
+      "expected": 20.0,
+      "start": 6460.319627658,
+      "passed": true,
+      "samples": 30,
+      "stable_samples": 18,
+      "latency_s": 0.1591585779997331,
+      "within_250ms": true
+    }
+  ],
+  "complete": true,
+  "source_sha256": {
+    "/ros_ws/src/bsn_ros2/central_hub/central_hub/central_hub.py": "d8d3241406af8ac87d4d0869deae6a959bec96bf6feaa689974cde3c339f07b9",
+    "/ros_ws/src/bsn_ros2/central_hub/central_hub/components/data_fusion.py": "2251da36a5212f3fa5dea823e467022e1d7ae3bf6369a75b82e2283c77062c1a",
+    "/ros_ws/src/bsn_ros2/central_hub/central_hub/components/sensor_data_handler.py": "8b11d5c350b79ea8236fa8a69dcd0bffa025610ad94f528bd073548c7ee9e887",
+    "/ros_ws/src/bsn_ros2/central_hub/central_hub/components/publishers.py": "71a95305cf064eb911f2c61558eda7e00a895ba68cec90a239bc93666e25f89d",
+    "/ros_ws/src/bsn_ros2/shared_components/shared_components/core/config_manager_base.py": "7517a2e4f30d432b67a4d57e9690c23d7165ed5b6e7b90964642c36a6bd2b754"
+  },
+  "passed": true,
+  "script_sha256": "46fb969763be7c88ca065c6b1d91261233d5de5cabb7d57d4cb0da1d566be15f",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "command": [
+    "src/ferramentas_traces/fechamento/validar_hub_controlado.py",
+    "--ros",
+    "2",
+    "--output",
+    "src/campanhas_fechamento",
+    "--repeticoes",
+    "3"
+  ],
+  "limits": [
+    "No physical sensor/patient chain. Latency is batch-publication to correlated hub output.",
+    "2s settling and 5s window are test protocol, not system requirements.",
+    "No retries; 250ms is reported separately, not included in functional pass."
+  ]
+}

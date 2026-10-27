@@ -1,0 +1,73 @@
+[WARN] [1793060800.557382331] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+[WARN] [1793060800.557402636] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+[INFO] [1793060800.651741078] [central_hub_node]: Initialized Central Hub with frequency: 6.0Hz
+[INFO] [1793060800.654260928] [central_hub_node]: Lifecycle Manager initialized
+[INFO] [1793060800.655815781] [central_hub_node]: PublisherManagerBase initialized successfully
+[INFO] [1793060800.656139632] [central_hub_node]: Auto-management flags updated: configure=True, activate=True, battery_aware=True, recovery=False
+[INFO] [1793060800.656398147] [central_hub_node]: Battery thresholds updated: low=2.0%, recovery=15.0%
+[INFO] [1793060800.656715946] [central_hub_node]: Lifecycle auto-management started
+[WARN] [1793060800.657655371] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060800.829899536] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060800.991787033] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060801.159406404] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060801.325198954] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060801.492111981] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060801.658197667] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060801.825018068] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060801.991565544] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060802.159543432] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060802.324863257] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060802.492382087] [central_hub_node]: Checking if hub is active: False
+[INFO] [1793060802.656920660] [central_hub_node]: Auto-configuring node...
+[INFO] [1793060802.657101241] [central_hub_node]: Triggering node configuration...
+[INFO] [1793060802.657450844] [central_hub_node]: Configuring Central Hub...
+[INFO] [1793060802.661122149] [central_hub_node]: Node configuration successful
+[WARN] [1793060802.662486020] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060802.825174132] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060802.993166282] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060803.158347593] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060803.325610076] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060803.491962541] [central_hub_node]: Checking if hub is active: False
+[WARN] [1793060803.659977479] [central_hub_node]: Checking if hub is active: False
+[INFO] [1793060803.662011189] [central_hub_node]: Triggering node activation...
+[INFO] [1793060803.662325374] [central_hub_node]: Activating Central Hub...
+[INFO] [1793060803.662800748] [central_hub_node]: Node activation successful
+[WARN] [1793060803.825561182] [central_hub_node]: Checking if hub is active: True
+[WARN] [1793060803.825979900] [central_hub_node]: Checking if hub is active: True
+[INFO] [1793060803.826429334] [central_hub_node]:  
++-----------------+-----------------+-----------------------------+
+| Vital Sign      | Value           | Risk Level                  |
++-----------------+-----------------+-----------------------------+
+| abpd            | waiting data      |                           |
+| abps            | waiting data      |                           |
+| ecg             | waiting data      |                           |
+| glucosemeter    | waiting data      |                           |
+| oximeter        | waiting data      |                           |
+| thermometer     | waiting data      |                           |
++-----------------+-----------------+-----------------------------+
+[INFO] [1793060803.827213897] [central_hub_node]: Published TargetSystemData
+Traceback (most recent call last):
+  File "/ros_ws/install/central_hub/lib/central_hub/emergency_detection", line 33, in <module>
+Exception in thread Thread-1 (spin):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    sys.exit(load_entry_point('central-hub', 'console_scripts', 'emergency_detection')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ros_ws/build/central_hub/central_hub/central_hub.py", line 232, in main
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+    rclpy.shutdown()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+    executor.spin_once()
+    _shutdown(context=context)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+    context.shutdown()
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+    self.__context.shutdown()
+rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[ros2run]: Process exited with failure 1

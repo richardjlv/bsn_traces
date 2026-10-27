@@ -1,0 +1,26 @@
+[WARN] [1793060714.089596546] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+[WARN] [1793060714.089622025] [rcl]: 'localhost_only' is enabled, 'automatic_discovery_range' and 'static_peers' will be ignored.
+[INFO] [1793060714.181373772] [central_hub_node]: Initialized Central Hub with frequency: 6.0Hz
+[ERROR] [1793060714.181800177] [central_hub_node]: component name must be set
+[ERROR] [1793060714.182235927] [central_hub_node]: Configuration error: component name must be set
+Traceback (most recent call last):
+  File "/ros_ws/install/central_hub/lib/central_hub/emergency_detection", line 33, in <module>
+    sys.exit(load_entry_point('central-hub', 'console_scripts', 'emergency_detection')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ros_ws/build/central_hub/central_hub/central_hub.py", line 217, in main
+    hub = CentralHub(node_name="central_hub_node")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ros_ws/build/central_hub/central_hub/central_hub.py", line 24, in __init__
+    super().__init__(node_name, parameters)
+  File "/ros_ws/build/shared_components/shared_components/core/ros_component.py", line 39, in __init__
+    self.config: Any = self._create_config_manager()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ros_ws/build/central_hub/central_hub/central_hub.py", line 42, in _create_config_manager
+    return ConfigManager(self)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/ros_ws/build/central_hub/central_hub/components/config_manager.py", line 25, in __init__
+    self.validate()
+  File "/ros_ws/build/shared_components/shared_components/core/config_manager_base.py", line 41, in validate
+    raise ValueError("component name must be set")
+ValueError: component name must be set
+[ros2run]: Process exited with failure 1

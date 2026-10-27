@@ -1,0 +1,297 @@
+{
+  "boundary": "fusion_functions_without_ROS",
+  "absolute_tolerance": 1e-09,
+  "source_sha256": {
+    "Processor.cpp": "65d8dd70b9364c4f5c689b1a4f302979b1edad672c52833e33e8fa4dc7c80c14",
+    "include/libbsn/processor/Processor.hpp": "3a219fe7714c1757e47294b7ab5d56d0046b51e8aa091b11d0a98ee55ca86b00",
+    "data_fusion.py": "2251da36a5212f3fa5dea823e467022e1d7ae3bf6369a75b82e2283c77062c1a",
+    "shared_components/enums.py": "f0775febc33f60df922d36bf01fb427c7da0d762fe03fa894ec3e103a837f634"
+  },
+  "cases": [
+    {
+      "case": "termometro_baixo",
+      "inputs": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": 20.0,
+      "observed": 20.0,
+      "variant": "cpp_original",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "termometro_baixo",
+      "inputs": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": 20.0,
+      "observed": 20.0,
+      "variant": "python_original",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "termometro_alto",
+      "inputs": [
+        90,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": 90.0,
+      "observed": 90.0,
+      "variant": "cpp_original",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "termometro_alto",
+      "inputs": [
+        90,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": 90.0,
+      "observed": 90.0,
+      "variant": "python_original",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "retorno_baixo",
+      "inputs": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": 20.0,
+      "observed": 20.0,
+      "variant": "cpp_original",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "retorno_baixo",
+      "inputs": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": 20.0,
+      "observed": 20.0,
+      "variant": "python_original",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "misto",
+      "inputs": [
+        10,
+        20,
+        30,
+        40,
+        60,
+        80
+      ],
+      "expected": 60.0,
+      "observed": 60.0,
+      "variant": "cpp_original",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "misto",
+      "inputs": [
+        10,
+        20,
+        30,
+        40,
+        60,
+        80
+      ],
+      "expected": 60.0,
+      "observed": 60.0,
+      "variant": "python_original",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "termometro_baixo",
+      "inputs": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": 20.0,
+      "observed": 20.0,
+      "variant": "cpp_mutant",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "termometro_baixo",
+      "inputs": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": 20.0,
+      "observed": 20.0,
+      "variant": "python_mutant",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "termometro_alto",
+      "inputs": [
+        90,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": 90.0,
+      "observed": 20.0,
+      "variant": "cpp_mutant",
+      "passed": false,
+      "errors": []
+    },
+    {
+      "case": "termometro_alto",
+      "inputs": [
+        90,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": 90.0,
+      "observed": 20.0,
+      "variant": "python_mutant",
+      "passed": false,
+      "errors": []
+    },
+    {
+      "case": "retorno_baixo",
+      "inputs": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": 20.0,
+      "observed": 20.0,
+      "variant": "cpp_mutant",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "retorno_baixo",
+      "inputs": [
+        10,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "expected": 20.0,
+      "observed": 20.0,
+      "variant": "python_mutant",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "misto",
+      "inputs": [
+        10,
+        20,
+        30,
+        40,
+        60,
+        80
+      ],
+      "expected": 60.0,
+      "observed": 56.666666666666664,
+      "variant": "cpp_mutant",
+      "passed": false,
+      "errors": []
+    },
+    {
+      "case": "misto",
+      "inputs": [
+        10,
+        20,
+        30,
+        40,
+        60,
+        80
+      ],
+      "expected": 60.0,
+      "observed": 56.666666666666664,
+      "variant": "python_mutant",
+      "passed": false,
+      "errors": []
+    }
+  ],
+  "commands": [
+    [
+      "g++",
+      "-std=c++11",
+      "-O0",
+      "-I/ros_ws/src/campanhas_fechamento/fusao_20261027T001940Z_10dxlqab/include",
+      "/ros_ws/src/campanhas_fechamento/fusao_20261027T001940Z_10dxlqab/harness.cpp",
+      "/ros_ws/src/campanhas_fechamento/fusao_20261027T001940Z_10dxlqab/Processor.cpp",
+      "-o",
+      "/ros_ws/src/campanhas_fechamento/fusao_20261027T001940Z_10dxlqab/cpp_original"
+    ],
+    [
+      "g++",
+      "-std=c++11",
+      "-O0",
+      "-I/ros_ws/src/campanhas_fechamento/fusao_20261027T001940Z_10dxlqab/include",
+      "/ros_ws/src/campanhas_fechamento/fusao_20261027T001940Z_10dxlqab/harness.cpp",
+      "/ros_ws/src/campanhas_fechamento/fusao_20261027T001940Z_10dxlqab/Processor_mutant.cpp",
+      "-o",
+      "/ros_ws/src/campanhas_fechamento/fusao_20261027T001940Z_10dxlqab/cpp_mutant"
+    ]
+  ],
+  "validation_passed": true,
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "limitations": [
+    "Synthetic mutation designed after examining code; not efficacy on unknown faults.",
+    "No node, communication, buffering, timing or durable storage exercised."
+  ]
+}

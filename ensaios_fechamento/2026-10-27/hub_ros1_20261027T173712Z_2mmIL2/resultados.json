@@ -1,0 +1,26 @@
+{
+  "phases": [], 
+  "complete": false, 
+  "limits": [
+    "No physical sensor/patient chain. Latency is batch-publication to correlated hub output.", 
+    "2s settling and 5s window are test protocol, not system requirements.", 
+    "No retries; 250ms is reported separately, not included in functional pass."
+  ], 
+  "frequency_hz": 6, 
+  "python": "2.7.17 (default, Mar  8 2023, 18:40:28) \n[GCC 7.5.0]", 
+  "repetitions": 3, 
+  "script_sha256": "b4ce5f375ae8320e753567fec1dec8253f95c2404bcaaeac4bad7524bba2ebe7", 
+  "passed": false, 
+  "error": "ResourceNotFound('component',)", 
+  "command": [
+    "../ferramentas_traces/fechamento/validar_hub_controlado.py", 
+    "--ros", 
+    "1", 
+    "--output", 
+    "src/campanhas_fechamento", 
+    "--repeticoes", 
+    "3"
+  ], 
+  "boundary": "six synthetic sensor topics -> hub output", 
+  "ros": "1"
+}

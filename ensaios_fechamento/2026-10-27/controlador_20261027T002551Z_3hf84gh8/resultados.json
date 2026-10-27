@@ -1,0 +1,90 @@
+{
+  "boundary": "isolated_actual_method_bodies_with_publication_doubles",
+  "source_sha256": {
+    "bsn2/src/sa-bsn/system_manager/enactor/src/Controller.cpp": "36baa688cf543089b3c1913ddf88f130393d950f375c20a4468951cd7f48ac4d",
+    "bsn_ros2/adaptation/adaptation/enactor/controller.py": "4f509c7da4a0c8278bf4df8331e8e3d008a7b238519115afab3ae2017b742a3a"
+  },
+  "rows": [
+    {
+      "case": "degradacao",
+      "reference": 0.8,
+      "current": 0.5,
+      "initial_frequency": 10,
+      "kp": 50,
+      "margin": 0.05,
+      "cpp_frequency": 10.15,
+      "cpp_commands": [
+        "freq=10.150000"
+      ],
+      "python_frequency": 10.15,
+      "python_commands": [
+        "freq=10.15"
+      ],
+      "equal_frequency": true,
+      "equal_command_presence": true
+    },
+    {
+      "case": "recuperacao_acima_referencia",
+      "reference": 0.8,
+      "current": 0.95,
+      "initial_frequency": 10,
+      "kp": 50,
+      "margin": 0.05,
+      "cpp_frequency": 9.925,
+      "cpp_commands": [
+        "freq=9.925000"
+      ],
+      "python_frequency": 9.925,
+      "python_commands": [
+        "freq=9.93"
+      ],
+      "equal_frequency": true,
+      "equal_command_presence": true
+    },
+    {
+      "case": "erro_zero",
+      "reference": 0.8,
+      "current": 0.8,
+      "initial_frequency": 10,
+      "kp": 50,
+      "margin": 0.05,
+      "cpp_frequency": 10.0,
+      "cpp_commands": [
+        "freq=10.000000"
+      ],
+      "python_frequency": 10.0,
+      "python_commands": [],
+      "equal_frequency": true,
+      "equal_command_presence": false
+    },
+    {
+      "case": "dentro_margem",
+      "reference": 0.8,
+      "current": 0.79,
+      "initial_frequency": 10,
+      "kp": 50,
+      "margin": 0.05,
+      "cpp_frequency": 10.005,
+      "cpp_commands": [
+        "freq=10.005000"
+      ],
+      "python_frequency": 10.0,
+      "python_commands": [],
+      "equal_frequency": false,
+      "equal_command_presence": false
+    }
+  ],
+  "command": [
+    "g++",
+    "-std=c++11",
+    "-O0",
+    "/ros_ws/src/campanhas_fechamento/controlador_20261027T002551Z_3hf84gh8/harness.cpp",
+    "-o",
+    "/ros_ws/src/campanhas_fechamento/controlador_20261027T002551Z_3hf84gh8/policy"
+  ],
+  "limitations": [
+    "Not a runtime reliability recovery experiment.",
+    "Outputs recorded including disagreements; not all are intended requirements.",
+    "No C++/Python production source modified."
+  ]
+}

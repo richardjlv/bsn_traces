@@ -1,0 +1,24 @@
+{
+  "ros": "2",
+  "boundary": "six synthetic sensor topics -> hub output",
+  "frequency_hz": 6,
+  "repetitions": 3,
+  "phases": [],
+  "complete": false,
+  "error": "RuntimeError('Hub input connections/output not ready')",
+  "passed": false,
+  "script_sha256": "c27d165efc9cc5eb5040d65ad2c22f12421813bc0b03782d253fb1e78c52ea0c",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "command": [
+    "src/ferramentas_traces/fechamento/validar_hub_controlado.py",
+    "--ros",
+    "2",
+    "--output",
+    "src/campanhas_fechamento"
+  ],
+  "limits": [
+    "No physical sensor/patient chain. Latency is batch-publication to correlated hub output.",
+    "2s settling and 5s window are test protocol, not system requirements.",
+    "No retries; 250ms is reported separately, not included in functional pass."
+  ]
+}

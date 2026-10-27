@@ -1,0 +1,31 @@
+{
+  "ros": "2",
+  "boundary": "six synthetic sensor topics -> hub output",
+  "frequency_hz": 6,
+  "repetitions": 3,
+  "phases": [],
+  "complete": false,
+  "source_sha256": {
+    "/ros_ws/src/bsn_ros2/central_hub/central_hub/central_hub.py": "d8d3241406af8ac87d4d0869deae6a959bec96bf6feaa689974cde3c339f07b9",
+    "/ros_ws/src/bsn_ros2/central_hub/central_hub/components/data_fusion.py": "2251da36a5212f3fa5dea823e467022e1d7ae3bf6369a75b82e2283c77062c1a",
+    "/ros_ws/src/bsn_ros2/central_hub/central_hub/components/sensor_data_handler.py": "8b11d5c350b79ea8236fa8a69dcd0bffa025610ad94f528bd073548c7ee9e887",
+    "/ros_ws/src/bsn_ros2/central_hub/central_hub/components/publishers.py": "71a95305cf064eb911f2c61558eda7e00a895ba68cec90a239bc93666e25f89d",
+    "/ros_ws/src/bsn_ros2/shared_components/shared_components/core/config_manager_base.py": "7517a2e4f30d432b67a4d57e9690c23d7165ed5b6e7b90964642c36a6bd2b754"
+  },
+  "error": "RuntimeError('Hub exited during readiness; see process log')",
+  "passed": false,
+  "script_sha256": "ed931b914dec73072ce1856d5403d1520535ddd021a5ae1f5eb27df005960a69",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "command": [
+    "src/ferramentas_traces/fechamento/validar_hub_controlado.py",
+    "--ros",
+    "2",
+    "--output",
+    "src/campanhas_fechamento"
+  ],
+  "limits": [
+    "No physical sensor/patient chain. Latency is batch-publication to correlated hub output.",
+    "2s settling and 5s window are test protocol, not system requirements.",
+    "No retries; 250ms is reported separately, not included in functional pass."
+  ]
+}

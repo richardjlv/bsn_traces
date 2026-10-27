@@ -1,0 +1,281 @@
+{
+  "ros_environment": {
+    "ROS_PACKAGE_PATH": "/home/bsn/Documents/bsn2/src:/opt/ros/melodic/share", 
+    "CMAKE_PREFIX_PATH": "/home/bsn/Documents/bsn2/devel:/opt/ros/melodic", 
+    "ROS_DISTRO": "melodic", 
+    "PYTHONPATH": "/home/bsn/Documents/bsn2/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages:/home/bsn/Documents/bsn/devel/lib/python2.7/dist-packages/"
+  }, 
+  "phases": [
+    {
+      "repeat": 0, 
+      "samples": 30, 
+      "data_markers": [
+        1000.0, 
+        1001.0, 
+        1002.0, 
+        1003.0, 
+        1004.0, 
+        1005.0
+      ], 
+      "start": 6680.448381376, 
+      "stable_samples": 18, 
+      "risks": [
+        10, 
+        20, 
+        20, 
+        20, 
+        20, 
+        20
+      ], 
+      "passed": true, 
+      "within_250ms": false, 
+      "phase": "baixo", 
+      "latency_s": 0.25217119399985677, 
+      "expected": 20.0
+    }, 
+    {
+      "repeat": 0, 
+      "samples": 29, 
+      "data_markers": [
+        1010.0, 
+        1011.0, 
+        1012.0, 
+        1013.0, 
+        1014.0, 
+        1015.0
+      ], 
+      "start": 6685.449708045, 
+      "stable_samples": 18, 
+      "risks": [
+        90, 
+        20, 
+        20, 
+        20, 
+        20, 
+        20
+      ], 
+      "passed": true, 
+      "within_250ms": false, 
+      "phase": "alto", 
+      "latency_s": 0.3236454400002913, 
+      "expected": 90.0
+    }, 
+    {
+      "repeat": 0, 
+      "samples": 29, 
+      "data_markers": [
+        1020.0, 
+        1021.0, 
+        1022.0, 
+        1023.0, 
+        1024.0, 
+        1025.0
+      ], 
+      "start": 6690.454718588, 
+      "stable_samples": 17, 
+      "risks": [
+        10, 
+        20, 
+        20, 
+        20, 
+        20, 
+        20
+      ], 
+      "passed": true, 
+      "within_250ms": true, 
+      "phase": "recuperado", 
+      "latency_s": 0.2373202950002451, 
+      "expected": 20.0
+    }, 
+    {
+      "repeat": 1, 
+      "samples": 30, 
+      "data_markers": [
+        1100.0, 
+        1101.0, 
+        1102.0, 
+        1103.0, 
+        1104.0, 
+        1105.0
+      ], 
+      "start": 6695.455025134, 
+      "stable_samples": 18, 
+      "risks": [
+        10, 
+        20, 
+        20, 
+        20, 
+        20, 
+        20
+      ], 
+      "passed": true, 
+      "within_250ms": true, 
+      "phase": "baixo", 
+      "latency_s": 0.0609451700001955, 
+      "expected": 20.0
+    }, 
+    {
+      "repeat": 1, 
+      "samples": 29, 
+      "data_markers": [
+        1110.0, 
+        1111.0, 
+        1112.0, 
+        1113.0, 
+        1114.0, 
+        1115.0
+      ], 
+      "start": 6700.455442901, 
+      "stable_samples": 18, 
+      "risks": [
+        90, 
+        20, 
+        20, 
+        20, 
+        20, 
+        20
+      ], 
+      "passed": true, 
+      "within_250ms": false, 
+      "phase": "alto", 
+      "latency_s": 0.3356661499992697, 
+      "expected": 90.0
+    }, 
+    {
+      "repeat": 1, 
+      "samples": 29, 
+      "data_markers": [
+        1120.0, 
+        1121.0, 
+        1122.0, 
+        1123.0, 
+        1124.0, 
+        1125.0
+      ], 
+      "start": 6705.460571063, 
+      "stable_samples": 17, 
+      "risks": [
+        10, 
+        20, 
+        20, 
+        20, 
+        20, 
+        20
+      ], 
+      "passed": true, 
+      "within_250ms": false, 
+      "phase": "recuperado", 
+      "latency_s": 0.2906208609992973, 
+      "expected": 20.0
+    }, 
+    {
+      "repeat": 2, 
+      "samples": 30, 
+      "data_markers": [
+        1200.0, 
+        1201.0, 
+        1202.0, 
+        1203.0, 
+        1204.0, 
+        1205.0
+      ], 
+      "start": 6710.464750661, 
+      "stable_samples": 18, 
+      "risks": [
+        10, 
+        20, 
+        20, 
+        20, 
+        20, 
+        20
+      ], 
+      "passed": true, 
+      "within_250ms": true, 
+      "phase": "baixo", 
+      "latency_s": 0.05593888800012792, 
+      "expected": 20.0
+    }, 
+    {
+      "repeat": 2, 
+      "samples": 29, 
+      "data_markers": [
+        1210.0, 
+        1211.0, 
+        1212.0, 
+        1213.0, 
+        1214.0, 
+        1215.0
+      ], 
+      "start": 6715.466624285, 
+      "stable_samples": 18, 
+      "risks": [
+        90, 
+        20, 
+        20, 
+        20, 
+        20, 
+        20
+      ], 
+      "passed": true, 
+      "within_250ms": false, 
+      "phase": "alto", 
+      "latency_s": 0.32734112399975857, 
+      "expected": 90.0
+    }, 
+    {
+      "repeat": 2, 
+      "samples": 29, 
+      "data_markers": [
+        1220.0, 
+        1221.0, 
+        1222.0, 
+        1223.0, 
+        1224.0, 
+        1225.0
+      ], 
+      "start": 6720.467307194, 
+      "stable_samples": 17, 
+      "risks": [
+        10, 
+        20, 
+        20, 
+        20, 
+        20, 
+        20
+      ], 
+      "passed": true, 
+      "within_250ms": false, 
+      "phase": "recuperado", 
+      "latency_s": 0.2777702980001777, 
+      "expected": 20.0
+    }
+  ], 
+  "complete": true, 
+  "limits": [
+    "No physical sensor/patient chain. Latency is batch-publication to correlated hub output.", 
+    "2s settling and 5s window are test protocol, not system requirements.", 
+    "No retries; 250ms is reported separately, not included in functional pass."
+  ], 
+  "frequency_hz": 6, 
+  "python": "2.7.17 (default, Mar  8 2023, 18:40:28) \n[GCC 7.5.0]", 
+  "repetitions": 3, 
+  "source_sha256": {
+    "/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/src/CentralHub.cpp": "f77a88cd033701bd2bb71ae352007c00d145ddfe7d994dcb2ce008c3aedebb0a", 
+    "/home/bsn/Documents/bsn2/devel/lib/component/g4t1": "2b40eec1603f47a2ef277df89d6913e85892b6b8d702054d2f2d869f2a7956f4", 
+    "/home/bsn/Documents/bsn2/src/libbsn/src/processor/Processor.cpp": "65d8dd70b9364c4f5c689b1a4f302979b1edad672c52833e33e8fa4dc7c80c14", 
+    "/home/bsn/Documents/bsn2/src/sa-bsn/target_system/components/component/src/g4t1/G4T1.cpp": "3c796d51c63e109a7b5824c867022052e1fc8ba61085aef5fc450fe210c6ae4a"
+  }, 
+  "script_sha256": "46fb969763be7c88ca065c6b1d91261233d5de5cabb7d57d4cb0da1d566be15f", 
+  "passed": true, 
+  "command": [
+    "../ferramentas_traces/fechamento/validar_hub_controlado.py", 
+    "--ros", 
+    "1", 
+    "--output", 
+    "src/campanhas_fechamento", 
+    "--repeticoes", 
+    "3"
+  ], 
+  "boundary": "six synthetic sensor topics -> hub output", 
+  "ros": "1"
+}
