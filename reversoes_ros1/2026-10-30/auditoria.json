@@ -1,0 +1,175 @@
+{
+  "checked_sha256_files": 4068,
+  "hash_mismatches": [],
+  "rounds": [
+    {
+      "round": "baseline",
+      "internal": {
+        "passed": 154,
+        "xfail": 2
+      },
+      "wrappers": {
+        "passed": 27
+      },
+      "failures": []
+    },
+    {
+      "round": "sem_B2",
+      "internal": {
+        "passed": 153,
+        "xfail": 2,
+        "failure": 1
+      },
+      "wrappers": {
+        "passed": 27
+      },
+      "failures": [
+        {
+          "file": "sem_B2/024_test_G4T1/xml/component/rosunit-test_g4t1.xml",
+          "name": "test_collect_thermometer_data",
+          "status": "failure"
+        }
+      ]
+    },
+    {
+      "round": "sem_B3",
+      "internal": {
+        "passed": 151,
+        "xfail": 1,
+        "failure": 4
+      },
+      "wrappers": {
+        "passed": 26,
+        "error": 1
+      },
+      "failures": [
+        {
+          "file": "sem_B3/010_test_managing_system/xml/component/rostest-wrapper.xml",
+          "name": "testtest_managing_system",
+          "status": "error"
+        },
+        {
+          "file": "sem_B3/010_test_managing_system/xml/component/rosunit-test_managing_system.xml",
+          "name": "test_sampling_rate_increases_when_sensor_reliability_falls_below_the_threshold_g4g5",
+          "status": "failure"
+        },
+        {
+          "file": "sem_B3/010_test_managing_system/xml/component/rosunit-test_managing_system.xml",
+          "name": "test_sampling_rate_decreases_after_sensor_reliability_recovers_g4g5",
+          "status": "failure"
+        },
+        {
+          "file": "sem_B3/010_test_managing_system/xml/component/rosunit-test_managing_system.xml",
+          "name": "test_an_adaptation_command_is_issued_within_10_seconds_after_reliability_degradation_g4g5",
+          "status": "failure"
+        },
+        {
+          "file": "sem_B3/010_test_managing_system/xml/component/rosunit-test_managing_system.xml",
+          "name": "test_a_failed_adaptation_attempt_is_recorded_in_the_system_log_g4g5",
+          "status": "failure"
+        }
+      ]
+    },
+    {
+      "round": "sem_B4",
+      "internal": {
+        "passed": 154,
+        "xfail": 2
+      },
+      "wrappers": {
+        "passed": 27
+      },
+      "failures": []
+    },
+    {
+      "round": "sem_B5",
+      "internal": {
+        "passed": 150,
+        "xfail": 1,
+        "failure": 5
+      },
+      "wrappers": {
+        "passed": 27
+      },
+      "failures": [
+        {
+          "file": "sem_B5/010_test_managing_system/xml/component/rosunit-test_managing_system.xml",
+          "name": "test_the_adaptation_enactor_exchanges_adaptation_strategies_with_the_reliability_engine",
+          "status": "failure"
+        },
+        {
+          "file": "sem_B5/010_test_managing_system/xml/component/rosunit-test_managing_system.xml",
+          "name": "test_the_adaptation_enactor_exchanges_adaptation_records_with_the_system_log",
+          "status": "failure"
+        },
+        {
+          "file": "sem_B5/010_test_managing_system/xml/component/rosunit-test_managing_system.xml",
+          "name": "test_sampling_rate_increases_when_sensor_reliability_falls_below_the_threshold_g4g5",
+          "status": "failure"
+        },
+        {
+          "file": "sem_B5/010_test_managing_system/xml/component/rosunit-test_managing_system.xml",
+          "name": "test_sampling_rate_decreases_after_sensor_reliability_recovers_g4g5",
+          "status": "failure"
+        },
+        {
+          "file": "sem_B5/010_test_managing_system/xml/component/rosunit-test_managing_system.xml",
+          "name": "test_an_adaptation_command_is_issued_within_10_seconds_after_reliability_degradation_g4g5",
+          "status": "failure"
+        }
+      ]
+    },
+    {
+      "round": "sem_B7",
+      "internal": {
+        "passed": 150,
+        "failure": 4,
+        "xfail": 2
+      },
+      "wrappers": {
+        "passed": 27
+      },
+      "failures": [
+        {
+          "file": "sem_B7/014_test_G3T1_2/xml/component/rosunit-test_G3T1_2.xml",
+          "name": "test_transfer_with_accuracy_fail",
+          "status": "failure"
+        },
+        {
+          "file": "sem_B7/016_test_G3T1_3/xml/component/rosunit-test_G3T1_3.xml",
+          "name": "test_transfer_with_accuracy_fail",
+          "status": "failure"
+        },
+        {
+          "file": "sem_B7/018_test_G3T1_4/xml/component/rosunit-test_G3T1_4.xml",
+          "name": "test_transfer_with_accuracy_fail",
+          "status": "failure"
+        },
+        {
+          "file": "sem_B7/020_test_G3T1_5/xml/component/rosunit-test_G3T1_5.xml",
+          "name": "test_transfer_with_accuracy_fail",
+          "status": "failure"
+        }
+      ]
+    },
+    {
+      "round": "baseline_final",
+      "internal": {
+        "passed": 154,
+        "xfail": 2
+      },
+      "wrappers": {
+        "passed": 27
+      },
+      "failures": []
+    }
+  ],
+  "source_files_verified": 477,
+  "external_source_link": {
+    "path": "CMakeLists.txt",
+    "target": "/opt/ros/melodic/share/catkin/cmake/toplevel.cmake",
+    "note": "Link externo preservado no arquivo; conteúdo depende da instalação catkin e não foi revalidado neste ambiente Jazzy."
+  },
+  "manifest_counts_match_xml": true,
+  "same_case_identities_all_rounds": true
+}

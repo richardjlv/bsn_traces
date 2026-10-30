@@ -2,6 +2,10 @@
 
 Este repositório preserva evidências de execução das features BDD da validação da migração ROS 1--ROS 2. Cada diretório em `campanhas_traces/` é imutável: contém o manifesto, hashes, fontes arquivadas, configuração, resultados JUnit, logs compactados e o trace de eventos dos cenários.
 
+## Reversões ROS 1 de 30/10
+
+A [campanha de sensibilidade](reversoes_ros1/2026-10-30/README.md) preserva sete rodadas com 27 lançamentos e 156 casos internos por rodada. As duas referências tiveram 154 PASS e dois XFAIL. As variantes retiram uma correção por vez; as falhas são analisadas no relatório, sem confundir conclusão da coleta com aprovação. O arquivo integral de evidências tem aproximadamente 16 MB.
+
 ## ROS 1: campanhas por feature de 26/10
 
 O [índice ROS 1](INDICE_FEATURES_ROS1.md) reúne as oito features com trace, XML e cobertura: **49 PASS e dois XFAIL**. As nove campanhas incluem uma repetição do injetor. O índice documenta a correção do recorte dos totais JSON do LLVM e a execução do cenário positivo de estado de saúde.
