@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="4" disabled="0" errors="0" time="0." timestamp="2026-11-02T22:22:16.139" name="AllTests">
+  <testsuite name="RiskClassificationTest" tests="4" failures="4" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-11-02T22:22:16.139">
+    <testcase name="LowRiskUsesPercentageRange" file="/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp" line="130" status="run" result="completed" time="0." timestamp="2026-11-02T22:22:16.139" classname="RiskClassificationTest">
+      <failure message="/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:131&#x0A;Value of: config.isLowRisk(15.0)&#x0A;  Actual: false&#x0A;Expected: true&#x0A;" type=""><![CDATA[/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:131
+Value of: config.isLowRisk(15.0)
+  Actual: false
+Expected: true
+]]></failure>
+      <failure message="/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:133&#x0A;Value of: config.isHighRisk(15.0)&#x0A;  Actual: true&#x0A;Expected: false&#x0A;" type=""><![CDATA[/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:133
+Value of: config.isHighRisk(15.0)
+  Actual: true
+Expected: false
+]]></failure>
+    </testcase>
+    <testcase name="MediumRiskUsesPercentageRange" file="/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp" line="136" status="run" result="completed" time="0." timestamp="2026-11-02T22:22:16.139" classname="RiskClassificationTest">
+      <failure message="/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:138&#x0A;Value of: config.isMediumRisk(45.0)&#x0A;  Actual: false&#x0A;Expected: true&#x0A;" type=""><![CDATA[/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:138
+Value of: config.isMediumRisk(45.0)
+  Actual: false
+Expected: true
+]]></failure>
+      <failure message="/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:139&#x0A;Value of: config.isHighRisk(45.0)&#x0A;  Actual: true&#x0A;Expected: false&#x0A;" type=""><![CDATA[/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:139
+Value of: config.isHighRisk(45.0)
+  Actual: true
+Expected: false
+]]></failure>
+    </testcase>
+    <testcase name="HighRiskUsesPercentageRange" file="/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp" line="142" status="run" result="completed" time="0." timestamp="2026-11-02T22:22:16.139" classname="RiskClassificationTest">
+      <failure message="/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:145&#x0A;Value of: config.isHighRisk(90.0)&#x0A;  Actual: false&#x0A;Expected: true&#x0A;" type=""><![CDATA[/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:145
+Value of: config.isHighRisk(90.0)
+  Actual: false
+Expected: true
+]]></failure>
+    </testcase>
+    <testcase name="TemperatureReadingProducesHighRiskCategory" file="/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp" line="148" status="run" result="completed" time="0." timestamp="2026-11-02T22:22:16.139" classname="RiskClassificationTest">
+      <failure message="/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:155&#x0A;Value of: config.isHighRisk(risk)&#x0A;  Actual: false&#x0A;Expected: true&#x0A;" type=""><![CDATA[/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:155
+Value of: config.isHighRisk(risk)
+  Actual: false
+Expected: true
+]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,107 @@
+{
+  "atual": {
+    "returncode": 0,
+    "cases": [
+      {
+        "suite": "ConfigurationTest",
+        "name": "Constructor",
+        "passed": true
+      },
+      {
+        "suite": "ConfigurationTest",
+        "name": "UnknowValue",
+        "passed": true
+      },
+      {
+        "suite": "ConfigurationTest",
+        "name": "GetDisplacementNormal",
+        "passed": true
+      },
+      {
+        "suite": "ConfigurationTest",
+        "name": "GetDisplacementInverse",
+        "passed": true
+      },
+      {
+        "suite": "ConfigurationTest",
+        "name": "GetDisplacementMedium",
+        "passed": true
+      },
+      {
+        "suite": "ConfigurationTest",
+        "name": "GetDisplacementInvalidArgument",
+        "passed": true
+      },
+      {
+        "suite": "ConfigurationTest",
+        "name": "Low",
+        "passed": true
+      },
+      {
+        "suite": "ConfigurationTest",
+        "name": "Medium0",
+        "passed": true
+      },
+      {
+        "suite": "ConfigurationTest",
+        "name": "Medium1",
+        "passed": true
+      },
+      {
+        "suite": "ConfigurationTest",
+        "name": "High0",
+        "passed": true
+      },
+      {
+        "suite": "ConfigurationTest",
+        "name": "High1",
+        "passed": true
+      },
+      {
+        "suite": "RiskClassificationTest",
+        "name": "LowRiskUsesPercentageRange",
+        "passed": true
+      },
+      {
+        "suite": "RiskClassificationTest",
+        "name": "MediumRiskUsesPercentageRange",
+        "passed": true
+      },
+      {
+        "suite": "RiskClassificationTest",
+        "name": "HighRiskUsesPercentageRange",
+        "passed": true
+      },
+      {
+        "suite": "RiskClassificationTest",
+        "name": "TemperatureReadingProducesHighRiskCategory",
+        "passed": true
+      }
+    ]
+  },
+  "b7_reintroduzido": {
+    "returncode": 1,
+    "cases": [
+      {
+        "suite": "RiskClassificationTest",
+        "name": "LowRiskUsesPercentageRange",
+        "passed": false
+      },
+      {
+        "suite": "RiskClassificationTest",
+        "name": "MediumRiskUsesPercentageRange",
+        "passed": false
+      },
+      {
+        "suite": "RiskClassificationTest",
+        "name": "HighRiskUsesPercentageRange",
+        "passed": false
+      },
+      {
+        "suite": "RiskClassificationTest",
+        "name": "TemperatureReadingProducesHighRiskCategory",
+        "passed": false
+      }
+    ]
+  }
+}

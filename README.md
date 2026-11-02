@@ -1,5 +1,7 @@
 # Campanhas de trace e cobertura do SA-BSN
 
+[Integração dos quatro casos B7 à suíte ROS 1](diagnosticos/b7_suite_ros1_2026-11-02/README.md): 15 testes de configuração aprovados e quatro reprovações na cópia com o defeito reintroduzido, em execução direta com gtest.
+
 Atualização: [revalidação das três features com falhas históricas](diagnosticos/revalidacao_features_2026-11-02/README.md), com dez aprovações e uma falha esperada nas reexecuções selecionadas. Os totais históricos abaixo permanecem vinculados às campanhas originais.
 
 Este repositório preserva evidências de execução das features BDD da validação da migração ROS 1--ROS 2. Cada diretório em `campanhas_traces/` é imutável: contém o manifesto, hashes, fontes arquivadas, configuração, resultados JUnit, logs compactados e o trace de eventos dos cenários.

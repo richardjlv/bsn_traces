@@ -1,0 +1,41 @@
+[==========] Running 15 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 11 tests from ConfigurationTest
+[ RUN      ] ConfigurationTest.Constructor
+[       OK ] ConfigurationTest.Constructor (0 ms)
+[ RUN      ] ConfigurationTest.UnknowValue
+[       OK ] ConfigurationTest.UnknowValue (0 ms)
+[ RUN      ] ConfigurationTest.GetDisplacementNormal
+[       OK ] ConfigurationTest.GetDisplacementNormal (0 ms)
+[ RUN      ] ConfigurationTest.GetDisplacementInverse
+[       OK ] ConfigurationTest.GetDisplacementInverse (0 ms)
+[ RUN      ] ConfigurationTest.GetDisplacementMedium
+[       OK ] ConfigurationTest.GetDisplacementMedium (0 ms)
+[ RUN      ] ConfigurationTest.GetDisplacementInvalidArgument
+[       OK ] ConfigurationTest.GetDisplacementInvalidArgument (0 ms)
+[ RUN      ] ConfigurationTest.Low
+[       OK ] ConfigurationTest.Low (0 ms)
+[ RUN      ] ConfigurationTest.Medium0
+[       OK ] ConfigurationTest.Medium0 (0 ms)
+[ RUN      ] ConfigurationTest.Medium1
+[       OK ] ConfigurationTest.Medium1 (0 ms)
+[ RUN      ] ConfigurationTest.High0
+[       OK ] ConfigurationTest.High0 (0 ms)
+[ RUN      ] ConfigurationTest.High1
+[       OK ] ConfigurationTest.High1 (0 ms)
+[----------] 11 tests from ConfigurationTest (0 ms total)
+
+[----------] 4 tests from RiskClassificationTest
+[ RUN      ] RiskClassificationTest.LowRiskUsesPercentageRange
+[       OK ] RiskClassificationTest.LowRiskUsesPercentageRange (0 ms)
+[ RUN      ] RiskClassificationTest.MediumRiskUsesPercentageRange
+[       OK ] RiskClassificationTest.MediumRiskUsesPercentageRange (0 ms)
+[ RUN      ] RiskClassificationTest.HighRiskUsesPercentageRange
+[       OK ] RiskClassificationTest.HighRiskUsesPercentageRange (0 ms)
+[ RUN      ] RiskClassificationTest.TemperatureReadingProducesHighRiskCategory
+[       OK ] RiskClassificationTest.TemperatureReadingProducesHighRiskCategory (0 ms)
+[----------] 4 tests from RiskClassificationTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 15 tests.

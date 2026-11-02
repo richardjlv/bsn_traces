@@ -1,0 +1,410 @@
+In file included from /usr/include/gtest/gtest-message.h:57,
+                 from /usr/include/gtest/gtest-assertion-result.h:46,
+                 from /usr/include/gtest/gtest.h:64,
+                 from /ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/main.cpp:1:
+/usr/include/gtest/internal/gtest-port.h:279:2: error: #error C++ versions less than C++14 are not supported.
+  279 | #error C++ versions less than C++14 are not supported.
+      |  ^~~~~
+/usr/include/gtest/gtest-assertion-result.h: In member function ‘void testing::AssertionResult::AppendMessage(const testing::Message&)’:
+/usr/include/gtest/gtest-assertion-result.h:207:48: error: ‘make_unique’ is not a member of ‘std’
+  207 |     if (message_ == nullptr) message_ = ::std::make_unique<::std::string>();
+      |                                                ^~~~~~~~~~~
+/usr/include/gtest/gtest-assertion-result.h:207:48: note: ‘std::make_unique’ is only available from C++14 onwards
+/usr/include/gtest/gtest-assertion-result.h:207:73: error: expected primary-expression before ‘>’ token
+  207 |     if (message_ == nullptr) message_ = ::std::make_unique<::std::string>();
+      |                                                                         ^
+/usr/include/gtest/gtest-assertion-result.h:207:75: error: expected primary-expression before ‘)’ token
+  207 |     if (message_ == nullptr) message_ = ::std::make_unique<::std::string>();
+      |                                                                           ^
+In file included from /usr/include/gtest/gtest-printers.h:122,
+                 from /usr/include/gtest/gtest-matchers.h:49,
+                 from /usr/include/gtest/internal/gtest-death-test-internal.h:47,
+                 from /usr/include/gtest/gtest-death-test.h:43,
+                 from /usr/include/gtest/gtest.h:65:
+/usr/include/gtest/internal/gtest-internal.h: At global scope:
+/usr/include/gtest/internal/gtest-internal.h:622:58: error: wrong number of template arguments (0, should be 1)
+  622 |   typedef ::std::map<std::string, CodeLocation, std::less<>> RegisteredTestsMap;
+      |                                                          ^
+In file included from /usr/include/c++/13/string:49,
+                 from /usr/include/c++/13/bits/locale_classes.h:40,
+                 from /usr/include/c++/13/bits/ios_base.h:41,
+                 from /usr/include/c++/13/iomanip:42,
+                 from /usr/include/gtest/gtest.h:54:
+/usr/include/c++/13/bits/stl_function.h:403:12: note: provided for ‘template<class _Tp> struct std::less’
+  403 |     struct less : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~
+/usr/include/gtest/internal/gtest-internal.h:622:59: error: template argument 3 is invalid
+  622 |   typedef ::std::map<std::string, CodeLocation, std::less<>> RegisteredTestsMap;
+      |                                                           ^~
+/usr/include/gtest/internal/gtest-internal.h: In member function ‘bool testing::internal::TypedTestSuitePState::AddTestName(const char*, int, const char*, const char*)’:
+/usr/include/gtest/internal/gtest-internal.h:599:23: error: request for member ‘insert’ in ‘((testing::internal::TypedTestSuitePState*)this)->testing::internal::TypedTestSuitePState::registered_tests_’, which is of non-class type ‘testing::internal::TypedTestSuitePState::RegisteredTestsMap’ {aka ‘int’}
+  599 |     registered_tests_.insert(
+      |                       ^~~~~~
+/usr/include/gtest/internal/gtest-internal.h: In member function ‘bool testing::internal::TypedTestSuitePState::TestExists(const std::string&) const’:
+/usr/include/gtest/internal/gtest-internal.h:605:30: error: request for member ‘count’ in ‘((const testing::internal::TypedTestSuitePState*)this)->testing::internal::TypedTestSuitePState::registered_tests_’, which is of non-class type ‘const testing::internal::TypedTestSuitePState::RegisteredTestsMap’ {aka ‘const int’}
+  605 |     return registered_tests_.count(test_name) > 0;
+      |                              ^~~~~
+/usr/include/gtest/internal/gtest-internal.h: In member function ‘const testing::internal::CodeLocation& testing::internal::TypedTestSuitePState::GetCodeLocation(const std::string&) const’:
+/usr/include/gtest/internal/gtest-internal.h:609:40: error: qualified-id in declaration before ‘it’
+  609 |     RegisteredTestsMap::const_iterator it = registered_tests_.find(test_name);
+      |                                        ^~
+/usr/include/gtest/internal/gtest-internal.h:610:5: error: ‘it’ was not declared in this scope; did you mean ‘int’?
+  610 |     GTEST_CHECK_(it != registered_tests_.end());
+      |     ^~~~~~~~~~~~
+/usr/include/gtest/internal/gtest-internal.h:610:5: error: request for member ‘end’ in ‘((const testing::internal::TypedTestSuitePState*)this)->testing::internal::TypedTestSuitePState::registered_tests_’, which is of non-class type ‘const testing::internal::TypedTestSuitePState::RegisteredTestsMap’ {aka ‘const int’}
+  610 |     GTEST_CHECK_(it != registered_tests_.end());
+      |     ^~~~~~~~~~~~
+/usr/include/gtest/internal/gtest-internal.h:611:12: error: ‘it’ was not declared in this scope; did you mean ‘int’?
+  611 |     return it->second;
+      |            ^~
+      |            int
+/usr/include/gtest/gtest-matchers.h: At global scope:
+/usr/include/gtest/gtest-matchers.h:725:75: error: wrong number of template arguments (0, should be 1)
+  725 | class EqMatcher : public ComparisonBase<EqMatcher<Rhs>, Rhs, std::equal_to<>> {
+      |                                                                           ^
+/usr/include/c++/13/bits/stl_function.h:373:12: note: provided for ‘template<class _Tp> struct std::equal_to’
+  373 |     struct equal_to : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~
+/usr/include/gtest/gtest-matchers.h:725:76: error: template argument 3 is invalid
+  725 | class EqMatcher : public ComparisonBase<EqMatcher<Rhs>, Rhs, std::equal_to<>> {
+      |                                                                            ^~
+/usr/include/gtest/gtest-matchers.h: In constructor ‘testing::internal::EqMatcher<Rhs>::EqMatcher(const Rhs&)’:
+/usr/include/gtest/gtest-matchers.h:728:58: error: wrong number of template arguments (0, should be 1)
+  728 |       : ComparisonBase<EqMatcher<Rhs>, Rhs, std::equal_to<>>(rhs) {}
+      |                                                          ^
+/usr/include/c++/13/bits/stl_function.h:373:12: note: provided for ‘template<class _Tp> struct std::equal_to’
+  373 |     struct equal_to : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~
+/usr/include/gtest/gtest-matchers.h:728:59: error: template argument 3 is invalid
+  728 |       : ComparisonBase<EqMatcher<Rhs>, Rhs, std::equal_to<>>(rhs) {}
+      |                                                           ^~
+/usr/include/gtest/gtest-matchers.h:728:61: error: expected ‘{’ before ‘(’ token
+  728 |       : ComparisonBase<EqMatcher<Rhs>, Rhs, std::equal_to<>>(rhs) {}
+      |                                                             ^
+/usr/include/gtest/gtest-matchers.h: At global scope:
+/usr/include/gtest/gtest-matchers.h:734:67: error: wrong number of template arguments (0, should be 1)
+  734 |     : public ComparisonBase<NeMatcher<Rhs>, Rhs, std::not_equal_to<>> {
+      |                                                                   ^
+/usr/include/c++/13/bits/stl_function.h:383:12: note: provided for ‘template<class _Tp> struct std::not_equal_to’
+  383 |     struct not_equal_to : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~~~~~
+/usr/include/gtest/gtest-matchers.h:734:68: error: template argument 3 is invalid
+  734 |     : public ComparisonBase<NeMatcher<Rhs>, Rhs, std::not_equal_to<>> {
+      |                                                                    ^~
+/usr/include/gtest/gtest-matchers.h: In constructor ‘testing::internal::NeMatcher<Rhs>::NeMatcher(const Rhs&)’:
+/usr/include/gtest/gtest-matchers.h:737:62: error: wrong number of template arguments (0, should be 1)
+  737 |       : ComparisonBase<NeMatcher<Rhs>, Rhs, std::not_equal_to<>>(rhs) {}
+      |                                                              ^
+/usr/include/c++/13/bits/stl_function.h:383:12: note: provided for ‘template<class _Tp> struct std::not_equal_to’
+  383 |     struct not_equal_to : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~~~~~
+/usr/include/gtest/gtest-matchers.h:737:63: error: template argument 3 is invalid
+  737 |       : ComparisonBase<NeMatcher<Rhs>, Rhs, std::not_equal_to<>>(rhs) {}
+      |                                                               ^~
+/usr/include/gtest/gtest-matchers.h:737:65: error: expected ‘{’ before ‘(’ token
+  737 |       : ComparisonBase<NeMatcher<Rhs>, Rhs, std::not_equal_to<>>(rhs) {}
+      |                                                                 ^
+/usr/include/gtest/gtest-matchers.h: At global scope:
+/usr/include/gtest/gtest-matchers.h:742:71: error: wrong number of template arguments (0, should be 1)
+  742 | class LtMatcher : public ComparisonBase<LtMatcher<Rhs>, Rhs, std::less<>> {
+      |                                                                       ^
+/usr/include/c++/13/bits/stl_function.h:403:12: note: provided for ‘template<class _Tp> struct std::less’
+  403 |     struct less : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~
+/usr/include/gtest/gtest-matchers.h:742:72: error: template argument 3 is invalid
+  742 | class LtMatcher : public ComparisonBase<LtMatcher<Rhs>, Rhs, std::less<>> {
+      |                                                                        ^~
+/usr/include/gtest/gtest-matchers.h: In constructor ‘testing::internal::LtMatcher<Rhs>::LtMatcher(const Rhs&)’:
+/usr/include/gtest/gtest-matchers.h:745:54: error: wrong number of template arguments (0, should be 1)
+  745 |       : ComparisonBase<LtMatcher<Rhs>, Rhs, std::less<>>(rhs) {}
+      |                                                      ^
+/usr/include/c++/13/bits/stl_function.h:403:12: note: provided for ‘template<class _Tp> struct std::less’
+  403 |     struct less : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~
+/usr/include/gtest/gtest-matchers.h:745:55: error: template argument 3 is invalid
+  745 |       : ComparisonBase<LtMatcher<Rhs>, Rhs, std::less<>>(rhs) {}
+      |                                                       ^~
+/usr/include/gtest/gtest-matchers.h:745:57: error: expected ‘{’ before ‘(’ token
+  745 |       : ComparisonBase<LtMatcher<Rhs>, Rhs, std::less<>>(rhs) {}
+      |                                                         ^
+/usr/include/gtest/gtest-matchers.h: At global scope:
+/usr/include/gtest/gtest-matchers.h:750:74: error: wrong number of template arguments (0, should be 1)
+  750 | class GtMatcher : public ComparisonBase<GtMatcher<Rhs>, Rhs, std::greater<>> {
+      |                                                                          ^
+/usr/include/c++/13/bits/stl_function.h:393:12: note: provided for ‘template<class _Tp> struct std::greater’
+  393 |     struct greater : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~
+/usr/include/gtest/gtest-matchers.h:750:75: error: template argument 3 is invalid
+  750 | class GtMatcher : public ComparisonBase<GtMatcher<Rhs>, Rhs, std::greater<>> {
+      |                                                                           ^~
+/usr/include/gtest/gtest-matchers.h: In constructor ‘testing::internal::GtMatcher<Rhs>::GtMatcher(const Rhs&)’:
+/usr/include/gtest/gtest-matchers.h:753:57: error: wrong number of template arguments (0, should be 1)
+  753 |       : ComparisonBase<GtMatcher<Rhs>, Rhs, std::greater<>>(rhs) {}
+      |                                                         ^
+/usr/include/c++/13/bits/stl_function.h:393:12: note: provided for ‘template<class _Tp> struct std::greater’
+  393 |     struct greater : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~
+/usr/include/gtest/gtest-matchers.h:753:58: error: template argument 3 is invalid
+  753 |       : ComparisonBase<GtMatcher<Rhs>, Rhs, std::greater<>>(rhs) {}
+      |                                                          ^~
+/usr/include/gtest/gtest-matchers.h:753:60: error: expected ‘{’ before ‘(’ token
+  753 |       : ComparisonBase<GtMatcher<Rhs>, Rhs, std::greater<>>(rhs) {}
+      |                                                            ^
+/usr/include/gtest/gtest-matchers.h: At global scope:
+/usr/include/gtest/gtest-matchers.h:759:65: error: wrong number of template arguments (0, should be 1)
+  759 |     : public ComparisonBase<LeMatcher<Rhs>, Rhs, std::less_equal<>> {
+      |                                                                 ^
+/usr/include/c++/13/bits/stl_function.h:423:12: note: provided for ‘template<class _Tp> struct std::less_equal’
+  423 |     struct less_equal : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~~~
+/usr/include/gtest/gtest-matchers.h:759:66: error: template argument 3 is invalid
+  759 |     : public ComparisonBase<LeMatcher<Rhs>, Rhs, std::less_equal<>> {
+      |                                                                  ^~
+/usr/include/gtest/gtest-matchers.h: In constructor ‘testing::internal::LeMatcher<Rhs>::LeMatcher(const Rhs&)’:
+/usr/include/gtest/gtest-matchers.h:762:60: error: wrong number of template arguments (0, should be 1)
+  762 |       : ComparisonBase<LeMatcher<Rhs>, Rhs, std::less_equal<>>(rhs) {}
+      |                                                            ^
+/usr/include/c++/13/bits/stl_function.h:423:12: note: provided for ‘template<class _Tp> struct std::less_equal’
+  423 |     struct less_equal : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~~~
+/usr/include/gtest/gtest-matchers.h:762:61: error: template argument 3 is invalid
+  762 |       : ComparisonBase<LeMatcher<Rhs>, Rhs, std::less_equal<>>(rhs) {}
+      |                                                             ^~
+/usr/include/gtest/gtest-matchers.h:762:63: error: expected ‘{’ before ‘(’ token
+  762 |       : ComparisonBase<LeMatcher<Rhs>, Rhs, std::less_equal<>>(rhs) {}
+      |                                                               ^
+/usr/include/gtest/gtest-matchers.h: At global scope:
+/usr/include/gtest/gtest-matchers.h:768:68: error: wrong number of template arguments (0, should be 1)
+  768 |     : public ComparisonBase<GeMatcher<Rhs>, Rhs, std::greater_equal<>> {
+      |                                                                    ^
+/usr/include/c++/13/bits/stl_function.h:413:12: note: provided for ‘template<class _Tp> struct std::greater_equal’
+  413 |     struct greater_equal : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~~~~~~
+/usr/include/gtest/gtest-matchers.h:768:69: error: template argument 3 is invalid
+  768 |     : public ComparisonBase<GeMatcher<Rhs>, Rhs, std::greater_equal<>> {
+      |                                                                     ^~
+/usr/include/gtest/gtest-matchers.h: In constructor ‘testing::internal::GeMatcher<Rhs>::GeMatcher(const Rhs&)’:
+/usr/include/gtest/gtest-matchers.h:771:63: error: wrong number of template arguments (0, should be 1)
+  771 |       : ComparisonBase<GeMatcher<Rhs>, Rhs, std::greater_equal<>>(rhs) {}
+      |                                                               ^
+/usr/include/c++/13/bits/stl_function.h:413:12: note: provided for ‘template<class _Tp> struct std::greater_equal’
+  413 |     struct greater_equal : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~~~~~~
+/usr/include/gtest/gtest-matchers.h:771:64: error: template argument 3 is invalid
+  771 |       : ComparisonBase<GeMatcher<Rhs>, Rhs, std::greater_equal<>>(rhs) {}
+      |                                                                ^~
+/usr/include/gtest/gtest-matchers.h:771:66: error: expected ‘{’ before ‘(’ token
+  771 |       : ComparisonBase<GeMatcher<Rhs>, Rhs, std::greater_equal<>>(rhs) {}
+      |                                                                  ^
+/usr/include/gtest/gtest.h: At global scope:
+/usr/include/gtest/gtest.h:302:30: error: ‘std::enable_if_t’ has not been declared
+  302 |   template <typename T, std::enable_if_t<std::is_convertible<T, int64_t>::value,
+      |                              ^~~~~~~~~~~
+/usr/include/gtest/gtest.h:302:41: error: expected ‘>’ before ‘<’ token
+  302 |   template <typename T, std::enable_if_t<std::is_convertible<T, int64_t>::value,
+      |                                         ^
+In file included from /usr/include/gtest/gtest-message.h:57,
+                 from /usr/include/gtest/gtest-assertion-result.h:46,
+                 from /usr/include/gtest/gtest.h:64,
+                 from /ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:1:
+/usr/include/gtest/internal/gtest-port.h:279:2: error: #error C++ versions less than C++14 are not supported.
+  279 | #error C++ versions less than C++14 are not supported.
+      |  ^~~~~
+/usr/include/gtest/gtest-assertion-result.h: In member function ‘void testing::AssertionResult::AppendMessage(const testing::Message&)’:
+/usr/include/gtest/gtest-assertion-result.h:207:48: error: ‘make_unique’ is not a member of ‘std’
+  207 |     if (message_ == nullptr) message_ = ::std::make_unique<::std::string>();
+      |                                                ^~~~~~~~~~~
+/usr/include/gtest/gtest-assertion-result.h:207:48: note: ‘std::make_unique’ is only available from C++14 onwards
+/usr/include/gtest/gtest-assertion-result.h:207:73: error: expected primary-expression before ‘>’ token
+  207 |     if (message_ == nullptr) message_ = ::std::make_unique<::std::string>();
+      |                                                                         ^
+/usr/include/gtest/gtest-assertion-result.h:207:75: error: expected primary-expression before ‘)’ token
+  207 |     if (message_ == nullptr) message_ = ::std::make_unique<::std::string>();
+      |                                                                           ^
+In file included from /usr/include/gtest/gtest-printers.h:122,
+                 from /usr/include/gtest/gtest-matchers.h:49,
+                 from /usr/include/gtest/internal/gtest-death-test-internal.h:47,
+                 from /usr/include/gtest/gtest-death-test.h:43,
+                 from /usr/include/gtest/gtest.h:65:
+/usr/include/gtest/internal/gtest-internal.h: At global scope:
+/usr/include/gtest/internal/gtest-internal.h:622:58: error: wrong number of template arguments (0, should be 1)
+  622 |   typedef ::std::map<std::string, CodeLocation, std::less<>> RegisteredTestsMap;
+      |                                                          ^
+In file included from /usr/include/c++/13/string:49,
+                 from /usr/include/c++/13/bits/locale_classes.h:40,
+                 from /usr/include/c++/13/bits/ios_base.h:41,
+                 from /usr/include/c++/13/iomanip:42,
+                 from /usr/include/gtest/gtest.h:54:
+/usr/include/c++/13/bits/stl_function.h:403:12: note: provided for ‘template<class _Tp> struct std::less’
+  403 |     struct less : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~
+/usr/include/gtest/internal/gtest-internal.h:622:59: error: template argument 3 is invalid
+  622 |   typedef ::std::map<std::string, CodeLocation, std::less<>> RegisteredTestsMap;
+      |                                                           ^~
+/usr/include/gtest/internal/gtest-internal.h: In member function ‘bool testing::internal::TypedTestSuitePState::AddTestName(const char*, int, const char*, const char*)’:
+/usr/include/gtest/internal/gtest-internal.h:599:23: error: request for member ‘insert’ in ‘((testing::internal::TypedTestSuitePState*)this)->testing::internal::TypedTestSuitePState::registered_tests_’, which is of non-class type ‘testing::internal::TypedTestSuitePState::RegisteredTestsMap’ {aka ‘int’}
+  599 |     registered_tests_.insert(
+      |                       ^~~~~~
+/usr/include/gtest/internal/gtest-internal.h: In member function ‘bool testing::internal::TypedTestSuitePState::TestExists(const std::string&) const’:
+/usr/include/gtest/internal/gtest-internal.h:605:30: error: request for member ‘count’ in ‘((const testing::internal::TypedTestSuitePState*)this)->testing::internal::TypedTestSuitePState::registered_tests_’, which is of non-class type ‘const testing::internal::TypedTestSuitePState::RegisteredTestsMap’ {aka ‘const int’}
+  605 |     return registered_tests_.count(test_name) > 0;
+      |                              ^~~~~
+/usr/include/gtest/internal/gtest-internal.h: In member function ‘const testing::internal::CodeLocation& testing::internal::TypedTestSuitePState::GetCodeLocation(const std::string&) const’:
+/usr/include/gtest/internal/gtest-internal.h:609:40: error: qualified-id in declaration before ‘it’
+  609 |     RegisteredTestsMap::const_iterator it = registered_tests_.find(test_name);
+      |                                        ^~
+/usr/include/gtest/internal/gtest-internal.h:610:5: error: ‘it’ was not declared in this scope; did you mean ‘int’?
+  610 |     GTEST_CHECK_(it != registered_tests_.end());
+      |     ^~~~~~~~~~~~
+/usr/include/gtest/internal/gtest-internal.h:610:5: error: request for member ‘end’ in ‘((const testing::internal::TypedTestSuitePState*)this)->testing::internal::TypedTestSuitePState::registered_tests_’, which is of non-class type ‘const testing::internal::TypedTestSuitePState::RegisteredTestsMap’ {aka ‘const int’}
+  610 |     GTEST_CHECK_(it != registered_tests_.end());
+      |     ^~~~~~~~~~~~
+/usr/include/gtest/internal/gtest-internal.h:611:12: error: ‘it’ was not declared in this scope; did you mean ‘int’?
+  611 |     return it->second;
+      |            ^~
+      |            int
+/usr/include/gtest/gtest-matchers.h: At global scope:
+/usr/include/gtest/gtest-matchers.h:725:75: error: wrong number of template arguments (0, should be 1)
+  725 | class EqMatcher : public ComparisonBase<EqMatcher<Rhs>, Rhs, std::equal_to<>> {
+      |                                                                           ^
+/usr/include/c++/13/bits/stl_function.h:373:12: note: provided for ‘template<class _Tp> struct std::equal_to’
+  373 |     struct equal_to : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~
+/usr/include/gtest/gtest-matchers.h:725:76: error: template argument 3 is invalid
+  725 | class EqMatcher : public ComparisonBase<EqMatcher<Rhs>, Rhs, std::equal_to<>> {
+      |                                                                            ^~
+/usr/include/gtest/gtest-matchers.h: In constructor ‘testing::internal::EqMatcher<Rhs>::EqMatcher(const Rhs&)’:
+/usr/include/gtest/gtest-matchers.h:728:58: error: wrong number of template arguments (0, should be 1)
+  728 |       : ComparisonBase<EqMatcher<Rhs>, Rhs, std::equal_to<>>(rhs) {}
+      |                                                          ^
+/usr/include/c++/13/bits/stl_function.h:373:12: note: provided for ‘template<class _Tp> struct std::equal_to’
+  373 |     struct equal_to : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~
+/usr/include/gtest/gtest-matchers.h:728:59: error: template argument 3 is invalid
+  728 |       : ComparisonBase<EqMatcher<Rhs>, Rhs, std::equal_to<>>(rhs) {}
+      |                                                           ^~
+/usr/include/gtest/gtest-matchers.h:728:61: error: expected ‘{’ before ‘(’ token
+  728 |       : ComparisonBase<EqMatcher<Rhs>, Rhs, std::equal_to<>>(rhs) {}
+      |                                                             ^
+/usr/include/gtest/gtest-matchers.h: At global scope:
+/usr/include/gtest/gtest-matchers.h:734:67: error: wrong number of template arguments (0, should be 1)
+  734 |     : public ComparisonBase<NeMatcher<Rhs>, Rhs, std::not_equal_to<>> {
+      |                                                                   ^
+/usr/include/c++/13/bits/stl_function.h:383:12: note: provided for ‘template<class _Tp> struct std::not_equal_to’
+  383 |     struct not_equal_to : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~~~~~
+/usr/include/gtest/gtest-matchers.h:734:68: error: template argument 3 is invalid
+  734 |     : public ComparisonBase<NeMatcher<Rhs>, Rhs, std::not_equal_to<>> {
+      |                                                                    ^~
+/usr/include/gtest/gtest-matchers.h: In constructor ‘testing::internal::NeMatcher<Rhs>::NeMatcher(const Rhs&)’:
+/usr/include/gtest/gtest-matchers.h:737:62: error: wrong number of template arguments (0, should be 1)
+  737 |       : ComparisonBase<NeMatcher<Rhs>, Rhs, std::not_equal_to<>>(rhs) {}
+      |                                                              ^
+/usr/include/c++/13/bits/stl_function.h:383:12: note: provided for ‘template<class _Tp> struct std::not_equal_to’
+  383 |     struct not_equal_to : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~~~~~
+/usr/include/gtest/gtest-matchers.h:737:63: error: template argument 3 is invalid
+  737 |       : ComparisonBase<NeMatcher<Rhs>, Rhs, std::not_equal_to<>>(rhs) {}
+      |                                                               ^~
+/usr/include/gtest/gtest-matchers.h:737:65: error: expected ‘{’ before ‘(’ token
+  737 |       : ComparisonBase<NeMatcher<Rhs>, Rhs, std::not_equal_to<>>(rhs) {}
+      |                                                                 ^
+/usr/include/gtest/gtest-matchers.h: At global scope:
+/usr/include/gtest/gtest-matchers.h:742:71: error: wrong number of template arguments (0, should be 1)
+  742 | class LtMatcher : public ComparisonBase<LtMatcher<Rhs>, Rhs, std::less<>> {
+      |                                                                       ^
+/usr/include/c++/13/bits/stl_function.h:403:12: note: provided for ‘template<class _Tp> struct std::less’
+  403 |     struct less : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~
+/usr/include/gtest/gtest-matchers.h:742:72: error: template argument 3 is invalid
+  742 | class LtMatcher : public ComparisonBase<LtMatcher<Rhs>, Rhs, std::less<>> {
+      |                                                                        ^~
+/usr/include/gtest/gtest-matchers.h: In constructor ‘testing::internal::LtMatcher<Rhs>::LtMatcher(const Rhs&)’:
+/usr/include/gtest/gtest-matchers.h:745:54: error: wrong number of template arguments (0, should be 1)
+  745 |       : ComparisonBase<LtMatcher<Rhs>, Rhs, std::less<>>(rhs) {}
+      |                                                      ^
+/usr/include/c++/13/bits/stl_function.h:403:12: note: provided for ‘template<class _Tp> struct std::less’
+  403 |     struct less : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~
+/usr/include/gtest/gtest-matchers.h:745:55: error: template argument 3 is invalid
+  745 |       : ComparisonBase<LtMatcher<Rhs>, Rhs, std::less<>>(rhs) {}
+      |                                                       ^~
+/usr/include/gtest/gtest-matchers.h:745:57: error: expected ‘{’ before ‘(’ token
+  745 |       : ComparisonBase<LtMatcher<Rhs>, Rhs, std::less<>>(rhs) {}
+      |                                                         ^
+/usr/include/gtest/gtest-matchers.h: At global scope:
+/usr/include/gtest/gtest-matchers.h:750:74: error: wrong number of template arguments (0, should be 1)
+  750 | class GtMatcher : public ComparisonBase<GtMatcher<Rhs>, Rhs, std::greater<>> {
+      |                                                                          ^
+/usr/include/c++/13/bits/stl_function.h:393:12: note: provided for ‘template<class _Tp> struct std::greater’
+  393 |     struct greater : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~
+/usr/include/gtest/gtest-matchers.h:750:75: error: template argument 3 is invalid
+  750 | class GtMatcher : public ComparisonBase<GtMatcher<Rhs>, Rhs, std::greater<>> {
+      |                                                                           ^~
+/usr/include/gtest/gtest-matchers.h: In constructor ‘testing::internal::GtMatcher<Rhs>::GtMatcher(const Rhs&)’:
+/usr/include/gtest/gtest-matchers.h:753:57: error: wrong number of template arguments (0, should be 1)
+  753 |       : ComparisonBase<GtMatcher<Rhs>, Rhs, std::greater<>>(rhs) {}
+      |                                                         ^
+/usr/include/c++/13/bits/stl_function.h:393:12: note: provided for ‘template<class _Tp> struct std::greater’
+  393 |     struct greater : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~
+/usr/include/gtest/gtest-matchers.h:753:58: error: template argument 3 is invalid
+  753 |       : ComparisonBase<GtMatcher<Rhs>, Rhs, std::greater<>>(rhs) {}
+      |                                                          ^~
+/usr/include/gtest/gtest-matchers.h:753:60: error: expected ‘{’ before ‘(’ token
+  753 |       : ComparisonBase<GtMatcher<Rhs>, Rhs, std::greater<>>(rhs) {}
+      |                                                            ^
+/usr/include/gtest/gtest-matchers.h: At global scope:
+/usr/include/gtest/gtest-matchers.h:759:65: error: wrong number of template arguments (0, should be 1)
+  759 |     : public ComparisonBase<LeMatcher<Rhs>, Rhs, std::less_equal<>> {
+      |                                                                 ^
+/usr/include/c++/13/bits/stl_function.h:423:12: note: provided for ‘template<class _Tp> struct std::less_equal’
+  423 |     struct less_equal : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~~~
+/usr/include/gtest/gtest-matchers.h:759:66: error: template argument 3 is invalid
+  759 |     : public ComparisonBase<LeMatcher<Rhs>, Rhs, std::less_equal<>> {
+      |                                                                  ^~
+/usr/include/gtest/gtest-matchers.h: In constructor ‘testing::internal::LeMatcher<Rhs>::LeMatcher(const Rhs&)’:
+/usr/include/gtest/gtest-matchers.h:762:60: error: wrong number of template arguments (0, should be 1)
+  762 |       : ComparisonBase<LeMatcher<Rhs>, Rhs, std::less_equal<>>(rhs) {}
+      |                                                            ^
+/usr/include/c++/13/bits/stl_function.h:423:12: note: provided for ‘template<class _Tp> struct std::less_equal’
+  423 |     struct less_equal : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~~~
+/usr/include/gtest/gtest-matchers.h:762:61: error: template argument 3 is invalid
+  762 |       : ComparisonBase<LeMatcher<Rhs>, Rhs, std::less_equal<>>(rhs) {}
+      |                                                             ^~
+/usr/include/gtest/gtest-matchers.h:762:63: error: expected ‘{’ before ‘(’ token
+  762 |       : ComparisonBase<LeMatcher<Rhs>, Rhs, std::less_equal<>>(rhs) {}
+      |                                                               ^
+/usr/include/gtest/gtest-matchers.h: At global scope:
+/usr/include/gtest/gtest-matchers.h:768:68: error: wrong number of template arguments (0, should be 1)
+  768 |     : public ComparisonBase<GeMatcher<Rhs>, Rhs, std::greater_equal<>> {
+      |                                                                    ^
+/usr/include/c++/13/bits/stl_function.h:413:12: note: provided for ‘template<class _Tp> struct std::greater_equal’
+  413 |     struct greater_equal : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~~~~~~
+/usr/include/gtest/gtest-matchers.h:768:69: error: template argument 3 is invalid
+  768 |     : public ComparisonBase<GeMatcher<Rhs>, Rhs, std::greater_equal<>> {
+      |                                                                     ^~
+/usr/include/gtest/gtest-matchers.h: In constructor ‘testing::internal::GeMatcher<Rhs>::GeMatcher(const Rhs&)’:
+/usr/include/gtest/gtest-matchers.h:771:63: error: wrong number of template arguments (0, should be 1)
+  771 |       : ComparisonBase<GeMatcher<Rhs>, Rhs, std::greater_equal<>>(rhs) {}
+      |                                                               ^
+/usr/include/c++/13/bits/stl_function.h:413:12: note: provided for ‘template<class _Tp> struct std::greater_equal’
+  413 |     struct greater_equal : public binary_function<_Tp, _Tp, bool>
+      |            ^~~~~~~~~~~~~
+/usr/include/gtest/gtest-matchers.h:771:64: error: template argument 3 is invalid
+  771 |       : ComparisonBase<GeMatcher<Rhs>, Rhs, std::greater_equal<>>(rhs) {}
+      |                                                                ^~
+/usr/include/gtest/gtest-matchers.h:771:66: error: expected ‘{’ before ‘(’ token
+  771 |       : ComparisonBase<GeMatcher<Rhs>, Rhs, std::greater_equal<>>(rhs) {}
+      |                                                                  ^
+/usr/include/gtest/gtest.h: At global scope:
+/usr/include/gtest/gtest.h:302:30: error: ‘std::enable_if_t’ has not been declared
+  302 |   template <typename T, std::enable_if_t<std::is_convertible<T, int64_t>::value,
+      |                              ^~~~~~~~~~~
+/usr/include/gtest/gtest.h:302:41: error: expected ‘>’ before ‘<’ token
+  302 |   template <typename T, std::enable_if_t<std::is_convertible<T, int64_t>::value,
+      |                                         ^

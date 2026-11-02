@@ -1,0 +1,54 @@
+Note: Google Test filter = RiskClassificationTest.*
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from RiskClassificationTest
+[ RUN      ] RiskClassificationTest.LowRiskUsesPercentageRange
+/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:131: Failure
+Value of: config.isLowRisk(15.0)
+  Actual: false
+Expected: true
+
+/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:133: Failure
+Value of: config.isHighRisk(15.0)
+  Actual: true
+Expected: false
+
+[  FAILED  ] RiskClassificationTest.LowRiskUsesPercentageRange (0 ms)
+[ RUN      ] RiskClassificationTest.MediumRiskUsesPercentageRange
+/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:138: Failure
+Value of: config.isMediumRisk(45.0)
+  Actual: false
+Expected: true
+
+/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:139: Failure
+Value of: config.isHighRisk(45.0)
+  Actual: true
+Expected: false
+
+[  FAILED  ] RiskClassificationTest.MediumRiskUsesPercentageRange (0 ms)
+[ RUN      ] RiskClassificationTest.HighRiskUsesPercentageRange
+/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:145: Failure
+Value of: config.isHighRisk(90.0)
+  Actual: false
+Expected: true
+
+[  FAILED  ] RiskClassificationTest.HighRiskUsesPercentageRange (0 ms)
+[ RUN      ] RiskClassificationTest.TemperatureReadingProducesHighRiskCategory
+/ros_ws/bsn_traces/diagnosticos/b7_suite_ros1_2026-11-02/sources/test/unit/configuration/ConfigurationTest.cpp:155: Failure
+Value of: config.isHighRisk(risk)
+  Actual: false
+Expected: true
+
+[  FAILED  ] RiskClassificationTest.TemperatureReadingProducesHighRiskCategory (0 ms)
+[----------] 4 tests from RiskClassificationTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 4 tests, listed below:
+[  FAILED  ] RiskClassificationTest.LowRiskUsesPercentageRange
+[  FAILED  ] RiskClassificationTest.MediumRiskUsesPercentageRange
+[  FAILED  ] RiskClassificationTest.HighRiskUsesPercentageRange
+[  FAILED  ] RiskClassificationTest.TemperatureReadingProducesHighRiskCategory
+
+ 4 FAILED TESTS
