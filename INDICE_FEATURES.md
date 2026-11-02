@@ -1,5 +1,7 @@
 # Índice de traces e cobertura por feature — ROS 2
 
+Atualização: [revalidação das três features com falhas históricas](diagnosticos/revalidacao_features_2026-11-02/README.md), com dez aprovações e uma falha esperada nas reexecuções selecionadas. Os totais históricos abaixo permanecem vinculados às campanhas originais.
+
 Seleção explícita em `selecao_features.json`. Cada linha corresponde a uma execução isolada da feature, com inicialização e encerramento próprios. Managing_system utiliza montagens independentes por grupo. As linhas não formam uma execução única da suíte geral.
 
 | Feature / campanha | Resultado interno | Linhas | Ramos | Evidências |

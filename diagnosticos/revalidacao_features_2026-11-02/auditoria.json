@@ -1,0 +1,398 @@
+{
+  "ros2_20261102T010038Z_6oaveyyg": {
+    "verified_hashes": 132,
+    "successful_collection": false,
+    "features": {
+      "check_bsn": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "pytest",
+          "-v",
+          "-rA",
+          "-o",
+          "addopts=",
+          "-p",
+          "no:pytest_cov",
+          "--junitxml=/ros_ws/src/campanhas_traces/ros2_20261102T010038Z_6oaveyyg/check_bsn/outer.xml",
+          "/ros_ws/src/bsn_ros2/features/test/test_check_bsn_bdd.py"
+        ],
+        "state": "finished",
+        "exit_code": 1,
+        "timed_out": false,
+        "internal_junit": [],
+        "scenario_starts": 0,
+        "step_starts": 0,
+        "missing_case_traces": [],
+        "coverage_contexts": [
+          "check_bsn"
+        ],
+        "coverage_totals": {
+          "covered_lines": 1289,
+          "num_statements": 3147,
+          "percent_covered": 35.8364312267658,
+          "percent_covered_display": "36",
+          "missing_lines": 1858,
+          "excluded_lines": 0,
+          "num_branches": 888,
+          "num_partial_branches": 71,
+          "covered_branches": 157,
+          "missing_branches": 731
+        },
+        "complete": false
+      },
+      "knowledge_repo": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "pytest",
+          "-v",
+          "-rA",
+          "-o",
+          "addopts=",
+          "-p",
+          "no:pytest_cov",
+          "--junitxml=/ros_ws/src/campanhas_traces/ros2_20261102T010038Z_6oaveyyg/knowledge_repo/outer.xml",
+          "/ros_ws/src/bsn_ros2/features/test/test_knowledge_repo_bdd.py"
+        ],
+        "state": "finished",
+        "exit_code": 1,
+        "timed_out": false,
+        "internal_junit": [],
+        "scenario_starts": 0,
+        "step_starts": 0,
+        "missing_case_traces": [],
+        "coverage_contexts": [
+          "knowledge_repo"
+        ],
+        "coverage_totals": {
+          "covered_lines": 1292,
+          "num_statements": 3147,
+          "percent_covered": 35.960346964064435,
+          "percent_covered_display": "36",
+          "missing_lines": 1855,
+          "excluded_lines": 0,
+          "num_branches": 888,
+          "num_partial_branches": 69,
+          "covered_branches": 159,
+          "missing_branches": 729
+        },
+        "complete": false
+      },
+      "data_persistance": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "pytest",
+          "-v",
+          "-rA",
+          "-o",
+          "addopts=",
+          "-p",
+          "no:pytest_cov",
+          "--junitxml=/ros_ws/src/campanhas_traces/ros2_20261102T010038Z_6oaveyyg/data_persistance/outer.xml",
+          "/ros_ws/src/bsn_ros2/features/test/test_data_persistance_bdd.py"
+        ],
+        "state": "finished",
+        "exit_code": 1,
+        "timed_out": false,
+        "internal_junit": [],
+        "scenario_starts": 0,
+        "step_starts": 0,
+        "missing_case_traces": [],
+        "coverage_contexts": [
+          "data_persistance"
+        ],
+        "coverage_totals": {
+          "covered_lines": 1290,
+          "num_statements": 3147,
+          "percent_covered": 35.861214374225526,
+          "percent_covered_display": "36",
+          "missing_lines": 1857,
+          "excluded_lines": 0,
+          "num_branches": 888,
+          "num_partial_branches": 71,
+          "covered_branches": 157,
+          "missing_branches": 731
+        },
+        "complete": false
+      }
+    }
+  },
+  "ros2_20261102T010219Z_ftsgif7l": {
+    "verified_hashes": 199,
+    "successful_collection": false,
+    "features": {
+      "check_bsn": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "pytest",
+          "-v",
+          "-rA",
+          "-o",
+          "addopts=",
+          "-p",
+          "no:pytest_cov",
+          "--junitxml=/ros_ws/src/campanhas_traces/ros2_20261102T010219Z_ftsgif7l/check_bsn/outer.xml",
+          "/ros_ws/src/bsn_ros2/features/test/test_check_bsn_bdd.py"
+        ],
+        "state": "finished",
+        "exit_code": 0,
+        "timed_out": false,
+        "internal_junit": [
+          {
+            "path": "/ros_ws/src/campanhas_traces/ros2_20261102T010219Z_ftsgif7l/check_bsn/internal_junit/test_check_bsn.xml",
+            "counts": {
+              "passed": 8
+            },
+            "cases": [
+              {
+                "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the oximeter]",
+                "classname": "steps.test_check_bsn",
+                "status": "passed",
+                "skip_reason": null
+              },
+              {
+                "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the ECG sensor]",
+                "classname": "steps.test_check_bsn",
+                "status": "passed",
+                "skip_reason": null
+              },
+              {
+                "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the thermometer]",
+                "classname": "steps.test_check_bsn",
+                "status": "passed",
+                "skip_reason": null
+              },
+              {
+                "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the SBP sensor]",
+                "classname": "steps.test_check_bsn",
+                "status": "passed",
+                "skip_reason": null
+              },
+              {
+                "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the DBP sensor]",
+                "classname": "steps.test_check_bsn",
+                "status": "passed",
+                "skip_reason": null
+              },
+              {
+                "name": "test_the_central_hub_receives_the_vital_sign_reading_reported_by_a_body_sensor_bsnp08[the glucometer]",
+                "classname": "steps.test_check_bsn",
+                "status": "passed",
+                "skip_reason": null
+              },
+              {
+                "name": "test_the_central_hub_classifies_a_vital_sign_reading_outside_the_normal_range_as_high_risk_bsnp08",
+                "classname": "steps.test_check_bsn",
+                "status": "passed",
+                "skip_reason": null
+              },
+              {
+                "name": "test_no_patient_risk_level_is_reported_while_the_central_hub_is_unavailable_bsnp08",
+                "classname": "steps.test_check_bsn",
+                "status": "passed",
+                "skip_reason": null
+              }
+            ]
+          }
+        ],
+        "scenario_starts": 8,
+        "step_starts": 24,
+        "missing_case_traces": [],
+        "coverage_contexts": [
+          "check_bsn"
+        ],
+        "coverage_totals": {
+          "covered_lines": 2079,
+          "num_statements": 3147,
+          "percent_covered": 62.627013630731106,
+          "percent_covered_display": "63",
+          "missing_lines": 1068,
+          "excluded_lines": 0,
+          "num_branches": 888,
+          "num_partial_branches": 178,
+          "covered_branches": 448,
+          "missing_branches": 440
+        },
+        "complete": true
+      },
+      "knowledge_repo": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "pytest",
+          "-v",
+          "-rA",
+          "-o",
+          "addopts=",
+          "-p",
+          "no:pytest_cov",
+          "--junitxml=/ros_ws/src/campanhas_traces/ros2_20261102T010219Z_ftsgif7l/knowledge_repo/outer.xml",
+          "/ros_ws/src/bsn_ros2/features/test/test_knowledge_repo_bdd.py"
+        ],
+        "state": "finished",
+        "exit_code": 1,
+        "timed_out": false,
+        "internal_junit": [
+          {
+            "path": "/ros_ws/src/campanhas_traces/ros2_20261102T010219Z_ftsgif7l/knowledge_repo/internal_junit/test_knowledge_repo.xml",
+            "counts": {
+              "failure": 1
+            },
+            "cases": [
+              {
+                "name": "test_knowledge_repository_wired",
+                "classname": "steps.test_knowledge_repo",
+                "status": "failure",
+                "skip_reason": null
+              }
+            ]
+          }
+        ],
+        "scenario_starts": 1,
+        "step_starts": 2,
+        "missing_case_traces": [],
+        "coverage_contexts": [
+          "knowledge_repo"
+        ],
+        "coverage_totals": {
+          "covered_lines": 2088,
+          "num_statements": 3147,
+          "percent_covered": 61.486988847583646,
+          "percent_covered_display": "61",
+          "missing_lines": 1059,
+          "excluded_lines": 0,
+          "num_branches": 888,
+          "num_partial_branches": 175,
+          "covered_branches": 393,
+          "missing_branches": 495
+        },
+        "complete": false
+      },
+      "data_persistance": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "pytest",
+          "-v",
+          "-rA",
+          "-o",
+          "addopts=",
+          "-p",
+          "no:pytest_cov",
+          "--junitxml=/ros_ws/src/campanhas_traces/ros2_20261102T010219Z_ftsgif7l/data_persistance/outer.xml",
+          "/ros_ws/src/bsn_ros2/features/test/test_data_persistance_bdd.py"
+        ],
+        "state": "finished",
+        "exit_code": 0,
+        "timed_out": false,
+        "internal_junit": [
+          {
+            "path": "/ros_ws/src/campanhas_traces/ros2_20261102T010219Z_ftsgif7l/data_persistance/internal_junit/test_data_persistance.xml",
+            "counts": {
+              "passed": 1,
+              "xfail": 1
+            },
+            "cases": [
+              {
+                "name": "test_reading_persisted_in_knowledge_repository",
+                "classname": "steps.test_data_persistance",
+                "status": "passed",
+                "skip_reason": null
+              },
+              {
+                "name": "test_persistence_failure_recorded",
+                "classname": "steps.test_data_persistance",
+                "status": "xfail",
+                "skip_reason": {
+                  "type": "pytest.xfail",
+                  "message": "gap in both versions, not a regression: no storage-failure branch in ROS1 (DataAccess.cpp) or ROS2 (logger.py); ROS1's old 'fail' check passed only via /g4t1's unrelated 'fail' Status. See ../DATA_PERSISTANCE_GAPS.md"
+                }
+              }
+            ]
+          }
+        ],
+        "scenario_starts": 2,
+        "step_starts": 4,
+        "missing_case_traces": [],
+        "coverage_contexts": [
+          "data_persistance"
+        ],
+        "coverage_totals": {
+          "covered_lines": 2117,
+          "num_statements": 3147,
+          "percent_covered": 62.65179677819083,
+          "percent_covered_display": "63",
+          "missing_lines": 1030,
+          "excluded_lines": 0,
+          "num_branches": 888,
+          "num_partial_branches": 177,
+          "covered_branches": 411,
+          "missing_branches": 477
+        },
+        "complete": true
+      }
+    }
+  },
+  "ros2_20261102T164547Z_jjbmzcaa": {
+    "verified_hashes": 58,
+    "successful_collection": true,
+    "features": {
+      "knowledge_repo": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "pytest",
+          "-v",
+          "-rA",
+          "-o",
+          "addopts=",
+          "-p",
+          "no:pytest_cov",
+          "--junitxml=/ros_ws/src/campanhas_traces/ros2_20261102T164547Z_jjbmzcaa/knowledge_repo/outer.xml",
+          "/ros_ws/src/bsn_ros2/features/test/test_knowledge_repo_bdd.py"
+        ],
+        "state": "finished",
+        "exit_code": 0,
+        "timed_out": false,
+        "internal_junit": [
+          {
+            "path": "/ros_ws/src/campanhas_traces/ros2_20261102T164547Z_jjbmzcaa/knowledge_repo/internal_junit/test_knowledge_repo.xml",
+            "counts": {
+              "passed": 1
+            },
+            "cases": [
+              {
+                "name": "test_knowledge_repository_wired",
+                "classname": "steps.test_knowledge_repo",
+                "status": "passed",
+                "skip_reason": null
+              }
+            ]
+          }
+        ],
+        "scenario_starts": 1,
+        "step_starts": 3,
+        "missing_case_traces": [],
+        "coverage_contexts": [
+          "knowledge_repo"
+        ],
+        "coverage_totals": {
+          "covered_lines": 2083,
+          "num_statements": 3147,
+          "percent_covered": 61.16480793060719,
+          "percent_covered_display": "61",
+          "missing_lines": 1064,
+          "excluded_lines": 0,
+          "num_branches": 888,
+          "num_partial_branches": 175,
+          "covered_branches": 385,
+          "missing_branches": 503
+        },
+        "complete": true
+      }
+    }
+  }
+}
