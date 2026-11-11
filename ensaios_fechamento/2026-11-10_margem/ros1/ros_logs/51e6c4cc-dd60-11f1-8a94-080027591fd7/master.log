@@ -1,0 +1,59 @@
+[rosmaster.main][INFO] 2026-11-10 20:41:59,234: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2026-11-10 20:41:59,234: Starting ROS Master Node
+[xmlrpc][INFO] 2026-11-10 20:41:59,235: XML-RPC server binding to 0.0.0.0:48173
+[xmlrpc][INFO] 2026-11-10 20:41:59,235: Started XML-RPC server [http://bsn-virtualbox:48173/]
+[xmlrpc][INFO] 2026-11-10 20:41:59,235: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2026-11-10 20:41:59,235: Master initialized: port[48173], uri[http://bsn-virtualbox:48173/]
+[rosmaster.master][INFO] 2026-11-10 20:41:59,248: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2026-11-10 20:41:59,249: +PARAM [/roslaunch/uris/host_bsn_virtualbox__45469] by /roslaunch
+[rosmaster.master][INFO] 2026-11-10 20:41:59,353: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2026-11-10 20:41:59,353: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2026-11-10 20:41:59,377: +PUB [/rosout] /adaptation_probe http://bsn-virtualbox:44489/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,378: +SERVICE [/adaptation_probe/get_loggers] /adaptation_probe http://bsn-virtualbox:44489/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,379: +SERVICE [/adaptation_probe/set_logger_level] /adaptation_probe http://bsn-virtualbox:44489/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,379: +PARAM [/frequency] by /adaptation_probe
+[rosmaster.master][INFO] 2026-11-10 20:41:59,380: +PARAM [/kp] by /adaptation_probe
+[rosmaster.master][INFO] 2026-11-10 20:41:59,380: +PARAM [/adaptation_parameter] by /adaptation_probe
+[rosmaster.master][INFO] 2026-11-10 20:41:59,380: +SERVICE [/EngineRequest] /adaptation_probe http://bsn-virtualbox:44489/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,381: +SERVICE [/DataAccessRequest] /adaptation_probe http://bsn-virtualbox:44489/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,381: +PUB [/event] /adaptation_probe http://bsn-virtualbox:44489/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,381: +PUB [/strategy] /adaptation_probe http://bsn-virtualbox:44489/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,382: +SUB [/log_adapt] /adaptation_probe http://bsn-virtualbox:44489/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,770: +SERVICE [/rosout/get_loggers] /rosout http://bsn-virtualbox:46519/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,771: +SERVICE [/rosout/set_logger_level] /rosout http://bsn-virtualbox:46519/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,771: +PUB [/rosout_agg] /rosout http://bsn-virtualbox:46519/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,773: +SUB [/rosout] /rosout http://bsn-virtualbox:46519/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,938: +PUB [/rosout] /enactor http://bsn-virtualbox:45693/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,939: +SERVICE [/enactor/get_loggers] /enactor http://bsn-virtualbox:45693/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,939: +SERVICE [/enactor/set_logger_level] /enactor http://bsn-virtualbox:45693/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,940: +PUB [/log_adapt] /enactor http://bsn-virtualbox:45693/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,940: +PUB [/exception] /enactor http://bsn-virtualbox:45693/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,941: +CACHEDPARAM [/rosout_disable_topics_generation] by /enactor
+[rosmaster.master][INFO] 2026-11-10 20:41:59,945: +SUB [/event] /enactor http://bsn-virtualbox:45693/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,946: publisherUpdate[/rosout] -> http://bsn-virtualbox:46519/ ['http://bsn-virtualbox:44489/', 'http://bsn-virtualbox:45693/']
+[rosmaster.master][INFO] 2026-11-10 20:41:59,947: +SUB [/strategy] /enactor http://bsn-virtualbox:45693/
+[rosmaster.master][INFO] 2026-11-10 20:41:59,947: publisherUpdate[/log_adapt] -> http://bsn-virtualbox:44489/ ['http://bsn-virtualbox:45693/']
+[rosmaster.master][INFO] 2026-11-10 20:41:59,948: publisherUpdate[/rosout] -> http://bsn-virtualbox:46519/ ['http://bsn-virtualbox:44489/', 'http://bsn-virtualbox:45693/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-11-10 20:41:59,949: publisherUpdate[/log_adapt] -> http://bsn-virtualbox:44489/ ['http://bsn-virtualbox:45693/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-11-10 20:42:00,150: +CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.master][INFO] 2026-11-10 20:42:22,447: -PUB [/rosout] /enactor http://bsn-virtualbox:45693/
+[rosmaster.master][INFO] 2026-11-10 20:42:22,448: -PUB [/log_adapt] /enactor http://bsn-virtualbox:45693/
+[rosmaster.master][INFO] 2026-11-10 20:42:22,448: -PUB [/exception] /enactor http://bsn-virtualbox:45693/
+[rosmaster.master][INFO] 2026-11-10 20:42:22,448: -SUB [/event] /enactor http://bsn-virtualbox:45693/
+[rosmaster.master][INFO] 2026-11-10 20:42:22,448: -SUB [/strategy] /enactor http://bsn-virtualbox:45693/
+[rosmaster.master][INFO] 2026-11-10 20:42:22,449: -SERVICE [/enactor/get_loggers] /enactor rosrpc://bsn-virtualbox:40843
+[rosmaster.master][INFO] 2026-11-10 20:42:22,449: -SERVICE [/enactor/set_logger_level] /enactor rosrpc://bsn-virtualbox:40843
+[rosmaster.master][INFO] 2026-11-10 20:42:22,449: -CACHEDPARAM [/rosout_disable_topics_generation] by /enactor
+[rosmaster.master][INFO] 2026-11-10 20:42:22,449: +CACHEDPARAM [/rosout_disable_topics_generation] by /adaptation_probe
+[rosmaster.master][INFO] 2026-11-10 20:42:22,452: publisherUpdate[/rosout] -> http://bsn-virtualbox:46519/ ['http://bsn-virtualbox:44489/']
+[rosmaster.master][INFO] 2026-11-10 20:42:22,452: publisherUpdate[/rosout] -> http://bsn-virtualbox:46519/ ['http://bsn-virtualbox:44489/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-11-10 20:42:22,452: publisherUpdate[/log_adapt] -> http://bsn-virtualbox:44489/ []
+[rosmaster.master][INFO] 2026-11-10 20:42:22,453: publisherUpdate[/log_adapt] -> http://bsn-virtualbox:44489/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2026-11-10 20:42:22,755: -PUB [/rosout_agg] /rosout http://bsn-virtualbox:46519/
+[rosmaster.master][INFO] 2026-11-10 20:42:22,756: -SUB [/rosout] /rosout http://bsn-virtualbox:46519/
+[rosmaster.master][INFO] 2026-11-10 20:42:22,756: -SERVICE [/rosout/get_loggers] /rosout rosrpc://bsn-virtualbox:52695
+[rosmaster.master][INFO] 2026-11-10 20:42:22,756: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://bsn-virtualbox:52695
+[rosmaster.master][INFO] 2026-11-10 20:42:22,757: -CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.main][INFO] 2026-11-10 20:42:22,857: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2026-11-10 20:42:22,857: stopping master...
+[rospy.core][INFO] 2026-11-10 20:42:22,857: signal_shutdown [atexit]

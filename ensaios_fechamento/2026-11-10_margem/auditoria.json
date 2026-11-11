@@ -1,0 +1,68 @@
+[
+  {
+    "campaign": "adaptacao_ros1_20261110T234154Z_dBIIGZ",
+    "ros": "1",
+    "oracle": "symmetric_deadband_v1",
+    "complete": true,
+    "passed": true,
+    "cases": [
+      {
+        "case": "degradacao",
+        "responses": 40,
+        "commands": 40,
+        "passed": true
+      },
+      {
+        "case": "acima_referencia",
+        "responses": 40,
+        "commands": 40,
+        "passed": true
+      },
+      {
+        "case": "erro_zero",
+        "responses": 40,
+        "commands": 0,
+        "passed": true
+      },
+      {
+        "case": "dentro_margem",
+        "responses": 40,
+        "commands": 0,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "campaign": "adaptacao_ros2_20261110T231310Z_07gg5xtl",
+    "ros": "2",
+    "oracle": "symmetric_deadband_v1",
+    "complete": true,
+    "passed": true,
+    "cases": [
+      {
+        "case": "degradacao",
+        "responses": 40,
+        "commands": 40,
+        "passed": true
+      },
+      {
+        "case": "acima_referencia",
+        "responses": 40,
+        "commands": 40,
+        "passed": true
+      },
+      {
+        "case": "erro_zero",
+        "responses": 40,
+        "commands": 0,
+        "passed": true
+      },
+      {
+        "case": "dentro_margem",
+        "responses": 40,
+        "commands": 0,
+        "passed": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,797 @@
+{
+  "ros": "2",
+  "boundary": "real enactor, controlled service responses -> log_adapt",
+  "frequency_hz": 10,
+  "kp": 50,
+  "reference": 0.8,
+  "margin": 0.02,
+  "oracle": "symmetric_deadband_v1",
+  "cases": [
+    {
+      "case": "degradacao",
+      "target": "/test_adapt_0",
+      "current": 0.5,
+      "start": 248261.560376875,
+      "responses": 40,
+      "commands": [
+        {
+          "event": "command",
+          "monotonic": 248261.618646738,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=10.15"
+        },
+        {
+          "event": "command",
+          "monotonic": 248261.717878279,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=10.30"
+        },
+        {
+          "event": "command",
+          "monotonic": 248261.817471372,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=10.45"
+        },
+        {
+          "event": "command",
+          "monotonic": 248261.919993797,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=10.60"
+        },
+        {
+          "event": "command",
+          "monotonic": 248262.017105392,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=10.75"
+        },
+        {
+          "event": "command",
+          "monotonic": 248262.117667442,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=10.90"
+        },
+        {
+          "event": "command",
+          "monotonic": 248262.218273175,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=11.05"
+        },
+        {
+          "event": "command",
+          "monotonic": 248262.317803623,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=11.20"
+        },
+        {
+          "event": "command",
+          "monotonic": 248262.417720861,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=11.35"
+        },
+        {
+          "event": "command",
+          "monotonic": 248262.518189784,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=11.50"
+        },
+        {
+          "event": "command",
+          "monotonic": 248262.622183201,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=11.65"
+        },
+        {
+          "event": "command",
+          "monotonic": 248262.717074742,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=11.80"
+        },
+        {
+          "event": "command",
+          "monotonic": 248262.819789154,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=11.95"
+        },
+        {
+          "event": "command",
+          "monotonic": 248262.918920008,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=12.10"
+        },
+        {
+          "event": "command",
+          "monotonic": 248263.019279118,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=12.25"
+        },
+        {
+          "event": "command",
+          "monotonic": 248263.117348548,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=12.40"
+        },
+        {
+          "event": "command",
+          "monotonic": 248263.217903077,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=12.55"
+        },
+        {
+          "event": "command",
+          "monotonic": 248263.317442879,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=12.70"
+        },
+        {
+          "event": "command",
+          "monotonic": 248263.428240996,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=12.85"
+        },
+        {
+          "event": "command",
+          "monotonic": 248263.51822943,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=13.00"
+        },
+        {
+          "event": "command",
+          "monotonic": 248263.618802554,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=13.15"
+        },
+        {
+          "event": "command",
+          "monotonic": 248263.718824885,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=13.30"
+        },
+        {
+          "event": "command",
+          "monotonic": 248263.818310694,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=13.45"
+        },
+        {
+          "event": "command",
+          "monotonic": 248263.92118987,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=13.60"
+        },
+        {
+          "event": "command",
+          "monotonic": 248264.018507618,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=13.75"
+        },
+        {
+          "event": "command",
+          "monotonic": 248264.117705994,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=13.90"
+        },
+        {
+          "event": "command",
+          "monotonic": 248264.217668624,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=14.05"
+        },
+        {
+          "event": "command",
+          "monotonic": 248264.317851902,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=14.20"
+        },
+        {
+          "event": "command",
+          "monotonic": 248264.417505285,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=14.35"
+        },
+        {
+          "event": "command",
+          "monotonic": 248264.520562891,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=14.50"
+        },
+        {
+          "event": "command",
+          "monotonic": 248264.621807014,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=14.65"
+        },
+        {
+          "event": "command",
+          "monotonic": 248264.722772755,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=14.80"
+        },
+        {
+          "event": "command",
+          "monotonic": 248264.818210406,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=14.95"
+        },
+        {
+          "event": "command",
+          "monotonic": 248264.917657414,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=15.10"
+        },
+        {
+          "event": "command",
+          "monotonic": 248265.017748104,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=15.25"
+        },
+        {
+          "event": "command",
+          "monotonic": 248265.118441684,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=15.40"
+        },
+        {
+          "event": "command",
+          "monotonic": 248265.217614866,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=15.55"
+        },
+        {
+          "event": "command",
+          "monotonic": 248265.320590852,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=15.70"
+        },
+        {
+          "event": "command",
+          "monotonic": 248265.416939695,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=15.85"
+        },
+        {
+          "event": "command",
+          "monotonic": 248265.51866652,
+          "source": "enactor",
+          "target": "/test_adapt_0",
+          "action": "freq=16.00"
+        }
+      ],
+      "expected_analytical": [
+        10.15,
+        10.3,
+        10.45,
+        10.6,
+        10.75,
+        10.9,
+        11.05,
+        11.2,
+        11.35,
+        11.5,
+        11.65,
+        11.8,
+        11.95,
+        12.100000000000001,
+        12.25,
+        12.4,
+        12.55,
+        12.7,
+        12.850000000000001,
+        13.0,
+        13.15,
+        13.3,
+        13.450000000000001,
+        13.600000000000001,
+        13.75,
+        13.9,
+        14.05,
+        14.200000000000001,
+        14.350000000000001,
+        14.5,
+        14.65,
+        14.8,
+        14.950000000000001,
+        15.100000000000001,
+        15.25,
+        15.4,
+        15.55,
+        15.700000000000001,
+        15.850000000000001,
+        16.0
+      ],
+      "serialization_tolerance": 0.0050000010000000004,
+      "expected_wire": [
+        10.15,
+        10.3,
+        10.45,
+        10.6,
+        10.75,
+        10.9,
+        11.05,
+        11.2,
+        11.35,
+        11.5,
+        11.65,
+        11.8,
+        11.95,
+        12.1,
+        12.25,
+        12.4,
+        12.55,
+        12.7,
+        12.85,
+        13.0,
+        13.15,
+        13.3,
+        13.45,
+        13.6,
+        13.75,
+        13.9,
+        14.05,
+        14.2,
+        14.35,
+        14.5,
+        14.65,
+        14.8,
+        14.95,
+        15.1,
+        15.25,
+        15.4,
+        15.55,
+        15.7,
+        15.85,
+        16.0
+      ],
+      "passed": true
+    },
+    {
+      "case": "acima_referencia",
+      "target": "/test_adapt_1",
+      "current": 0.95,
+      "start": 248267.075946314,
+      "responses": 40,
+      "commands": [
+        {
+          "event": "command",
+          "monotonic": 248267.117537745,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.93"
+        },
+        {
+          "event": "command",
+          "monotonic": 248267.228824522,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.85"
+        },
+        {
+          "event": "command",
+          "monotonic": 248267.316935398,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.78"
+        },
+        {
+          "event": "command",
+          "monotonic": 248267.417460093,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.70"
+        },
+        {
+          "event": "command",
+          "monotonic": 248267.518053833,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.63"
+        },
+        {
+          "event": "command",
+          "monotonic": 248267.617475791,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.55"
+        },
+        {
+          "event": "command",
+          "monotonic": 248267.717414528,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.48"
+        },
+        {
+          "event": "command",
+          "monotonic": 248267.818664707,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.40"
+        },
+        {
+          "event": "command",
+          "monotonic": 248267.917897734,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.33"
+        },
+        {
+          "event": "command",
+          "monotonic": 248268.01817246,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.25"
+        },
+        {
+          "event": "command",
+          "monotonic": 248268.123064127,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.18"
+        },
+        {
+          "event": "command",
+          "monotonic": 248268.217314068,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.10"
+        },
+        {
+          "event": "command",
+          "monotonic": 248268.318632731,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=9.03"
+        },
+        {
+          "event": "command",
+          "monotonic": 248268.41701888,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.95"
+        },
+        {
+          "event": "command",
+          "monotonic": 248268.518565584,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.88"
+        },
+        {
+          "event": "command",
+          "monotonic": 248268.617719791,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.80"
+        },
+        {
+          "event": "command",
+          "monotonic": 248268.717918501,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.73"
+        },
+        {
+          "event": "command",
+          "monotonic": 248268.817537941,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.65"
+        },
+        {
+          "event": "command",
+          "monotonic": 248268.920648098,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.58"
+        },
+        {
+          "event": "command",
+          "monotonic": 248269.018202629,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.50"
+        },
+        {
+          "event": "command",
+          "monotonic": 248269.117631708,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.43"
+        },
+        {
+          "event": "command",
+          "monotonic": 248269.217876436,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.35"
+        },
+        {
+          "event": "command",
+          "monotonic": 248269.317870315,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.28"
+        },
+        {
+          "event": "command",
+          "monotonic": 248269.420318779,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.20"
+        },
+        {
+          "event": "command",
+          "monotonic": 248269.553006145,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.13"
+        },
+        {
+          "event": "command",
+          "monotonic": 248269.6177931,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=8.05"
+        },
+        {
+          "event": "command",
+          "monotonic": 248269.717373456,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.98"
+        },
+        {
+          "event": "command",
+          "monotonic": 248269.817563273,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.90"
+        },
+        {
+          "event": "command",
+          "monotonic": 248269.917190549,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.83"
+        },
+        {
+          "event": "command",
+          "monotonic": 248270.019039982,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.75"
+        },
+        {
+          "event": "command",
+          "monotonic": 248270.11892838,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.68"
+        },
+        {
+          "event": "command",
+          "monotonic": 248270.218124758,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.60"
+        },
+        {
+          "event": "command",
+          "monotonic": 248270.318270917,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.53"
+        },
+        {
+          "event": "command",
+          "monotonic": 248270.417933064,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.45"
+        },
+        {
+          "event": "command",
+          "monotonic": 248270.517713493,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.38"
+        },
+        {
+          "event": "command",
+          "monotonic": 248270.617167602,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.30"
+        },
+        {
+          "event": "command",
+          "monotonic": 248270.717806183,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.23"
+        },
+        {
+          "event": "command",
+          "monotonic": 248270.818807928,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.15"
+        },
+        {
+          "event": "command",
+          "monotonic": 248270.918649264,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.08"
+        },
+        {
+          "event": "command",
+          "monotonic": 248271.02206731,
+          "source": "enactor",
+          "target": "/test_adapt_1",
+          "action": "freq=7.00"
+        }
+      ],
+      "expected_analytical": [
+        9.925,
+        9.85,
+        9.775,
+        9.7,
+        9.625,
+        9.55,
+        9.475,
+        9.4,
+        9.325000000000001,
+        9.25,
+        9.175,
+        9.100000000000001,
+        9.025,
+        8.950000000000001,
+        8.875,
+        8.8,
+        8.725000000000001,
+        8.65,
+        8.575000000000001,
+        8.5,
+        8.425,
+        8.350000000000001,
+        8.275,
+        8.200000000000001,
+        8.125000000000002,
+        8.05,
+        7.975000000000001,
+        7.900000000000001,
+        7.825000000000001,
+        7.750000000000002,
+        7.675000000000002,
+        7.600000000000001,
+        7.525000000000001,
+        7.450000000000001,
+        7.375000000000002,
+        7.300000000000002,
+        7.225000000000001,
+        7.150000000000002,
+        7.075000000000002,
+        7.000000000000002
+      ],
+      "serialization_tolerance": 0.0050000010000000004,
+      "expected_wire": [
+        9.93,
+        9.85,
+        9.78,
+        9.7,
+        9.62,
+        9.55,
+        9.47,
+        9.4,
+        9.33,
+        9.25,
+        9.18,
+        9.1,
+        9.03,
+        8.95,
+        8.88,
+        8.8,
+        8.73,
+        8.65,
+        8.58,
+        8.5,
+        8.43,
+        8.35,
+        8.28,
+        8.2,
+        8.13,
+        8.05,
+        7.98,
+        7.9,
+        7.83,
+        7.75,
+        7.68,
+        7.6,
+        7.53,
+        7.45,
+        7.38,
+        7.3,
+        7.23,
+        7.15,
+        7.08,
+        7.0
+      ],
+      "passed": true
+    },
+    {
+      "case": "erro_zero",
+      "target": "/test_adapt_2",
+      "current": 0.8,
+      "start": 248272.580969073,
+      "responses": 40,
+      "commands": [],
+      "expected_analytical": [],
+      "serialization_tolerance": 0.0050000010000000004,
+      "expected_wire": [],
+      "passed": true
+    },
+    {
+      "case": "dentro_margem",
+      "target": "/test_adapt_3",
+      "current": 0.79,
+      "start": 248278.083499426,
+      "responses": 40,
+      "commands": [],
+      "expected_analytical": [],
+      "serialization_tolerance": 0.0050000010000000004,
+      "expected_wire": [],
+      "passed": true
+    }
+  ],
+  "complete": true,
+  "source_sha256": {
+    "/ros_ws/src/bsn_ros2/adaptation/adaptation/enactor/controller.py": "4f509c7da4a0c8278bf4df8331e8e3d008a7b238519115afab3ae2017b742a3a",
+    "/ros_ws/src/bsn_ros2/adaptation/adaptation/enactor/enactor.py": "e4cec03363c2687507642e01249348ddaa8dbe6a19e3943e7d291937d7bc04e7"
+  },
+  "passed": true,
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "limits": [
+    "Common reliability acceptance oracle: emit only when abs(error) exceeds margin * reference; not full migration approval.",
+    "DataAccess and Engine services are doubles; no real reliability estimation, planning, logger, adapter or sensor effect.",
+    "No commands is interpreted only with positive-control commands and recorded service activity."
+  ]
+}

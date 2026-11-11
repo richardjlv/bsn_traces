@@ -1,0 +1,23 @@
+[rospy.client][INFO] 2026-11-10 20:41:59,275: init_node, name[/adaptation_probe], pid[8829]
+[xmlrpc][INFO] 2026-11-10 20:41:59,275: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2026-11-10 20:41:59,275: Started XML-RPC server [http://bsn-virtualbox:44489/]
+[rospy.impl.masterslave][INFO] 2026-11-10 20:41:59,275: _ready: http://bsn-virtualbox:44489/
+[rospy.init][INFO] 2026-11-10 20:41:59,276: ROS Slave URI: [http://bsn-virtualbox:44489/]
+[rospy.registration][INFO] 2026-11-10 20:41:59,276: Registering with master node http://127.0.0.1:48173
+[xmlrpc][INFO] 2026-11-10 20:41:59,276: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2026-11-10 20:41:59,376: registered with master
+[rospy.rosout][INFO] 2026-11-10 20:41:59,376: initializing /rosout core topic
+[rospy.rosout][INFO] 2026-11-10 20:41:59,377: connected to core topic /rosout
+[rospy.simtime][INFO] 2026-11-10 20:41:59,378: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2026-11-10 20:41:59,965: topic[/log_adapt] adding connection to [http://bsn-virtualbox:45693/], count 0
+[rospy.internal][INFO] 2026-11-10 20:42:00,050: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2026-11-10 20:42:00,150: topic[/event] adding connection to [/enactor], count 0
+[rospy.internal][INFO] 2026-11-10 20:42:00,151: topic[/strategy] adding connection to [/enactor], count 0
+[rosout][ERROR] 2026-11-10 20:42:22,449: incoming connection failed: unable to receive data from sender, check sender's logs for details
+[rospy.internal][INFO] 2026-11-10 20:42:22,486: topic[/log_adapt] removing connection to http://bsn-virtualbox:45693/
+[rospy.internal][INFO] 2026-11-10 20:42:22,525: topic[/event] removing connection to /enactor
+[rospy.internal][INFO] 2026-11-10 20:42:22,525: topic[/strategy] removing connection to /enactor
+[rospy.internal][INFO] 2026-11-10 20:42:23,027: topic[/rosout] removing connection to /rosout
+[rospy.core][INFO] 2026-11-10 20:42:23,251: signal_shutdown [atexit]
+[rospy.registration][WARNING] 2026-11-10 20:42:23,252: cannot unregister with master due to network issues
+[rospy.impl.masterslave][INFO] 2026-11-10 20:42:23,252: atexit
