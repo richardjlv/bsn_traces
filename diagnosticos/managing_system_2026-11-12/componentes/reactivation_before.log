@@ -1,0 +1,26 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /ros_ws/src/bsn_ros2/adaptation
+configfile: pytest.ini
+plugins: ament-pep257-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-xmllint-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-flake8-0.17.5, cov-4.1.0, bdd-5.0.0, colcon-core-0.21.3
+collected 2 items
+
+src/bsn_ros2/adaptation/test/test_strategy_contract.py .F                [100%]
+
+=================================== FAILURES ===================================
+_______________ test_reactivation_restores_component_to_planning _______________
+
+    def test_reactivation_restores_component_to_planning():
+        engine = SimpleNamespace(strategy={}, deactivated_components={}, get_logger=Mock())
+        for component, key in [('/g3t1_1', 'R_G3_T1_1'), ('/g4t1', 'R_G4_T1')]:
+            ReliabilityEngine._process_context_response(engine, component + ':deactivate')
+            assert engine.deactivated_components[key] == 1
+            ReliabilityEngine._process_context_response(engine, component + ':activate')
+>           assert engine.deactivated_components[key] == 0
+E           assert 1 == 0
+
+src/bsn_ros2/adaptation/test/test_strategy_contract.py:30: AssertionError
+- generated xml file: /ros_ws/src/campanhas_fechamento/recuperacao_ros2_2026-11-11/reactivation_before.xml -
+=========================== short test summary info ============================
+FAILED src/bsn_ros2/adaptation/test/test_strategy_contract.py::test_reactivation_restores_component_to_planning
+========================= 1 failed, 1 passed in 0.09s ==========================

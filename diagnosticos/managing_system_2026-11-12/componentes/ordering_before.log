@@ -1,0 +1,43 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /ros_ws/src/bsn_ros2/adaptation
+configfile: pytest.ini
+plugins: ament-pep257-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-xmllint-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-flake8-0.17.5, cov-4.1.0, bdd-5.0.0, colcon-core-0.21.3
+collected 3 items
+
+src/bsn_ros2/adaptation/test/test_strategy_contract.py ..F               [100%]
+
+=================================== FAILURES ===================================
+_______ test_equal_priority_plan_is_independent_of_term_insertion_order ________
+
+    def test_equal_priority_plan_is_independent_of_term_insertion_order():
+        from math import prod
+    
+        outputs = []
+        for components in [('G3_T1_1', 'G4_T1'), ('G4_T1', 'G3_T1_1')]:
+            strategy = {}
+            for component in components:
+                strategy.update({prefix + component: 1.0 for prefix in ('R_', 'CTX_', 'F_')})
+            engine = SimpleNamespace(
+                strategy=strategy, priority={key: 50 for key in strategy if key.startswith('R_')},
+                deactivated_components={}, setpoint=0.9, tolerance=0.02,
+                offset=0.5, gain=0.01, target_system_model=None,
+                calculate_qos=lambda model, values: prod(values.values()),
+                get_logger=Mock(), execute=Mock(),
+            )
+            ReliabilityEngine.plan(engine)
+            engine.execute.assert_called_once()
+            outputs.append(engine.strategy)
+>       assert outputs[0] == outputs[1]
+E       AssertionError: assert {'CTX_G3_T1_1...T1': 1.0, ...} == {'CTX_G3_T1_1...T1': 1.0, ...}
+E         Omitting 4 identical items, use -vv to show
+E         Differing items:
+E         {'R_G4_T1': 0.999} != {'R_G4_T1': 0.9009999999999999}
+E         {'R_G3_T1_1': 0.9009999999999999} != {'R_G3_T1_1': 0.999}
+E         Use -v to get more diff
+
+src/bsn_ros2/adaptation/test/test_strategy_contract.py:51: AssertionError
+- generated xml file: /ros_ws/src/campanhas_fechamento/recuperacao_ros2_2026-11-11/ordering_before.xml -
+=========================== short test summary info ============================
+FAILED src/bsn_ros2/adaptation/test/test_strategy_contract.py::test_equal_priority_plan_is_independent_of_term_insertion_order
+========================= 1 failed, 2 passed in 0.09s ==========================

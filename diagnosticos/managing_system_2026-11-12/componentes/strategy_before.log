@@ -1,0 +1,37 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /ros_ws/src/bsn_ros2/adaptation
+configfile: pytest.ini
+plugins: ament-pep257-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-xmllint-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-flake8-0.17.5, cov-4.1.0, bdd-5.0.0, colcon-core-0.21.3
+collected 1 item
+
+src/bsn_ros2/adaptation/test/test_strategy_contract.py F                 [100%]
+
+=================================== FAILURES ===================================
+__________ test_published_strategy_updates_all_controller_references ___________
+
+    def test_published_strategy_updates_all_controller_references():
+        publisher = Mock()
+        engine = SimpleNamespace(
+            strategy={'R_G3_T1_1': 0.85, 'R_G4_T1': 0.9},
+            strategy_publisher=publisher, get_logger=Mock(),
+        )
+        controller = SimpleNamespace(
+            adaptation_parameter='reliability',
+            r_ref={'/g3t1_1': 1.0, '/g4t1': 1.0}, get_logger=Mock(),
+        )
+        ReliabilityEngine.execute(engine)
+        message = publisher.publish.call_args.args[0]
+        Enactor.receive_strategy(controller, message)
+>       assert controller.r_ref == {'/g3t1_1': 0.85, '/g4t1': 0.9}
+E       AssertionError: assert {'/g3t1_1': 1.0, '/g4t1': 1.0} == {'/g3t1_1': 0... '/g4t1': 0.9}
+E         Differing items:
+E         {'/g3t1_1': 1.0} != {'/g3t1_1': 0.85}
+E         {'/g4t1': 1.0} != {'/g4t1': 0.9}
+E         Use -v to get more diff
+
+src/bsn_ros2/adaptation/test/test_strategy_contract.py:21: AssertionError
+- generated xml file: /ros_ws/src/campanhas_fechamento/recuperacao_ros2_2026-11-11/strategy_before.xml -
+=========================== short test summary info ============================
+FAILED src/bsn_ros2/adaptation/test/test_strategy_contract.py::test_published_strategy_updates_all_controller_references
+============================== 1 failed in 0.09s ===============================

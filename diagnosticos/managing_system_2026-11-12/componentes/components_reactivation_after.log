@@ -1,0 +1,15 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /ros_ws/src/bsn_ros2/adaptation
+configfile: pytest.ini
+plugins: ament-pep257-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-xmllint-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-flake8-0.17.5, cov-4.1.0, bdd-5.0.0, colcon-core-0.21.3
+collected 67 items
+
+src/bsn_ros2/adaptation/test/test_reli_engine.py ......................  [ 32%]
+src/bsn_ros2/adaptation/test/test_enactor.py .......................     [ 67%]
+src/bsn_ros2/adaptation/test/test_data_access.py ...............         [ 89%]
+src/bsn_ros2/adaptation/test/test_strategy_contract.py ..                [ 92%]
+src/bsn_ros2/adaptation/test/test_reliability_status_query.py .....      [100%]
+
+- generated xml file: /ros_ws/src/campanhas_fechamento/recuperacao_ros2_2026-11-11/components_reactivation_after.xml -
+============================== 67 passed in 2.36s ==============================

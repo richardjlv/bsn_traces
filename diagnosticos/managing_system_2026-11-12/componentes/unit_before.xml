@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="5" time="0.095" timestamp="2026-11-11T13:34:00.700174" hostname="bsn-virtualbox"><testcase classname="test.test_reliability_status_query" name="test_query_counts_only_success_and_fail[statuses0-1.0]" time="0.001"><failure message="assert 0.5 == 1.0 ± 1.0e-06&#10;  comparison failed&#10;  Obtained: 0.5&#10;  Expected: 1.0 ± 1.0e-06">statuses = ['success', 'running'], expected = 1.0
+
+    @pytest.mark.parametrize('statuses, expected', [
+        (['success', 'running'], 1.0),
+        (['success', 'fail', 'running'], 0.5),
+        (['success', 'success', 'fail'], 2.0 / 3.0),
+        (['running'], 0.0),
+        ([], 0.0),
+    ])
+    def test_query_counts_only_success_and_fail(statuses, expected):
+        subject = SimpleNamespace(status={
+            'g3t1_1': deque((i, value) for i, value in enumerate(statuses))
+        })
+        request = DataAccessRequest.Request()
+        request.query = 'all:reliability:'
+        response = DataAccess.process_query(subject, request, DataAccessRequest.Response())
+        payload = response.content.rstrip(';').split(':', 1)[1]
+&gt;       assert float(payload.split(',')[-1]) == pytest.approx(expected, abs=1e-6)
+E       assert 0.5 == 1.0 ± 1.0e-06
+E         comparison failed
+E         Obtained: 0.5
+E         Expected: 1.0 ± 1.0e-06
+
+src/bsn_ros2/adaptation/test/test_reliability_status_query.py:25: AssertionError</failure></testcase><testcase classname="test.test_reliability_status_query" name="test_query_counts_only_success_and_fail[statuses1-0.5]" time="0.001"><failure message="assert 0.333333 == 0.5 ± 1.0e-06&#10;  comparison failed&#10;  Obtained: 0.333333&#10;  Expected: 0.5 ± 1.0e-06">statuses = ['success', 'fail', 'running'], expected = 0.5
+
+    @pytest.mark.parametrize('statuses, expected', [
+        (['success', 'running'], 1.0),
+        (['success', 'fail', 'running'], 0.5),
+        (['success', 'success', 'fail'], 2.0 / 3.0),
+        (['running'], 0.0),
+        ([], 0.0),
+    ])
+    def test_query_counts_only_success_and_fail(statuses, expected):
+        subject = SimpleNamespace(status={
+            'g3t1_1': deque((i, value) for i, value in enumerate(statuses))
+        })
+        request = DataAccessRequest.Request()
+        request.query = 'all:reliability:'
+        response = DataAccess.process_query(subject, request, DataAccessRequest.Response())
+        payload = response.content.rstrip(';').split(':', 1)[1]
+&gt;       assert float(payload.split(',')[-1]) == pytest.approx(expected, abs=1e-6)
+E       assert 0.333333 == 0.5 ± 1.0e-06
+E         comparison failed
+E         Obtained: 0.333333
+E         Expected: 0.5 ± 1.0e-06
+
+src/bsn_ros2/adaptation/test/test_reliability_status_query.py:25: AssertionError</failure></testcase><testcase classname="test.test_reliability_status_query" name="test_query_counts_only_success_and_fail[statuses2-0.6666666666666666]" time="0.001" /><testcase classname="test.test_reliability_status_query" name="test_query_counts_only_success_and_fail[statuses3-0.0]" time="0.000" /><testcase classname="test.test_reliability_status_query" name="test_query_counts_only_success_and_fail[statuses4-0.0]" time="0.000" /></testsuite></testsuites>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="0.100" timestamp="2026-11-11T18:42:20.426947" hostname="bsn-virtualbox"><testcase classname="test.test_strategy_contract" name="test_published_strategy_updates_all_controller_references" time="0.001" /><testcase classname="test.test_strategy_contract" name="test_reactivation_restores_component_to_planning" time="0.001"><failure message="assert 1 == 0">def test_reactivation_restores_component_to_planning():
+        engine = SimpleNamespace(strategy={}, deactivated_components={}, get_logger=Mock())
+        for component, key in [('/g3t1_1', 'R_G3_T1_1'), ('/g4t1', 'R_G4_T1')]:
+            ReliabilityEngine._process_context_response(engine, component + ':deactivate')
+            assert engine.deactivated_components[key] == 1
+            ReliabilityEngine._process_context_response(engine, component + ':activate')
+&gt;           assert engine.deactivated_components[key] == 0
+E           assert 1 == 0
+
+src/bsn_ros2/adaptation/test/test_strategy_contract.py:30: AssertionError</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.093" timestamp="2026-11-11T18:35:48.028911" hostname="bsn-virtualbox"><testcase classname="test.test_strategy_contract" name="test_published_strategy_updates_all_controller_references" time="0.001"><failure message="AssertionError: assert {'/g3t1_1': 1.0, '/g4t1': 1.0} == {'/g3t1_1': 0... '/g4t1': 0.9}&#10;  Differing items:&#10;  {'/g3t1_1': 1.0} != {'/g3t1_1': 0.85}&#10;  {'/g4t1': 1.0} != {'/g4t1': 0.9}&#10;  Use -v to get more diff">def test_published_strategy_updates_all_controller_references():
+        publisher = Mock()
+        engine = SimpleNamespace(
+            strategy={'R_G3_T1_1': 0.85, 'R_G4_T1': 0.9},
+            strategy_publisher=publisher, get_logger=Mock(),
+        )
+        controller = SimpleNamespace(
+            adaptation_parameter='reliability',
+            r_ref={'/g3t1_1': 1.0, '/g4t1': 1.0}, get_logger=Mock(),
+        )
+        ReliabilityEngine.execute(engine)
+        message = publisher.publish.call_args.args[0]
+        Enactor.receive_strategy(controller, message)
+&gt;       assert controller.r_ref == {'/g3t1_1': 0.85, '/g4t1': 0.9}
+E       AssertionError: assert {'/g3t1_1': 1.0, '/g4t1': 1.0} == {'/g3t1_1': 0... '/g4t1': 0.9}
+E         Differing items:
+E         {'/g3t1_1': 1.0} != {'/g3t1_1': 0.85}
+E         {'/g4t1': 1.0} != {'/g4t1': 0.9}
+E         Use -v to get more diff
+
+src/bsn_ros2/adaptation/test/test_strategy_contract.py:21: AssertionError</failure></testcase></testsuite></testsuites>

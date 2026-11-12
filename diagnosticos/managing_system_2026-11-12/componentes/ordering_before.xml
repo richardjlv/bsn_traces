@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="0.098" timestamp="2026-11-12T00:25:02.417559" hostname="bsn-virtualbox"><testcase classname="test.test_strategy_contract" name="test_published_strategy_updates_all_controller_references" time="0.001" /><testcase classname="test.test_strategy_contract" name="test_reactivation_restores_component_to_planning" time="0.001" /><testcase classname="test.test_strategy_contract" name="test_equal_priority_plan_is_independent_of_term_insertion_order" time="0.002"><failure message="AssertionError: assert {'CTX_G3_T1_1...T1': 1.0, ...} == {'CTX_G3_T1_1...T1': 1.0, ...}&#10;  Omitting 4 identical items, use -vv to show&#10;  Differing items:&#10;  {'R_G4_T1': 0.999} != {'R_G4_T1': 0.9009999999999999}&#10;  {'R_G3_T1_1': 0.9009999999999999} != {'R_G3_T1_1': 0.999}&#10;  Use -v to get more diff">def test_equal_priority_plan_is_independent_of_term_insertion_order():
+        from math import prod
+    
+        outputs = []
+        for components in [('G3_T1_1', 'G4_T1'), ('G4_T1', 'G3_T1_1')]:
+            strategy = {}
+            for component in components:
+                strategy.update({prefix + component: 1.0 for prefix in ('R_', 'CTX_', 'F_')})
+            engine = SimpleNamespace(
+                strategy=strategy, priority={key: 50 for key in strategy if key.startswith('R_')},
+                deactivated_components={}, setpoint=0.9, tolerance=0.02,
+                offset=0.5, gain=0.01, target_system_model=None,
+                calculate_qos=lambda model, values: prod(values.values()),
+                get_logger=Mock(), execute=Mock(),
+            )
+            ReliabilityEngine.plan(engine)
+            engine.execute.assert_called_once()
+            outputs.append(engine.strategy)
+&gt;       assert outputs[0] == outputs[1]
+E       AssertionError: assert {'CTX_G3_T1_1...T1': 1.0, ...} == {'CTX_G3_T1_1...T1': 1.0, ...}
+E         Omitting 4 identical items, use -vv to show
+E         Differing items:
+E         {'R_G4_T1': 0.999} != {'R_G4_T1': 0.9009999999999999}
+E         {'R_G3_T1_1': 0.9009999999999999} != {'R_G3_T1_1': 0.999}
+E         Use -v to get more diff
+
+src/bsn_ros2/adaptation/test/test_strategy_contract.py:51: AssertionError</failure></testcase></testsuite></testsuites>
