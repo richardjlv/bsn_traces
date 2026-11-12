@@ -1,5 +1,7 @@
 # Recuperação da adaptação ROS 2 — 11–12/11/2026
 
+> **Correções descartadas em 12/11/2026.** Por decisão do autor, o commit experimental `fc7c959` foi retirado da branch do fork ROS 2, que retornou a `3153596`. Os resultados de aprovação abaixo pertencem ao código modificado durante o diagnóstico e **não representam a versão mantida**. A falha de recuperação permanece registrada como possível regressão, sem correção de produção adotada. Os arquivos são preservados para rastreabilidade da investigação.
+
 A investigação reproduziu e corrigiu quatro problemas: estados `running` no denominador da confiabilidade; separadores incompatíveis entre planejador e controlador; marca de desativação mantida após reativação; e desempate de prioridades dependente da ordem de inserção. Os testes dirigidos falharam antes dos respectivos ajustes e aprovaram depois. A seleção final de componentes aprovou 68 casos.
 
 Na montagem BDD, a prontidão deixou de exigir comando espontâneo e passou a aguardar conexão e inicialização do enactor. A frequência de planejamento do lançamento de teste foi alinhada ao ROS 1 (0,2 Hz); o padrão de produção continua 0,02 Hz. O cenário continua exigindo comando inferior ao pico e encaminhamento do registro.
