@@ -1,0 +1,28 @@
+{
+  "campaign": "ros1_20261112T141511Z_bsn_p03_hvv_1_rq",
+  "cases": [
+    {
+      "case": "test_an_emergency_is_reported_within_250_ms_of_a_highrisk_reading_bsnp03",
+      "passed": true,
+      "evaluated_differences_us": [
+        349444.355999,
+        15115.0310001
+      ],
+      "accepted_difference_us": 15115.0310001
+    },
+    {
+      "case": "test_an_emergency_is_reported_within_250_ms_even_while_the_sensor_is_under_sustained_load_bsnp03",
+      "passed": true,
+      "evaluated_differences_us": [
+        2223.78399849
+      ],
+      "accepted_difference_us": 2223.78399849
+    }
+  ],
+  "source_hashes_checked": [
+    "asserts.py",
+    "temporal_capture.py",
+    "test_BSN-P03.py"
+  ],
+  "criterion": "At least one value-matched pair with observer latency in [0, 250000] microseconds; not all pairs."
+}

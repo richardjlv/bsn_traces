@@ -1,0 +1,22 @@
+{
+  "campaign": "ros1_20261112T140638Z_bsn_p03_zefkd5g0",
+  "cases": [
+    {
+      "case": "test_an_emergency_is_reported_within_250_ms_of_a_highrisk_reading_bsnp03",
+      "failed": true,
+      "matched_pairs": 10,
+      "min_difference_us": -1000242.0,
+      "max_difference_us": -330196.0,
+      "nonnegative_pairs": 0
+    },
+    {
+      "case": "test_an_emergency_is_reported_within_250_ms_even_while_the_sensor_is_under_sustained_load_bsnp03",
+      "failed": true,
+      "matched_pairs": 9,
+      "min_difference_us": -50091.0,
+      "max_difference_us": -9051.0,
+      "nonnegative_pairs": 0
+    }
+  ],
+  "interpretation": "Invalid timing basis: negative decreasing %time from rostopic --offset; no valid deadline conclusion."
+}

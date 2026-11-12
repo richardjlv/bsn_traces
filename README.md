@@ -1,5 +1,7 @@
 # Campanhas de trace e cobertura do SA-BSN
 
+[Revisão temporal BSN-P03 em ROS 1 e ROS 2](diagnosticos/bsn_p03_2026-11-12/README.md): dois cenários aprovados por versão após correções exclusivas dos testes; tentativas anteriores preservadas e limites da medição explicitados.
+
 [Integração dos quatro casos B7 à suíte ROS 1](diagnosticos/b7_suite_ros1_2026-11-02/README.md): 15 testes de configuração aprovados e quatro reprovações na cópia com o defeito reintroduzido, em execução direta com gtest.
 
 Atualização: [revalidação das três features com falhas históricas](diagnosticos/revalidacao_features_2026-11-02/README.md), com dez aprovações e uma falha esperada nas reexecuções selecionadas. Os totais históricos abaixo permanecem vinculados às campanhas originais.
