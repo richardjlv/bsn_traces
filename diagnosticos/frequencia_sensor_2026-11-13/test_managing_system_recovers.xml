@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="75.922" timestamp="2026-11-13T15:17:57.683610" hostname="bsn-virtualbox"><testcase classname="steps.test_managing_system" name="test_sampling_rate_decreases_after_sensor_reliability_recovers_g4g5" time="75.583"><failure message="AssertionError: Sensor rate did not increase by more than 10%: before=1.001 Hz, after=0.998 Hz">request = &lt;FixtureRequest for &lt;Function test_sampling_rate_decreases_after_sensor_reliability_recovers_g4g5&gt;&gt;
+_pytest_bdd_example = {}
+
+    @pytest.mark.usefixtures(*args)
+    def scenario_wrapper(request, _pytest_bdd_example):
+        scenario = templated_scenario.render(_pytest_bdd_example)
+&gt;       _execute_scenario(feature, scenario, request)
+
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:144: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+/usr/lib/python3/dist-packages/pytest_bdd/scenario.py:114: in _execute_step_function
+    return_value = step_func(**kwargs)
+steps/test_managing_system.py:573: in sensor_operating_at_elevated_rate
+    assert_rate_changed(initial, elevated, 'increase')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+before = {'hz': 1.0007412240070899, 'messages': 6, 'span_s': 4.9988398410059744, 'timestamps': [43528.299572453, 43529.298113002, 43530.3014346, 43531.300693925, 43532.30133485, 43533.298412294]}
+after = {'hz': 0.9981461879982007, 'messages': 6, 'span_s': 4.997616489999928, 'timestamps': [43543.301672749, 43544.636254324, 43545.298210735, 43546.301715533, 43547.297431984, 43548.299289239]}
+direction = 'increase'
+
+    def assert_rate_changed(before, after, direction):
+        assert direction in ('increase', 'decrease')
+        ratio = after['hz'] / before['hz']
+        passed = ratio &gt; 1.0 + MIN_RELATIVE_CHANGE if direction == 'increase' else ratio &lt; 1.0 - MIN_RELATIVE_CHANGE
+&gt;       assert passed, 'Sensor rate did not {} by more than 10%: before={:.3f} Hz, after={:.3f} Hz'.format(direction, before['hz'], after['hz'])
+E       AssertionError: Sensor rate did not increase by more than 10%: before=1.001 Hz, after=0.998 Hz
+
+steps/sampling_rate_oracle.py:25: AssertionError</failure></testcase></testsuite></testsuites>

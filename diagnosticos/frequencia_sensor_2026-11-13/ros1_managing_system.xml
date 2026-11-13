@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="3" hostname="bsn-virtualbox" name="pytest" skipped="0" tests="11" time="84.860" timestamp="2026-11-13T12:24:16.493565"><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_adaptation_enactor_exchanges_adaptation_strategies_with_the_reliability_engine" time="0.981"><system-out>node /enactor, inbound_connections [u&apos;/event&apos;, u&apos;/strategy&apos;] subscriptions: [u&apos;/event&apos;, u&apos;/strategy&apos;]
+missing_topics: []
+is_receiving: True, for topic /strategy and node /enactor
+missing_topics: []
+node /enactor, outbound_connections [u&apos;/log_adapt&apos;, u&apos;/exception&apos;] publications: [u&apos;/exception&apos;, u&apos;/log_adapt&apos;, u&apos;/rosout&apos;]
+missing_topics: []
+node /enactor is publishing to all expected topics.
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_adaptation_enactor_exchanges_adaptation_records_with_the_system_log" time="0.770"><system-out>node /enactor, inbound_connections [u&apos;/event&apos;, u&apos;/strategy&apos;] subscriptions: [u&apos;/event&apos;, u&apos;/strategy&apos;]
+missing_topics: []
+is_receiving: True, for topic /event and node /enactor
+missing_topics: []
+node /enactor, outbound_connections [u&apos;/log_adapt&apos;, u&apos;/exception&apos;] publications: [u&apos;/exception&apos;, u&apos;/log_adapt&apos;, u&apos;/rosout&apos;]
+missing_topics: []
+node /enactor is publishing to all expected topics.
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor event]" time="0.380"><system-out>node /logger, inbound_connections [u&apos;/log_adapt&apos;, u&apos;/log_status&apos;, u&apos;/log_energy_status&apos;, u&apos;/log_event&apos;, u&apos;/log_uncertainty&apos;] subscriptions: [u&apos;/log_adapt&apos;, u&apos;/log_energy_status&apos;, u&apos;/log_event&apos;, u&apos;/log_status&apos;, u&apos;/log_uncertainty&apos;]
+missing_topics: []
+is_receiving: True, for topic /log_event and node /logger
+missing_topics: []
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor status]" time="0.426"><system-out>node /logger, inbound_connections [u&apos;/log_adapt&apos;, u&apos;/log_status&apos;, u&apos;/log_energy_status&apos;, u&apos;/log_event&apos;, u&apos;/log_uncertainty&apos;] subscriptions: [u&apos;/log_adapt&apos;, u&apos;/log_energy_status&apos;, u&apos;/log_event&apos;, u&apos;/log_status&apos;, u&apos;/log_uncertainty&apos;]
+missing_topics: []
+is_receiving: True, for topic /log_status and node /logger
+missing_topics: []
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_system_log_receives_each_topic_collected_by_the_log_collector[sensor energy status]" time="0.529"><system-out>node /logger, inbound_connections [u&apos;/log_adapt&apos;, u&apos;/log_status&apos;, u&apos;/log_energy_status&apos;, u&apos;/log_event&apos;, u&apos;/log_uncertainty&apos;] subscriptions: [u&apos;/log_adapt&apos;, u&apos;/log_energy_status&apos;, u&apos;/log_event&apos;, u&apos;/log_status&apos;, u&apos;/log_uncertainty&apos;]
+missing_topics: []
+is_receiving: True, for topic /log_energy_status and node /logger
+missing_topics: []
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_the_system_log_sends_reconfiguration_requests_to_the_parameter_adapter" time="0.445"><system-out>node /logger, outbound_connections [u&apos;/reconfigure&apos;, u&apos;/persist&apos;, u&apos;/event&apos;] publications: [u&apos;/event&apos;, u&apos;/persist&apos;, u&apos;/reconfigure&apos;, u&apos;/rosout&apos;, u&apos;/status&apos;]
+missing_topics: []
+node /logger is publishing to all expected topics.
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_sampling_rate_increases_when_sensor_reliability_falls_below_the_threshold_g4g5" time="36.751"><failure message="AssertionError: Nenhum AdaptationCommand com freq &gt; 1.0Hz recebido para /g3t1_1 em 30s. O managing system deveria aumentar a taxa de amostragem quando a confiabilidade esta abaixo do setpoint (error &gt; 0 -&gt; new_freq aumenta).
+assert None is not None">request = &lt;FixtureRequest for &lt;Function test_sampling_rate_increases_when_sensor_reliability_falls_below_the_threshold_g4g5&gt;&gt;
+
+    @pytest.mark.usefixtures(*function_args)
+    def scenario_wrapper(request):
+&gt;       _execute_scenario(feature, scenario, request, encoding)
+
+../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py:177: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py:143: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py:113: in _execute_step_function
+    return_value = step_func(**kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+context = {&apos;adaptation_since_index&apos;: 0, &apos;baseline_frequency_hz&apos;: 1.0, &apos;degradation_start_time&apos;: 1794583468.477869, &apos;enactor_active&apos;: True, ...}
+sensor = &apos;the oximeter&apos;
+
+    @then(parsers.parse(&quot;an adaptation command increasing the sampling rate of {sensor} should be issued&quot;))
+    def then_increase_sampling_rate(context, sensor):
+        target_sensor = SYSTEM_MAP[sensor]
+        context[&quot;target_sensor&quot;] = target_sensor
+        # the /enactor should issue an adaptation command targeting /g3t1_1 with a higher frequency
+        since = context.get(&quot;adaptation_since_index&quot;, 0)
+        baseline = context[&quot;baseline_frequency_hz&quot;]
+    
+        # Aguarda especificamente um comando com frequencia ACIMA da inicial.
+        # Isso descarta comandos de reducao emitidos antes do /reli_engine
+        # ter acumulado suficientes &quot;fail&quot; para reduzir r_curr abaixo do setpoint.
+        result = _wait_for_adaptation_command_above(
+            target=target_sensor,
+            min_freq_hz=baseline,
+            timeout=30.0,
+            since_index=since,
+        )
+        if result is None:
+            _stop_status_failure_stream(context)
+    
+&gt;       assert result is not None, (
+            &quot;Nenhum AdaptationCommand com freq &gt; {:.1f}Hz recebido para {} em 30s. &quot;
+            &quot;O managing system deveria aumentar a taxa de amostragem quando a &quot;
+            &quot;confiabilidade esta abaixo do setpoint (error &gt; 0 -&gt; new_freq aumenta).&quot;.format(
+                baseline, target_sensor)
+        )
+E       AssertionError: Nenhum AdaptationCommand com freq &gt; 1.0Hz recebido para /g3t1_1 em 30s. O managing system deveria aumentar a taxa de amostragem quando a confiabilidade esta abaixo do setpoint (error &gt; 0 -&gt; new_freq aumenta).
+E       assert None is not None
+
+../Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_managing_system.py:353: AssertionError</failure><system-out>sensor_rate_observation: {&apos;hz&apos;: 1.0001980292049064, &apos;span_s&apos;: 4.999749678005173, &apos;messages&apos;: 6, &apos;timestamps&apos;: [43859.487659711, 43860.487381602, 43861.48759693, 43862.494404873, 43863.487607379, 43864.487409389]}
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_sampling_rate_decreases_after_sensor_reliability_recovers_g4g5" time="21.852"><failure message="AssertionError: Sensor rate did not increase by more than 10%: before=0.999 Hz, after=1.000 Hz">request = &lt;FixtureRequest for &lt;Function test_sampling_rate_decreases_after_sensor_reliability_recovers_g4g5&gt;&gt;
+
+    @pytest.mark.usefixtures(*function_args)
+    def scenario_wrapper(request):
+&gt;       _execute_scenario(feature, scenario, request, encoding)
+
+../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py:177: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py:143: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py:113: in _execute_step_function
+    return_value = step_func(**kwargs)
+../Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_managing_system.py:452: in given_elevated_rate_sensor
+    given_elevated_rate(context)
+../Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_managing_system.py:419: in given_elevated_rate
+    assert_rate_changed(initial, elevated, &apos;increase&apos;)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+before = {&apos;hz&apos;: 0.9992692134387742, &apos;messages&apos;: 6, &apos;span_s&apos;: 5.002045051995083, &apos;timestamps&apos;: [43896.500658404, 43897.501389725, 43898.503840022, 43899.502613014, 43900.501650461, 43901.502703456]}
+after = {&apos;hz&apos;: 1.0002767535689472, &apos;messages&apos;: 6, &apos;span_s&apos;: 5.001105450006435, &apos;timestamps&apos;: [43911.50866997, 43912.508982727, 43913.508363935, 43914.512138925, 43915.510052097, 43916.50977542]}
+direction = &apos;increase&apos;
+
+    def assert_rate_changed(before, after, direction):
+        assert direction in (&apos;increase&apos;, &apos;decrease&apos;)
+        ratio = after[&apos;hz&apos;] / before[&apos;hz&apos;]
+        passed = ratio &gt; 1.0 + MIN_RELATIVE_CHANGE if direction == &apos;increase&apos; else ratio &lt; 1.0 - MIN_RELATIVE_CHANGE
+&gt;       assert passed, &apos;Sensor rate did not {} by more than 10%: before={:.3f} Hz, after={:.3f} Hz&apos;.format(direction, before[&apos;hz&apos;], after[&apos;hz&apos;])
+E       AssertionError: Sensor rate did not increase by more than 10%: before=0.999 Hz, after=1.000 Hz
+
+../Documents/bsn2/src/sa-bsn/target_system/components/component/test/sampling_rate_oracle.py:25: AssertionError</failure><system-out>sensor_rate_observation: {&apos;hz&apos;: 0.9992692134387742, &apos;span_s&apos;: 5.002045051995083, &apos;messages&apos;: 6, &apos;timestamps&apos;: [43896.500658404, 43897.501389725, 43898.503840022, 43899.502613014, 43900.501650461, 43901.502703456]}
+sensor_rate_observation: {&apos;hz&apos;: 1.0002767535689472, &apos;span_s&apos;: 5.001105450006435, &apos;messages&apos;: 6, &apos;timestamps&apos;: [43911.50866997, 43912.508982727, 43913.508363935, 43914.512138925, 43915.510052097, 43916.50977542]}
+</system-out></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_an_adaptation_command_is_issued_within_10_seconds_after_reliability_degradation_g4g5" time="12.347"><failure message="AssertionError: AdaptationCommand para /g3t1_1 nao chegou em 10s
+assert None is not None">request = &lt;FixtureRequest for &lt;Function test_an_adaptation_command_is_issued_within_10_seconds_after_reliability_degradation_g4g5&gt;&gt;
+
+    @pytest.mark.usefixtures(*function_args)
+    def scenario_wrapper(request):
+&gt;       _execute_scenario(feature, scenario, request, encoding)
+
+../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py:177: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py:143: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py:113: in _execute_step_function
+    return_value = step_func(**kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+context = {&apos;adaptation_since_index&apos;: 0, &apos;baseline_frequency_hz&apos;: 1.0, &apos;degradation_start_time&apos;: 1794583522.80996, &apos;enactor_active&apos;: True, ...}
+sensor = &apos;the oximeter&apos;, time_limit = &apos;10&apos;
+
+    @then(parsers.parse(&quot;an adaptation command for {sensor} should be issued within {time_limit} seconds&quot;))
+    def then_adaptation_within_time_limit_sensor(context, sensor, time_limit):
+        target_sensor = SYSTEM_MAP[sensor]
+        since = context.get(&quot;adaptation_since_index&quot;, 0)
+        t_start = context[&quot;degradation_start_time&quot;]
+        time_limit_s = float(time_limit)
+    
+        result = _wait_for_adaptation_command(
+            target=target_sensor,
+            timeout=time_limit_s,
+            require=False,
+            since_index=since,
+        )
+        _stop_status_failure_stream(context)
+    
+        elapsed = time.time() - t_start
+&gt;       assert result is not None, (
+            &quot;AdaptationCommand para {} nao chegou em {:.0f}s&quot;.format(
+                target_sensor, time_limit_s)
+        )
+E       AssertionError: AdaptationCommand para /g3t1_1 nao chegou em 10s
+E       assert None is not None
+
+../Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_managing_system.py:648: AssertionError</failure></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_no_adaptation_is_triggered_while_sensor_reliability_stays_above_the_threshold_g4g5" time="8.061"></testcase><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_a_failed_adaptation_attempt_is_recorded_in_the_system_log_g4g5" time="0.334"><system-out>Persist confirmado mesmo com o sensor desconectado: type=AdaptationCommand source=/enactor content=freq=5.0
+</system-out></testcase></testsuite></testsuites>
