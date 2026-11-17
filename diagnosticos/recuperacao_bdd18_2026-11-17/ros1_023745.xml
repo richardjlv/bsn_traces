@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="bsn-virtualbox" name="pytest" skipped="0" tests="1" time="49.773" timestamp="2026-11-16T23:37:59.980880"><testcase classname="" file="../../../../../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py" line="174" name="test_sampling_rate_decreases_after_sensor_reliability_recovers_g4g5" time="49.330"><failure message="AssertionError: Sensor rate did not consistently increase: hz before=[0.9984360547525563, 0.9989518108537022, 0.9993017369133208], after=[0.9984279602134892, 0.9996515144936007, 1.0008174797311618]">request = &lt;FixtureRequest for &lt;Function test_sampling_rate_decreases_after_sensor_reliability_recovers_g4g5&gt;&gt;
+
+    @pytest.mark.usefixtures(*function_args)
+    def scenario_wrapper(request):
+&gt;       _execute_scenario(feature, scenario, request, encoding)
+
+../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py:177: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py:143: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+../.local/lib/python2.7/site-packages/pytest_bdd/scenario.py:113: in _execute_step_function
+    return_value = step_func(**kwargs)
+../Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_managing_system.py:452: in given_elevated_rate_sensor
+    given_elevated_rate(context)
+../Documents/bsn2/src/sa-bsn/target_system/components/component/test/test_bdd/test_managing_system.py:419: in given_elevated_rate
+    assert_rate_changed(initial, elevated, &apos;increase&apos;)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+before = {&apos;hz&apos;: 0.9989518108537022, &apos;windows&apos;: [{&apos;count_hz&apos;: 0.9994538564353925, &apos;hz&apos;: 0.9984360547525563, &apos;messages&apos;: 6, &apos;span...1, ...}, {&apos;count_hz&apos;: 0.9997825852796819, &apos;hz&apos;: 0.9993017369133208, &apos;messages&apos;: 6, &apos;span_s&apos;: 5.0006668330024695, ...}]}
+after = {&apos;hz&apos;: 0.9996515144936007, &apos;windows&apos;: [{&apos;count_hz&apos;: 0.99945526772791, &apos;hz&apos;: 0.9984279602134892, &apos;messages&apos;: 6, &apos;span_s...75, ...}, {&apos;count_hz&apos;: 0.8332374472846101, &apos;hz&apos;: 1.0008174797311618, &apos;messages&apos;: 5, &apos;span_s&apos;: 4.001258716991288, ...}]}
+direction = &apos;increase&apos;
+
+    def assert_rate_changed(before, after, direction):
+        assert direction in (&apos;increase&apos;, &apos;decrease&apos;)
+        first = before[&apos;windows&apos;]
+        second = after[&apos;windows&apos;]
+        assert len(first) == len(second) == OBSERVATION_WINDOWS, &apos;Three windows required per phase&apos;
+        for metric in (&apos;hz&apos;, &apos;count_hz&apos;):
+            left = [window[metric] for window in first]
+            right = [window[metric] for window in second]
+            changed = min(right) &gt; max(left) if direction == &apos;increase&apos; else max(right) &lt; min(left)
+&gt;           assert changed, &apos;Sensor rate did not consistently {}: {} before={}, after={}&apos;.format(direction, metric, left, right)
+E           AssertionError: Sensor rate did not consistently increase: hz before=[0.9984360547525563, 0.9989518108537022, 0.9993017369133208], after=[0.9984279602134892, 0.9996515144936007, 1.0008174797311618]
+
+../Documents/bsn2/src/sa-bsn/target_system/components/component/test/sampling_rate_oracle.py:30: AssertionError</failure><system-out>sensor_rate_observation: {&apos;hz&apos;: 0.9984360547525563, &apos;span_s&apos;: 5.007934559005662, &apos;count_hz&apos;: 0.9994538564353925, &apos;messages&apos;: 6, &apos;timestamps&apos;: [118670.449467092, 118671.451033487, 118672.45107815, 118673.453517584, 118674.453996108, 118675.457401651]}
+sensor_rate_observation: {&apos;hz&apos;: 0.9989518108537022, &apos;span_s&apos;: 5.002067238005111, &apos;count_hz&apos;: 0.9999254397246043, &apos;messages&apos;: 6, &apos;timestamps&apos;: [118677.455981351, 118678.459234327, 118679.460283616, 118680.457730181, 118681.456626282, 118682.458048589]}
+sensor_rate_observation: {&apos;hz&apos;: 0.9993017369133208, &apos;span_s&apos;: 5.0006668330024695, &apos;count_hz&apos;: 0.9997825852796819, &apos;messages&apos;: 6, &apos;timestamps&apos;: [118684.457812108, 118685.458971394, 118686.459940404, 118687.457615802, 118688.458314553, 118689.458478941]}
+sensor_rate_phase: {&apos;windows&apos;: [{&apos;hz&apos;: 0.9984360547525563, &apos;span_s&apos;: 5.007934559005662, &apos;count_hz&apos;: 0.9994538564353925, &apos;messages&apos;: 6, &apos;timestamps&apos;: [118670.449467092, 118671.451033487, 118672.45107815, 118673.453517584, 118674.453996108, 118675.457401651]}, {&apos;hz&apos;: 0.9989518108537022, &apos;span_s&apos;: 5.002067238005111, &apos;count_hz&apos;: 0.9999254397246043, &apos;messages&apos;: 6, &apos;timestamps&apos;: [118677.455981351, 118678.459234327, 118679.460283616, 118680.457730181, 118681.456626282, 118682.458048589]}, {&apos;hz&apos;: 0.9993017369133208, &apos;span_s&apos;: 5.0006668330024695, &apos;count_hz&apos;: 0.9997825852796819, &apos;messages&apos;: 6, &apos;timestamps&apos;: [118684.457812108, 118685.458971394, 118686.459940404, 118687.457615802, 118688.458314553, 118689.458478941]}], &apos;hz&apos;: 0.9989518108537022}
+sensor_rate_observation: {&apos;hz&apos;: 0.9984279602134892, &apos;span_s&apos;: 5.005479170999024, &apos;count_hz&apos;: 0.99945526772791, &apos;messages&apos;: 6, &apos;timestamps&apos;: [118699.470376538, 118700.472050336, 118701.470843298, 118702.470957683, 118703.472532198, 118704.475855709]}
+sensor_rate_observation: {&apos;hz&apos;: 0.9996515144936007, &apos;span_s&apos;: 5.0006799529946875, &apos;count_hz&apos;: 0.9995938213811758, &apos;messages&apos;: 6, &apos;timestamps&apos;: [118706.473462836, 118707.47290079, 118708.47372219, 118709.476497551, 118710.473794182, 118711.474142789]}
+sensor_rate_observation: {&apos;hz&apos;: 1.0008174797311618, &apos;span_s&apos;: 4.001258716991288, &apos;count_hz&apos;: 0.8332374472846101, &apos;messages&apos;: 5, &apos;timestamps&apos;: [118713.484175531, 118714.479951007, 118715.477441136, 118716.484558001, 118717.485434248]}
+sensor_rate_phase: {&apos;windows&apos;: [{&apos;hz&apos;: 0.9984279602134892, &apos;span_s&apos;: 5.005479170999024, &apos;count_hz&apos;: 0.99945526772791, &apos;messages&apos;: 6, &apos;timestamps&apos;: [118699.470376538, 118700.472050336, 118701.470843298, 118702.470957683, 118703.472532198, 118704.475855709]}, {&apos;hz&apos;: 0.9996515144936007, &apos;span_s&apos;: 5.0006799529946875, &apos;count_hz&apos;: 0.9995938213811758, &apos;messages&apos;: 6, &apos;timestamps&apos;: [118706.473462836, 118707.47290079, 118708.47372219, 118709.476497551, 118710.473794182, 118711.474142789]}, {&apos;hz&apos;: 1.0008174797311618, &apos;span_s&apos;: 4.001258716991288, &apos;count_hz&apos;: 0.8332374472846101, &apos;messages&apos;: 5, &apos;timestamps&apos;: [118713.484175531, 118714.479951007, 118715.477441136, 118716.484558001, 118717.485434248]}], &apos;hz&apos;: 0.9996515144936007}
+</system-out></testcase></testsuite></testsuites>
